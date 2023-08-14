@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "hap_activity_points",
+"name": "hap_activity_points_20230814",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "act_id": "1453_FISH", "access_id": "1453", "site_id": "501734", "site_name": "1st St & W River Rd", "activity": "FISH", "checked": "SE", "act_codes": null, "access_name": null, "address": null, "layer": "hap_activity_points", "path": "/Users/saraeichner/Dropbox/hudson_access_project/hap_data/merged_site_data/current/as_published/hap_activity_points.geojson" }, "geometry": { "type": "Point", "coordinates": [ -74.014337396680347, 40.375909999901289 ] } },
