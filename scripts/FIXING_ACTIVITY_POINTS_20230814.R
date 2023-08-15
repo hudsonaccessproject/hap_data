@@ -27,6 +27,7 @@ act_points_current_fixed <- act_points_current |>
   mutate(access_id = ifelse(site_id == 71975, 1621, access_id),
          access_id = str_split(access_id, ",") |> 
            sapply(function(x) ifelse(length(x) > 0, x[1], "")),
+         activity = ifelse(activity == "BL", "HPBL", activity),
          act_id = paste(access_id, activity, sep = "_")) |> 
   select(act_id:activity, access_name, lon, lat) |> 
   filter(site_id != "remove dupe") |> 
