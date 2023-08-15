@@ -7,13 +7,14 @@ act_points_current <- st_read("data/processed/current/hap_activity_points.geojso
 website_act_points_current <- st_read("data/processed/current/hap_activity_points.geojson")
 
 
+
 tofix <- act_points_current |> 
   filter(grepl(",", activity)) |> 
   mutate(lon = unlist(map(geometry,1)),
          lat = unlist(map(geometry,2))) |> 
   st_drop_geometry()
 
-# write_csv(tofix, "/Users/sarahodges/Downloads/to_fix.csv")
+write_csv(tofix, "/Users/sarahodges/Downloads/to_fix.csv")
 
 fixed <- read_csv("/Users/sarahodges/Downloads/to_fix.csv")
 
