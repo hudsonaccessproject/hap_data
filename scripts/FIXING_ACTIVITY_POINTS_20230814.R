@@ -31,10 +31,14 @@ act_points_current_fixed <- act_points_current |>
          activity = ifelse(activity == "BL", "HPBL", activity),
          act_id = paste(access_id, activity, sep = "_")) |> 
   select(act_id:activity, access_name, lon, lat) |> 
-  filter(site_id != "remove dupe") |> 
+  filter(site_id != "remove dupe",
+         site_id != 595580) |> ### remove steuben house since it is visual only
   mutate(access_id = as.numeric(access_id))
 
-act_points_sf <- st_as_sf(act_points_current_fixed, coords = c("lon", "lat"), crs=4326) 
+act_points_sf <- st_as_sf(act_points_current_fixed, coords = c("lon", "lat"), crs=4326) |> 
+  mutate(lon = unlist(map(geometry,1)),
+         lat = unlist(map(geometry,2)))
+
 
 
 write_sf(act_points_sf, "/Users/sarahodges/spatial/SAVI/hudson_access/data/published/data/data_updates/correcting_activity_points_20230814/hap_activity_points_20230815.geojson")
