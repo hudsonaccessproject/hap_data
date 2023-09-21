@@ -183,4 +183,4 @@ site_sh <- point_sm |>
 ### writing out
 write_sf(poly_new, "data/published/data/hap_site_polys_20230921.geojson")
 write_sf(point, "data/published/data/hap_site_points_20230921.geojson")
-write_sf(act, "data/published/data/hap_site_acts_20230921.geojson")
+write_sf(act, "data/published/data/hap_act_points_20230921.geojson")
