@@ -5,7 +5,7 @@ library(sf)
 
 raw_poly <- st_read("data/published/data/hap_site_polys_20230913.geojson") 
 raw_point <- st_read("data/published/data/hap_site_points_20230913.geojson")
-raw_act <- st_read("data/published/data/hap_act_points_20230913.geojson")
+raw_act <- st_read("data/published/data/hap_act_points_20230913.geojson") 
 
 # site_id_dupes <- st_drop_geometry(raw_point) |> 
 #   group_by(site_id) |> 
@@ -52,6 +52,7 @@ point <- raw_point |>
          lat = unlist(map(geometry,2))) ### replacing lat long since I manually moved some in qgis
 
 act <- raw_act |> 
+  mutate(act_id = ifelse(is.na(act_id), "999_FISH", act_id)) |> 
   filter(site_id != 165, # remove francis lewis park dupe
          site_id != 59, # remove barretto point park dupe
          site_id != 110, # remove battery park park dupe
@@ -82,9 +83,13 @@ act <- raw_act |>
          site_id != 311119, # cleaning up jersey city waterfront
          site_id != 188401, # removing conference park dupe
          site_id != 147570, # removing marina that doesn't exist
+         act_id != "139_MPBL", # removing random activity point
          site_id != 174) |>  # remove bayswater park dupe
   mutate(lon = unlist(map(geometry,1)),
-         lat = unlist(map(geometry,2))) ### replacing lat long since I manually moved some in qgis
+         lat = unlist(map(geometry,2)), ### replacing lat long since I manually moved some in qgis
+         site_id = ifelse(site_name == "Nutley Boat Ramp", 4313409, site_id),
+         site_id = ifelse(site_name == "Bayswater Point State Park", 164, site_id),
+         site_id = ifelse(site_name == "Hunt's Point Riverside Park", 31177, site_id))
 
 ## small point spatial df to get the correct site ids for the polygons
 point_sm <- point |> 
@@ -158,6 +163,10 @@ act_sites <- df_act |>
 sites_no_act <- df_points |> 
   left_join(act_sites, by = "site_id") |> 
   filter(is.na(count))
+
+## acts with no sites
+acts_no_site <- df_act |> 
+  full_join(point_sm_df, by = c("site_id" = "site_id_pt")) 
 
 df_poly_test <- df_poly |> 
   select(site_id) |> 
