@@ -5,11 +5,11 @@
 	import Polygon from './Polygon.svelte';
 	import ActPoint from './ActPoint.svelte';
 	// import SafetyPoint from './SafetyPoint.svelte';
-	import {onMount} from 'svelte'
+	import {onMount, afterUpdate} from 'svelte'
 	import Header from './components/Header.svelte';	
 	import Hoverup from './Hoverup.svelte';
 	import Title from './Title.svelte';
-	import {afterUpdate} from 'svelte';
+	// import {afterUpdate} from 'svelte';
 	import PlaceList from './PlaceList.svelte';
 	// import { geoJSON } from 'leaflet';
 	import CollapsibleSection from './CollapsibleSection.svelte'
@@ -20,7 +20,7 @@
 	import HomeButton from './Home.svelte'
 	import WaterQualityLegend from './WaterQualityLegend.svelte';
 	import WaterSafetyLegend from './WaterSafetyLegend.svelte';
-	import { count, activePageTracker } from "./store.js";
+	import { count, activePageTracker} from "./store.js";
 
 	let point_data;
 	let act_data;
@@ -42,15 +42,11 @@
 	const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20230921.geojson";
 	//const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_temp_stations.geojson";
 
-	// let showWaterSafety = false;
-	// let showWaterAccess = true;
-	// let showWaterQuality = false;
-	// let showAboutPage = false;
 
-	// let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-    // let qualityTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clhyzicsw009n01pjc6t5adeb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
+	let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
+    let qualityTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clhyzicsw009n01pjc6t5adeb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
 	// //let aboutTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cli2a1j4w04qg01qn1cfaaqta/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-	// let regTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cli2a1j4w04qg01qn1cfaaqta/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
+	let regTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cli2a1j4w04qg01qn1cfaaqta/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
 
 
 
@@ -60,85 +56,63 @@
 
 	let activePage; // Add the active page variable
 
-	// function changeBasemap(newTileURL) {
-	// 	console.log(map);
-	// 	map.eachLayer(function (layer) {
-	// 		if (layer instanceof L.TileLayer) {
-	// 		layer.setUrl(newTileURL);
-	// 		}
-	// 	});
-	// 	console.log(newTileURL)
-	// }
-
-	// $: {
-	// 	switch($activePageTracker) {
-	// 	case 'access':
-	// 		changeBasemap($activeTileURL);
-	// 		break;
-	// 	case 'safety':
-	// 		changeBasemap(safetyTileURL);
-	// 		break;
-	// 	case 'quality':
-	// 		changeBasemap(qualityTileURL);
-	// 		break;
-	// 	case 'about':
-	// 		changeBasemap(regTileURL);
-	// 		filters = {
-	// 				act_filters:[],
-	// 				feature_filters:[],
-	// 				prog_filters:[],
-	// 				text_filter:"",
-	// 				active:[],
-	// 				previous:[]
-	// 			}; // this replaces the points if they were removed - except now it doen's because of the if statements in actPoint & GeoPoint
-	// 		break;
-	// 	default:
-	// 		changeBasemap(regTileURL);
-	// 	}
-	// }
-
-	// define the active page - this is where the header function is defined
-	function changePage(showSafety, showAccess, showQuality, showAbout, newTileURL) {
-		// Change the tile layer URL
+	function changeBasemap(newTileURL) {
 		map.eachLayer(function (layer) {
 			if (layer instanceof L.TileLayer) {
 			layer.setUrl(newTileURL);
 			}
 		});
+	}
 
-		// this is a hack to remove all points
-		if (showQuality | showSafety) {
-			map.eachLayer(layer => {
-				if (layer instanceof L.Layer && layer.feature && layer.feature.geometry && layer.feature.geometry.type === 'Point') {
-				map.removeLayer(layer);
-				}
-			});
-		}
+	function removePoints() {
+		map.eachLayer(layer => {
+			if (layer instanceof L.Layer && layer.feature && layer.feature.geometry && layer.feature.geometry.type === 'Point') {
+			map.removeLayer(layer);
+			}
+		});
+	}
 
-		// Update the values of showWaterSafety and showWaterAccess
-		showWaterSafety = showSafety;
-		showWaterAccess = showAccess;
-		showWaterQuality = showQuality;
-		showAboutPage = showAbout;
+	function removePolygons() {
+		map.eachLayer(layer => {
+			if (layer instanceof L.Layer && layer.feature && layer.feature.geometry && (layer.feature.geometry.type === 'MultiPolygon' || layer.feature.geometry.type === 'Polygon')) {
+			map.removeLayer(layer);
+			}
+		});
+	}
 
-		// Update the active page variable
-		if (showAccess) {
-			activePage = 'access';
-		} else if (showSafety) {
-			activePage = 'safety';
-		} else if (showQuality) {
-			activePage = 'quality';
-		} else if (showAbout) {
-			activePage = 'about';
+	$: {
+		switch($activePageTracker) {
+		case 'access':
+			// changeBasemap($activeTileURL);
+			console.log("access case");
+			break;
+		case 'safety':
+			removePoints();
+			removePolygons();
+			changeBasemap(safetyTileURL);
+			break;
+		case 'quality':
+			removePoints();
+			removePolygons
+			changeBasemap(qualityTileURL);
+			break;
+		case 'about':
+		console.log("about case");
+			removePoints();
+			removePolygons();
+			changeBasemap(regTileURL);
 			filters = {
-				act_filters:[],
-				feature_filters:[],
-				prog_filters:[],
-				text_filter:"",
-				active:[],
-				previous:[]
-			}; // this replaces the points if they were removed - except now it doen's because of the if statements in actPoint & GeoPoint
-			// update if statement if you want points to show on About page
+					act_filters:[],
+					feature_filters:[],
+					prog_filters:[],
+					text_filter:"",
+					active:[],
+					previous:[]
+				}; // this replaces the points if they were removed - except now it doen's because of the if statements in actPoint & GeoPoint
+			break;
+		default:
+			console.log("default");
+			//changeBasemap(regTileURL);
 		}
 	}
 
@@ -147,7 +121,6 @@
 		// Set the initial value
 		activePage = 'access';
 		showWaterAccess = true;
-		console.log(activePage);
 
 		const res = await fetch( point_url );
 		point_data = await res.json();
@@ -316,19 +289,24 @@
 <!-- Render the page -- header, map and the sidebar -->
 {#if all_point_data && all_poly_data} 
 
-	<Header  {activePage} {changePage}/>
+	<!-- <Header  {activePage} {changePage}/> -->
+	<Header  {activePage}/>
+
+	{#if $activePageTracker === 'about'}
+		<About />
+	{/if}
 
 	<!-- {#if showWaterQuality}
 		<div class="water-quality-iframe">
 			<iframe src="https://www.hudsonriver.org/article/charts-and-graphs" frameborder="0" class="frame"></iframe>
 		</div>
 	{/if} -->
-	<!-- {#if $activePageTracker === 'quality'} -->
-	{#if showWaterQuality}
+	{#if $activePageTracker === 'quality'}
+	<!-- {#if showWaterQuality} -->
 		<WaterQualityLegend />
 	{/if}
-	<!-- {#if $activePageTracker === 'safety'} -->
-	{#if showWaterSafety}
+	{#if $activePageTracker === 'safety'}
+	<!-- {#if showWaterSafety} -->
 		<WaterSafetyLegend />
 	{/if}
 
@@ -336,8 +314,8 @@
 	<div class="map-pane">
 		<LeafletMap >
 			<HomeButton on:homebutton={handleExtent}/>
-			<!-- {#if $activePageTracker === 'access'} -->
-			{#if showWaterAccess}
+			{#if $activePageTracker === 'access'}
+			<!-- {#if showWaterAccess} -->
 				{#key active_data}
 				<Polygon active_data={active_data}/>
 				{/key}
@@ -356,23 +334,21 @@
 
 	<div class="left-panel panel">
 		<div class="find">
-			<!-- {#if $activePageTracker === 'access'} -->
-			{#if showWaterAccess}
+			{#if $activePageTracker === 'access'}
 			<span class="t1 side-title">Find a place to access the water</span>
 			{/if}
-			{#if showWaterSafety}
+			{#if $activePageTracker === 'safety'}
 			<span class="t1 side-title">How to stay safe on the water</span>
 			{/if}
-			{#if showWaterQuality}
+			{#if $activePageTracker === 'quality'}
 			<span class="t1 side-title">Learn about water quality</span>
 			{/if}
-			{#if showAboutPage}
+			{#if $activePageTracker === 'about'}
 			<span class="t1 side-title">About the Hudson Access Project</span>
 			{/if}
-			<!-- <span class="t1 quality">Coming soon</span> -->
 		</div>
 		<!-- {#if $activePageTracker === 'access'} -->
-		{#if showWaterAccess}
+		{#if $activePageTracker === 'access'}
 			<div>
 				<div class="activity-filter">
 					<div class="r">
@@ -431,14 +407,11 @@
 				</CollapsibleSection>
 			</div>
 		{/if}
-		{#if showWaterSafety}
+		{#if $activePageTracker === 'safety'}
 			<WaterSafety />
 		{/if}
-		{#if showWaterQuality}
+		{#if $activePageTracker === 'quality'}
 			<WaterQuality />
-		{/if}
-		{#if showAboutPage}
-			<About />
 		{/if}
 		<!-- PROGRAMMING INPUT-->
 		<!-- <CollapsibleSection headerText={'Look for sites with programming by type'} >
@@ -457,7 +430,7 @@
 		</CollapsibleSection> -->
 		<!-- Search Input Box-->
 		<!-- {#if $activePageTracker === 'access'} -->
-		{#if showWaterAccess}
+		{#if $activePageTracker === 'access'}
 			<div class="places-list">
 				<div class="searcher r">
 					<input id="searcher" placeholder="Search for a site by name" type="text" bind:value={filters.text_filter}>
