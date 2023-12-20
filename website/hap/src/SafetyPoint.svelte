@@ -24,10 +24,12 @@
 
     function onEachFeature(feature, layer) {
         var popupContent = `
-        <span class="Retired-popup-text">
-            ${feature.properties.name}
-        </span>
-        <p>Click to open <a href=${feature.properties.station_URL} target="_blank">station url</a></p>
+            <div class="popup-content">
+                <span class="popup-header">
+                    ${feature.properties.station_name}
+                </span>
+                <p>Click to open <a href=${feature.properties.station_url} target="_blank">station url</a></p>
+            </div>
         `;
         layer.bindPopup(popupContent);
 

@@ -36,7 +36,7 @@
 	const point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_points_20231204.geojson";
 	const act_point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_act_points_20230921.geojson";
 	const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20230921.geojson";
-	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_temp_stations.geojson";
+	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 
 
 	let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'

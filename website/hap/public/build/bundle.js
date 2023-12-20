@@ -16222,10 +16222,12 @@ var app = (function () {
 
     function onEachFeature(feature, layer) {
     	var popupContent = `
-        <span class="Retired-popup-text">
-            ${feature.properties.name}
-        </span>
-        <p>Click to open <a href=${feature.properties.station_URL} target="_blank">station url</a></p>
+            <div class="popup-content">
+                <span class="popup-header">
+                    ${feature.properties.station_name}
+                </span>
+                <p>Click to open <a href=${feature.properties.station_url} target="_blank">station url</a></p>
+            </div>
         `;
 
     	layer.bindPopup(popupContent);
@@ -31275,7 +31277,7 @@ var app = (function () {
     const point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_points_20231204.geojson";
     const act_point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_act_points_20230921.geojson";
     const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20230921.geojson";
-    const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_temp_stations.geojson";
+    const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 
     function modifyIconSource(act) {
     	if (act.isActive) {
