@@ -16226,7 +16226,18 @@ var app = (function () {
                 <span class="popup-header">
                     ${feature.properties.station_name}
                 </span>
-                <p>Click to open <a href=${feature.properties.station_url} target="_blank">station url</a></p>
+                <span >
+                    ${feature.properties.station_type}
+                </span>
+                ${feature.properties.tide_url !== null
+	? `<span>View <a href=${feature.properties.tide_url} target="_blank">NOAA tide prediction data</a></span>`
+	: ''}
+                ${feature.properties.current_url !== null
+	? `<span>View <a href=${feature.properties.current_url} target="_blank">NOAA current prediction data</a></span>`
+	: ''}
+                ${feature.properties.temp_url !== null
+	? `<span>View <a href=${feature.properties.temp_url} target="_blank">NOAA tide and temperature data</a></span>`
+	: ''}
             </div>
         `;
 
@@ -16251,9 +16262,20 @@ var app = (function () {
     	});
     }
 
+    // color based on station type
+    function getColorByType(d) {
+    	return d == "Current Prediction Station"
+    	? '#fcee57'
+    	: d == "Tide Prediction Station"
+    		? '#fca057'
+    		: d == "Tide & Current Prediction Station"
+    			? '#fcee57'
+    			: d == "Temperature Station" ? '#1a66ff' : '#1a66ff';
+    }
+
     function style(feature) {
     	return {
-    		fillColor: '#1a66ff',
+    		fillColor: getColorByType(feature.properties.station_type),
     		color: '#000000',
     		opacity: 1,
     		radius: 3,
@@ -16305,6 +16327,7 @@ var app = (function () {
     		layer,
     		createCircles,
     		onEachFeature,
+    		getColorByType,
     		style
     	});
 
