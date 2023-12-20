@@ -5,7 +5,7 @@
 </script>
 <!-- map legend div with title and several rows with a styled circle or suqare and a label -->
 <div class="legend">
-    <h3 class="legend-title">NOAA stations</h3>
+    <h3 class="legend-title">NOAA Water Monitoring Stations</h3>
     <h3 class="header">Tide & Current Prediction stations</h3>
     <div class="legend-row">
         <div class="legend-symbol">
@@ -85,12 +85,13 @@
     }
 
     .legend-circle {
-        width: 100%;
-        height: 100%;
+        width: 75%;
+        height: 75%;
         border-radius: 50%;
+        border: solid 1px #000;
     }
 
-    .legend-small-circle {
+    /* .legend-small-circle {
         width: 50%;
         height: 50%;
         border-radius: 50%;
@@ -101,7 +102,7 @@
     .legend-square {
         width: 100%;
         height: 100%;
-    }
+    } */
 
     .legend-label {
         margin: 0;
@@ -111,7 +112,7 @@
         font-weight: 700;
     }
 
-    .sub {
+    /* .sub {
         margin-top: 12px;
     }
 
@@ -122,7 +123,7 @@
         }
 
         .learn-text {
-        margin-right: 5px; /* Adjust as needed */
+        margin-right: 5px; /* Adjust as needed 
         }
 
     .expand-icon {
@@ -134,6 +135,6 @@
     }
     .expand-icon {
         color: #707070;
-    }
+    } */
     
 </style>
