@@ -7,10 +7,10 @@
     location.reload();
   }
 
-  function setPage(page, tileurl) {
-    activePageTracker.set(page);
-    activeTileURL.set(tileurl);
-  }
+  // function setPage(page, tileurl) {
+  //   activePageTracker.set(page);
+  //   activeTileURL.set(tileurl);
+  // }
 
   // let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clhyzicsw009n01pjc6t5adeb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
   let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'

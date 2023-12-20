@@ -16259,44 +16259,44 @@ var app = (function () {
     			div6 = element("div");
     			div6.textContent = "About";
     			attr_dev(span0, "title", "Covering sites where you can access the Hudson River Estuary South of the Mario Cuomo Bridge, Hudson tributaries, and the waters of the NY-NJ Harbor area.");
-    			add_location(span0, file$g, 27, 10, 1588);
+    			add_location(span0, file$g, 27, 10, 1600);
     			attr_dev(span1, "title", "This is a work in progress. Please help make this website as useful as it can be: send any corrections or site information to hudsonaccessproject@gmail.com.");
     			attr_dev(span1, "class", "beta svelte-zgmo43");
-    			add_location(span1, file$g, 28, 10, 1797);
+    			add_location(span1, file$g, 28, 10, 1809);
     			attr_dev(div0, "class", "title svelte-zgmo43");
-    			add_location(div0, file$g, 26, 8, 1510);
+    			add_location(div0, file$g, 26, 8, 1522);
     			attr_dev(div1, "class", "col large-col svelte-zgmo43");
-    			add_location(div1, file$g, 25, 6, 1474);
+    			add_location(div1, file$g, 25, 6, 1486);
     			attr_dev(input, "type", "checkbox");
     			attr_dev(input, "id", "hamburger-checkbox");
     			attr_dev(input, "class", "svelte-zgmo43");
-    			add_location(input, file$g, 55, 8, 3072);
+    			add_location(input, file$g, 55, 8, 3084);
     			attr_dev(span2, "class", "hamburger svelte-zgmo43");
-    			add_location(span2, file$g, 57, 10, 3171);
+    			add_location(span2, file$g, 57, 10, 3183);
     			attr_dev(label, "for", "hamburger-checkbox");
-    			add_location(label, file$g, 56, 8, 3128);
+    			add_location(label, file$g, 56, 8, 3140);
     			attr_dev(div2, "class", "column-content other-pages svelte-zgmo43");
-    			add_location(div2, file$g, 61, 12, 3336);
+    			add_location(div2, file$g, 61, 12, 3348);
     			attr_dev(div3, "class", "col svelte-zgmo43");
     			toggle_class(div3, "active", /*activePage*/ ctx[0] === 'safety');
-    			add_location(div3, file$g, 60, 10, 3267);
+    			add_location(div3, file$g, 60, 10, 3279);
     			attr_dev(div4, "class", "column-content other-pages svelte-zgmo43");
-    			add_location(div4, file$g, 66, 12, 3662);
+    			add_location(div4, file$g, 66, 12, 3674);
     			attr_dev(div5, "class", "col svelte-zgmo43");
     			toggle_class(div5, "active", /*activePage*/ ctx[0] === 'quality');
-    			add_location(div5, file$g, 65, 10, 3592);
+    			add_location(div5, file$g, 65, 10, 3604);
     			attr_dev(div6, "class", "column-content other-pages svelte-zgmo43");
-    			add_location(div6, file$g, 71, 12, 3989);
+    			add_location(div6, file$g, 71, 12, 4001);
     			attr_dev(div7, "class", "col svelte-zgmo43");
     			toggle_class(div7, "active", /*activePage*/ ctx[0] === 'about');
-    			add_location(div7, file$g, 70, 10, 3921);
+    			add_location(div7, file$g, 70, 10, 3933);
     			attr_dev(div8, "class", "hamburger-menu svelte-zgmo43");
-    			add_location(div8, file$g, 59, 8, 3228);
+    			add_location(div8, file$g, 59, 8, 3240);
     			attr_dev(div9, "class", "hamburger-selector svelte-zgmo43");
-    			add_location(div9, file$g, 54, 6, 3031);
+    			add_location(div9, file$g, 54, 6, 3043);
     			attr_dev(div10, "class", "header-content svelte-zgmo43");
-    			add_location(div10, file$g, 24, 4, 1439);
-    			add_location(header, file$g, 23, 2, 1426);
+    			add_location(div10, file$g, 24, 4, 1451);
+    			add_location(header, file$g, 23, 2, 1438);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16384,11 +16384,10 @@ var app = (function () {
     	let { activePage } = $$props;
     	let { changePage } = $$props;
 
-    	function setPage(page, tileurl) {
-    		activePageTracker.set(page);
-    		activeTileURL.set(tileurl);
-    	}
-
+    	// function setPage(page, tileurl) {
+    	//   activePageTracker.set(page);
+    	//   activeTileURL.set(tileurl);
+    	// }
     	// let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clhyzicsw009n01pjc6t5adeb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
     	let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw';
 
@@ -16429,7 +16428,6 @@ var app = (function () {
     		activePage,
     		changePage,
     		refreshPage,
-    		setPage,
     		safetyTileURL,
     		qualityTileURL,
     		aboutTileURL
