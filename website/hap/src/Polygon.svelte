@@ -11,9 +11,9 @@
 
     // this is a hack to remove previous polygon
     map.eachLayer(layer => {
-    if (layer instanceof L.Layer && layer.feature && layer.feature.geometry && (layer.feature.geometry.type === 'MultiPolygon' || layer.feature.geometry.type === 'Polygon')) {
-        map.removeLayer(layer);
-    }
+        if (layer instanceof L.Layer && layer.feature && layer.feature.geometry && (layer.feature.geometry.type === 'MultiPolygon' || layer.feature.geometry.type === 'Polygon')) {
+            map.removeLayer(layer);
+        }
     });
 
     export let polygonLayer = L.geoJson(active_data, {

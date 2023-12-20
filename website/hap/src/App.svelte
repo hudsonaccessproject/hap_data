@@ -4,7 +4,7 @@
 	import GeoPoint from './GeoPoint.svelte';
 	import Polygon from './Polygon.svelte';
 	import ActPoint from './ActPoint.svelte';
-	// import SafetyPoint from './SafetyPoint.svelte';
+	import SafetyPoint from './SafetyPoint.svelte';
 	import {onMount, afterUpdate} from 'svelte'
 	import Header from './components/Header.svelte';	
 	import Hoverup from './Hoverup.svelte';
@@ -25,22 +25,18 @@
 	let point_data;
 	let act_data;
 	let poly_data;
-	//let temp_data;
+	let temp_data;
 	let all_poly_data;
 	let all_point_data;
 	let act_point_data;
-	//let temp_point_data;
+	let temp_point_data;
 	let active_data;
 	let active_point;
-	let showWaterSafety;
-	let showWaterAccess;
-	let showWaterQuality;
-	let showAboutPage;
 
 	const point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_points_20231204.geojson";
 	const act_point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_act_points_20230921.geojson";
 	const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20230921.geojson";
-	//const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_temp_stations.geojson";
+	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_temp_stations.geojson";
 
 
 	let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
@@ -53,8 +49,6 @@
 	//countValue is map object stored in the store.js
     let map;
     count.subscribe(value => {map = value});
-
-	let activePage; // Add the active page variable
 
 	function changeBasemap(newTileURL) {
 		map.eachLayer(function (layer) {
@@ -84,7 +78,7 @@
 		switch($activePageTracker) {
 		case 'access':
 			// changeBasemap($activeTileURL);
-			console.log("access case");
+			// console.log("access case");
 			break;
 		case 'safety':
 			removePoints();
@@ -97,30 +91,18 @@
 			changeBasemap(qualityTileURL);
 			break;
 		case 'about':
-		console.log("about case");
 			removePoints();
 			removePolygons();
 			changeBasemap(regTileURL);
-			filters = {
-					act_filters:[],
-					feature_filters:[],
-					prog_filters:[],
-					text_filter:"",
-					active:[],
-					previous:[]
-				}; // this replaces the points if they were removed - except now it doen's because of the if statements in actPoint & GeoPoint
 			break;
 		default:
-			console.log("default");
+			// console.log("default");
 			//changeBasemap(regTileURL);
 		}
 	}
 
 	
 	onMount(async () => {
-		// Set the initial value
-		activePage = 'access';
-		showWaterAccess = true;
 
 		const res = await fetch( point_url );
 		point_data = await res.json();
@@ -137,10 +119,10 @@
 
 		all_poly_data = [ ...poly_data.features]
 
-		// const res4 = await fetch( temp_url );
-		// temp_data = await res4.json();
+		const res4 = await fetch( temp_url );
+		temp_data = await res4.json();
 
-		// temp_point_data = [...temp_data.features]
+		temp_point_data = [...temp_data.features]
 
 	});
 
@@ -252,7 +234,6 @@
 		// Otherwise, add it to filters.act_filters.
 		filters.act_filters = [...filters.act_filters, value];
 		}
-		console.log(filters.act_filters);
 
 		// Toggle the isActive property of each act object based on the click
 		acts = acts.map(act => {
@@ -290,23 +271,16 @@
 {#if all_point_data && all_poly_data} 
 
 	<!-- <Header  {activePage} {changePage}/> -->
-	<Header  {activePage}/>
+	<Header />
 
 	{#if $activePageTracker === 'about'}
 		<About />
 	{/if}
 
-	<!-- {#if showWaterQuality}
-		<div class="water-quality-iframe">
-			<iframe src="https://www.hudsonriver.org/article/charts-and-graphs" frameborder="0" class="frame"></iframe>
-		</div>
-	{/if} -->
 	{#if $activePageTracker === 'quality'}
-	<!-- {#if showWaterQuality} -->
 		<WaterQualityLegend />
 	{/if}
 	{#if $activePageTracker === 'safety'}
-	<!-- {#if showWaterSafety} -->
 		<WaterSafetyLegend />
 	{/if}
 
@@ -315,20 +289,19 @@
 		<LeafletMap >
 			<HomeButton on:homebutton={handleExtent}/>
 			{#if $activePageTracker === 'access'}
-			<!-- {#if showWaterAccess} -->
 				{#key active_data}
 				<Polygon active_data={active_data}/>
 				{/key}
 				{#key filters}
-				<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} {activePage}/>
+				<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} />
 				{/key}
 				{#key filters}
-				<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  {activePage} />
+				<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  />
 				{/key}
 			{/if}
-			<!-- {#if showWaterSafety}
-				<SafetyPoint safety_geojson={temp_point_data} activePage={activePage}  />
-			{/if} -->
+			{#if $activePageTracker === 'safety'}
+				<SafetyPoint geojson={temp_point_data} />
+			{/if}
 		</LeafletMap>
 	</div>
 
