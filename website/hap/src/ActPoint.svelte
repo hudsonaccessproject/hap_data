@@ -42,7 +42,7 @@
   ];
 
     export let act_geojson;
-    export let activePage;
+    // export let activePage;
 
     let mapDataSiteIdsValue = [];
 
@@ -61,8 +61,8 @@
 
     // Define the setLayerVisibility function
     function setLayerVisibility(zoom) {
-        // if (zoom >= 13 && zoom <= 18 && $activePageTracker === 'access') {
-        if (zoom >= 13 && zoom <= 18 && activePage === 'access') {
+        if (zoom >= 13 && zoom <= 18 && $activePageTracker === 'access') {
+        // if (zoom >= 13 && zoom <= 18 && activePage === 'access') {
             map.addLayer(layer);
         } else {
             map.removeLayer(layer);

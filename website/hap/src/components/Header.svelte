@@ -1,23 +1,15 @@
 <script>
-  import { activePageTracker, activeTileURL } from '../store.js';
-  export let activePage;
-  export let changePage;
+  import { activePageTracker } from '../store.js';
+  // export let activePage;
+  // export let changePage;
 
   function refreshPage() {
     location.reload();
   }
 
-  // function setPage(page, tileurl) {
-  //   activePageTracker.set(page);
-  //   activeTileURL.set(tileurl);
-  // }
-
-  // let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clhyzicsw009n01pjc6t5adeb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-  let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-  let qualityTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clhyzicsw009n01pjc6t5adeb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-	let aboutTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cli2a1j4w04qg01qn1cfaaqta/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-	//let regTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cli2a1j4w04qg01qn1cfaaqta/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-
+  function setPage(page) {
+    activePageTracker.set(page);
+  }
 
 </script>
     
@@ -29,30 +21,30 @@
           <span title="This is a work in progress. Please help make this website as useful as it can be: send any corrections or site information to hudsonaccessproject@gmail.com." class="beta">beta</span>
         </div>
       </div>
-      <!-- <div class="hamburger-selector">
+      <div class="hamburger-selector">
         <input type="checkbox" id="hamburger-checkbox">
         <label for="hamburger-checkbox">
           <span class="hamburger"></span>
         </label>
         <div class="hamburger-menu">
-          <div class="col" >
-            <div class="column-content other-pages" on:click={() => setPage('safety', safetyTileURL)} on:keydown={() => setPage('safety', safetyTileURL)}>
+          <div class="col {$activePageTracker === 'safety' ? 'active' : ''}">
+            <div class="column-content other-pages" on:click={() => setPage('safety')} on:keydown={() => setPage('safety')}>
               Water Safety
             </div>
           </div>
-          <div class="col" >
-            <div class="column-content other-pages" on:click={() => setPage('quality', qualityTileURL)} on:keydown={() => setPage('quality', qualityTileURL)}>
+          <div class="col {$activePageTracker === 'quality' ? 'active' : ''}" >
+            <div class="column-content other-pages" on:click={() => setPage('quality')} on:keydown={() => setPage('quality')}>
               Water Quality
             </div>
           </div>
-          <div class="col" >
-            <div class="column-content other-pages" on:click={() => setPage('about', aboutTileURL)} on:keydown={() => setPage('about', aboutTileURL)}>
+          <div class="col {$activePageTracker === 'about' ? 'active' : ''}" >
+            <div class="column-content other-pages" on:click={() => setPage('about')} on:keydown={() => setPage('about')}>
               About
             </div>
           </div>
         </div>
-      </div> -->
-      <div class="hamburger-selector">
+      </div>
+      <!-- <div class="hamburger-selector">
         <input type="checkbox" id="hamburger-checkbox">
         <label for="hamburger-checkbox">
           <span class="hamburger"></span>
@@ -74,7 +66,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </header>    
 

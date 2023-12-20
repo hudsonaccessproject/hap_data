@@ -8,7 +8,7 @@
 
     export let geojson;
     export let filters;
-    export let activePage;
+    // export let activePage;
 
     //countValue is map object stored in the store.js
     let map;
@@ -25,8 +25,8 @@
 
 
     function setLayerVisibility(zoom) {
-        // if (zoom <= 12 && $activePageTracker === 'access') {
-        if (zoom <= 12 && activePage === 'access') {
+        if (zoom <= 12 && ($activePageTracker === 'access' || $activePageTracker === 'about')) {
+        // if (zoom <= 12 && activePage === 'access') {
             // Show the layer when zoom is within the specified range
             map.addLayer(layer); // Add the layer to the map
         } else {
