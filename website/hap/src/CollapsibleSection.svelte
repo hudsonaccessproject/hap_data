@@ -58,10 +58,16 @@
     font-family: "ff-tisa-sans-web-pro", sans-serif;
     /* font-size: 9pt;
     color: #999; */
-    font-size: 14pt;
+    font-size: 16pt;
     font-weight: 600;
     color: #666;
     padding: 15px;
+  }
+
+  @media (max-width: 1000px) {
+    button {
+      font-size: 18px;
+    }
   }
 
   /* Media query for mobile devices */
