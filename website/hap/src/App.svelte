@@ -33,16 +33,10 @@
 	let active_data;
 	let active_point;
 
-	// const point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_points_20231204.geojson";
-	// const act_point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_act_points_20230921.geojson";
-	// const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20230921.geojson";
 	const point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_points_20240115.geojson";
 	const act_point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_act_points_20240115.geojson";
 	const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20240115.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
-	// const point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/staging/hap_site_points_20240115.geojson";
-	// const act_point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/staging/hap_activity_points_20240115.geojson";
-	// const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/staging/hap_site_polys_20240114.geojson";
 
 
 	let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
