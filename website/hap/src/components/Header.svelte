@@ -94,16 +94,21 @@
   .title {
     /* color: #3884CB; */
     color: #707070;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 700;
     cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .column-content {
     text-align: center;
     color: #5D5D5D;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
+    cursor: pointer;
+    margin-left: 1px;
+    margin-right: 1px;
   }
 
   /* active styles for column-content */
@@ -139,10 +144,35 @@
     height: 65px;
   }
 
-  .column-content {
-    /* make hand when hover */  
-    cursor: pointer;
-  } 
+  @media (max-width: 1200px) {
+    .column-content {
+      font-size: 20px;
+    }
+
+    .title{
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .column-content {
+      font-size: 18px;
+    }
+
+    .title{
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .column-content {
+      font-size: 15px;
+    }
+
+    .title{
+      font-size: 20px;
+    }
+  }
 
 
   /* Media query for mobile devices */

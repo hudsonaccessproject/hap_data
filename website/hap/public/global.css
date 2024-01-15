@@ -303,7 +303,7 @@ img {
 
 .t2 {
     font-family: "ff-tisa-sans-web-pro", sans-serif;
-    font-size: 14pt;
+    font-size: 16pt;
     font-weight: 700;
     color: #666;
     font-weight: 600;
@@ -311,7 +311,7 @@ img {
 
 .t3 {
     font-family: "ff-tisa-sans-web-pro", sans-serif;
-    font-size: 10pt;
+    font-size: 12pt;
     /* font-weight: bold; */
     color: #707070;
     line-height: 1.5;
@@ -358,6 +358,7 @@ input[type=text] {
     background-position: right 5px center;
     background-size: 20px 20px;
     background-repeat: no-repeat;
+    padding-left: 0px;
 }
 
 input[type=text]:focus {
@@ -373,11 +374,12 @@ input[type=text]:focus {
     font-family: "ff-tisa-sans-web-pro", sans-serif;
     font-size: 11pt;
     font-weight: 700;
+    padding-left: 0px;
 }
 
 #searcher {
     color: var(--blue);
-    font-size: 20px;
+    font-size: 22px;
     padding-right: 5px;
 }
 
@@ -520,6 +522,14 @@ header {
         width: 60vw;
     }
 } */
+
+/* Media query for mid-size */
+
+@media (max-width: 1200px) {
+    .column-content {
+        font-size: 20px;
+    }
+}
 
 
 /* Media query for mobile devices */
@@ -692,7 +702,7 @@ input[type=text]:focus {
     font-weight: 600;
     opacity: 1;
     font-family: "ff-tisa-sans-web-pro", sans-serif;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 /* styles for caollapsible section of the about page */
@@ -706,6 +716,13 @@ input[type=text]:focus {
     padding-left: 15px;
     padding-right: 15px;
 } 
+
+@media screen and (max-width: 1000px) {
+    ::placeholder {
+        font-size: 14pt;
+        padding-inline: 0px;
+    }
+}
 
 @media (max-width: 767px) {
     /* .about-wide p {

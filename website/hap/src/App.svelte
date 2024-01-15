@@ -592,21 +592,30 @@
 
 	.side-title {
 		color: var(--orange2);
-		font-size: 20px;
+		font-size: 22px;
 		font-weight: 700;
 	}
-
-	/* .frame-load {
-		position: absolute;
-		top: 65px;
-		left: 10px;
-		z-index: -1;
-	} */
-	
-
-	/* @media (min-width: 640px) {
-		main {
-			max-width: none;
+	@media (max-width: 1200px) {
+		.side-title{
+		font-size: 20px;
 		}
-	} */
+	}
+
+	@media (max-width: 1000px) {
+		.side-title{
+		font-size: 18px;
+		}
+		.t2 {
+			font-size: 18px;
+		}
+		.t3 {
+			font-size: 14px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.side-title{
+		font-size: 15px;
+		}
+	}
 </style>

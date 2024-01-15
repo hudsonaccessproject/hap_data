@@ -71,7 +71,7 @@
         fillColor: getColorByType(feature.properties.station_type),
         color:'#000000',
         opacity: 1,
-        radius: 3,
+        radius: 4,
         weight: .25,
         fillOpacity: 1
         }
