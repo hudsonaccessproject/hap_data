@@ -25,7 +25,7 @@
 
 
     function setLayerVisibility(zoom) {
-        if (zoom <= 12 && ($activePageTracker === 'access' || $activePageTracker === 'about')) {
+        if (zoom <= 13 && ($activePageTracker === 'access' || $activePageTracker === 'about')) {
         // if (zoom <= 12 && activePage === 'access') {
             // Show the layer when zoom is within the specified range
             map.addLayer(layer); // Add the layer to the map

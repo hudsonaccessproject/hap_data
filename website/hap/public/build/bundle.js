@@ -15551,7 +15551,7 @@ var app = (function () {
     	});
 
     	function setLayerVisibility(zoom) {
-    		if (zoom <= 12 && ($activePageTracker === 'access' || $activePageTracker === 'about')) {
+    		if (zoom <= 13 && ($activePageTracker === 'access' || $activePageTracker === 'about')) {
     			// if (zoom <= 12 && activePage === 'access') {
     			// Show the layer when zoom is within the specified range
     			map.addLayer(layer); // Add the layer to the map
@@ -16002,7 +16002,7 @@ var app = (function () {
 
     	// Define the setLayerVisibility function
     	function setLayerVisibility(zoom) {
-    		if (zoom >= 13 && zoom <= 18 && $activePageTracker === 'access') {
+    		if (zoom >= 14 && zoom <= 18 && $activePageTracker === 'access') {
     			// if (zoom >= 13 && zoom <= 18 && activePage === 'access') {
     			map.addLayer(layer);
     		} else {
@@ -16051,7 +16051,7 @@ var app = (function () {
     			return {
     				icon: leafletSrc.icon({
     					iconUrl: matchingAct.source,
-    					iconSize: [6, 6], // Adjust the size as needed
+    					iconSize: [5, 5], // Adjust the size as needed
     					iconAnchor: [1, 1], // Anchor point for the icon
     					
     				})
@@ -16270,7 +16270,7 @@ var app = (function () {
     		? '#fca057'
     		: d == "Tide & Current Prediction Station"
     			? '#fcee57'
-    			: d == "Temperature Station" ? '#1a66ff' : '#1a66ff';
+    			: d == "Temperature Station" ? '#a67aeb' : '#a67aeb';
     }
 
     function style(feature) {
@@ -29197,7 +29197,7 @@ var app = (function () {
     			attr_dev(h32, "class", "header svelte-orqw9b");
     			add_location(h32, file$1, 21, 4, 765);
     			attr_dev(div8, "class", "legend-circle svelte-orqw9b");
-    			set_style(div8, "background-color", "#1a66ff");
+    			set_style(div8, "background-color", "#a66dcf");
     			add_location(div8, file$1, 24, 12, 887);
     			attr_dev(div9, "class", "legend-symbol svelte-orqw9b");
     			add_location(div9, file$1, 23, 8, 847);

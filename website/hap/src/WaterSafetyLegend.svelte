@@ -22,7 +22,7 @@
     <h3 class="header">Temperature stations</h3>
     <div class="legend-row">
         <div class="legend-symbol">
-            <div class="legend-circle" style="background-color: #1a66ff;"></div>
+            <div class="legend-circle" style="background-color: #a66dcf;"></div>
         </div>
         <div class="legend-label">Air & Water Temperature</div>
     </div>

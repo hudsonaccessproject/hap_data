@@ -61,7 +61,7 @@
 
     // Define the setLayerVisibility function
     function setLayerVisibility(zoom) {
-        if (zoom >= 13 && zoom <= 18 && $activePageTracker === 'access') {
+        if (zoom >= 14 && zoom <= 18 && $activePageTracker === 'access') {
         // if (zoom >= 13 && zoom <= 18 && activePage === 'access') {
             map.addLayer(layer);
         } else {
@@ -110,7 +110,7 @@
             return {
                 icon: L.icon({
                     iconUrl: matchingAct.source,
-                    iconSize: [6, 6], // Adjust the size as needed
+                    iconSize: [5, 5], // Adjust the size as needed
                     iconAnchor: [1, 1], // Anchor point for the icon
                 }),
             };

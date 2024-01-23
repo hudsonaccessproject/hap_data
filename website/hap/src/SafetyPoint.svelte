@@ -62,8 +62,8 @@
         return d == "Current Prediction Station" ? '#fcee57' :
                 d == "Tide Prediction Station" ? '#fca057' :
                 d == "Tide & Current Prediction Station" ? '#fcee57' :
-                d == "Temperature Station" ? '#1a66ff' :
-                        '#1a66ff'
+                d == "Temperature Station" ? '#a67aeb' :
+                        '#a67aeb'
     }
 
     function style(feature) {
