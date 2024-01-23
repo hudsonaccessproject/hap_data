@@ -749,3 +749,9 @@ input[type=text]:focus {
 div.leaflet-popup-content {
     width: 300px;
 }
+
+.sc-carousel__arrow-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
