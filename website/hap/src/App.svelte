@@ -469,7 +469,7 @@
 			width: 100%;
 			/* min-height: 23%; */
 			height: auto;
-			/* height: fit-content; */
+			overflow-y: scroll;
     		/* max-height: 50%; */
 		}
 
@@ -525,14 +525,14 @@
 
 	}
 
-	.find {
+	/* .find {
 		min-height: 63px;
 		text-align: center;
 		display: flex;
 		padding-left: 15px;
     	align-items: center;
 		border-bottom: solid 1.5px rgb(225, 225, 225);
-	}
+	} */
 
 	.last {
 		margin-bottom: 10px;
@@ -561,6 +561,9 @@
 		font-weight: 700;
 	} */
 
+	.places-list {
+		overflow-y: scroll;
+	} 
 
 	@media (max-width: 1000px) {
 		.t2 {
