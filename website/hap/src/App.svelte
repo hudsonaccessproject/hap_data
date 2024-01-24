@@ -6,7 +6,7 @@
 	import ActPoint from './ActPoint.svelte';
 	import SafetyPoint from './SafetyPoint.svelte';
 	import {onMount, afterUpdate} from 'svelte'
-	import Header from './components/Header.svelte';	
+	import Header from './components/Header2.svelte';	
 	import Hoverup from './Hoverup.svelte';
 	import Title from './Title.svelte';
 	// import {afterUpdate} from 'svelte';
@@ -473,7 +473,7 @@
 
 		.map-pane {
 			width: 100vw;
-			top: 45px;
+			top: 75px;
 		}
 
 		.leaflet-top.leaflet-left {

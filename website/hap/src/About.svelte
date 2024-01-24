@@ -81,8 +81,8 @@
     }
     @media (max-width: 767px) {
         .about-wide {
-            top: 160px;
-            height: calc(100% - 160px);
+            top: 75px;
+            height: calc(100% - 75px);
         }
     }
 
