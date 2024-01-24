@@ -46,10 +46,10 @@
         overflow-y: scroll;
         color: #707070;
     }
-    /* Media query for mobile devices */
+    /* Media query for mobile devices */   
     @media (max-width: 767px) {
         .legend {
-            display: none;
+            top: 10px;
         }
     }
 

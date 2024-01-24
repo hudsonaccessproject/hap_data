@@ -277,16 +277,15 @@
 		<About />
 	{/if}
 
-	{#if $activePageTracker === 'quality'}
-		<WaterQualityLegend />
-	{/if}
-	{#if $activePageTracker === 'safety'}
-		<WaterSafetyLegend />
-	{/if}
-
 	<!-- Initiate Map Here-->
 	<div class="map-pane">
 		<LeafletMap >
+			{#if $activePageTracker === 'quality'}
+				<WaterQualityLegend />
+			{/if}
+			{#if $activePageTracker === 'safety'}
+				<WaterSafetyLegend />
+			{/if}
 			<HomeButton on:homebutton={handleExtent}/>
 			{#if $activePageTracker === 'access'}
 				{#key active_data}

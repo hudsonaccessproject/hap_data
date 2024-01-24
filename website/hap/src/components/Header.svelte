@@ -173,33 +173,6 @@
       border: solid 1.5px rgb(225, 225, 225);
     }
 
-    .hamburger-selector .hamburger {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background-color: #707070;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .hamburger-selector .hamburger::before,
-    .hamburger-selector .hamburger::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 3px;
-      background-color: #707070;
-      transition: background-color 0.3s ease;
-    }
-
-    .hamburger-selector .hamburger::before {
-      margin-bottom: 5px;
-    }
-
-    .hamburger-selector .hamburger::after {
-      margin-top: 5px;
-    }
-
     .hamburger-selector input[type="checkbox"] {
       display: none;
     }
@@ -224,16 +197,16 @@
       flex-basis: calc(100% / 3);
       margin-bottom: 10px;
     }
+
+    .hamburger-line {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #707070;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
   }
 
-  .hamburger-line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #707070;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    margin-bottom: 5px;
-  }
 </style>
-
