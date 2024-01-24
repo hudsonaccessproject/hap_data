@@ -29,7 +29,8 @@
         checkScreenWidth();
     	window.addEventListener("resize", checkScreenWidth);
 
-        holderClass = isMobile ? "hidden" : "";
+        // use this to hide the list on mobile
+        // holderClass = isMobile ? "hidden" : "";
         plusInnerHTML = holderClass === "hidden" ? "+" : "x";
     });
 
@@ -209,6 +210,7 @@
 </script>
 
 <!-- svelte-ignore missing-declaration -->
+{#if map_data.length > 0}  
 <button on:click={expander}> 
     <div class="site-button">  
         {#if map_data.length > 0}                  
@@ -217,6 +219,7 @@
         {/if}
     </div>
 </button>
+
 <div id="holder" class={holderClass}>
     
     {#if map_data.length > 0}
@@ -226,10 +229,11 @@
                 {d.properties.site_name}
             </div>
         {/each}
-    <!-- {:else}
-        <span class="t3">There are no sites matching with the search criteria</span> -->
+    {:else}
+        <!-- <span class="t3">There are no sites matching with the search criteria</span> -->
     {/if}
 </div>
+{/if}
 
 <style>
 

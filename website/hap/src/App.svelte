@@ -469,6 +469,8 @@
 			width: 100%;
 			/* min-height: 23%; */
 			height: auto;
+			/* height: fit-content; */
+    		/* max-height: 50%; */
 		}
 
 		.map-pane {
