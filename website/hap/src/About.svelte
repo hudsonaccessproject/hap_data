@@ -66,7 +66,7 @@
 
     .about-wide {
         position: absolute;
-        top: 65px;
+        top: 66px;
         z-index: 10001;
         background-color: #fff;
         height: calc(100% - 65px);
@@ -81,23 +81,9 @@
     }
     @media (max-width: 767px) {
         .about-wide {
-            top: 175px;
-            height: calc(100% - 175px);
+            top: 160px;
+            height: calc(100% - 160px);
         }
     }
-    /* .ws {
-        padding: 0 2.5%;
-    }
-    .qual {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .estuary {
-        cursor: pointer;
-        font-weight: 700;
-    }
 
-    .estuary:hover {
-        text-decoration: underline;
-    } */
 </style>

@@ -94,8 +94,8 @@
 <style>
     .legend {
         position: absolute;
-        top: 75px;
-        left: 60px;
+        top: 10px;
+        left: 55px;
         z-index: 1000;
         background-color: #fff;
         padding: 10px;
@@ -112,7 +112,8 @@
     /* Media query for mobile devices */
     @media (max-width: 767px) {
         .legend {
-            display: none;
+            top: auto;
+            margin-top: 5px;
         }
     }
 

@@ -507,14 +507,15 @@ label {
 	font-weight: bold;
 }
 
-header {
+/* header {
 	height: 65px !important;
 	white-space: nowrap;
 	margin: 0px;
 	z-index: 3;
 	position: absolute;
 	width: 70vw;
-}
+    border-bottom: solid 1.5px rgb(225, 225, 225);
+} */
 
   /* Media query for very wide */
 /* @media (min-width: 1550px) {

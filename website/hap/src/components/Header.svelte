@@ -48,11 +48,44 @@
         </div>
       </div>
     </div>
+    <div class="find">
+      {#if $activePageTracker === 'access'}
+      <span class="t1 side-title">Find a place to access the water</span>
+      {/if}
+      {#if $activePageTracker === 'safety'}
+      <span class="t1 side-title">How to stay safe on the water</span>
+      {/if}
+      {#if $activePageTracker === 'quality'}
+      <span class="t1 side-title">Learn about water quality</span>
+      {/if}
+      {#if $activePageTracker === 'about'}
+      <span class="t1 side-title">About the Hudson Access Project</span>
+      {/if}
+    </div>
   </header>    
 
 <style>
 
+  header {
+    height: 65px !important;
+    white-space: nowrap;
+    margin: 0px;
+    z-index: 3;
+    position: absolute;
+    width: 100vw;
+    border-bottom: solid 1.5px rgb(225, 225, 225);
+    display: flex;
+  }
+
+  .find {
+    width: calc(30vw - 2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .header-content {
+    width: calc(70vw + 1.5px);
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -61,7 +94,7 @@
 
   .col {
     flex-basis: 33.3%;
-    border: solid 1.5px rgb(225, 225, 225);
+    border-right: solid 2px rgb(225, 225, 225);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,6 +123,12 @@
     margin-left: 1px;
     margin-right: 1px;
   }
+
+  .side-title {
+		color: var(--orange3);
+		font-size: 22px;
+		font-weight: 700;
+	}
 
   /* active styles for column-content */
   .active {
@@ -122,6 +161,7 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     height: 65px;
+    z-index: 100002;
   }
 
   @media (max-width: 1200px) {
@@ -132,6 +172,10 @@
     .title{
       font-size: 24px;
     }
+
+    .side-title{
+		  font-size: 20px;
+		}
   }
 
   @media (max-width: 1000px) {
@@ -142,6 +186,10 @@
     .title{
       font-size: 22px;
     }
+
+    .side-title{
+		  font-size: 18px;
+		}
   }
 
   @media (max-width: 900px) {
@@ -152,11 +200,29 @@
     .title{
       font-size: 20px;
     }
+
+    .side-title{
+		  font-size: 15px;
+		}
   }
 
 
   /* Media query for mobile devices */
   @media (max-width: 767px) {
+    header {
+        width: 100%;
+        height: 45px !important;
+
+    }
+
+    .header-content {
+      width: 100vw;
+    }
+
+    .find {
+      display: none;
+    }
+
     .header-content {
       height: 45px;
     }
