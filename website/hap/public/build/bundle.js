@@ -16270,7 +16270,7 @@ var app = (function () {
     		? '#fca057'
     		: d == "Tide & Current Prediction Station"
     			? '#fcee57'
-    			: d == "Temperature Station" ? '#a67aeb' : '#a67aeb';
+    			: d == "Temperature Station" ? '#a66dcf' : '#a66dcf';
     }
 
     function style(feature) {
@@ -16384,15 +16384,19 @@ var app = (function () {
     	let label;
     	let span2;
     	let t5;
+    	let span3;
+    	let t6;
+    	let span4;
+    	let t7;
     	let div8;
     	let div3;
     	let div2;
     	let div3_class_value;
-    	let t7;
+    	let t9;
     	let div5;
     	let div4;
     	let div5_class_value;
-    	let t9;
+    	let t11;
     	let div7;
     	let div6;
     	let div7_class_value;
@@ -16417,66 +16421,74 @@ var app = (function () {
     			label = element("label");
     			span2 = element("span");
     			t5 = space();
+    			span3 = element("span");
+    			t6 = space();
+    			span4 = element("span");
+    			t7 = space();
     			div8 = element("div");
     			div3 = element("div");
     			div2 = element("div");
     			div2.textContent = "Water Safety";
-    			t7 = space();
+    			t9 = space();
     			div5 = element("div");
     			div4 = element("div");
     			div4.textContent = "Water Quality";
-    			t9 = space();
+    			t11 = space();
     			div7 = element("div");
     			div6 = element("div");
     			div6.textContent = "About";
     			attr_dev(span0, "title", "Covering sites where you can access the Hudson River Estuary South of the Mario Cuomo Bridge, Hudson tributaries, and the waters of the NY-NJ Harbor area.");
-    			add_location(span0, file$g, 19, 10, 416);
+    			add_location(span0, file$g, 17, 10, 360);
     			attr_dev(span1, "title", "This is a work in progress. Please help make this website as useful as it can be: send any corrections or site information to hudsonaccessproject@gmail.com.");
-    			attr_dev(span1, "class", "beta svelte-1lc5mjk");
-    			add_location(span1, file$g, 20, 10, 625);
-    			attr_dev(div0, "class", "title svelte-1lc5mjk");
-    			add_location(div0, file$g, 18, 8, 338);
-    			attr_dev(div1, "class", "col large-col svelte-1lc5mjk");
-    			add_location(div1, file$g, 17, 6, 302);
+    			attr_dev(span1, "class", "beta svelte-1koiode");
+    			add_location(span1, file$g, 18, 10, 569);
+    			attr_dev(div0, "class", "title svelte-1koiode");
+    			add_location(div0, file$g, 16, 8, 282);
+    			attr_dev(div1, "class", "col large-col svelte-1koiode");
+    			add_location(div1, file$g, 15, 6, 246);
     			attr_dev(input, "type", "checkbox");
     			attr_dev(input, "id", "hamburger-checkbox");
-    			attr_dev(input, "class", "svelte-1lc5mjk");
-    			add_location(input, file$g, 24, 8, 896);
-    			attr_dev(span2, "class", "hamburger svelte-1lc5mjk");
-    			add_location(span2, file$g, 26, 10, 995);
+    			attr_dev(input, "class", "svelte-1koiode");
+    			add_location(input, file$g, 22, 8, 840);
+    			attr_dev(span2, "class", "hamburger-line svelte-1koiode");
+    			add_location(span2, file$g, 27, 10, 1048);
+    			attr_dev(span3, "class", "hamburger-line svelte-1koiode");
+    			add_location(span3, file$g, 28, 10, 1095);
+    			attr_dev(span4, "class", "hamburger-line svelte-1koiode");
+    			add_location(span4, file$g, 29, 10, 1142);
     			attr_dev(label, "for", "hamburger-checkbox");
-    			add_location(label, file$g, 25, 8, 952);
-    			attr_dev(div2, "class", "column-content other-pages svelte-1lc5mjk");
-    			add_location(div2, file$g, 30, 12, 1171);
+    			add_location(label, file$g, 26, 8, 1005);
+    			attr_dev(div2, "class", "column-content other-pages svelte-1koiode");
+    			add_location(div2, file$g, 33, 12, 1323);
 
     			attr_dev(div3, "class", div3_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'safety'
     			? 'active'
-    			: '') + " svelte-1lc5mjk");
+    			: '') + " svelte-1koiode");
 
-    			add_location(div3, file$g, 29, 10, 1091);
-    			attr_dev(div4, "class", "column-content other-pages svelte-1lc5mjk");
-    			add_location(div4, file$g, 35, 12, 1439);
+    			add_location(div3, file$g, 32, 10, 1243);
+    			attr_dev(div4, "class", "column-content other-pages svelte-1koiode");
+    			add_location(div4, file$g, 38, 12, 1591);
 
     			attr_dev(div5, "class", div5_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'quality'
     			? 'active'
-    			: '') + " svelte-1lc5mjk");
+    			: '') + " svelte-1koiode");
 
-    			add_location(div5, file$g, 34, 10, 1357);
-    			attr_dev(div6, "class", "column-content other-pages svelte-1lc5mjk");
-    			add_location(div6, file$g, 40, 12, 1708);
+    			add_location(div5, file$g, 37, 10, 1509);
+    			attr_dev(div6, "class", "column-content other-pages svelte-1koiode");
+    			add_location(div6, file$g, 43, 12, 1860);
 
     			attr_dev(div7, "class", div7_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'about'
     			? 'active'
-    			: '') + " svelte-1lc5mjk");
+    			: '') + " svelte-1koiode");
 
-    			add_location(div7, file$g, 39, 10, 1628);
-    			attr_dev(div8, "class", "hamburger-menu svelte-1lc5mjk");
-    			add_location(div8, file$g, 28, 8, 1052);
-    			attr_dev(div9, "class", "hamburger-selector svelte-1lc5mjk");
-    			add_location(div9, file$g, 23, 6, 855);
-    			attr_dev(div10, "class", "header-content svelte-1lc5mjk");
-    			add_location(div10, file$g, 16, 4, 267);
-    			add_location(header, file$g, 15, 2, 254);
+    			add_location(div7, file$g, 42, 10, 1780);
+    			attr_dev(div8, "class", "hamburger-menu svelte-1koiode");
+    			add_location(div8, file$g, 31, 8, 1204);
+    			attr_dev(div9, "class", "hamburger-selector svelte-1koiode");
+    			add_location(div9, file$g, 21, 6, 799);
+    			attr_dev(div10, "class", "header-content svelte-1koiode");
+    			add_location(div10, file$g, 14, 4, 211);
+    			add_location(header, file$g, 13, 2, 198);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16495,14 +16507,18 @@ var app = (function () {
     			append_dev(div9, t4);
     			append_dev(div9, label);
     			append_dev(label, span2);
-    			append_dev(div9, t5);
+    			append_dev(label, t5);
+    			append_dev(label, span3);
+    			append_dev(label, t6);
+    			append_dev(label, span4);
+    			append_dev(div9, t7);
     			append_dev(div9, div8);
     			append_dev(div8, div3);
     			append_dev(div3, div2);
-    			append_dev(div8, t7);
+    			append_dev(div8, t9);
     			append_dev(div8, div5);
     			append_dev(div5, div4);
-    			append_dev(div8, t9);
+    			append_dev(div8, t11);
     			append_dev(div8, div7);
     			append_dev(div7, div6);
 
@@ -16524,19 +16540,19 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*$activePageTracker*/ 1 && div3_class_value !== (div3_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'safety'
     			? 'active'
-    			: '') + " svelte-1lc5mjk")) {
+    			: '') + " svelte-1koiode")) {
     				attr_dev(div3, "class", div3_class_value);
     			}
 
     			if (dirty & /*$activePageTracker*/ 1 && div5_class_value !== (div5_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'quality'
     			? 'active'
-    			: '') + " svelte-1lc5mjk")) {
+    			: '') + " svelte-1koiode")) {
     				attr_dev(div5, "class", div5_class_value);
     			}
 
     			if (dirty & /*$activePageTracker*/ 1 && div7_class_value !== (div7_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'about'
     			? 'active'
-    			: '') + " svelte-1lc5mjk")) {
+    			: '') + " svelte-1koiode")) {
     				attr_dev(div7, "class", div7_class_value);
     			}
     		},

@@ -25,6 +25,7 @@
     "leaflet.markercluster": "^1.5.3",
     "sirv-cli": "^2.0.0",
     "svelte-carousel": "^1.0.25",
+    "svelte-hamburgers": "^4.2.0",
     "svelte-tooltip": "^1.2.0"
   }
 }
