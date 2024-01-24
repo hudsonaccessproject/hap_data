@@ -1,7 +1,5 @@
 <script>
   import { activePageTracker } from '../store.js';
-  // export let activePage;
-  // export let changePage;
 
   function refreshPage() {
     location.reload();
@@ -23,8 +21,13 @@
       </div>
       <div class="hamburger-selector">
         <input type="checkbox" id="hamburger-checkbox">
-        <label for="hamburger-checkbox">
+        <!-- <label for="hamburger-checkbox">
           <span class="hamburger"></span>
+        </label> -->
+        <label for="hamburger-checkbox">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </label>
         <div class="hamburger-menu">
           <div class="col {$activePageTracker === 'safety' ? 'active' : ''}">
@@ -44,29 +47,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="hamburger-selector">
-        <input type="checkbox" id="hamburger-checkbox">
-        <label for="hamburger-checkbox">
-          <span class="hamburger"></span>
-        </label>
-        <div class="hamburger-menu">
-          <div class="col" class:active={activePage === 'safety'}>
-            <div class="column-content other-pages" on:click={() => changePage(true, false, false, false, safetyTileURL)} on:keydown={() => changePage(true, false, false, false, safetyTileURL)}>
-              Water Safety
-            </div>
-          </div>
-          <div class="col" class:active={activePage === 'quality'}>
-            <div class="column-content other-pages" on:click={() => changePage(false, false, true, false, qualityTileURL)} on:keydown={() => changePage(false, false, true, false, qualityTileURL)}>
-              Water Quality
-            </div>
-          </div>
-          <div class="col" class:active={activePage === 'about'}>
-            <div class="column-content other-pages" on:click={() => changePage(false, false, false, true, aboutTileURL)} on:keydown={() => changePage(false, false, false, true, aboutTileURL)}>
-              About
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </header>    
 
@@ -244,6 +224,16 @@
       flex-basis: calc(100% / 3);
       margin-bottom: 10px;
     }
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #707070;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 5px;
   }
 </style>
 
