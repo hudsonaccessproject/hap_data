@@ -21,7 +21,7 @@
                 map.removeLayer(layer);
             }
         });
-        map.flyTo([40.73, -74.05], 10);
+        // map.flyTo([40.73, -74.05], 10);
     },'Reset map');
     
     home.button.onclick = function(){

@@ -9,9 +9,7 @@
 	import Header from './components/Header2.svelte';	
 	import Hoverup from './Hoverup.svelte';
 	import Title from './Title.svelte';
-	// import {afterUpdate} from 'svelte';
 	import PlaceList from './PlaceList.svelte';
-	// import { geoJSON } from 'leaflet';
 	import CollapsibleSection from './CollapsibleSection.svelte'
 	import InfoPanel from './InfoPanel.svelte';
 	import WaterSafety from './WaterSafety.svelte';
@@ -279,115 +277,120 @@
 
 	<!-- Initiate Map Here-->
 	<div class="map-pane">
-		<LeafletMap >
-			<HomeButton on:homebutton={handleExtent}/>
-			<div class="left-panel panel">
+		<div class="map-only-pane">
+			<LeafletMap >
+				<HomeButton on:homebutton={handleExtent}/>
+				<!-- data on the map -->
 				{#if $activePageTracker === 'access'}
-					<div>
-						<div class="activity-filter">
-							<div class="r">
-								<span class="t2 act-filter-header">Activity Filters</span><br>
-								<span class="t3 icon-instructions">Select an icon to search by activity</span>
-							</div>
-							<!-- ACT BUTTONS-->
-							<div class="act-filters r">
-								{#each acts as act}
-								<label
-									class="act-buttons"
-									class:active="{act.isActive}"
-								>
-									<img
-									alt={act.value}
-									style="width:40px"
-									src={modifyIconSource(act)}
-									/>
-									<input
-									class="act-input"
-									type="checkbox"
-									on:click={clickHandleACT}
-									value={act.value}
-									id={act.value}
-									/>
-								</label>
-								{/each}
-							</div>
-						</div>
-					</div>
-					<div id="amenity">
-						<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
-							<div class="feature-filters r">
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch_YN"> 
-								<label class="t3" for="boat_launch_YN"> Boat launch</label><br>
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
-								<label class="t3" for="restrooms"> Restrooms</label><br>
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "public_transit"> 
-								<label class="t3" for="public_transit"> Accessible by public transit</label><br>
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "parking">
-								<label class="t3" for="parking"> Parking</label><br>
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "food"> 
-								<label class="t3" for="food"> Food on site</label><br>
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "drinking_water">
-								<label class="t3" for="drinking_water"> Drinkable / running water</label><br>
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "picnic_area"> 
-								<label class="t3" for="picnic_area"> Picnic Area</label><br>
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "hiking">
-								<label class="t3" for="hiking"> Walking / hiking trails</label><br>
-								<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "pets_allowed"> 
-								<label class="t3" for="pets_allowed"> Dogs / pets allowed</label><br>
-								<input type="checkbox" class="last" on:click={e=>{clickHandleSiteFeatures(e)}} value = "program"> 
-								<label class="t3" for="program"> Programming</label><br>
-							</div>
-						</CollapsibleSection>
-					</div>
+					{#key active_data}
+					<Polygon active_data={active_data}/>
+					{/key}
+					{#key filters}
+					<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} />
+					{/key}
+					{#key filters}
+					<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  />
+					{/key}
 				{/if}
 				{#if $activePageTracker === 'safety'}
-					<WaterSafety />
+					<SafetyPoint geojson={temp_point_data} />
 				{/if}
+				<!-- Legends -->
 				{#if $activePageTracker === 'quality'}
-					<WaterQuality />
+					<WaterQualityLegend />
 				{/if}
-				{#if $activePageTracker === 'access'}
-					<div class="places-list">
-						<div class="searcher r">
-							<input id="searcher" placeholder="Search for a site by name" type="text" bind:value={filters.text_filter}>
+				{#if $activePageTracker === 'safety'}
+					<WaterSafetyLegend />
+				{/if}
+			</LeafletMap>
+		</div>
+		<div class="left-panel panel">
+			{#if $activePageTracker === 'access'}
+				<div>
+					<div class="activity-filter">
+						<div class="r">
+							<span class="t2 act-filter-header">Activity Filters</span><br>
+							<span class="t3 icon-instructions">Select an icon to search by activity</span>
 						</div>
-						<!-- <CollapsibleSection > -->
-							<div class = "info-panel panel">
-								{#key active_point}
-									<InfoPanel {active_point} />
-								{/key}
-							</div>
-						<!-- </CollapsibleSection> -->
-						<!-- Accordion List -->
-						{#key filters}
-							<PlaceList on:message={handlePlaceMessage} geojson={all_point_data} {filters}/>
+						<!-- ACT BUTTONS-->
+						<div class="act-filters r">
+							{#each acts as act}
+							<label
+								class="act-buttons"
+								class:active="{act.isActive}"
+							>
+								<img
+								alt={act.value}
+								style="width:40px"
+								src={modifyIconSource(act)}
+								/>
+								<input
+								class="act-input"
+								type="checkbox"
+								on:click={clickHandleACT}
+								value={act.value}
+								id={act.value}
+								/>
+							</label>
+							{/each}
+						</div>
+					</div>
+				</div>
+				<div id="amenity">
+					<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
+						<div class="feature-filters r">
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch_YN"> 
+							<label class="t3" for="boat_launch_YN"> Boat launch</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
+							<label class="t3" for="restrooms"> Restrooms</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "public_transit"> 
+							<label class="t3" for="public_transit"> Accessible by public transit</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "parking">
+							<label class="t3" for="parking"> Parking</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "food"> 
+							<label class="t3" for="food"> Food on site</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "drinking_water">
+							<label class="t3" for="drinking_water"> Drinkable / running water</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "picnic_area"> 
+							<label class="t3" for="picnic_area"> Picnic Area</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "hiking">
+							<label class="t3" for="hiking"> Walking / hiking trails</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "pets_allowed"> 
+							<label class="t3" for="pets_allowed"> Dogs / pets allowed</label><br>
+							<input type="checkbox" class="last" on:click={e=>{clickHandleSiteFeatures(e)}} value = "program"> 
+							<label class="t3" for="program"> Programming</label><br>
+						</div>
+					</CollapsibleSection>
+				</div>
+			{/if}
+			{#if $activePageTracker === 'access'}
+				<div class="searcher r">
+					<input id="searcher" placeholder="Search for a site by name" type="text" bind:value={filters.text_filter}>
+				</div>
+				<!-- <div class = "info-panel panel">
+					{#key active_point}
+						<InfoPanel {active_point} />
+					{/key}
+				</div> -->
+				<div class="places-list">
+					<div class = "info-panel panel">
+						{#key active_point}
+							<InfoPanel {active_point} />
 						{/key}
 					</div>
-				{/if}			
-			</div>
-			<!-- data on the map -->
-			{#if $activePageTracker === 'access'}
-				{#key active_data}
-				<Polygon active_data={active_data}/>
-				{/key}
-				{#key filters}
-				<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} />
-				{/key}
-				{#key filters}
-				<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  />
-				{/key}
-			{/if}
+					<!-- Accordion List -->
+					{#key filters}
+						<PlaceList on:message={handlePlaceMessage} geojson={all_point_data} {filters}/>
+					{/key}
+				</div>
+			{/if}	
 			{#if $activePageTracker === 'safety'}
-				<SafetyPoint geojson={temp_point_data} />
+				<WaterSafety />
 			{/if}
-			<!-- Legends -->
 			{#if $activePageTracker === 'quality'}
-				<WaterQualityLegend />
-			{/if}
-			{#if $activePageTracker === 'safety'}
-				<WaterSafetyLegend />
-			{/if}
-		</LeafletMap>
+				<WaterQuality />
+			{/if}		
+		</div>
 	</div>
 
 	<Hoverup {acts} />
@@ -399,6 +402,15 @@
 {/if}
 
 <style>
+
+	.map-only-pane {
+		position: absolute;
+		left: 0px;
+		z-index: 0;
+		width: 70vw;
+		height: 100%;
+		padding: 0px;
+	}
 
 	.map-pane {
 		position: absolute;
@@ -424,20 +436,10 @@
 		border-left: solid 2px rgb(225, 225, 225);
 		width: 30vw;
 		box-sizing: border-box;
-		height:100vh;
-		overflow: scroll;
+		height:calc(100vh - 62px);
+		/* overflow: scroll; */
 		z-index: 10001;
 	} 
-
-	/* Media query for very wide */
-	/* @media (min-width: 1550px) {
-		.map-pane {
-			width: 60vw;
-		}
-		.left-panel {
-			width: 40vw;
-		}
-	} */
 
 	/* Hide scrollbar for Chrome, Safari and Opera */
 	.left-panel::-webkit-scrollbar {
@@ -451,13 +453,12 @@
 	}
 
 
-
-	/* #amenity {
-		padding-bottom: 10px;
-	} */
-
 	/* Media query for mobile devices */
 	@media (max-width: 767px) {
+
+		.map-only-pane {
+			width: 100vw;
+		}
 
 		.left-panel {
 			position: relative;
@@ -467,10 +468,9 @@
 			border-bottom: solid 2px rgb(225, 225, 225);
 			border-left: none;
 			width: 100%;
-			/* min-height: 23%; */
-			height: auto;
 			overflow-y: scroll;
-    		/* max-height: 50%; */
+			height: auto;
+			max-height: calc(100vh - 75px);
 		}
 
 		.map-pane {
@@ -478,15 +478,9 @@
 			top: 75px;
 		}
 
-		.leaflet-top.leaflet-left {
+		/* .leaflet-top.leaflet-left {
 			bottom: 0px!important;
 			left: 0px!important;
-		}
-
-		/* .water-quality-iframe {
-			width: 100vw!important;
-			top: 50%!important;
-			height: 50%!important;
 		} */
 
 		/* .find {
@@ -504,24 +498,10 @@
 			padding: 5px;
 		}
 
-		/* .r {
-			margin-top: 0px;
-			margin-bottom: 0px;
-			padding-bottom: 0px;
-			padding-left: 13px;
-		} */
 		.act-filters {
 			border-bottom: none;
 			/* padding-top: 10px; */
 		}
-
-		/* .places-list .active-search {
-			height: 80px;
-		}
-
-		.places-list {
-			height: 40px;
-		} */
 
 	}
 
@@ -538,32 +518,20 @@
 		margin-bottom: 10px;
 	}
 
-	/* .water-quality-iframe {
-		position: absolute;
-		top: 65px;
-		left: 0px;
-		width: 70vw;
-		height: calc(100% - 65px);
-		z-index: 10001;
-		overflow: hidden; 
-	}
-
-	.frame {
-		background-color: white;
-		position: relative;
-		width: 100%;
-		height: 100%;
-	} */
-
-	/* .side-title {
-		color: var(--orange2);
-		font-size: 22px;
-		font-weight: 700;
-	} */
-
 	.places-list {
 		overflow-y: scroll;
 	} 
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.places-list::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.places-list {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
 
 	@media (max-width: 1000px) {
 		.t2 {

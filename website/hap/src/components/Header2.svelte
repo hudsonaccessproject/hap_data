@@ -272,16 +272,16 @@
       border-bottom: solid 1.5px rgb(225, 225, 225);
     }
 
-    .hamburger-selector input[type="checkbox"]:checked ~ .hamburger-menu {
+    /* .hamburger-selector input[type="checkbox"]:checked ~ .hamburger-menu {
       display: block;
-    }
+    } */
 
     .hamburger-menu .col {
       flex-basis: calc(100% / 3);
       /* margin-bottom: 10px; */
     }
 
-    .hamburger-line {
+    /* .hamburger-line {
       display: block;
       width: 25px;
       height: 3px;
@@ -289,7 +289,7 @@
       transition: background-color 0.3s ease;
       cursor: pointer;
       margin-bottom: 5px;
-    }
+    } */
   }
 
 </style>
