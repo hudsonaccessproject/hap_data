@@ -277,33 +277,6 @@
 
 	<!-- Initiate Map Here-->
 	<div class="map-pane">
-		<div class="map-only-pane">
-			<LeafletMap >
-				<HomeButton on:homebutton={handleExtent}/>
-				<!-- data on the map -->
-				{#if $activePageTracker === 'access'}
-					{#key active_data}
-					<Polygon active_data={active_data}/>
-					{/key}
-					{#key filters}
-					<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} />
-					{/key}
-					{#key filters}
-					<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  />
-					{/key}
-				{/if}
-				{#if $activePageTracker === 'safety'}
-					<SafetyPoint geojson={temp_point_data} />
-				{/if}
-				<!-- Legends -->
-				{#if $activePageTracker === 'quality'}
-					<WaterQualityLegend />
-				{/if}
-				{#if $activePageTracker === 'safety'}
-					<WaterSafetyLegend />
-				{/if}
-			</LeafletMap>
-		</div>
 		<div class="left-panel panel">
 			{#if $activePageTracker === 'access'}
 				<div>
@@ -391,6 +364,33 @@
 				<WaterQuality />
 			{/if}		
 		</div>
+		<div class="map-only-pane">
+			<LeafletMap >
+				<HomeButton on:homebutton={handleExtent}/>
+				<!-- data on the map -->
+				{#if $activePageTracker === 'access'}
+					{#key active_data}
+					<Polygon active_data={active_data}/>
+					{/key}
+					{#key filters}
+					<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} />
+					{/key}
+					{#key filters}
+					<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  />
+					{/key}
+				{/if}
+				{#if $activePageTracker === 'safety'}
+					<SafetyPoint geojson={temp_point_data} />
+				{/if}
+				<!-- Legends -->
+				{#if $activePageTracker === 'quality'}
+					<WaterQualityLegend />
+				{/if}
+				{#if $activePageTracker === 'safety'}
+					<WaterSafetyLegend />
+				{/if}
+			</LeafletMap>
+		</div>
 	</div>
 
 	<Hoverup {acts} />
@@ -402,16 +402,6 @@
 {/if}
 
 <style>
-
-	.map-only-pane {
-		position: absolute;
-		left: 0px;
-		z-index: 0;
-		width: 70vw;
-		height: 100%;
-		padding: 0px;
-	}
-
 	.map-pane {
 		position: absolute;
 		top: 65px;
@@ -420,62 +410,60 @@
 		width: 100vw;
 		height: calc(100% - 75px);
 		padding: 0px;
+		display: flex;
+  		flex-direction: row;
 	}
 
-	.panel {
-		background: white;
-		/* top: 5px; */
-		z-index: 1;
-		right: 0px;
+	.map-only-pane {
+		width: 70vw;
+		order: 1;
+		/* position: absolute;
+		left: 0px;
+		z-index: 0;
+		height: 100%;
+		padding: 0px; */
 	}
 
 	.left-panel {
-		position: absolute;
+		width: 30vw;
 		display: flex;
 		flex-direction: column;
 		border-left: solid 2px rgb(225, 225, 225);
-		width: 30vw;
 		box-sizing: border-box;
 		height:calc(100vh - 62px);
 		/* overflow: scroll; */
 		z-index: 10001;
+		order: 2;
 	} 
-
-	/* Hide scrollbar for Chrome, Safari and Opera */
-	.left-panel::-webkit-scrollbar {
-		display: none;
-	}
-
-	/* Hide scrollbar for IE, Edge and Firefox */
-	.left-panel {
-		-ms-overflow-style: none;  /* IE and Edge */
-		scrollbar-width: none;  /* Firefox */
-	}
 
 
 	/* Media query for mobile devices */
 	@media (max-width: 767px) {
 
+		.map-pane {
+			flex-direction: column;
+			width: 100vw;
+			top: 75px;
+			order: unset; 
+		}
 		.map-only-pane {
 			width: 100vw;
+			height: -webkit-fill-available;
+			order: 2;
 		}
 
 		.left-panel {
-			position: relative;
+			width: 100%;
+			/* position: relative;
 			top: 0px;
 			display: flex;
 			flex-direction: column;
 			border-bottom: solid 2px rgb(225, 225, 225);
 			border-left: none;
-			width: 100%;
-			overflow-y: scroll;
+			overflow-y: scroll; */
 			height: auto;
 			max-height: calc(100vh - 75px);
-		}
-
-		.map-pane {
-			width: 100vw;
-			top: 75px;
+			order: 1;
 		}
 
 		/* .leaflet-top.leaflet-left {
@@ -505,6 +493,23 @@
 
 	}
 
+	.panel {
+		background: white;
+		z-index: 1;
+		right: 0px;
+	}
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.left-panel::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.left-panel {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
+
 	/* .find {
 		min-height: 63px;
 		text-align: center;
@@ -531,15 +536,6 @@
 	.places-list {
 		-ms-overflow-style: none;  /* IE and Edge */
 		scrollbar-width: none;  /* Firefox */
-	}
-
-	@media (max-width: 1000px) {
-		.t2 {
-			font-size: 18px;
-		}
-		.t3 {
-			font-size: 14px;
-		}
 	}
 
 </style>

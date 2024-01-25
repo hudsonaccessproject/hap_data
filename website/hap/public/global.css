@@ -329,6 +329,15 @@ img {
     font-weight: 400;
 }
 
+@media (max-width: 1000px) {
+    .t2 {
+        font-size: 18px;
+    }
+    .t3 {
+        font-size: 14px;
+    }
+}
+
 .site-text {
     margin-left: 6px;
 }
