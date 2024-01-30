@@ -19,16 +19,14 @@
           <span title="This is a work in progress. Please help make this website as useful as it can be: send any corrections or site information to hudsonaccessproject@gmail.com." class="beta">beta</span>
         </div>
       </div>
-      <div class="hamburger-selector">
-        <input type="checkbox" id="hamburger-checkbox">
-        <!-- <label for="hamburger-checkbox">
-          <span class="hamburger"></span>
-        </label> -->
+      <div class="other-pages">
+      <!-- <div class="hamburger-selector"> -->
+        <!-- <input type="checkbox" id="hamburger-checkbox">
         <label for="hamburger-checkbox">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
-        </label>
+        </label> -->
         <div class="hamburger-menu">
           <div class="col {$activePageTracker === 'safety' ? 'active' : ''}">
             <div class="column-content other-pages" on:click={() => setPage('safety')} on:keydown={() => setPage('safety')}>
@@ -47,6 +45,7 @@
           </div>
         </div>
       </div>
+      <!-- </div> -->
     </div>
     <div class="find">
       {#if $activePageTracker === 'access'}
@@ -149,13 +148,17 @@
     font-style: italic;
   }
 
-  .hamburger-selector {
+  .other-pages {
+    flex-basis: 60%;
+  }
+
+  /* .hamburger-selector {
     flex-basis: 60%;
   }
 
   .hamburger-selector input[type="checkbox"] {
     display: none;
-  }
+  } */
   .hamburger-menu {
     display: flex;
     justify-content: space-between;
@@ -221,6 +224,18 @@
 
     .find {
       display: none;
+      /* width: 100vw;
+      position: absolute;
+      top: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      border-bottom: solid 2px rgb(225, 225, 225); */
+    }
+
+    .other-pages {
+      flex-basis: 0%;
     }
 
     .header-content {
@@ -228,10 +243,10 @@
     }
     
     .large-col {
-      flex-basis: 90%;
+      flex-basis: 100%;
     }
 
-    .hamburger-selector {
+    /* .hamburger-selector {
       flex-basis: 10%;
       display: flex;
       align-items: end;
@@ -241,30 +256,32 @@
 
     .hamburger-selector input[type="checkbox"] {
       display: none;
-    }
+    } */
 
     .hamburger-menu {
-      display: none;
+      /* display: none; */
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       background-color: #fff;
-      padding: 10px;
+      /* padding: 10px; */
       box-sizing: border-box;
-      height: auto;
+      height: 30px;
+      border-top: solid 1.5px rgb(225, 225, 225);
+      border-bottom: solid 1.5px rgb(225, 225, 225);
     }
 
-    .hamburger-selector input[type="checkbox"]:checked ~ .hamburger-menu {
+    /* .hamburger-selector input[type="checkbox"]:checked ~ .hamburger-menu {
       display: block;
-    }
+    } */
 
     .hamburger-menu .col {
       flex-basis: calc(100% / 3);
-      margin-bottom: 10px;
+      /* margin-bottom: 10px; */
     }
 
-    .hamburger-line {
+    /* .hamburger-line {
       display: block;
       width: 25px;
       height: 3px;
@@ -272,7 +289,7 @@
       transition: background-color 0.3s ease;
       cursor: pointer;
       margin-bottom: 5px;
-    }
+    } */
   }
 
 </style>

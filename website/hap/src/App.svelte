@@ -6,12 +6,10 @@
 	import ActPoint from './ActPoint.svelte';
 	import SafetyPoint from './SafetyPoint.svelte';
 	import {onMount, afterUpdate} from 'svelte'
-	import Header from './components/Header.svelte';	
+	import Header from './components/Header2.svelte';	
 	import Hoverup from './Hoverup.svelte';
 	import Title from './Title.svelte';
-	// import {afterUpdate} from 'svelte';
 	import PlaceList from './PlaceList.svelte';
-	// import { geoJSON } from 'leaflet';
 	import CollapsibleSection from './CollapsibleSection.svelte'
 	import InfoPanel from './InfoPanel.svelte';
 	import WaterSafety from './WaterSafety.svelte';
@@ -279,151 +277,120 @@
 
 	<!-- Initiate Map Here-->
 	<div class="map-pane">
-		<LeafletMap >
-			{#if $activePageTracker === 'quality'}
-				<WaterQualityLegend />
-			{/if}
-			{#if $activePageTracker === 'safety'}
-				<WaterSafetyLegend />
-			{/if}
-			<HomeButton on:homebutton={handleExtent}/>
+		<div class="left-panel panel">
 			{#if $activePageTracker === 'access'}
-				{#key active_data}
-				<Polygon active_data={active_data}/>
-				{/key}
-				{#key filters}
-				<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} />
-				{/key}
-				{#key filters}
-				<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  />
-				{/key}
-			{/if}
-			{#if $activePageTracker === 'safety'}
-				<SafetyPoint geojson={temp_point_data} />
-			{/if}
-		</LeafletMap>
-	</div>
-
-	<div class="left-panel panel">
-		<div class="find">
-			{#if $activePageTracker === 'access'}
-			<span class="t1 side-title">Find a place to access the water</span>
-			{/if}
-			{#if $activePageTracker === 'safety'}
-			<span class="t1 side-title">How to stay safe on the water</span>
-			{/if}
-			{#if $activePageTracker === 'quality'}
-			<span class="t1 side-title">Learn about water quality</span>
-			{/if}
-			{#if $activePageTracker === 'about'}
-			<span class="t1 side-title">About the Hudson Access Project</span>
-			{/if}
-		</div>
-		<!-- {#if $activePageTracker === 'access'} -->
-		{#if $activePageTracker === 'access'}
-			<div>
-				<div class="activity-filter">
-					<div class="r">
-						<!-- <span class="t2" id="target-eco" on:click={(e) => showHover(e)}>Target Ecosystem Characteristics</span><br> -->
-						<span class="t2 act-filter-header">Activity Filters</span><br>
-						<span class="t3 icon-instructions">Select an icon to search by activity</span>
-					</div>
-					<!-- ACT BUTTONS-->
-					<div class="act-filters r">
-						{#each acts as act}
-						<label
-							class="act-buttons"
-							class:active="{act.isActive}"
-						>
-							<img
-							alt={act.value}
-							style="width:40px"
-							src={modifyIconSource(act)}
-							/>
-							<input
-							class="act-input"
-							type="checkbox"
-							on:click={clickHandleACT}
-							value={act.value}
-							id={act.value}
-							/>
-						</label>
-						{/each}
+				<div>
+					<div class="activity-filter">
+						<div class="r">
+							<span class="t2 act-filter-header">Activity Filters</span><br>
+							<span class="t3 icon-instructions">Select an icon to search by activity</span>
+						</div>
+						<!-- ACT BUTTONS-->
+						<div class="act-filters r">
+							{#each acts as act}
+							<label
+								class="act-buttons"
+								class:active="{act.isActive}"
+							>
+								<img
+								alt={act.value}
+								style="width:40px"
+								src={modifyIconSource(act)}
+								/>
+								<input
+								class="act-input"
+								type="checkbox"
+								on:click={clickHandleACT}
+								value={act.value}
+								id={act.value}
+								/>
+							</label>
+							{/each}
+						</div>
 					</div>
 				</div>
-			</div>
-			<div id="amenity">
-				<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
-					<div class="feature-filters r">
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch_YN"> 
-						<label class="t3" for="boat_launch_YN"> Boat launch</label><br>
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
-						<label class="t3" for="restrooms"> Restrooms</label><br>
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "public_transit"> 
-						<label class="t3" for="public_transit"> Accessible by public transit</label><br>
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "parking">
-						<label class="t3" for="parking"> Parking</label><br>
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "food"> 
-						<label class="t3" for="food"> Food on site</label><br>
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "drinking_water">
-						<label class="t3" for="drinking_water"> Drinkable / running water</label><br>
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "picnic_area"> 
-						<label class="t3" for="picnic_area"> Picnic Area</label><br>
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "hiking">
-						<label class="t3" for="hiking"> Walking / hiking trails</label><br>
-						<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "pets_allowed"> 
-						<label class="t3" for="pets_allowed"> Dogs / pets allowed</label><br>
-						<input type="checkbox" class="last" on:click={e=>{clickHandleSiteFeatures(e)}} value = "program"> 
-						<label class="t3" for="program"> Programming</label><br>
-					</div>
-				</CollapsibleSection>
-			</div>
-		{/if}
-		{#if $activePageTracker === 'safety'}
-			<WaterSafety />
-		{/if}
-		{#if $activePageTracker === 'quality'}
-			<WaterQuality />
-		{/if}
-		<!-- PROGRAMMING INPUT-->
-		<!-- <CollapsibleSection headerText={'Look for sites with programming by type'} >
-			<div class="prog-filters r">
-				<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch"> 
-				<label class="t3" for="boat_launch">Instruction or classes</label><br>
-				<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
-				<label class="t3" for="restrooms">Guided trips or tours</label><br>
-				<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch"> 
-				<label class="t3" for="boat_launch">Environmental education opportunities</label><br>
-				<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
-				<label class="t3" for="restrooms">Equipment rentals</label><br>
-				<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch"> 
-				<label class="t3" for="boat_launch">Equipment for free use</label>
-			</div>
-		</CollapsibleSection> -->
-		<!-- Search Input Box-->
-		<!-- {#if $activePageTracker === 'access'} -->
-		{#if $activePageTracker === 'access'}
-			<div class="places-list">
+				<div id="amenity">
+					<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
+						<div class="feature-filters r">
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch_YN"> 
+							<label class="t3" for="boat_launch_YN"> Boat launch</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
+							<label class="t3" for="restrooms"> Restrooms</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "public_transit"> 
+							<label class="t3" for="public_transit"> Accessible by public transit</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "parking">
+							<label class="t3" for="parking"> Parking</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "food"> 
+							<label class="t3" for="food"> Food on site</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "drinking_water">
+							<label class="t3" for="drinking_water"> Drinkable / running water</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "picnic_area"> 
+							<label class="t3" for="picnic_area"> Picnic Area</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "hiking">
+							<label class="t3" for="hiking"> Walking / hiking trails</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "pets_allowed"> 
+							<label class="t3" for="pets_allowed"> Dogs / pets allowed</label><br>
+							<input type="checkbox" class="last" on:click={e=>{clickHandleSiteFeatures(e)}} value = "program"> 
+							<label class="t3" for="program"> Programming</label><br>
+						</div>
+					</CollapsibleSection>
+				</div>
+			{/if}
+			{#if $activePageTracker === 'access'}
 				<div class="searcher r">
 					<input id="searcher" placeholder="Search for a site by name" type="text" bind:value={filters.text_filter}>
 				</div>
-				<!-- <CollapsibleSection > -->
+				<!-- <div class = "info-panel panel">
+					{#key active_point}
+						<InfoPanel {active_point} />
+					{/key}
+				</div> -->
+				<div class="places-list">
 					<div class = "info-panel panel">
 						{#key active_point}
 							<InfoPanel {active_point} />
 						{/key}
 					</div>
-				<!-- </CollapsibleSection> -->
-				<!-- Accordion List -->
-				{#key filters}
-					<PlaceList on:message={handlePlaceMessage} geojson={all_point_data} {filters}/>
-				{/key}
-			</div>
-		{/if}
-
-	
-
-		
+					<!-- Accordion List -->
+					{#key filters}
+						<PlaceList on:message={handlePlaceMessage} geojson={all_point_data} {filters}/>
+					{/key}
+				</div>
+			{/if}	
+			{#if $activePageTracker === 'safety'}
+				<WaterSafety />
+			{/if}
+			{#if $activePageTracker === 'quality'}
+				<WaterQuality />
+			{/if}		
+		</div>
+		<div class="map-only-pane">
+			<LeafletMap >
+				<HomeButton on:homebutton={handleExtent}/>
+				<!-- data on the map -->
+				{#if $activePageTracker === 'access'}
+					{#key active_data}
+					<Polygon active_data={active_data}/>
+					{/key}
+					{#key filters}
+					<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} />
+					{/key}
+					{#key filters}
+					<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  />
+					{/key}
+				{/if}
+				{#if $activePageTracker === 'safety'}
+					<SafetyPoint geojson={temp_point_data} />
+				{/if}
+				<!-- Legends -->
+				{#if $activePageTracker === 'quality'}
+					<WaterQualityLegend />
+				{/if}
+				{#if $activePageTracker === 'safety'}
+					<WaterSafetyLegend />
+				{/if}
+			</LeafletMap>
+		</div>
 	</div>
 
 	<Hoverup {acts} />
@@ -435,44 +402,102 @@
 {/if}
 
 <style>
-
 	.map-pane {
 		position: absolute;
 		top: 65px;
 		left: 0px;
 		z-index: 0;
-		width: 70vw;
+		width: 100vw;
 		height: calc(100% - 75px);
 		padding: 0px;
+		display: flex;
+  		flex-direction: row;
+	}
+
+	.map-only-pane {
+		width: 70vw;
+		order: 1;
+		/* position: absolute;
+		left: 0px;
+		z-index: 0;
+		height: 100%;
+		padding: 0px; */
+	}
+
+	.left-panel {
+		width: 30vw;
+		display: flex;
+		flex-direction: column;
+		border-left: solid 2px rgb(225, 225, 225);
+		box-sizing: border-box;
+		height:calc(100vh - 62px);
+		/* overflow: scroll; */
+		z-index: 10001;
+		order: 2;
+	} 
+
+
+	/* Media query for mobile devices */
+	@media (max-width: 767px) {
+
+		.map-pane {
+			flex-direction: column;
+			width: 100vw;
+			top: 75px;
+			order: unset; 
+		}
+		.map-only-pane {
+			width: 100vw;
+			height: -webkit-fill-available;
+			order: 2;
+		}
+
+		.left-panel {
+			width: 100%;
+			/* position: relative;
+			top: 0px;
+			display: flex;
+			flex-direction: column;
+			border-bottom: solid 2px rgb(225, 225, 225);
+			border-left: none;
+			overflow-y: scroll; */
+			height: auto;
+			max-height: calc(100vh - 75px);
+			order: 1;
+		}
+
+		/* .leaflet-top.leaflet-left {
+			bottom: 0px!important;
+			left: 0px!important;
+		} */
+
+		/* .find {
+			display: none!important;
+		} */
+
+		.icon-instructions {
+			display: none!important;
+		}
+
+		/* activity filter display */
+		.activity-filter {
+			display: flex;
+			border-bottom: 1.5px solid rgb(225, 225, 225);
+			padding: 5px;
+		}
+
+		.act-filters {
+			border-bottom: none;
+			/* padding-top: 10px; */
+		}
+
 	}
 
 	.panel {
 		background: white;
-		/* top: 5px; */
 		z-index: 1;
 		right: 0px;
 	}
-
-	.left-panel {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		border-left: solid 2px rgb(225, 225, 225);
-		width: 30vw;
-		box-sizing: border-box;
-		height:100vh;
-		overflow: scroll;
-	} 
-
-	/* Media query for very wide */
-	/* @media (min-width: 1550px) {
-		.map-pane {
-			width: 60vw;
-		}
-		.left-panel {
-			width: 40vw;
-		}
-	} */
 
 	/* Hide scrollbar for Chrome, Safari and Opera */
 	.left-panel::-webkit-scrollbar {
@@ -485,136 +510,32 @@
 		scrollbar-width: none;  /* Firefox */
 	}
 
-
-
-	/* #amenity {
-		padding-bottom: 10px;
-	} */
-
-	/* Media query for mobile devices */
-	@media (max-width: 767px) {
-
-		.left-panel {
-			position: relative;
-			top: 45px;
-			display: flex;
-			flex-direction: column;
-			border-bottom: solid 2px rgb(225, 225, 225);
-			border-left: none;
-			width: 100%;
-			/* min-height: 23%; */
-			height: auto;
-		}
-
-		.map-pane {
-			width: 100vw;
-			top: 25%;
-			height: 75%;
-		}
-
-		.leaflet-top.leaflet-left {
-			bottom: 0px!important;
-			left: 0px!important;
-		}
-
-		/* .water-quality-iframe {
-			width: 100vw!important;
-			top: 50%!important;
-			height: 50%!important;
-		} */
-
-		.find {
-			display: none!important;
-		}
-
-		.icon-instructions {
-			display: none!important;
-		}
-
-		/* activity filter display */
-		.activity-filter {
-			display: flex;
-			border-bottom: 1.5px solid rgb(225, 225, 225);
-			padding: 15px;
-		}
-
-		/* .r {
-			margin-top: 0px;
-			margin-bottom: 0px;
-			padding-bottom: 0px;
-			padding-left: 13px;
-		} */
-		.act-filters {
-			border-bottom: none;
-			/* padding-top: 10px; */
-		}
-
-		/* .places-list .active-search {
-			height: 80px;
-		}
-
-		.places-list {
-			height: 40px;
-		} */
-
-	}
-
-	.find {
+	/* .find {
 		min-height: 63px;
 		text-align: center;
 		display: flex;
 		padding-left: 15px;
     	align-items: center;
 		border-bottom: solid 1.5px rgb(225, 225, 225);
-	}
+	} */
 
 	.last {
 		margin-bottom: 10px;
 	}
 
-	/* .water-quality-iframe {
-		position: absolute;
-		top: 65px;
-		left: 0px;
-		width: 70vw;
-		height: calc(100% - 65px);
-		z-index: 10001;
-		overflow: hidden; 
+	.places-list {
+		overflow-y: scroll;
+	} 
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.places-list::-webkit-scrollbar {
+		display: none;
 	}
 
-	.frame {
-		background-color: white;
-		position: relative;
-		width: 100%;
-		height: 100%;
-	} */
-
-	.side-title {
-		color: var(--orange2);
-		font-size: 22px;
-		font-weight: 700;
-	}
-	@media (max-width: 1200px) {
-		.side-title{
-		font-size: 20px;
-		}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.places-list {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
 	}
 
-	@media (max-width: 1000px) {
-		.side-title{
-			font-size: 18px;
-		}
-		.t2 {
-			font-size: 18px;
-		}
-		.t3 {
-			font-size: 14px;
-		}
-	}
-
-	@media (max-width: 900px) {
-		.side-title{
-		font-size: 15px;
-		}
-	}
 </style>

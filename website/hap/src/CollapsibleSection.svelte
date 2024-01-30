@@ -6,6 +6,19 @@
     // create prop to track whether or not the section is visible
     export let isVisible = true;
     let expanded = isVisible;
+    let isDesktop = window.innerWidth >= 768; 
+
+    // Function to update expanded and isVisible based on screen width
+    function updateVisibility() {
+      isDesktop = window.innerWidth >= 768; // Adjust the breakpoint as needed
+      expanded = isDesktop && isVisible;
+    }
+
+    // Initial call to set the initial values based on the screen width
+    updateVisibility();
+
+    // Event listener to update values on window resize
+    window.addEventListener('resize', updateVisibility);
 </script>
 
 <div class="collapsible">
