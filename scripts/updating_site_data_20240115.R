@@ -9,8 +9,31 @@ act <- st_read("data/published/data/staging/hap_activity_points_20240115.geojson
 point <- new_point |> 
   mutate(site_name_photo_01 = ifelse(site_id == 53, NA, site_name_photo_01),
          site_name_photo_02 = ifelse(site_id == 53, NA, site_name_photo_02),
-         site_name_photo_03 = ifelse(site_id == 53, NA, site_name_photo_03))
+         site_name_photo_03 = ifelse(site_id == 53, NA, site_name_photo_03),
+         site_name_photo_01 = ifelse(site_id == 6, "great_kills_park_01.JPG", site_name_photo_01),
+         site_name_photo_02 = ifelse(site_id == 6, "great_kills_park_02.JPG", site_name_photo_02),
+         site_name_photo_03 = ifelse(site_id == 6, "great_kills_park_03.JPG", site_name_photo_03))
 
 write_sf(point, "data/published/data/hap_site_points_20240115.geojson")
 write_sf(act, "data/published/data/hap_act_points_20240115.geojson")
 write_sf(poly, "data/published/data/hap_site_polys_20240115.geojson")
+
+
+poly <- st_read("~/spatial/SAVI/hudson_access/data/published/data/hap_site_polys_20240130.geojson")
+point <- st_read("data/published/data/hap_site_points_20240130.geojson")
+act <- st_read("data/published/data/hap_act_points_20240130.geojson")
+
+
+new_act <- act |> 
+  mutate(lon = unlist(map(geometry,1)),
+         lat = unlist(map(geometry,2)))
+
+new_point <- point |> 
+  mutate(lon = unlist(map(geometry,1)),
+         lat = unlist(map(geometry,2)),
+         x = unlist(map(geometry,1)),
+         y = unlist(map(geometry,2)))
+
+write_sf(new_point, "data/published/data/hap_site_points_20240130.geojson")
+write_sf(new_act, "data/published/data/hap_act_points_20240130.geojson")
+write_sf(poly, "data/published/data/hap_site_polys_20240130.geojson")
