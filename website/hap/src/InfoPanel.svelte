@@ -57,6 +57,7 @@
     let site_features = [];
 
     if (active_point) {
+        console.log(active_point);
         active_point = active_point[0].properties;
         let actCodes = active_point.act_codes.split(',').map(code => code.trim());
 
