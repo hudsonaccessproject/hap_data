@@ -165,6 +165,7 @@
 
         // Get the site ID of the clicked point
         var clickedSiteId = e.target.feature.properties.site_id;
+        console.log(clickedSiteId);
 
         // Iterate over each layer and update the style if it is in the clciked site
         // layer.eachLayer(function (layer) {
