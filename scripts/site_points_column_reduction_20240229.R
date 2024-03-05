@@ -31,8 +31,11 @@ columns <- read_csv("data/temp/HAP_tracking_matrix - site data updates - 2_29_20
 ### create ms4 column to join 
 
 cso_data <- st_drop_geometry(poly) |> 
-  select(site_id, ms4, cso) 
-
+  select(site_id, ms4, cso, nr_ms4_cso) |> 
+  mutate(ms4 = ifelse(ms4 == 1, "Y", ms4),
+         cso = ifelse(cso == 1, "Y", cso),
+         cso = ifelse(cso == 1, "Y", cso))
+Site within 1/2 mile of ms4 or CSO outfall
 # |> 
 #   mutate(nr_ms4_cso = ifelse(is.na(nr_ms4_cso), NA, 1))
 

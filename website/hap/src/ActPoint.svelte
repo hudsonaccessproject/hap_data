@@ -61,7 +61,7 @@
 
     // Define the setLayerVisibility function
     function setLayerVisibility(zoom) {
-        if (zoom >= 14 && zoom <= 18 && $activePageTracker === 'access') {
+        if (zoom >= 14 && zoom <= 18 && ($activePageTracker === 'access' || $activePageTracker === 'quality')) {
         // if (zoom >= 13 && zoom <= 18 && activePage === 'access') {
             map.addLayer(layer);
         } else {
