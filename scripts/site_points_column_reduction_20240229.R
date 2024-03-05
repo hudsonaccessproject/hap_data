@@ -10,7 +10,10 @@
 library(sf)
 library(tidyverse)
 
+
+# add existing data
 site_points <- st_read("data/published/data/hap_site_points_20240201.geojson")
+poly <- st_read("~/Documents/spatial/SAVI/hudson_access/data/published/data/hap_site_polys_20240201.geojson")
 
 column_names <- colnames(site_points)
 
@@ -24,6 +27,14 @@ write_csv(column_names_df, "data/temp/site_points_column_names.csv")
 columns <- read_csv("data/temp/HAP_tracking_matrix - site data updates - 2_29_2024.csv") |> 
   filter(`keep?` == "y") |> 
   select(Column_Names)
+
+### create ms4 column to join 
+
+cso_data <- st_drop_geometry(poly) |> 
+  select(site_id, ms4, cso) 
+
+# |> 
+#   mutate(nr_ms4_cso = ifelse(is.na(nr_ms4_cso), NA, 1))
 
 ### now look at existing data to combine columns that we will remove and select columns to keep
 
@@ -48,13 +59,15 @@ new_site_points <- site_points |>
                                       paste(parking_description, ", approximately ", distance_parking_to_launch_HPBL, " to boat launch from parking"), 
                                       parking_description),
          boat_cleaning_requirements = NA) |> 
+  left_join(cso_data, by = "site_id") |> 
   select(site_id, act_codes, access_id, site_name, site_label, site_address, site_description, hours_info, open_close_date, fee, 
          public_transit, public_transit_description, url_public, site_manager, phone_site_manager, email_site_manager, 
          accessibility_description, safety, use_limits, program_YN, program_name, program_description, program_url, 
          program_contact, amenities_description, restrooms, changing_station, food, drinking_water, walking_trails, 
          equipment_rental, boat_launch_YN, bike_path_accessible, parking, parking_description, wheelchair_access_restrooms, 
          wheelchair_access_trails, SWIM_YN, FISH_YN, HPBL_YN, MPBL_YN, boat_cleaning_requirements, site_name_photo_01, 
-         site_name_photo_02, site_name_photo_03, photo_credits, owner, owner_type, water_quality_monitoring, typology, lat, lon)
+         site_name_photo_02, site_name_photo_03, photo_credits, owner, owner_type, water_quality_monitoring, typology, 
+         ms4, cso, lat, lon) 
   
 
 write_sf(new_site_points, "data/published/data/hap_site_points_20240304.geojson")
