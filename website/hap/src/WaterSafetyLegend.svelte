@@ -115,6 +115,7 @@
 
     .header {
         font-weight: 700;
+        margin-bottom: 5px;
     }
 
     /* .sub {

@@ -5,20 +5,20 @@
 </script>
 <!-- map legend div with title and several rows with a styled circle or suqare and a label -->
 <div class="legend">
-    <h3 class="legend-title">Pollution Sources near boat launches and swimming beaches</h3>
+    <h3 class="legend-title">Boat Launches and Swimming Beaches Near Pollution Sources</h3>
     <div class="legend-row sub">
         <div class="legend-symbol">
             <div class="legend-circle" style="background-color: #707070;"></div>
         </div>
-        <div class="legend-label header">Human Powered Boat Launches</div>
+        <div class="legend-label header">Human powered boat launches or swim beach</div>
     </div>
     <div class="legend-row">
         <div class="legend-symbol">
-            <div class="legend-circle" style="background-color: #FF9F88;"></div>
+            <div class="legend-circle" style="background-color: #FFAA22;"></div>
         </div>
-        <div class="legend-label">within half mile of CSO</div>
+        <div class="legend-label">within half mile of an outfall</div>
     </div>
-    <div class="legend-row">
+    <!-- <div class="legend-row">
         <div class="legend-symbol">
             <div class="legend-circle" style="background-color: #FFD474;"></div>
         </div>
@@ -35,7 +35,11 @@
             <div class="legend-square" style="background-color: #FFD474;"></div>
         </div>
         <div class="legend-label">within half mile of MS4</div>
-    </div>
+    </div> -->
+    <h3 class="legend-subtitle">Pollution Sources: Outfalls</h3>
+    <!-- <div class="legend-row sub">
+        <div class="legend-label header">Pollution Sources: Outfalls</div>
+    </div> -->
     <div class="legend-row sub">
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: #C4C3C3; border: 1px solid #C4C3C3;"></div>
@@ -46,7 +50,7 @@
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: #FC0000; border: 1px solid #FC0000;"></div>
         </div>
-        <div class="legend-label">within half mile of a boat launch</div>
+        <div class="legend-label">within half mile of a boat launch or swimming beach</div>
     </div>
     <div class="legend-row sub">
         <div class="legend-symbol">
@@ -58,13 +62,14 @@
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: transparent; border: 1px solid #FFAA22;"></div>
         </div>
-        <div class="legend-label">within half mile of a boat launch</div>
-    </div><div class="legend-row">
+        <div class="legend-label">within half mile of a boat launch or swimming beach</div>
+    </div>
+    <!-- <div class="legend-row">
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: #FFAA22; border: 1px solid #FFAA22;"></div>
         </div>
         <div class="legend-label">within half mile of swimming beaches</div>
-    </div>
+    </div> -->
     <div class="legend-collapsible">
         <h3>
             <button aria-expanded={expanded} on:click={() => expanded = !expanded} class="button-container">
@@ -74,7 +79,7 @@
         </h3>
         
         <div class='contents' hidden={!expanded}>
-            <p><span class="header">CSOs, MS4s and storm related pollution:</span> hover, OR we can put this into the sidebar text:  
+            <p><span class="header">CSOs, MS4s and storm related pollution:</span> 
                 Combined Sewer Overflows serve about 60% of New York City. Under dry weather conditions CSOs convey sewage to 
                 treatment plants but with as little one twentieth of an inch of rain, CSOs can be overwhelmed and stormwater and 
                 sewage are diverted to overflow outflows and discharged into area waterbodies. According to Riverkeeper, more 
@@ -131,7 +136,15 @@
     .legend-title {
         color: #707070;
         margin: 0 0 5px 0;
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.25;
+    }
+
+    .legend-subtitle {
+        color: #707070;
+        margin: 5px 0 5px 0;
+        font-size: 16px;
         font-weight: 700;
         line-height: 1.25;
     }
@@ -149,8 +162,8 @@
     }
 
     .legend-circle {
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         border-radius: 50%;
     }
 
@@ -176,7 +189,7 @@
     }
 
     .sub {
-        margin-top: 12px;
+        margin-top: 6px;
     }
 
     .button-container {
