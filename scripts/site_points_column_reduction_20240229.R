@@ -34,10 +34,7 @@ cso_data <- st_drop_geometry(poly) |>
   select(site_id, ms4, cso, nr_ms4_cso) |> 
   mutate(ms4 = ifelse(ms4 == 1, "Y", ms4),
          cso = ifelse(cso == 1, "Y", cso),
-         cso = ifelse(cso == 1, "Y", cso))
-Site within 1/2 mile of ms4 or CSO outfall
-# |> 
-#   mutate(nr_ms4_cso = ifelse(is.na(nr_ms4_cso), NA, 1))
+         nr_ms4_cso = ifelse(nr_ms4_cso == "Site within 1/2 mile of ms4 or CSO outfall", "Y", nr_ms4_cso))
 
 ### now look at existing data to combine columns that we will remove and select columns to keep
 
