@@ -25,7 +25,7 @@
 
 
     function setLayerVisibility(zoom) {
-        if (zoom <= 13 && ($activePageTracker === 'access' || $activePageTracker === 'about')) {
+        if (zoom <= 13 && ($activePageTracker === 'access' || $activePageTracker === 'about'  || $activePageTracker === 'quality')) {
         // if (zoom <= 12 && activePage === 'access') {
             // Show the layer when zoom is within the specified range
             map.addLayer(layer); // Add the layer to the map
@@ -61,6 +61,16 @@
         let feature_remain;
         let text_remain = true;
 
+          //POLLUTION Filters - this is how we show the sites near ms4 or cso on water quality page
+
+        // // Show the feature gray if there are no filters
+        // const allPollutionFilters = filters.pollution_filters.every(pollution_filters => feature.properties[pollution_filters] === "1");
+        // if (allPollutionFilters) {
+        //     feature.properties.remain = "active";
+        // } else {
+        //     feature.properties.remain = "inactive";
+        // }
+
         //ACTIVITY FEATURE Filters
         if (filters.act_filters.length === 0){
             // Show the feature gray if there are no filters
@@ -70,6 +80,7 @@
             // Only show the feature if the feature's activity code is included in one
             // of the existing activity filters
             let actCodes = feature.properties.act_codes.split(',').map(code => code.trim());
+
             const isActive = filters.act_filters.some(el => actCodes.includes(el));
 
             if (isActive) {
@@ -130,6 +141,14 @@
                 feature.properties.remain = "inactive";
             }
         }
+        /// for the water quality page, we want to hide the SWIM and HPBL sites that are near ms4 or cso
+        let actCodes = feature.properties.act_codes.split(',').map(code => code.trim());
+        const noSwimHPBL = !filters.act_filters.some(el => actCodes.includes(el));
+        if ($activePageTracker === 'quality' && noSwimHPBL) {
+            feature.properties.remain = "hidden";
+        }else {
+                feature.properties.remain = feature.properties.remain;
+            }
         return(feature)
 
     }
@@ -159,6 +178,7 @@
     function getColorByFilter(d) {
         return d == "active" ? '#F77B00' :
                 d == "inactive" ? '#5D5D5D' :
+                    d == "hidden" ? 'transparent' :
                         '#b2b2b2'
     }
 

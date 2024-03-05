@@ -64,6 +64,8 @@
 	}
 
 	function removePolygons() {
+		// console.log(active_point);
+		console.log("test");
 		map.eachLayer(layer => {
 			if (layer instanceof L.Layer && layer.feature && layer.feature.geometry && (layer.feature.geometry.type === 'MultiPolygon' || layer.feature.geometry.type === 'Polygon')) {
 			map.removeLayer(layer);
@@ -83,8 +85,9 @@
 			changeBasemap(safetyTileURL);
 			break;
 		case 'quality':
-			removePoints();
-			removePolygons
+			// removePoints();
+			// removePolygons();
+			filterPollution();
 			changeBasemap(qualityTileURL);
 			break;
 		case 'about':
@@ -131,6 +134,7 @@
 		feature_filters:[],
 		prog_filters:[],
 		text_filter:"",
+		pollution_filters:[],
 		active:[],
 		previous:[]
 	};
@@ -166,6 +170,13 @@
       desc: "You can motor boat here."
     }
   ];
+
+	// write a function to toggle the isActive property of the act object with value = 'FISH'
+	function filterPollution() {
+		filters.act_filters = ['SWIM', 'HPBL'];
+		// I am using the existing featre filters and treating the cso and ms4 columns as features.  If the site va
+		filters.feature_filters = ['nr_ms4_cso'];
+	}
 
 	// Handle Site Feature Filters
 	function clickHandleSiteFeatures(e){
@@ -231,6 +242,7 @@
 		// Otherwise, add it to filters.act_filters.
 		filters.act_filters = [...filters.act_filters, value];
 		}
+		console.log(value);
 
 		// Toggle the isActive property of each act object based on the click
 		acts = acts.map(act => {
@@ -367,7 +379,7 @@
 			<LeafletMap >
 				<HomeButton on:homebutton={handleExtent}/>
 				<!-- data on the map -->
-				{#if $activePageTracker === 'access'}
+				{#if $activePageTracker === 'access' || $activePageTracker === 'quality'}
 					{#key active_data}
 					<Polygon active_data={active_data}/>
 					{/key}
