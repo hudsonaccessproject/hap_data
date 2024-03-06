@@ -9,7 +9,9 @@
             and fishing; with a focus on activities that bring people into direct contact with the water. The project 
             is ongoing and we welcome information and feedback. Please put the tool to use so you can test it and 
             help us improve it.
-
+        </p>
+        <p class="t4 ws"> 
+            If you have any comments, or photos of a site that we can use on the Hudson Access Project website, please fill out <a href="https://forms.gle/7mz519nRxRUUMstX9" target="_blank">this form</a>.
         </p>
     </div>  
     <CollapsibleSection isVisible={true} headerText={'Share Information!'} >
