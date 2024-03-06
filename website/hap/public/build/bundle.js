@@ -29483,7 +29483,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Loading...";
-    			add_location(div, file, 445, 1, 15047);
+    			add_location(div, file, 445, 1, 15060);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31050,7 +31050,7 @@ var app = (function () {
     			t0 = space();
     			div = element("div");
     			span0 = element("span");
-    			t1 = text("Next High Tide: ");
+    			t1 = text("The Battery: Next High Tide: ");
     			t2 = text(t2_value);
     			br = element("br");
     			t3 = space();
@@ -31068,8 +31068,8 @@ var app = (function () {
     			if (if_block3) if_block3.c();
     			if_block3_anchor = empty();
     			add_location(span0, file, 411, 5, 14094);
-    			add_location(br, file, 411, 96, 14185);
-    			add_location(span1, file, 412, 5, 14195);
+    			add_location(br, file, 411, 109, 14198);
+    			add_location(span1, file, 412, 5, 14208);
     			attr_dev(div, "class", "water-temp svelte-1m3lw2p");
     			add_location(div, file, 410, 4, 14064);
     		},

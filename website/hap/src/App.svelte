@@ -409,7 +409,7 @@
 			<LeafletMap >
 				<HomeButton on:homebutton={handleExtent}/>
 				<div class="water-temp">
-					<span>Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span><br>
+					<span>The Battery: Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span><br>
 					<span>Current Water Temperature: {waterTemp}°F</span>
 				</div>
 				<!-- data on the map -->
