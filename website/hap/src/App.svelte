@@ -24,6 +24,7 @@
 	let act_data;
 	let poly_data;
 	let temp_data;
+	let waterTemp;
 	let all_poly_data;
 	let all_point_data;
 	let act_point_data;
@@ -35,6 +36,8 @@
 	const act_point_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_act_points_20240201.geojson";
 	const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20240201.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
+	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
+
 
 
 	let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
@@ -123,6 +126,11 @@
 		temp_data = await res4.json();
 
 		temp_point_data = [...temp_data.features]
+
+		// water temp data fro noaa
+		const wt_response = await fetch(water_temp_url);
+		const wt_data = await wt_response.json();
+		waterTemp = wt_data.data[0].v;
 
 	});
 
@@ -378,6 +386,7 @@
 		<div class="map-only-pane">
 			<LeafletMap >
 				<HomeButton on:homebutton={handleExtent}/>
+				<span class="water-temp">Current Water Temperature: {waterTemp}°F</span>
 				<!-- data on the map -->
 				{#if $activePageTracker === 'access' || $activePageTracker === 'quality'}
 					{#key active_data}
@@ -428,11 +437,27 @@
 	.map-only-pane {
 		width: 70vw;
 		order: 1;
+		position: relative;
 		/* position: absolute;
 		left: 0px;
 		z-index: 0;
 		height: 100%;
 		padding: 0px; */
+	}
+
+	.map-only-pane .water-temp {
+		position: absolute;
+		/* top: 5px; */
+		bottom: 20px;
+		right: 5px;
+		z-index: 10001;
+		/* color: #666; */
+		color: var(--orange3);
+		font-size: 20px;
+		font-weight: 700;
+		/* background-color: rgba(255, 255, 255, 0.25);
+		padding: 5px;
+		border-radius: 5px; */
 	}
 
 	.left-panel {
@@ -461,6 +486,14 @@
 			width: 100vw;
 			height: -webkit-fill-available;
 			order: 2;
+		}
+
+		.map-only-pane .water-temp {
+			bottom: 30px;
+			font-size: 16px;
+			/* background-color: rgba(255, 255, 255, 0.5);
+			padding: 5px;
+			border-radius: 5px; */
 		}
 
 		.left-panel {

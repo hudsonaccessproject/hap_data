@@ -106,15 +106,6 @@ body {
     padding: 0;
 }
 
-/* header {
-    height: var(--hh) !important;
-    white-space: nowrap;
-    border-bottom: 2px solid #A8CD7B;
-    margin: 0px;
-    z-index: 3;
-    position: absolute;
-    width: 100%;
-} */
 
 h1 {
     font-size: 22pt;
@@ -136,33 +127,10 @@ h1 {
 }
 
 .r {
-    /* margin-top: 1px; */
     margin-bottom: 0px;
     padding: 15px;
-    /* padding-left: 15px; */
-    /* padding-bottom: 1px; */
     line-height: 1.2em;
 }
-/* .panel {
-    background: white;
-    top: var(--hh);
-    z-index: 1;
-    right: 0;
-} 
-
-.left-panel {
-    position: absolute;
-    min-width: 330px;
-    max-width: 330px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 12px;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    width: 25%;
-    max-height: calc(100% - var(--hh));
-    box-sizing: border-box;
-} */
 
 .info-panel {
     padding-top: 0px;
@@ -227,18 +195,6 @@ img {
         max-width: unset;
     }
 }
-
-/* @media screen and (max-width: 550px) {
-    .info-panel {
-        visibility: hidden;
-    }
-}
-
-@media screen and (max-height: 550px) {
-    .info-panel {
-        visibility: hidden;
-    }
-} */
 
 #holder {
     position: relative;
@@ -391,17 +347,6 @@ input[type=text]:focus {
     padding-right: 5px;
 }
 
-/* .Working:hover {
-    color: var(--blue)
-}
-
-.Retired:hover {
-    color: var(--green)
-}
-
-.Completed:hover {
-    color: var(--green)
-} */
 
 button {
     width: 100%;
@@ -465,34 +410,11 @@ label {
     stroke-width: 2px;
 }
 
-/* #target-eco {
-    cursor: pointer;
-}
-
-#target-eco:hover {
-    color: var(--orange)
-} */
-
-
-/* .site-button {
-    display: flex;
-    height: 27px;
-    justify-content: space-between;
-    padding-top: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    padding-left: 10px;
-} */
-
 .site-buttons {
     margin-left: 0px;
     padding-left: 0px;
 }
 
-/* .leaflet-left {
-    left: 10px!important;
-} */
 
 #collapse-nav-button {
     color: #666;
@@ -501,9 +423,6 @@ label {
     padding-right: 5px;
 }
 
-/* .searcher {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-} */
 
 .hover-logos {
     margin-top: 5px;
@@ -515,22 +434,6 @@ label {
 	font-weight: bold;
 }
 
-/* header {
-	height: 65px !important;
-	white-space: nowrap;
-	margin: 0px;
-	z-index: 3;
-	position: absolute;
-	width: 70vw;
-    border-bottom: solid 1.5px rgb(225, 225, 225);
-} */
-
-  /* Media query for very wide */
-/* @media (min-width: 1550px) {
-    header {
-        width: 60vw;
-    }
-} */
 
 /* Media query for mid-size */
 
@@ -581,13 +484,6 @@ h1 {
 
 
 /* New stuff here */
-/* #holder {
-    position: relative;
-    max-height: inherit;
-    padding: 0px 5px 5px 15px;
-    overflow-y: scroll;
-    flex-grow: 1;
-} */
 
 .place-list {
     margin-bottom: 2px;
@@ -605,40 +501,6 @@ h1 {
     border-bottom: 1.5px solid rgba(225, 225, 225);
 }
 
-/* .park-info {
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    height: 300px;
-    overflow-y: scroll;
-} */
-
-
-/* p.bayshore {
-    padding-left: 15px;
-}
-
-.croton-info {
-    height: 400px;
-    overflow-y: scroll;
-}
-
-div.croton {
-    background-color: #FDAA23;
-    margin-left: -15px;
-    margin-bottom: 10px;
-    border-bottom: 3px solid #FDAA23;
-}
-
-div.croton label {
-    background-color: #FDAA23;
-    padding-left: 2;
-    padding-bottom: 0;
-    padding-right: 0;
-}
-
-div.croton label:hover {
-    background-color: #FDAA23;
-    padding-bottom: 0;
-} */
 
 .act-logos {
     display: grid;
@@ -647,29 +509,6 @@ div.croton label:hover {
     padding-top: 0px;
     padding-left: 0px;
 }
-
-/* .t1 {
-    font-family: "ff-tisa-sans-web-pro", sans-serif;
-    font-weight: bold;
-    font-size: 14pt;
-    color: #444;
-    line-height: 1.25;
-}
-
-.t2 {
-    font-family: "ff-tisa-sans-web-pro", sans-serif;
-    font-size: 11pt;
-    font-weight: 400;
-    color: #666
-}
-
-.t3 {
-    font-family: "ff-tisa-sans-web-pro", sans-serif;
-    font-size: 8pt;
-    font-weight: bold;
-    color: #999;
-    line-height: 1.5;
-} */
 
 .site-text {
     margin-left: 6px;
@@ -690,10 +529,10 @@ div.croton label:hover {
     font-weight: 700;
     background-color: white;
     /* background-image: url("https://raw.githubusercontent.com/PrattSAVI/RAM/main/img/icons/searchicon.png"); */
-    background-position: 257px 5px;
+    /* background-position: 257px 5px;
     background-size: 20px 20px;
     background-repeat: no-repeat;
-} */
+} */ 
 
 input[type=text]:focus {
     background-color: #e7e7e7;
