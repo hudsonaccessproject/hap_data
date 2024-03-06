@@ -25,6 +25,8 @@
 	let poly_data;
 	let temp_data;
 	let waterTemp;
+	let tidesData;
+    let nextHighTide;
 	let all_poly_data;
 	let all_point_data;
 	let act_point_data;
@@ -37,7 +39,7 @@
 	const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20240201.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
-
+	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
 
 
 	let safetyTileURL = 'https://api.mapbox.com/styles/v1/prattsavi/clpvm5jgq00yi01qmb4p5ffbj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
@@ -127,10 +129,17 @@
 
 		temp_point_data = [...temp_data.features]
 
-		// water temp data fro noaa
+		// water temp data from noaa
 		const wt_response = await fetch(water_temp_url);
 		const wt_data = await wt_response.json();
 		waterTemp = wt_data.data[0].v;
+
+		// next high tide from NOAA
+		const tides_response = await fetch(tides_today_url);
+		const tidesData = await await tides_response.json();
+		const tides = tidesData.predictions;
+		console.log(tides);
+		nextHighTide = getNextHighTide(tides);
 
 	});
 
@@ -178,6 +187,19 @@
       desc: "You can motor boat here."
     }
   ];
+
+	function getNextHighTide(tides) {
+		const currentTime = new Date();
+		for (const tide of tides) {
+			console.log(tide);
+			console.log(currentTime);
+		if (new Date(tide.t) > currentTime && tide.type === 'H') {
+			return tide;
+		}
+		}
+		// If no high tide after current time, return null
+		return null;
+	}
 
 	// write a function to toggle the isActive property of the act object with value = 'FISH'
 	function filterPollution() {
@@ -386,7 +408,10 @@
 		<div class="map-only-pane">
 			<LeafletMap >
 				<HomeButton on:homebutton={handleExtent}/>
-				<span class="water-temp">Current Water Temperature: {waterTemp}°F</span>
+				<div class="water-temp">
+					<span>Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span><br>
+					<span>Current Water Temperature: {waterTemp}°F</span>
+				</div>
 				<!-- data on the map -->
 				{#if $activePageTracker === 'access' || $activePageTracker === 'quality'}
 					{#key active_data}

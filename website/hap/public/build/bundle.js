@@ -29471,11 +29471,11 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[41] = list[i];
+    	child_ctx[43] = list[i];
     	return child_ctx;
     }
 
-    // (420:1) {:else}
+    // (445:1) {:else}
     function create_else_block(ctx) {
     	let div;
 
@@ -29483,7 +29483,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Loading...";
-    			add_location(div, file, 420, 1, 14107);
+    			add_location(div, file, 445, 1, 15047);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -29500,14 +29500,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(420:1) {:else}",
+    		source: "(445:1) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (288:0) {#if all_point_data && all_poly_data}
+    // (310:0) {#if all_point_data && all_poly_data}
     function create_if_block(ctx) {
     	let header;
     	let t0;
@@ -29541,12 +29541,12 @@ var app = (function () {
     		});
 
     	hoverup = new Hoverup({
-    			props: { acts: /*acts*/ ctx[9] },
+    			props: { acts: /*acts*/ ctx[10] },
     			$$inline: true
     		});
 
     	title = new Title({
-    			props: { title_hover: /*title_hover*/ ctx[10] },
+    			props: { title_hover: /*title_hover*/ ctx[11] },
     			$$inline: true
     		});
 
@@ -29573,11 +29573,11 @@ var app = (function () {
     			t7 = space();
     			create_component(title.$$.fragment);
     			attr_dev(div0, "class", "left-panel panel svelte-1m3lw2p");
-    			add_location(div0, file, 298, 2, 9645);
+    			add_location(div0, file, 320, 2, 10462);
     			attr_dev(div1, "class", "map-only-pane svelte-1m3lw2p");
-    			add_location(div1, file, 385, 2, 13151);
+    			add_location(div1, file, 407, 2, 13968);
     			attr_dev(div2, "class", "map-pane svelte-1m3lw2p");
-    			add_location(div2, file, 297, 1, 9620);
+    			add_location(div2, file, 319, 1, 10437);
     		},
     		m: function mount(target, anchor) {
     			mount_component(header, target, anchor);
@@ -29714,16 +29714,16 @@ var app = (function () {
 
     			const leafletmap_changes = {};
 
-    			if (dirty[0] & /*$activePageTracker, temp_point_data, filters, act_point_data, all_point_data, active_data, waterTemp*/ 379 | dirty[1] & /*$$scope*/ 8192) {
+    			if (dirty[0] & /*$activePageTracker, temp_point_data, filters, act_point_data, all_point_data, active_data, waterTemp, nextHighTide*/ 759 | dirty[1] & /*$$scope*/ 32768) {
     				leafletmap_changes.$$scope = { dirty, ctx };
     			}
 
     			leafletmap.$set(leafletmap_changes);
     			const hoverup_changes = {};
-    			if (dirty[0] & /*acts*/ 512) hoverup_changes.acts = /*acts*/ ctx[9];
+    			if (dirty[0] & /*acts*/ 1024) hoverup_changes.acts = /*acts*/ ctx[10];
     			hoverup.$set(hoverup_changes);
     			const title_changes = {};
-    			if (dirty[0] & /*title_hover*/ 1024) title_changes.title_hover = /*title_hover*/ ctx[10];
+    			if (dirty[0] & /*title_hover*/ 2048) title_changes.title_hover = /*title_hover*/ ctx[11];
     			title.$set(title_changes);
     		},
     		i: function intro(local) {
@@ -29773,14 +29773,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(288:0) {#if all_point_data && all_poly_data}",
+    		source: "(310:0) {#if all_point_data && all_poly_data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (293:1) {#if $activePageTracker === 'about'}
+    // (315:1) {#if $activePageTracker === 'about'}
     function create_if_block_9(ctx) {
     	let about;
     	let current;
@@ -29812,14 +29812,14 @@ var app = (function () {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(293:1) {#if $activePageTracker === 'about'}",
+    		source: "(315:1) {#if $activePageTracker === 'about'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (300:3) {#if $activePageTracker === 'access'}
+    // (322:3) {#if $activePageTracker === 'access'}
     function create_if_block_8(ctx) {
     	let div3;
     	let div2;
@@ -29834,7 +29834,7 @@ var app = (function () {
     	let div4;
     	let collapsiblesection;
     	let current;
-    	let each_value = /*acts*/ ctx[9];
+    	let each_value = /*acts*/ ctx[10];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -29874,19 +29874,19 @@ var app = (function () {
     			div4 = element("div");
     			create_component(collapsiblesection.$$.fragment);
     			attr_dev(span0, "class", "t2 act-filter-header");
-    			add_location(span0, file, 303, 7, 9791);
-    			add_location(br, file, 303, 65, 9849);
+    			add_location(span0, file, 325, 7, 10608);
+    			add_location(br, file, 325, 65, 10666);
     			attr_dev(span1, "class", "t3 icon-instructions svelte-1m3lw2p");
-    			add_location(span1, file, 304, 7, 9861);
+    			add_location(span1, file, 326, 7, 10678);
     			attr_dev(div0, "class", "r");
-    			add_location(div0, file, 302, 6, 9768);
+    			add_location(div0, file, 324, 6, 10585);
     			attr_dev(div1, "class", "act-filters r svelte-1m3lw2p");
-    			add_location(div1, file, 307, 6, 9985);
+    			add_location(div1, file, 329, 6, 10802);
     			attr_dev(div2, "class", "activity-filter svelte-1m3lw2p");
-    			add_location(div2, file, 301, 5, 9732);
-    			add_location(div3, file, 300, 4, 9721);
+    			add_location(div2, file, 323, 5, 10549);
+    			add_location(div3, file, 322, 4, 10538);
     			attr_dev(div4, "id", "amenity");
-    			add_location(div4, file, 330, 4, 10470);
+    			add_location(div4, file, 352, 4, 11287);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -29911,8 +29911,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*acts, clickHandleACT*/ 33280) {
-    				each_value = /*acts*/ ctx[9];
+    			if (dirty[0] & /*acts, clickHandleACT*/ 66560) {
+    				each_value = /*acts*/ ctx[10];
     				validate_each_argument(each_value);
     				let i;
 
@@ -29937,7 +29937,7 @@ var app = (function () {
 
     			const collapsiblesection_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8192) {
+    			if (dirty[1] & /*$$scope*/ 32768) {
     				collapsiblesection_changes.$$scope = { dirty, ctx };
     			}
 
@@ -29965,14 +29965,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(300:3) {#if $activePageTracker === 'access'}",
+    		source: "(322:3) {#if $activePageTracker === 'access'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (309:7) {#each acts as act}
+    // (331:7) {#each acts as act}
     function create_each_block(ctx) {
     	let label;
     	let img;
@@ -29993,18 +29993,18 @@ var app = (function () {
     			t0 = space();
     			input = element("input");
     			t1 = space();
-    			attr_dev(img, "alt", img_alt_value = /*act*/ ctx[41].value);
+    			attr_dev(img, "alt", img_alt_value = /*act*/ ctx[43].value);
     			set_style(img, "width", "40px");
-    			if (!src_url_equal(img.src, img_src_value = modifyIconSource(/*act*/ ctx[41]))) attr_dev(img, "src", img_src_value);
-    			add_location(img, file, 313, 8, 10137);
+    			if (!src_url_equal(img.src, img_src_value = modifyIconSource(/*act*/ ctx[43]))) attr_dev(img, "src", img_src_value);
+    			add_location(img, file, 335, 8, 10954);
     			attr_dev(input, "class", "act-input");
     			attr_dev(input, "type", "checkbox");
-    			input.value = input_value_value = /*act*/ ctx[41].value;
-    			attr_dev(input, "id", input_id_value = /*act*/ ctx[41].value);
-    			add_location(input, file, 318, 8, 10248);
+    			input.value = input_value_value = /*act*/ ctx[43].value;
+    			attr_dev(input, "id", input_id_value = /*act*/ ctx[43].value);
+    			add_location(input, file, 340, 8, 11065);
     			attr_dev(label, "class", "act-buttons");
-    			toggle_class(label, "active", /*act*/ ctx[41].isActive);
-    			add_location(label, file, 309, 7, 10047);
+    			toggle_class(label, "active", /*act*/ ctx[43].isActive);
+    			add_location(label, file, 331, 7, 10864);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -30014,29 +30014,29 @@ var app = (function () {
     			append_dev(label, t1);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "click", /*clickHandleACT*/ ctx[15], false, false, false, false);
+    				dispose = listen_dev(input, "click", /*clickHandleACT*/ ctx[16], false, false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*acts*/ 512 && img_alt_value !== (img_alt_value = /*act*/ ctx[41].value)) {
+    			if (dirty[0] & /*acts*/ 1024 && img_alt_value !== (img_alt_value = /*act*/ ctx[43].value)) {
     				attr_dev(img, "alt", img_alt_value);
     			}
 
-    			if (dirty[0] & /*acts*/ 512 && !src_url_equal(img.src, img_src_value = modifyIconSource(/*act*/ ctx[41]))) {
+    			if (dirty[0] & /*acts*/ 1024 && !src_url_equal(img.src, img_src_value = modifyIconSource(/*act*/ ctx[43]))) {
     				attr_dev(img, "src", img_src_value);
     			}
 
-    			if (dirty[0] & /*acts*/ 512 && input_value_value !== (input_value_value = /*act*/ ctx[41].value)) {
+    			if (dirty[0] & /*acts*/ 1024 && input_value_value !== (input_value_value = /*act*/ ctx[43].value)) {
     				prop_dev(input, "value", input_value_value);
     			}
 
-    			if (dirty[0] & /*acts*/ 512 && input_id_value !== (input_id_value = /*act*/ ctx[41].value)) {
+    			if (dirty[0] & /*acts*/ 1024 && input_id_value !== (input_id_value = /*act*/ ctx[43].value)) {
     				attr_dev(input, "id", input_id_value);
     			}
 
-    			if (dirty[0] & /*acts*/ 512) {
-    				toggle_class(label, "active", /*act*/ ctx[41].isActive);
+    			if (dirty[0] & /*acts*/ 1024) {
+    				toggle_class(label, "active", /*act*/ ctx[43].isActive);
     			}
     		},
     		d: function destroy(detaching) {
@@ -30050,14 +30050,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(309:7) {#each acts as act}",
+    		source: "(331:7) {#each acts as act}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (332:5) <CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
+    // (354:5) <CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
     function create_default_slot_1(ctx) {
     	let div;
     	let input0;
@@ -30176,77 +30176,77 @@ var app = (function () {
     			br9 = element("br");
     			attr_dev(input0, "type", "checkbox");
     			input0.value = "boat_launch_YN";
-    			add_location(input0, file, 333, 7, 10617);
+    			add_location(input0, file, 355, 7, 11434);
     			attr_dev(label0, "class", "t3");
     			attr_dev(label0, "for", "boat_launch_YN");
-    			add_location(label0, file, 334, 7, 10717);
-    			add_location(br0, file, 334, 66, 10776);
+    			add_location(label0, file, 356, 7, 11534);
+    			add_location(br0, file, 356, 66, 11593);
     			attr_dev(input1, "type", "checkbox");
     			input1.value = "restrooms";
-    			add_location(input1, file, 335, 7, 10788);
+    			add_location(input1, file, 357, 7, 11605);
     			attr_dev(label1, "class", "t3");
     			attr_dev(label1, "for", "restrooms");
-    			add_location(label1, file, 336, 7, 10882);
-    			add_location(br1, file, 336, 59, 10934);
+    			add_location(label1, file, 358, 7, 11699);
+    			add_location(br1, file, 358, 59, 11751);
     			attr_dev(input2, "type", "checkbox");
     			input2.value = "public_transit";
-    			add_location(input2, file, 337, 7, 10946);
+    			add_location(input2, file, 359, 7, 11763);
     			attr_dev(label2, "class", "t3");
     			attr_dev(label2, "for", "public_transit");
-    			add_location(label2, file, 338, 7, 11046);
-    			add_location(br2, file, 338, 83, 11122);
+    			add_location(label2, file, 360, 7, 11863);
+    			add_location(br2, file, 360, 83, 11939);
     			attr_dev(input3, "type", "checkbox");
     			input3.value = "parking";
-    			add_location(input3, file, 339, 7, 11134);
+    			add_location(input3, file, 361, 7, 11951);
     			attr_dev(label3, "class", "t3");
     			attr_dev(label3, "for", "parking");
-    			add_location(label3, file, 340, 7, 11226);
-    			add_location(br3, file, 340, 55, 11274);
+    			add_location(label3, file, 362, 7, 12043);
+    			add_location(br3, file, 362, 55, 12091);
     			attr_dev(input4, "type", "checkbox");
     			input4.value = "food";
-    			add_location(input4, file, 341, 7, 11286);
+    			add_location(input4, file, 363, 7, 12103);
     			attr_dev(label4, "class", "t3");
     			attr_dev(label4, "for", "food");
-    			add_location(label4, file, 342, 7, 11376);
-    			add_location(br4, file, 342, 57, 11426);
+    			add_location(label4, file, 364, 7, 12193);
+    			add_location(br4, file, 364, 57, 12243);
     			attr_dev(input5, "type", "checkbox");
     			input5.value = "drinking_water";
-    			add_location(input5, file, 343, 7, 11438);
+    			add_location(input5, file, 365, 7, 12255);
     			attr_dev(label5, "class", "t3");
     			attr_dev(label5, "for", "drinking_water");
-    			add_location(label5, file, 344, 7, 11537);
-    			add_location(br5, file, 344, 80, 11610);
+    			add_location(label5, file, 366, 7, 12354);
+    			add_location(br5, file, 366, 80, 12427);
     			attr_dev(input6, "type", "checkbox");
     			input6.value = "picnic_area";
-    			add_location(input6, file, 345, 7, 11622);
+    			add_location(input6, file, 367, 7, 12439);
     			attr_dev(label6, "class", "t3");
     			attr_dev(label6, "for", "picnic_area");
-    			add_location(label6, file, 346, 7, 11719);
-    			add_location(br6, file, 346, 63, 11775);
+    			add_location(label6, file, 368, 7, 12536);
+    			add_location(br6, file, 368, 63, 12592);
     			attr_dev(input7, "type", "checkbox");
     			input7.value = "hiking";
-    			add_location(input7, file, 347, 7, 11787);
+    			add_location(input7, file, 369, 7, 12604);
     			attr_dev(label7, "class", "t3");
     			attr_dev(label7, "for", "hiking");
-    			add_location(label7, file, 348, 7, 11878);
-    			add_location(br7, file, 348, 70, 11941);
+    			add_location(label7, file, 370, 7, 12695);
+    			add_location(br7, file, 370, 70, 12758);
     			attr_dev(input8, "type", "checkbox");
     			input8.value = "pets_allowed";
-    			add_location(input8, file, 349, 7, 11953);
+    			add_location(input8, file, 371, 7, 12770);
     			attr_dev(label8, "class", "t3");
     			attr_dev(label8, "for", "pets_allowed");
-    			add_location(label8, file, 350, 7, 12051);
-    			add_location(br8, file, 350, 72, 12116);
+    			add_location(label8, file, 372, 7, 12868);
+    			add_location(br8, file, 372, 72, 12933);
     			attr_dev(input9, "type", "checkbox");
     			attr_dev(input9, "class", "last svelte-1m3lw2p");
     			input9.value = "program";
-    			add_location(input9, file, 351, 7, 12128);
+    			add_location(input9, file, 373, 7, 12945);
     			attr_dev(label9, "class", "t3");
     			attr_dev(label9, "for", "program");
-    			add_location(label9, file, 352, 7, 12234);
-    			add_location(br9, file, 352, 59, 12286);
+    			add_location(label9, file, 374, 7, 13051);
+    			add_location(br9, file, 374, 59, 13103);
     			attr_dev(div, "class", "feature-filters r");
-    			add_location(div, file, 332, 6, 10578);
+    			add_location(div, file, 354, 6, 11395);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -30302,16 +30302,16 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "click", /*click_handler*/ ctx[16], false, false, false, false),
-    					listen_dev(input1, "click", /*click_handler_1*/ ctx[17], false, false, false, false),
-    					listen_dev(input2, "click", /*click_handler_2*/ ctx[18], false, false, false, false),
-    					listen_dev(input3, "click", /*click_handler_3*/ ctx[19], false, false, false, false),
-    					listen_dev(input4, "click", /*click_handler_4*/ ctx[20], false, false, false, false),
-    					listen_dev(input5, "click", /*click_handler_5*/ ctx[21], false, false, false, false),
-    					listen_dev(input6, "click", /*click_handler_6*/ ctx[22], false, false, false, false),
-    					listen_dev(input7, "click", /*click_handler_7*/ ctx[23], false, false, false, false),
-    					listen_dev(input8, "click", /*click_handler_8*/ ctx[24], false, false, false, false),
-    					listen_dev(input9, "click", /*click_handler_9*/ ctx[25], false, false, false, false)
+    					listen_dev(input0, "click", /*click_handler*/ ctx[17], false, false, false, false),
+    					listen_dev(input1, "click", /*click_handler_1*/ ctx[18], false, false, false, false),
+    					listen_dev(input2, "click", /*click_handler_2*/ ctx[19], false, false, false, false),
+    					listen_dev(input3, "click", /*click_handler_3*/ ctx[20], false, false, false, false),
+    					listen_dev(input4, "click", /*click_handler_4*/ ctx[21], false, false, false, false),
+    					listen_dev(input5, "click", /*click_handler_5*/ ctx[22], false, false, false, false),
+    					listen_dev(input6, "click", /*click_handler_6*/ ctx[23], false, false, false, false),
+    					listen_dev(input7, "click", /*click_handler_7*/ ctx[24], false, false, false, false),
+    					listen_dev(input8, "click", /*click_handler_8*/ ctx[25], false, false, false, false),
+    					listen_dev(input9, "click", /*click_handler_9*/ ctx[26], false, false, false, false)
     				];
 
     				mounted = true;
@@ -30329,23 +30329,23 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(332:5) <CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >",
+    		source: "(354:5) <CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (358:3) {#if $activePageTracker === 'access'}
+    // (380:3) {#if $activePageTracker === 'access'}
     function create_if_block_7(ctx) {
     	let div0;
     	let input;
     	let t0;
     	let div2;
     	let div1;
-    	let previous_key = /*active_point*/ ctx[7];
+    	let previous_key = /*active_point*/ ctx[8];
     	let t1;
-    	let previous_key_1 = /*filters*/ ctx[8];
+    	let previous_key_1 = /*filters*/ ctx[9];
     	let current;
     	let mounted;
     	let dispose;
@@ -30365,18 +30365,18 @@ var app = (function () {
     			attr_dev(input, "id", "searcher");
     			attr_dev(input, "placeholder", "Search for a site by name");
     			attr_dev(input, "type", "text");
-    			add_location(input, file, 359, 5, 12426);
+    			add_location(input, file, 381, 5, 13243);
     			attr_dev(div0, "class", "searcher r");
-    			add_location(div0, file, 358, 4, 12396);
+    			add_location(div0, file, 380, 4, 13213);
     			attr_dev(div1, "class", "info-panel panel svelte-1m3lw2p");
-    			add_location(div1, file, 367, 5, 12708);
+    			add_location(div1, file, 389, 5, 13525);
     			attr_dev(div2, "class", "places-list svelte-1m3lw2p");
-    			add_location(div2, file, 366, 4, 12677);
+    			add_location(div2, file, 388, 4, 13494);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			append_dev(div0, input);
-    			set_input_value(input, /*filters*/ ctx[8].text_filter);
+    			set_input_value(input, /*filters*/ ctx[9].text_filter);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div1);
@@ -30386,16 +30386,16 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[26]);
+    				dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[27]);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*filters*/ 256 && input.value !== /*filters*/ ctx[8].text_filter) {
-    				set_input_value(input, /*filters*/ ctx[8].text_filter);
+    			if (dirty[0] & /*filters*/ 512 && input.value !== /*filters*/ ctx[9].text_filter) {
+    				set_input_value(input, /*filters*/ ctx[9].text_filter);
     			}
 
-    			if (dirty[0] & /*active_point*/ 128 && safe_not_equal(previous_key, previous_key = /*active_point*/ ctx[7])) {
+    			if (dirty[0] & /*active_point*/ 256 && safe_not_equal(previous_key, previous_key = /*active_point*/ ctx[8])) {
     				group_outros();
     				transition_out(key_block0, 1, 1, noop);
     				check_outros();
@@ -30407,7 +30407,7 @@ var app = (function () {
     				key_block0.p(ctx, dirty);
     			}
 
-    			if (dirty[0] & /*filters*/ 256 && safe_not_equal(previous_key_1, previous_key_1 = /*filters*/ ctx[8])) {
+    			if (dirty[0] & /*filters*/ 512 && safe_not_equal(previous_key_1, previous_key_1 = /*filters*/ ctx[9])) {
     				group_outros();
     				transition_out(key_block1, 1, 1, noop);
     				check_outros();
@@ -30445,20 +30445,20 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(358:3) {#if $activePageTracker === 'access'}",
+    		source: "(380:3) {#if $activePageTracker === 'access'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (369:6) {#key active_point}
+    // (391:6) {#key active_point}
     function create_key_block_4(ctx) {
     	let infopanel;
     	let current;
 
     	infopanel = new InfoPanel({
-    			props: { active_point: /*active_point*/ ctx[7] },
+    			props: { active_point: /*active_point*/ ctx[8] },
     			$$inline: true
     		});
 
@@ -30472,7 +30472,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const infopanel_changes = {};
-    			if (dirty[0] & /*active_point*/ 128) infopanel_changes.active_point = /*active_point*/ ctx[7];
+    			if (dirty[0] & /*active_point*/ 256) infopanel_changes.active_point = /*active_point*/ ctx[8];
     			infopanel.$set(infopanel_changes);
     		},
     		i: function intro(local) {
@@ -30493,27 +30493,27 @@ var app = (function () {
     		block,
     		id: create_key_block_4.name,
     		type: "key",
-    		source: "(369:6) {#key active_point}",
+    		source: "(391:6) {#key active_point}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (374:5) {#key filters}
+    // (396:5) {#key filters}
     function create_key_block_3(ctx) {
     	let placelist;
     	let current;
 
     	placelist = new PlaceList({
     			props: {
-    				geojson: /*all_point_data*/ ctx[3],
-    				filters: /*filters*/ ctx[8]
+    				geojson: /*all_point_data*/ ctx[4],
+    				filters: /*filters*/ ctx[9]
     			},
     			$$inline: true
     		});
 
-    	placelist.$on("message", /*handlePlaceMessage*/ ctx[12]);
+    	placelist.$on("message", /*handlePlaceMessage*/ ctx[13]);
 
     	const block = {
     		c: function create() {
@@ -30525,8 +30525,8 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const placelist_changes = {};
-    			if (dirty[0] & /*all_point_data*/ 8) placelist_changes.geojson = /*all_point_data*/ ctx[3];
-    			if (dirty[0] & /*filters*/ 256) placelist_changes.filters = /*filters*/ ctx[8];
+    			if (dirty[0] & /*all_point_data*/ 16) placelist_changes.geojson = /*all_point_data*/ ctx[4];
+    			if (dirty[0] & /*filters*/ 512) placelist_changes.filters = /*filters*/ ctx[9];
     			placelist.$set(placelist_changes);
     		},
     		i: function intro(local) {
@@ -30547,14 +30547,14 @@ var app = (function () {
     		block,
     		id: create_key_block_3.name,
     		type: "key",
-    		source: "(374:5) {#key filters}",
+    		source: "(396:5) {#key filters}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (379:3) {#if $activePageTracker === 'safety'}
+    // (401:3) {#if $activePageTracker === 'safety'}
     function create_if_block_6(ctx) {
     	let watersafety;
     	let current;
@@ -30586,14 +30586,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(379:3) {#if $activePageTracker === 'safety'}",
+    		source: "(401:3) {#if $activePageTracker === 'safety'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (382:3) {#if $activePageTracker === 'quality'}
+    // (404:3) {#if $activePageTracker === 'quality'}
     function create_if_block_5(ctx) {
     	let waterquality;
     	let current;
@@ -30625,20 +30625,20 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(382:3) {#if $activePageTracker === 'quality'}",
+    		source: "(404:3) {#if $activePageTracker === 'quality'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (391:4) {#if $activePageTracker === 'access' || $activePageTracker === 'quality'}
+    // (416:4) {#if $activePageTracker === 'access' || $activePageTracker === 'quality'}
     function create_if_block_4(ctx) {
-    	let previous_key = /*active_data*/ ctx[6];
+    	let previous_key = /*active_data*/ ctx[7];
     	let t0;
-    	let previous_key_1 = /*filters*/ ctx[8];
+    	let previous_key_1 = /*filters*/ ctx[9];
     	let t1;
-    	let previous_key_2 = /*filters*/ ctx[8];
+    	let previous_key_2 = /*filters*/ ctx[9];
     	let key_block2_anchor;
     	let current;
     	let key_block0 = create_key_block_2(ctx);
@@ -30664,7 +30664,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*active_data*/ 64 && safe_not_equal(previous_key, previous_key = /*active_data*/ ctx[6])) {
+    			if (dirty[0] & /*active_data*/ 128 && safe_not_equal(previous_key, previous_key = /*active_data*/ ctx[7])) {
     				group_outros();
     				transition_out(key_block0, 1, 1, noop);
     				check_outros();
@@ -30676,7 +30676,7 @@ var app = (function () {
     				key_block0.p(ctx, dirty);
     			}
 
-    			if (dirty[0] & /*filters*/ 256 && safe_not_equal(previous_key_1, previous_key_1 = /*filters*/ ctx[8])) {
+    			if (dirty[0] & /*filters*/ 512 && safe_not_equal(previous_key_1, previous_key_1 = /*filters*/ ctx[9])) {
     				group_outros();
     				transition_out(key_block1, 1, 1, noop);
     				check_outros();
@@ -30688,7 +30688,7 @@ var app = (function () {
     				key_block1.p(ctx, dirty);
     			}
 
-    			if (dirty[0] & /*filters*/ 256 && safe_not_equal(previous_key_2, previous_key_2 = /*filters*/ ctx[8])) {
+    			if (dirty[0] & /*filters*/ 512 && safe_not_equal(previous_key_2, previous_key_2 = /*filters*/ ctx[9])) {
     				group_outros();
     				transition_out(key_block2, 1, 1, noop);
     				check_outros();
@@ -30727,20 +30727,20 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(391:4) {#if $activePageTracker === 'access' || $activePageTracker === 'quality'}",
+    		source: "(416:4) {#if $activePageTracker === 'access' || $activePageTracker === 'quality'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (392:5) {#key active_data}
+    // (417:5) {#key active_data}
     function create_key_block_2(ctx) {
     	let polygon;
     	let current;
 
     	polygon = new Polygon({
-    			props: { active_data: /*active_data*/ ctx[6] },
+    			props: { active_data: /*active_data*/ ctx[7] },
     			$$inline: true
     		});
 
@@ -30754,7 +30754,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const polygon_changes = {};
-    			if (dirty[0] & /*active_data*/ 64) polygon_changes.active_data = /*active_data*/ ctx[6];
+    			if (dirty[0] & /*active_data*/ 128) polygon_changes.active_data = /*active_data*/ ctx[7];
     			polygon.$set(polygon_changes);
     		},
     		i: function intro(local) {
@@ -30775,27 +30775,27 @@ var app = (function () {
     		block,
     		id: create_key_block_2.name,
     		type: "key",
-    		source: "(392:5) {#key active_data}",
+    		source: "(417:5) {#key active_data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (395:5) {#key filters}
+    // (420:5) {#key filters}
     function create_key_block_1(ctx) {
     	let geopoint;
     	let current;
 
     	geopoint = new GeoPoint({
     			props: {
-    				geojson: /*all_point_data*/ ctx[3],
-    				filters: /*filters*/ ctx[8]
+    				geojson: /*all_point_data*/ ctx[4],
+    				filters: /*filters*/ ctx[9]
     			},
     			$$inline: true
     		});
 
-    	geopoint.$on("message", /*handleMessage*/ ctx[13]);
+    	geopoint.$on("message", /*handleMessage*/ ctx[14]);
 
     	const block = {
     		c: function create() {
@@ -30807,8 +30807,8 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const geopoint_changes = {};
-    			if (dirty[0] & /*all_point_data*/ 8) geopoint_changes.geojson = /*all_point_data*/ ctx[3];
-    			if (dirty[0] & /*filters*/ 256) geopoint_changes.filters = /*filters*/ ctx[8];
+    			if (dirty[0] & /*all_point_data*/ 16) geopoint_changes.geojson = /*all_point_data*/ ctx[4];
+    			if (dirty[0] & /*filters*/ 512) geopoint_changes.filters = /*filters*/ ctx[9];
     			geopoint.$set(geopoint_changes);
     		},
     		i: function intro(local) {
@@ -30829,24 +30829,24 @@ var app = (function () {
     		block,
     		id: create_key_block_1.name,
     		type: "key",
-    		source: "(395:5) {#key filters}",
+    		source: "(420:5) {#key filters}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (398:5) {#key filters}
+    // (423:5) {#key filters}
     function create_key_block(ctx) {
     	let actpoint;
     	let current;
 
     	actpoint = new ActPoint({
-    			props: { act_geojson: /*act_point_data*/ ctx[4] },
+    			props: { act_geojson: /*act_point_data*/ ctx[5] },
     			$$inline: true
     		});
 
-    	actpoint.$on("message", /*handleMessage*/ ctx[13]);
+    	actpoint.$on("message", /*handleMessage*/ ctx[14]);
 
     	const block = {
     		c: function create() {
@@ -30858,7 +30858,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const actpoint_changes = {};
-    			if (dirty[0] & /*act_point_data*/ 16) actpoint_changes.act_geojson = /*act_point_data*/ ctx[4];
+    			if (dirty[0] & /*act_point_data*/ 32) actpoint_changes.act_geojson = /*act_point_data*/ ctx[5];
     			actpoint.$set(actpoint_changes);
     		},
     		i: function intro(local) {
@@ -30879,20 +30879,20 @@ var app = (function () {
     		block,
     		id: create_key_block.name,
     		type: "key",
-    		source: "(398:5) {#key filters}",
+    		source: "(423:5) {#key filters}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (402:4) {#if $activePageTracker === 'safety'}
+    // (427:4) {#if $activePageTracker === 'safety'}
     function create_if_block_3(ctx) {
     	let safetypoint;
     	let current;
 
     	safetypoint = new SafetyPoint({
-    			props: { geojson: /*temp_point_data*/ ctx[5] },
+    			props: { geojson: /*temp_point_data*/ ctx[6] },
     			$$inline: true
     		});
 
@@ -30906,7 +30906,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const safetypoint_changes = {};
-    			if (dirty[0] & /*temp_point_data*/ 32) safetypoint_changes.geojson = /*temp_point_data*/ ctx[5];
+    			if (dirty[0] & /*temp_point_data*/ 64) safetypoint_changes.geojson = /*temp_point_data*/ ctx[6];
     			safetypoint.$set(safetypoint_changes);
     		},
     		i: function intro(local) {
@@ -30927,14 +30927,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(402:4) {#if $activePageTracker === 'safety'}",
+    		source: "(427:4) {#if $activePageTracker === 'safety'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (406:4) {#if $activePageTracker === 'quality'}
+    // (431:4) {#if $activePageTracker === 'quality'}
     function create_if_block_2(ctx) {
     	let waterqualitylegend;
     	let current;
@@ -30966,14 +30966,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(406:4) {#if $activePageTracker === 'quality'}",
+    		source: "(431:4) {#if $activePageTracker === 'quality'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (409:4) {#if $activePageTracker === 'safety'}
+    // (434:4) {#if $activePageTracker === 'safety'}
     function create_if_block_1(ctx) {
     	let watersafetylegend;
     	let current;
@@ -31005,29 +31005,40 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(409:4) {#if $activePageTracker === 'safety'}",
+    		source: "(434:4) {#if $activePageTracker === 'safety'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (387:3) <LeafletMap >
+    // (409:3) <LeafletMap >
     function create_default_slot(ctx) {
     	let homebutton;
     	let t0;
-    	let span;
+    	let div;
+    	let span0;
     	let t1;
+
+    	let t2_value = (/*nextHighTide*/ ctx[2]
+    	? /*nextHighTide*/ ctx[2].t.substr(11, 5)
+    	: 'is tomorrow') + "";
+
     	let t2;
+    	let br;
     	let t3;
+    	let span1;
     	let t4;
     	let t5;
     	let t6;
     	let t7;
+    	let t8;
+    	let t9;
+    	let t10;
     	let if_block3_anchor;
     	let current;
     	homebutton = new Home({ $$inline: true });
-    	homebutton.$on("homebutton", /*handleExtent*/ ctx[14]);
+    	homebutton.$on("homebutton", /*handleExtent*/ ctx[15]);
     	let if_block0 = (/*$activePageTracker*/ ctx[0] === 'access' || /*$activePageTracker*/ ctx[0] === 'quality') && create_if_block_4(ctx);
     	let if_block1 = /*$activePageTracker*/ ctx[0] === 'safety' && create_if_block_3(ctx);
     	let if_block2 = /*$activePageTracker*/ ctx[0] === 'quality' && create_if_block_2(ctx);
@@ -31037,42 +31048,61 @@ var app = (function () {
     		c: function create() {
     			create_component(homebutton.$$.fragment);
     			t0 = space();
-    			span = element("span");
-    			t1 = text("Current Water Temperature: ");
-    			t2 = text(/*waterTemp*/ ctx[1]);
-    			t3 = text("°F");
-    			t4 = space();
-    			if (if_block0) if_block0.c();
-    			t5 = space();
-    			if (if_block1) if_block1.c();
-    			t6 = space();
-    			if (if_block2) if_block2.c();
+    			div = element("div");
+    			span0 = element("span");
+    			t1 = text("Next High Tide: ");
+    			t2 = text(t2_value);
+    			br = element("br");
+    			t3 = space();
+    			span1 = element("span");
+    			t4 = text("Current Water Temperature: ");
+    			t5 = text(/*waterTemp*/ ctx[1]);
+    			t6 = text("°F");
     			t7 = space();
+    			if (if_block0) if_block0.c();
+    			t8 = space();
+    			if (if_block1) if_block1.c();
+    			t9 = space();
+    			if (if_block2) if_block2.c();
+    			t10 = space();
     			if (if_block3) if_block3.c();
     			if_block3_anchor = empty();
-    			attr_dev(span, "class", "water-temp svelte-1m3lw2p");
-    			add_location(span, file, 388, 4, 13247);
+    			add_location(span0, file, 411, 5, 14094);
+    			add_location(br, file, 411, 96, 14185);
+    			add_location(span1, file, 412, 5, 14195);
+    			attr_dev(div, "class", "water-temp svelte-1m3lw2p");
+    			add_location(div, file, 410, 4, 14064);
     		},
     		m: function mount(target, anchor) {
     			mount_component(homebutton, target, anchor);
     			insert_dev(target, t0, anchor);
-    			insert_dev(target, span, anchor);
-    			append_dev(span, t1);
-    			append_dev(span, t2);
-    			append_dev(span, t3);
-    			insert_dev(target, t4, anchor);
-    			if (if_block0) if_block0.m(target, anchor);
-    			insert_dev(target, t5, anchor);
-    			if (if_block1) if_block1.m(target, anchor);
-    			insert_dev(target, t6, anchor);
-    			if (if_block2) if_block2.m(target, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, span0);
+    			append_dev(span0, t1);
+    			append_dev(span0, t2);
+    			append_dev(div, br);
+    			append_dev(div, t3);
+    			append_dev(div, span1);
+    			append_dev(span1, t4);
+    			append_dev(span1, t5);
+    			append_dev(span1, t6);
     			insert_dev(target, t7, anchor);
+    			if (if_block0) if_block0.m(target, anchor);
+    			insert_dev(target, t8, anchor);
+    			if (if_block1) if_block1.m(target, anchor);
+    			insert_dev(target, t9, anchor);
+    			if (if_block2) if_block2.m(target, anchor);
+    			insert_dev(target, t10, anchor);
     			if (if_block3) if_block3.m(target, anchor);
     			insert_dev(target, if_block3_anchor, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty[0] & /*waterTemp*/ 2) set_data_dev(t2, /*waterTemp*/ ctx[1]);
+    			if ((!current || dirty[0] & /*nextHighTide*/ 4) && t2_value !== (t2_value = (/*nextHighTide*/ ctx[2]
+    			? /*nextHighTide*/ ctx[2].t.substr(11, 5)
+    			: 'is tomorrow') + "")) set_data_dev(t2, t2_value);
+
+    			if (!current || dirty[0] & /*waterTemp*/ 2) set_data_dev(t5, /*waterTemp*/ ctx[1]);
 
     			if (/*$activePageTracker*/ ctx[0] === 'access' || /*$activePageTracker*/ ctx[0] === 'quality') {
     				if (if_block0) {
@@ -31085,7 +31115,7 @@ var app = (function () {
     					if_block0 = create_if_block_4(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
-    					if_block0.m(t5.parentNode, t5);
+    					if_block0.m(t8.parentNode, t8);
     				}
     			} else if (if_block0) {
     				group_outros();
@@ -31108,7 +31138,7 @@ var app = (function () {
     					if_block1 = create_if_block_3(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
-    					if_block1.m(t6.parentNode, t6);
+    					if_block1.m(t9.parentNode, t9);
     				}
     			} else if (if_block1) {
     				group_outros();
@@ -31129,7 +31159,7 @@ var app = (function () {
     					if_block2 = create_if_block_2(ctx);
     					if_block2.c();
     					transition_in(if_block2, 1);
-    					if_block2.m(t7.parentNode, t7);
+    					if_block2.m(t10.parentNode, t10);
     				}
     			} else if (if_block2) {
     				group_outros();
@@ -31182,14 +31212,14 @@ var app = (function () {
     		d: function destroy(detaching) {
     			destroy_component(homebutton, detaching);
     			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(span);
-    			if (detaching) detach_dev(t4);
-    			if (if_block0) if_block0.d(detaching);
-    			if (detaching) detach_dev(t5);
-    			if (if_block1) if_block1.d(detaching);
-    			if (detaching) detach_dev(t6);
-    			if (if_block2) if_block2.d(detaching);
+    			if (detaching) detach_dev(div);
     			if (detaching) detach_dev(t7);
+    			if (if_block0) if_block0.d(detaching);
+    			if (detaching) detach_dev(t8);
+    			if (if_block1) if_block1.d(detaching);
+    			if (detaching) detach_dev(t9);
+    			if (if_block2) if_block2.d(detaching);
+    			if (detaching) detach_dev(t10);
     			if (if_block3) if_block3.d(detaching);
     			if (detaching) detach_dev(if_block3_anchor);
     		}
@@ -31199,7 +31229,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(387:3) <LeafletMap >",
+    		source: "(409:3) <LeafletMap >",
     		ctx
     	});
 
@@ -31219,7 +31249,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*all_point_data*/ ctx[3] && /*all_poly_data*/ ctx[2]) return 0;
+    		if (/*all_point_data*/ ctx[4] && /*all_poly_data*/ ctx[3]) return 0;
     		return 1;
     	}
 
@@ -31235,9 +31265,9 @@ var app = (function () {
     			if_block_anchor = empty();
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css");
-    			add_location(link, file, 281, 1, 9166);
+    			add_location(link, file, 303, 1, 9983);
     			if (!src_url_equal(script.src, script_src_value = "https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 282, 1, 9268);
+    			add_location(script, file, 304, 1, 10085);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -31311,6 +31341,23 @@ var app = (function () {
     const polygon_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_site_polys_20240201.geojson";
     const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
     const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
+    const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
+
+    function getNextHighTide(tides) {
+    	const currentTime = new Date();
+
+    	for (const tide of tides) {
+    		console.log(tide);
+    		console.log(currentTime);
+
+    		if (new Date(tide.t) > currentTime && tide.type === 'H') {
+    			return tide;
+    		}
+    	}
+
+    	// If no high tide after current time, return null
+    	return null;
+    }
 
     function modifyIconSource(act) {
     	if (act.isActive) {
@@ -31331,6 +31378,8 @@ var app = (function () {
     	let poly_data;
     	let temp_data;
     	let waterTemp;
+    	let tidesData;
+    	let nextHighTide;
     	let all_poly_data;
     	let all_point_data;
     	let act_point_data;
@@ -31382,22 +31431,30 @@ var app = (function () {
     	onMount(async () => {
     		const res = await fetch(point_url);
     		point_data = await res.json();
-    		$$invalidate(3, all_point_data = [...point_data.features]);
+    		$$invalidate(4, all_point_data = [...point_data.features]);
     		const res3 = await fetch(act_point_url);
     		act_data = await res3.json();
-    		$$invalidate(4, act_point_data = [...act_data.features]);
+    		$$invalidate(5, act_point_data = [...act_data.features]);
     		const res2 = await fetch(polygon_url);
     		poly_data = await res2.json();
-    		$$invalidate(2, all_poly_data = [...poly_data.features]);
+    		$$invalidate(3, all_poly_data = [...poly_data.features]);
     		const res4 = await fetch(temp_url);
     		temp_data = await res4.json();
-    		$$invalidate(5, temp_point_data = [...temp_data.features]);
+    		$$invalidate(6, temp_point_data = [...temp_data.features]);
 
-    		// water temp data fro noaa
+    		// water temp data from noaa
     		const wt_response = await fetch(water_temp_url);
 
     		const wt_data = await wt_response.json();
     		$$invalidate(1, waterTemp = wt_data.data[0].v);
+
+    		// next high tide from NOAA
+    		const tides_response = await fetch(tides_today_url);
+
+    		const tidesData = await await tides_response.json();
+    		const tides = tidesData.predictions;
+    		console.log(tides);
+    		$$invalidate(2, nextHighTide = getNextHighTide(tides));
     	});
 
     	//Filter Function. Filter goes to GeoJSON.svelte
@@ -31446,29 +31503,29 @@ var app = (function () {
 
     	// write a function to toggle the isActive property of the act object with value = 'FISH'
     	function filterPollution() {
-    		$$invalidate(8, filters.act_filters = ['SWIM', 'HPBL'], filters);
+    		$$invalidate(9, filters.act_filters = ['SWIM', 'HPBL'], filters);
 
     		// I am using the existing featre filters and treating the cso and ms4 columns as features.  If the site va
-    		$$invalidate(8, filters.feature_filters = ['nr_ms4_cso'], filters);
+    		$$invalidate(9, filters.feature_filters = ['nr_ms4_cso'], filters);
     	}
 
     	// Handle Site Feature Filters
     	function clickHandleSiteFeatures(e) {
     		if (filters.feature_filters.includes(e.target.value)) {
-    			$$invalidate(8, filters.feature_filters = filters.feature_filters.filter(f => f !== e.target.value), filters);
+    			$$invalidate(9, filters.feature_filters = filters.feature_filters.filter(f => f !== e.target.value), filters);
     		} else {
-    			$$invalidate(8, filters.feature_filters = [...filters.feature_filters, e.target.value], filters);
+    			$$invalidate(9, filters.feature_filters = [...filters.feature_filters, e.target.value], filters);
     		}
     	}
 
     	function handlePlaceMessage(e) {
     		let active_id = String(e.detail.active[0].properties.site_id);
 
-    		$$invalidate(6, active_data = all_poly_data.filter(function (f) {
+    		$$invalidate(7, active_data = all_poly_data.filter(function (f) {
     			return String(f.properties.site_id) === active_id;
     		}));
 
-    		$$invalidate(7, active_point = all_point_data.filter(function (f) {
+    		$$invalidate(8, active_point = all_point_data.filter(function (f) {
     			return String(f.properties.site_id) === active_id;
     		}));
 
@@ -31478,31 +31535,31 @@ var app = (function () {
     	function handleMessage(e) {
     		let active_id = String(e.detail.active[0].properties.site_id);
 
-    		$$invalidate(6, active_data = all_poly_data.filter(function (f) {
+    		$$invalidate(7, active_data = all_poly_data.filter(function (f) {
     			return String(f.properties.site_id) === active_id;
     		}));
 
-    		$$invalidate(7, active_point = all_point_data.filter(function (f) {
+    		$$invalidate(8, active_point = all_point_data.filter(function (f) {
     			return String(f.properties.site_id) === active_id;
     		}));
     	}
 
     	function handleExtent(e) {
-    		$$invalidate(6, active_data = null);
-    		$$invalidate(7, active_point = null);
+    		$$invalidate(7, active_data = null);
+    		$$invalidate(8, active_point = null);
     	}
 
     	let title_hover = { x: null, y: null, name: null };
 
     	function enter(e, name) {
     		e.preventDefault();
-    		$$invalidate(10, title_hover.x = e.clientX, title_hover);
-    		$$invalidate(10, title_hover.y = e.clientY, title_hover);
-    		$$invalidate(10, title_hover.name = name, title_hover);
+    		$$invalidate(11, title_hover.x = e.clientX, title_hover);
+    		$$invalidate(11, title_hover.y = e.clientY, title_hover);
+    		$$invalidate(11, title_hover.name = name, title_hover);
     	}
 
     	function leave(e) {
-    		$$invalidate(10, title_hover.name = null, title_hover);
+    		$$invalidate(11, title_hover.name = null, title_hover);
     	}
 
     	function clickHandleACT(e) {
@@ -31510,16 +31567,16 @@ var app = (function () {
 
     		// If the value is already in filters.act_filters, remove it.
     		if (filters.act_filters.includes(value)) {
-    			$$invalidate(8, filters.act_filters = filters.act_filters.filter(f => f !== value), filters);
+    			$$invalidate(9, filters.act_filters = filters.act_filters.filter(f => f !== value), filters);
     		} else {
     			// Otherwise, add it to filters.act_filters.
-    			$$invalidate(8, filters.act_filters = [...filters.act_filters, value], filters);
+    			$$invalidate(9, filters.act_filters = [...filters.act_filters, value], filters);
     		}
 
     		console.log(value);
 
     		// Toggle the isActive property of each act object based on the click
-    		$$invalidate(9, acts = acts.map(act => {
+    		$$invalidate(10, acts = acts.map(act => {
     			if (act.value === value) {
     				return { ...act, isActive: !act.isActive };
     			}
@@ -31582,7 +31639,7 @@ var app = (function () {
 
     	function input_input_handler() {
     		filters.text_filter = this.value;
-    		$$invalidate(8, filters);
+    		$$invalidate(9, filters);
     	}
 
     	$$self.$capture_state = () => ({
@@ -31612,6 +31669,8 @@ var app = (function () {
     		poly_data,
     		temp_data,
     		waterTemp,
+    		tidesData,
+    		nextHighTide,
     		all_poly_data,
     		all_point_data,
     		act_point_data,
@@ -31623,6 +31682,7 @@ var app = (function () {
     		polygon_url,
     		temp_url,
     		water_temp_url,
+    		tides_today_url,
     		safetyTileURL,
     		qualityTileURL,
     		regTileURL,
@@ -31632,6 +31692,7 @@ var app = (function () {
     		removePolygons,
     		filters,
     		acts,
+    		getNextHighTide,
     		filterPollution,
     		clickHandleSiteFeatures,
     		handlePlaceMessage,
@@ -31651,19 +31712,21 @@ var app = (function () {
     		if ('poly_data' in $$props) poly_data = $$props.poly_data;
     		if ('temp_data' in $$props) temp_data = $$props.temp_data;
     		if ('waterTemp' in $$props) $$invalidate(1, waterTemp = $$props.waterTemp);
-    		if ('all_poly_data' in $$props) $$invalidate(2, all_poly_data = $$props.all_poly_data);
-    		if ('all_point_data' in $$props) $$invalidate(3, all_point_data = $$props.all_point_data);
-    		if ('act_point_data' in $$props) $$invalidate(4, act_point_data = $$props.act_point_data);
-    		if ('temp_point_data' in $$props) $$invalidate(5, temp_point_data = $$props.temp_point_data);
-    		if ('active_data' in $$props) $$invalidate(6, active_data = $$props.active_data);
-    		if ('active_point' in $$props) $$invalidate(7, active_point = $$props.active_point);
-    		if ('safetyTileURL' in $$props) $$invalidate(32, safetyTileURL = $$props.safetyTileURL);
-    		if ('qualityTileURL' in $$props) $$invalidate(33, qualityTileURL = $$props.qualityTileURL);
-    		if ('regTileURL' in $$props) $$invalidate(34, regTileURL = $$props.regTileURL);
+    		if ('tidesData' in $$props) tidesData = $$props.tidesData;
+    		if ('nextHighTide' in $$props) $$invalidate(2, nextHighTide = $$props.nextHighTide);
+    		if ('all_poly_data' in $$props) $$invalidate(3, all_poly_data = $$props.all_poly_data);
+    		if ('all_point_data' in $$props) $$invalidate(4, all_point_data = $$props.all_point_data);
+    		if ('act_point_data' in $$props) $$invalidate(5, act_point_data = $$props.act_point_data);
+    		if ('temp_point_data' in $$props) $$invalidate(6, temp_point_data = $$props.temp_point_data);
+    		if ('active_data' in $$props) $$invalidate(7, active_data = $$props.active_data);
+    		if ('active_point' in $$props) $$invalidate(8, active_point = $$props.active_point);
+    		if ('safetyTileURL' in $$props) $$invalidate(34, safetyTileURL = $$props.safetyTileURL);
+    		if ('qualityTileURL' in $$props) $$invalidate(35, qualityTileURL = $$props.qualityTileURL);
+    		if ('regTileURL' in $$props) $$invalidate(36, regTileURL = $$props.regTileURL);
     		if ('map' in $$props) map = $$props.map;
-    		if ('filters' in $$props) $$invalidate(8, filters = $$props.filters);
-    		if ('acts' in $$props) $$invalidate(9, acts = $$props.acts);
-    		if ('title_hover' in $$props) $$invalidate(10, title_hover = $$props.title_hover);
+    		if ('filters' in $$props) $$invalidate(9, filters = $$props.filters);
+    		if ('acts' in $$props) $$invalidate(10, acts = $$props.acts);
+    		if ('title_hover' in $$props) $$invalidate(11, title_hover = $$props.title_hover);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -31702,6 +31765,7 @@ var app = (function () {
     	return [
     		$activePageTracker,
     		waterTemp,
+    		nextHighTide,
     		all_poly_data,
     		all_point_data,
     		act_point_data,
