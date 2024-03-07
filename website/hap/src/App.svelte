@@ -20,6 +20,8 @@
 	import WaterSafetyLegend from './WaterSafetyLegend.svelte';
 	import { count, activePageTracker} from "./store.js";
 
+	let title = "The Hudson Access Project is collecting information about all the places where the public can get into and onto the water in the Hudson & Harbor Estuary and its tributaries for swimming, boating, and fishing; with a focus on activities that bring people into direct contact with the water."
+
 	let point_data;
 	let act_data;
 	let poly_data;
@@ -191,11 +193,10 @@
 	function getNextHighTide(tides) {
 		const currentTime = new Date();
 		for (const tide of tides) {
-			console.log(tide);
-			console.log(currentTime);
-		if (new Date(tide.t) > currentTime && tide.type === 'H') {
-			return tide;
-		}
+
+			if (new Date(tide.t) > currentTime && tide.type === 'H') {
+				return tide;
+			}
 		}
 		// If no high tide after current time, return null
 		return null;
@@ -303,6 +304,7 @@
 <svelte:head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
 	<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+	<title>{title}</title>
 </svelte:head>
 
 
