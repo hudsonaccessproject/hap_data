@@ -348,7 +348,7 @@ input[type=text]:focus {
 #searcher {
     color: var(--blue);
     font-size: 22px;
-    padding-right: 5px;
+    /* padding-right: 5px; */
 }
 
 

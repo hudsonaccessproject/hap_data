@@ -11,9 +11,13 @@
     // define array for images if they exist
     let images = [];
     let carousel;
-    // const handleNextClick = () => {
-    //     carousel.next();
-    // };
+
+    let closeSVG = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+    `;
 
     //Use these for activitiy feature ucons
 	let acts = [
@@ -99,7 +103,7 @@
 
 {#if active_point}
     <div class="park-header">
-        <span class="close" on:click={closeDiv}  on:keydown={closeDiv}>x</span>
+        <span class="close" on:click={closeDiv}  on:keydown={closeDiv}>{@html closeSVG}</span>
         <p class="park-name">{active_point.site_name}</p>
         {#if active_point.program_name}
             <p class="park-subname">{active_point.program_name}</p>
@@ -186,7 +190,7 @@
 .park-header {
     background-color: #FFAA22;
     color: #000;
-    padding: 15px;
+    padding: 15px 10px 15px 15px;
     /* border-bottom: 5px solid #FFAA22;
     border-top: 5px solid #FFAA22; */
 }
