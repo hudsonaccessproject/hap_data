@@ -23,16 +23,35 @@
 
 <div class="collapsible">
     <h3>
-        <button aria-expanded={expanded} on:click={() => expanded = !expanded}>
-          {#if headerText}
+      <button aria-expanded={expanded} on:click={() => expanded = !expanded}>
+        {#if headerText}
             <!-- {headerText} -->
             <span class="header-text {expanded ? 'expanded' : ''}" >{headerText}</span>
           {/if}
-<svg viewBox="0 0 20 20" fill="none" >
-<path class="vert" d="M10 1V19" stroke="black" stroke-width="2"/>
-<path d="M1 10L19 10" stroke="black" stroke-width="2"/>
-</svg>
-        </button>
+        {#if expanded}
+          <!-- "X" SVG for close -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        {:else}
+          <!-- "+" SVG for open -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        {/if}
+      <!-- </button>
+        <button aria-expanded={expanded} on:click={() => expanded = !expanded}>
+          {#if headerText} -->
+            <!-- {headerText} -->
+            <!-- <span class="header-text {expanded ? 'expanded' : ''}" >{headerText}</span>
+          {/if}
+          <svg viewBox="0 0 20 20" fill="none" >
+          <path class="vert" d="M10 1V19" stroke="black" stroke-width="2"/>
+          <path d="M1 10L19 10" stroke="black" stroke-width="2"/>
+          </svg>
+        </button> -->
     </h3>
     
     <div class='contents' hidden={!expanded}>
@@ -96,22 +115,22 @@
     border-bottom: 1.5px solid var(--gray-light, #e1e1e1);
   }
 
-    button[aria-expanded="true"] .vert {
+    /* button[aria-expanded="true"] .vert {
         display: none;
-    }
+    } */
 
-    button:focus svg{
+    /* button:focus svg{
         outline: 2px solid;
-    }
+    } */
 /* 
     button [aria-expanded="true"] rect {
         fill: currentColor;
     } */
 
-    svg {
+    /* svg {
         height: 0.7em;
 				width: 0.7em;
-    }
+    } */
 
     /* .contents {
       padding-top: 5px;
