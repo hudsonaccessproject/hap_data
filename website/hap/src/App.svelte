@@ -36,12 +36,12 @@
 	let active_data;
 	let active_point;
 
-	const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
-	const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
-	const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
-	// const point_url = "/assets/hap_site_points_20240320.geojson";
-	// const act_point_url = "/assets/hap_act_points_20240320.geojson";
-	// const polygon_url = "/assets/hap_site_polys_20240201.geojson";
+	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
+	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
+	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
+	const point_url = "/assets/hap_site_points_20240320.geojson";
+	const act_point_url = "/assets/hap_act_points_20240320.geojson";
+	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
@@ -327,12 +327,12 @@
 			{#if $activePageTracker === 'access'}
 				<div>
 					<div class="activity-filter">
-						<div class="r">
+						<div class="act-filters-label">
 							<span class="t2 act-filter-header">Activity Filters</span><br>
 							<span class="t3 icon-instructions">Select an icon to search by activity</span>
 						</div>
 						<!-- ACT BUTTONS-->
-						<div class="act-filters r">
+						<div class="act-filters">
 							{#each acts as act}
 							<label
 								class="act-buttons"
@@ -340,7 +340,6 @@
 							>
 								<img
 								alt={act.value}
-								style="width:40px"
 								src={modifyIconSource(act)}
 								/>
 								<input
@@ -502,6 +501,17 @@
 		order: 2;
 	} 
 
+	.activity-filter {
+		border-bottom: 1.5px solid rgba(225, 225, 225);
+		margin-bottom: 0px;
+		padding: 15px 15px 10px 15px;
+		line-height: 1.2em;
+	}
+
+	/* .act-filters {
+		padding-top: 10px;
+	} */
+
 
 	/* Media query for mobile devices */
 	@media (max-width: 767px) {
@@ -521,33 +531,14 @@
 		.map-only-pane .water-temp {
 			bottom: 30px;
 			font-size: 16px;
-			/* background-color: rgba(255, 255, 255, 0.5);
-			padding: 5px;
-			border-radius: 5px; */
 		}
 
 		.left-panel {
 			width: 100%;
-			/* position: relative;
-			top: 0px;
-			display: flex;
-			flex-direction: column;
-			border-bottom: solid 2px rgb(225, 225, 225);
-			border-left: none;
-			overflow-y: scroll; */
 			height: auto;
 			max-height: calc(100vh - 75px);
 			order: 1;
 		}
-
-		/* .leaflet-top.leaflet-left {
-			bottom: 0px!important;
-			left: 0px!important;
-		} */
-
-		/* .find {
-			display: none!important;
-		} */
 
 		.icon-instructions {
 			display: none!important;
@@ -557,12 +548,23 @@
 		.activity-filter {
 			display: flex;
 			border-bottom: 1.5px solid rgb(225, 225, 225);
-			padding: 5px;
+			padding: 0px 11px 0px 11px;
+			justify-content: space-between; /* Align children at ends */
+    		width: 100%; /* Ensure full width */
+		}
+
+		.act-filters-label {
+			flex: 0 0 auto; /* Prevent automatic sizing */
+    		text-align: left; /* Align text left */
+			margin-top: 9px;
 		}
 
 		.act-filters {
 			border-bottom: none;
-			/* padding-top: 10px; */
+			float: right;
+			margin-right: 11px;
+			padding-top: 6px;
+			margin-bottom: 3px;
 		}
 
 	}
