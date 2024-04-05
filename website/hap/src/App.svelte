@@ -508,9 +508,9 @@
 		line-height: 1.2em;
 	}
 
-	/* .act-filters {
+	.act-filters {
 		padding-top: 10px;
-	} */
+	}
 
 
 	/* Media query for mobile devices */
@@ -538,6 +538,7 @@
 			height: auto;
 			max-height: calc(100vh - 75px);
 			order: 1;
+			border: none;
 		}
 
 		.icon-instructions {
