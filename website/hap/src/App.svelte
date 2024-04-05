@@ -413,8 +413,8 @@
 			<LeafletMap >
 				<HomeButton on:homebutton={handleExtent}/>
 				<div class="water-temp">
-					<span>The Battery: Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span><br>
-					<span>Current Water Temperature: {waterTemp}°F</span>
+					<span>Water Temperature: {waterTemp}°F</span><br>
+					<span>Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span>
 				</div>
 				<!-- data on the map -->
 				{#if $activePageTracker === 'access' || $activePageTracker === 'quality'}
@@ -476,17 +476,15 @@
 
 	.map-only-pane .water-temp {
 		position: absolute;
-		/* top: 5px; */
-		bottom: 20px;
-		right: 5px;
+		bottom: 28px;
+		right: 11px;
 		z-index: 10001;
-		/* color: #666; */
-		color: var(--orange3);
-		font-size: 20px;
-		font-weight: 700;
-		/* background-color: rgba(255, 255, 255, 0.25);
-		padding: 5px;
-		border-radius: 5px; */
+		color: #000;
+		font-size: 18px;
+		border: 1.5px solid var(--orange3);
+		background-color: white;
+		padding: 3px 5px;
+		border-radius: 5px;
 	}
 
 	.left-panel {
@@ -529,16 +527,17 @@
 		}
 
 		.map-only-pane .water-temp {
-			bottom: 30px;
+			bottom: 41px;
 			font-size: 16px;
 		}
 
 		.left-panel {
 			width: 100%;
 			height: auto;
-			max-height: calc(100vh - 75px);
+			/* max-height: calc(100vh - 75px); */
 			order: 1;
 			border: none;
+			max-height: 60%;
 		}
 
 		.icon-instructions {

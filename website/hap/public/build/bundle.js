@@ -29636,7 +29636,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Loading...";
-    			add_location(div, file, 449, 1, 15409);
+    			add_location(div, file, 449, 1, 15388);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -29725,11 +29725,11 @@ var app = (function () {
     			create_component(hoverup.$$.fragment);
     			t7 = space();
     			create_component(title_1.$$.fragment);
-    			attr_dev(div0, "class", "left-panel panel svelte-1dr26ne");
+    			attr_dev(div0, "class", "left-panel panel svelte-zphqls");
     			add_location(div0, file, 325, 2, 10824);
-    			attr_dev(div1, "class", "map-only-pane svelte-1dr26ne");
+    			attr_dev(div1, "class", "map-only-pane svelte-zphqls");
     			add_location(div1, file, 411, 2, 14317);
-    			attr_dev(div2, "class", "map-pane svelte-1dr26ne");
+    			attr_dev(div2, "class", "map-pane svelte-zphqls");
     			add_location(div2, file, 324, 1, 10799);
     		},
     		m: function mount(target, anchor) {
@@ -29867,7 +29867,7 @@ var app = (function () {
 
     			const leafletmap_changes = {};
 
-    			if (dirty[0] & /*$activePageTracker, temp_point_data, filters, act_point_data, all_point_data, active_data, waterTemp, nextHighTide*/ 759 | dirty[1] & /*$$scope*/ 65536) {
+    			if (dirty[0] & /*$activePageTracker, temp_point_data, filters, act_point_data, all_point_data, active_data, nextHighTide, waterTemp*/ 759 | dirty[1] & /*$$scope*/ 65536) {
     				leafletmap_changes.$$scope = { dirty, ctx };
     			}
 
@@ -30029,13 +30029,13 @@ var app = (function () {
     			attr_dev(span0, "class", "t2 act-filter-header");
     			add_location(span0, file, 330, 7, 10986);
     			add_location(br, file, 330, 65, 11044);
-    			attr_dev(span1, "class", "t3 icon-instructions svelte-1dr26ne");
+    			attr_dev(span1, "class", "t3 icon-instructions svelte-zphqls");
     			add_location(span1, file, 331, 7, 11056);
-    			attr_dev(div0, "class", "act-filters-label svelte-1dr26ne");
+    			attr_dev(div0, "class", "act-filters-label svelte-zphqls");
     			add_location(div0, file, 329, 6, 10947);
-    			attr_dev(div1, "class", "act-filters svelte-1dr26ne");
+    			attr_dev(div1, "class", "act-filters svelte-zphqls");
     			add_location(div1, file, 334, 6, 11180);
-    			attr_dev(div2, "class", "activity-filter svelte-1dr26ne");
+    			attr_dev(div2, "class", "activity-filter svelte-zphqls");
     			add_location(div2, file, 328, 5, 10911);
     			add_location(div3, file, 327, 4, 10900);
     			attr_dev(div4, "id", "amenity");
@@ -30390,7 +30390,7 @@ var app = (function () {
     			add_location(label8, file, 376, 7, 13217);
     			add_location(br8, file, 376, 72, 13282);
     			attr_dev(input9, "type", "checkbox");
-    			attr_dev(input9, "class", "last svelte-1dr26ne");
+    			attr_dev(input9, "class", "last svelte-zphqls");
     			input9.value = "program";
     			add_location(input9, file, 377, 7, 13294);
     			attr_dev(label9, "class", "t3");
@@ -30520,9 +30520,9 @@ var app = (function () {
     			add_location(input, file, 385, 5, 13592);
     			attr_dev(div0, "class", "searcher r");
     			add_location(div0, file, 384, 4, 13562);
-    			attr_dev(div1, "class", "info-panel panel svelte-1dr26ne");
+    			attr_dev(div1, "class", "info-panel panel svelte-zphqls");
     			add_location(div1, file, 393, 5, 13874);
-    			attr_dev(div2, "class", "places-list svelte-1dr26ne");
+    			attr_dev(div2, "class", "places-list svelte-zphqls");
     			add_location(div2, file, 392, 4, 13843);
     		},
     		m: function mount(target, anchor) {
@@ -31171,17 +31171,17 @@ var app = (function () {
     	let div;
     	let span0;
     	let t1;
+    	let t2;
+    	let t3;
+    	let br;
+    	let t4;
+    	let span1;
+    	let t5;
 
-    	let t2_value = (/*nextHighTide*/ ctx[2]
+    	let t6_value = (/*nextHighTide*/ ctx[2]
     	? /*nextHighTide*/ ctx[2].t.substr(11, 5)
     	: 'is tomorrow') + "";
 
-    	let t2;
-    	let br;
-    	let t3;
-    	let span1;
-    	let t4;
-    	let t5;
     	let t6;
     	let t7;
     	let t8;
@@ -31202,14 +31202,14 @@ var app = (function () {
     			t0 = space();
     			div = element("div");
     			span0 = element("span");
-    			t1 = text("The Battery: Next High Tide: ");
-    			t2 = text(t2_value);
+    			t1 = text("Water Temperature: ");
+    			t2 = text(/*waterTemp*/ ctx[1]);
+    			t3 = text("°F");
     			br = element("br");
-    			t3 = space();
+    			t4 = space();
     			span1 = element("span");
-    			t4 = text("Current Water Temperature: ");
-    			t5 = text(/*waterTemp*/ ctx[1]);
-    			t6 = text("°F");
+    			t5 = text("Next High Tide: ");
+    			t6 = text(t6_value);
     			t7 = space();
     			if (if_block0) if_block0.c();
     			t8 = space();
@@ -31220,9 +31220,9 @@ var app = (function () {
     			if (if_block3) if_block3.c();
     			if_block3_anchor = empty();
     			add_location(span0, file, 415, 5, 14443);
-    			add_location(br, file, 415, 109, 14547);
-    			add_location(span1, file, 416, 5, 14557);
-    			attr_dev(div, "class", "water-temp svelte-1dr26ne");
+    			add_location(br, file, 415, 50, 14488);
+    			add_location(span1, file, 416, 5, 14498);
+    			attr_dev(div, "class", "water-temp svelte-zphqls");
     			add_location(div, file, 414, 4, 14413);
     		},
     		m: function mount(target, anchor) {
@@ -31232,10 +31232,10 @@ var app = (function () {
     			append_dev(div, span0);
     			append_dev(span0, t1);
     			append_dev(span0, t2);
+    			append_dev(span0, t3);
     			append_dev(div, br);
-    			append_dev(div, t3);
+    			append_dev(div, t4);
     			append_dev(div, span1);
-    			append_dev(span1, t4);
     			append_dev(span1, t5);
     			append_dev(span1, t6);
     			insert_dev(target, t7, anchor);
@@ -31250,11 +31250,11 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if ((!current || dirty[0] & /*nextHighTide*/ 4) && t2_value !== (t2_value = (/*nextHighTide*/ ctx[2]
-    			? /*nextHighTide*/ ctx[2].t.substr(11, 5)
-    			: 'is tomorrow') + "")) set_data_dev(t2, t2_value);
+    			if (!current || dirty[0] & /*waterTemp*/ 2) set_data_dev(t2, /*waterTemp*/ ctx[1]);
 
-    			if (!current || dirty[0] & /*waterTemp*/ 2) set_data_dev(t5, /*waterTemp*/ ctx[1]);
+    			if ((!current || dirty[0] & /*nextHighTide*/ 4) && t6_value !== (t6_value = (/*nextHighTide*/ ctx[2]
+    			? /*nextHighTide*/ ctx[2].t.substr(11, 5)
+    			: 'is tomorrow') + "")) set_data_dev(t6, t6_value);
 
     			if (/*$activePageTracker*/ ctx[0] === 'access' || /*$activePageTracker*/ ctx[0] === 'quality') {
     				if (if_block0) {
