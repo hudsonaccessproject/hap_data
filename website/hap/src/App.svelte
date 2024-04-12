@@ -136,7 +136,7 @@
 		const wt_response = await fetch(water_temp_url);
 		const wt_data = await wt_response.json();
 		waterTemp = wt_data.data[0].v;
-
+		console.log(waterTemp)
 		// next high tide from NOAA
 		const tides_response = await fetch(tides_today_url);
 		const tidesData = await await tides_response.json();
@@ -164,40 +164,63 @@
 		{
 		value: "FISH",
 		name: "Fishing",
-		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
-		// source: "/assets/icons/activities/fishing.svg",
-		// activesource: "/assets/icons/activities/fishing_F77B00.svg",
+		source: "/assets/icons/activities/fishing.svg",
+		activesource: "/assets/icons/activities/fishing_F77B00.svg",
 		desc: "You can fish here."
 		},
 		{
 		value: "SWIM",
 		name: "Swimming",
-		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
-		// source: "/assets/icons/activities/swimming.svg",
-		// activesource: "/assets/icons/activities/swimming_F77B00.svg",
+		source: "/assets/icons/activities/swimming.svg",
+		activesource: "/assets/icons/activities/swimming_F77B00.svg",
 		desc: "You can swim here."
 		},
 		{
 		value: "HPBL",
 		name: "Human-powered boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
-		// source: "/assets/icons/activities/hp_boating.svg",
-		// activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
+		source: "/assets/icons/activities/hp_boating.svg",
+		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 		desc: "You can kayak here."
 		},
 		{
 		value: "MPBL",
 		name: "Motor boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
-		// source: "/assets/icons/activities/mp_boating.svg",
-		// activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
+		source: "/assets/icons/activities/mp_boating.svg",
+		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 		desc: "You can motor boat here."
 		}
 	];
+
+    // let acts = [
+	// 	{
+	// 	value: "FISH",
+	// 	name: "Fishing",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	desc: "You can fish here."
+	// 	},
+	// 	{
+	// 	value: "SWIM",
+	// 	name: "Swimming",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	desc: "You can swim here."
+	// 	},
+	// 	{
+	// 	value: "HPBL",
+	// 	name: "Human-powered boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	desc: "You can kayak here."
+	// 	},
+	// 	{
+	// 	value: "MPBL",
+	// 	name: "Motor boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	desc: "You can motor boat here."
+	// 	}
+	// ];
 
 	function getNextHighTide(tides) {
 		const currentTime = new Date();
@@ -418,10 +441,12 @@
 		<div class="map-only-pane">
 			<LeafletMap >
 				<HomeButton on:homebutton={handleExtent}/>
-				<div class="water-temp">
-					<span>Water Temperature: {waterTemp}°F</span><br>
-					<span>Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span>
-				</div>
+				{#if waterTemp!==undefined}
+					<div class="water-temp">
+						<span>Water Temperature: {waterTemp}°F</span><br>
+						<span>Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span>
+					</div>
+				{/if}
 				<!-- data on the map -->
 				{#if $activePageTracker === 'access' || $activePageTracker === 'quality'}
 					{#key active_data}
