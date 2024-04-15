@@ -66,7 +66,7 @@
 <style>
 
   header {
-    height: 65px !important;
+    height: 65px;
     white-space: nowrap;
     margin: 0px;
     z-index: 3;
@@ -127,6 +127,7 @@
 		color: var(--orange3);
 		font-size: 22px;
 		font-weight: 700;
+    padding-left: 15px;
 	}
 
   /* active styles for column-content */
@@ -214,7 +215,7 @@
   @media (max-width: 767px) {
     header {
         width: 100%;
-        height: 45px !important;
+        height: 45px;
 
     }
 

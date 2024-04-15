@@ -36,12 +36,12 @@
 	let active_data;
 	let active_point;
 
-	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
-	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
-	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
-	const point_url = "/assets/hap_site_points_20240320.geojson";
-	const act_point_url = "/assets/hap_act_points_20240320.geojson";
-	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
+	const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
+	const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
+	const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
+	// const point_url = "/assets/hap_site_points_20240320.geojson";
+	// const act_point_url = "/assets/hap_act_points_20240320.geojson";
+	// const polygon_url = "/assets/hap_site_polys_20240201.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
@@ -160,67 +160,67 @@
 	};
 
 	//Use these for creating buttons and hover pop up
-	let acts = [
-		{
-		value: "FISH",
-		name: "Fishing",
-		source: "/assets/icons/activities/fishing.svg",
-		activesource: "/assets/icons/activities/fishing_F77B00.svg",
-		desc: "You can fish here."
-		},
-		{
-		value: "SWIM",
-		name: "Swimming",
-		source: "/assets/icons/activities/swimming.svg",
-		activesource: "/assets/icons/activities/swimming_F77B00.svg",
-		desc: "You can swim here."
-		},
-		{
-		value: "HPBL",
-		name: "Human-powered boating",
-		source: "/assets/icons/activities/hp_boating.svg",
-		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-		desc: "You can kayak here."
-		},
-		{
-		value: "MPBL",
-		name: "Motor boating",
-		source: "/assets/icons/activities/mp_boating.svg",
-		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-		desc: "You can motor boat here."
-		}
-	];
-
-    // let acts = [
+	// let acts = [
 	// 	{
 	// 	value: "FISH",
 	// 	name: "Fishing",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	source: "/assets/icons/activities/fishing.svg",
+	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
 	// 	desc: "You can fish here."
 	// 	},
 	// 	{
 	// 	value: "SWIM",
 	// 	name: "Swimming",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	source: "/assets/icons/activities/swimming.svg",
+	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
 	// 	desc: "You can swim here."
 	// 	},
 	// 	{
 	// 	value: "HPBL",
 	// 	name: "Human-powered boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/hp_boating.svg",
+	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 	// 	desc: "You can kayak here."
 	// 	},
 	// 	{
 	// 	value: "MPBL",
 	// 	name: "Motor boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/mp_boating.svg",
+	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 	// 	desc: "You can motor boat here."
 	// 	}
 	// ];
+
+    let acts = [
+		{
+		value: "FISH",
+		name: "Fishing",
+		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		desc: "You can fish here."
+		},
+		{
+		value: "SWIM",
+		name: "Swimming",
+		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		desc: "You can swim here."
+		},
+		{
+		value: "HPBL",
+		name: "Human-powered boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		desc: "You can kayak here."
+		},
+		{
+		value: "MPBL",
+		name: "Motor boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		desc: "You can motor boat here."
+		}
+	];
 
 	function getNextHighTide(tides) {
 		const currentTime = new Date();
@@ -528,6 +528,7 @@
 		/* overflow: scroll; */
 		z-index: 10001;
 		order: 2;
+		overflow: hidden;
 	} 
 
 	.activity-filter {
@@ -555,6 +556,8 @@
 			width: 100vw;
 			height: -webkit-fill-available;
 			order: 2;
+			border-top: solid 2px rgb(225, 225, 225);
+			margin-top: 10px;
 		}
 
 		.map-only-pane .water-temp {
@@ -565,10 +568,11 @@
 		.left-panel {
 			width: 100%;
 			height: auto;
-			/* max-height: calc(100vh - 75px); */
 			order: 1;
 			border: none;
 			max-height: 60%;
+			flex-grow: 1;
+			padding-bottom: 10px;
 		}
 
 		.icon-instructions {
