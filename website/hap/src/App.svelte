@@ -36,12 +36,12 @@
 	let active_data;
 	let active_point;
 
-	const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
-	const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
-	const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
-	// const point_url = "/assets/hap_site_points_20240320.geojson";
-	// const act_point_url = "/assets/hap_act_points_20240320.geojson";
-	// const polygon_url = "/assets/hap_site_polys_20240201.geojson";
+	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
+	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
+	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
+	const point_url = "/assets/hap_site_points_20240320.geojson"; 
+	const act_point_url = "/assets/hap_act_points_20240320.geojson";
+	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
@@ -136,12 +136,10 @@
 		const wt_response = await fetch(water_temp_url);
 		const wt_data = await wt_response.json();
 		waterTemp = wt_data.data[0].v;
-		console.log(waterTemp)
 		// next high tide from NOAA
 		const tides_response = await fetch(tides_today_url);
 		const tidesData = await await tides_response.json();
 		const tides = tidesData.predictions;
-		console.log("new data source");
 		nextHighTide = getNextHighTide(tides);
 
 	});
@@ -160,74 +158,78 @@
 	};
 
 	//Use these for creating buttons and hover pop up
-	// let acts = [
-	// 	{
-	// 	value: "FISH",
-	// 	name: "Fishing",
-	// 	source: "/assets/icons/activities/fishing.svg",
-	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
-	// 	desc: "You can fish here."
-	// 	},
-	// 	{
-	// 	value: "SWIM",
-	// 	name: "Swimming",
-	// 	source: "/assets/icons/activities/swimming.svg",
-	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
-	// 	desc: "You can swim here."
-	// 	},
-	// 	{
-	// 	value: "HPBL",
-	// 	name: "Human-powered boating",
-	// 	source: "/assets/icons/activities/hp_boating.svg",
-	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-	// 	desc: "You can kayak here."
-	// 	},
-	// 	{
-	// 	value: "MPBL",
-	// 	name: "Motor boating",
-	// 	source: "/assets/icons/activities/mp_boating.svg",
-	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-	// 	desc: "You can motor boat here."
-	// 	}
-	// ];
-
-    let acts = [
+	let acts = [
 		{
 		value: "FISH",
 		name: "Fishing",
-		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		source: "/assets/icons/activities/fishing.svg",
+		activesource: "/assets/icons/activities/fishing_F77B00.svg",
 		desc: "You can fish here."
 		},
 		{
 		value: "SWIM",
 		name: "Swimming",
-		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		source: "/assets/icons/activities/swimming.svg",
+		activesource: "/assets/icons/activities/swimming_F77B00.svg",
 		desc: "You can swim here."
 		},
 		{
 		value: "HPBL",
 		name: "Human-powered boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		source: "/assets/icons/activities/hp_boating.svg",
+		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 		desc: "You can kayak here."
 		},
 		{
 		value: "MPBL",
 		name: "Motor boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		source: "/assets/icons/activities/mp_boating.svg",
+		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 		desc: "You can motor boat here."
 		}
 	];
 
+    // let acts = [
+	// 	{
+	// 	value: "FISH",
+	// 	name: "Fishing",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	desc: "You can fish here."
+	// 	},
+	// 	{
+	// 	value: "SWIM",
+	// 	name: "Swimming",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	desc: "You can swim here."
+	// 	},
+	// 	{
+	// 	value: "HPBL",
+	// 	name: "Human-powered boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	desc: "You can kayak here."
+	// 	},
+	// 	{
+	// 	value: "MPBL",
+	// 	name: "Motor boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	desc: "You can motor boat here."
+	// 	}
+	// ];
+
 	function getNextHighTide(tides) {
 		const currentTime = new Date();
 		for (const tide of tides) {
-
 			if (new Date(tide.t) > currentTime && tide.type === 'H') {
-				return tide;
+				const time = new Date(tide.t);
+				const hours24 = time.getHours();
+				const hours = time.getHours() % 12 || 12;  // Convert to 12-hour format (12 for midnight)
+				const minutes = time.getMinutes().toString().padStart(2, '0');  // Pad minutes with 0
+				const amPm = hours24 >= 12 ? 'PM' : 'AM';
+				return `${hours}:${minutes} ${amPm}`;
 			}
 		}
 		// If no high tide after current time, return null
@@ -444,7 +446,8 @@
 				{#if waterTemp!==undefined}
 					<div class="water-temp">
 						<span>Water Temperature: {waterTemp}°F</span><br>
-						<span>Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span>
+						<span>Next High Tide: { nextHighTide ? nextHighTide : 'is tomorrow'}</span>
+						<!-- <span>Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span> -->
 					</div>
 				{/if}
 				<!-- data on the map -->
@@ -512,8 +515,8 @@
 		z-index: 10001;
 		color: #000;
 		font-size: 18px;
-		border: 1.5px solid var(--orange3);
-		background-color: white;
+		border: 1px solid #000;
+		background-color: var(--orange3);
 		padding: 3px 5px;
 		border-radius: 5px;
 	}

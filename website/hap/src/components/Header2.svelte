@@ -80,7 +80,6 @@
     width: calc(30vw - 2px);
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 
   .header-content {
