@@ -4,25 +4,44 @@
 
 <!-- <div class="about-wide"> -->
     <!-- <div class="about-content-top"> -->
-        <p class="t4 ws qual">The Hudson Access Project is collecting information about all the places where the public 
+        <CollapsibleSection isVisible={true} headerText={'Submit photos and information! '} >
+        <p class="t4 ws qual">Share information about public access sites: The Hudson Access Project was created to make 
+            it easier for everyone — especially people in areas with fewer resources and communities with fewer blue 
+            spaces — to find their way onto the water. We also want to make it easier for people with mobility or 
+            other concerns to understand how accessible each site is. We welcome your input! Please send us your 
+            photographs, corrections, feedback and new information, especially details that support our goals to 
+            increase accessibility for everyone. Photos and information can be submitted 
+            through <a href="https://forms.gle/7mz519nRxRUUMstX9" target="_blank">this survey</a>. 
+        </p>
+        <!-- <p class="t4 ws"> 
+            If you have any comments, or photos of a site that we can use on the Hudson Access Project website, please fill out <a href="https://forms.gle/7mz519nRxRUUMstX9" target="_blank">this form</a>.
+        </p> -->
+    </CollapsibleSection>
+    <!-- </div>   -->
+    <CollapsibleSection isVisible={true} headerText={'About the map'} >
+        <!-- <div class="about-content"> -->
+            <!-- The Hudson Access Project is collecting information about all the places where the public 
             can get into and onto the water in the Hudson & Harbor <span class="estuary" title="An estuary is any body of water where tidal ocean waters mix with fresh water from rivers and streams. The impact of tides and saltwater reaches all the way to Troy, NY and this map covers all the area of the estuary from the NY-NJ Harbor estuary to the northern reach of the Hudson at Troy. ">Estuary</span> and its tributaries for swimming, boating, 
             and fishing; with a focus on activities that bring people into direct contact with the water. The project 
             is ongoing and we welcome information and feedback. Please put the tool to use so you can test it and 
-            help us improve it.
-        </p>
-        <p class="t4 ws"> 
-            If you have any comments, or photos of a site that we can use on the Hudson Access Project website, please fill out <a href="https://forms.gle/7mz519nRxRUUMstX9" target="_blank">this form</a>.
-        </p>
-    <!-- </div>   -->
-    <CollapsibleSection isVisible={true} headerText={'Share Information!'} >
-        <!-- <div class="about-content"> -->
-            <p class="t4 ws">The Hudson Access Project has specific priorities in data collection: we want to make it easier for 
-                people in areas with fewer resources, and communities with fewer blue spaces, to find their way onto the water 
-                more easily. We also want to make it easier for people with mobility or other concerns to understand how 
-                accessible each site listed is. Please share information supporting these goals if you have it. 
-
+            help us improve it. -->
+            <p class="t4 ws">The website you are using was created by a small team at Pratt Institute with collaborative 
+                support from the NY-NJ Harbor & Estuary Program.  The project is funded by a River Access Grant awarded 
+                by the New York State Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program has 
+                facilitated a relationship with the Public Access Working Group which has provided valuable insight into 
+                issues around public access, water safety and data. Additional funding was awarded to the project in 2023 
+                by the Pratt Center Taconic Fellowship. 
             </p>
-            <p class="t4 ws">
+            <p class="t4 ws"> 
+                <a href="https://twitter.com/hudson_access/" target="_blank">Twitter</a>
+            </p>
+            <p class="t4 ws"> 
+                <a href="https://www.instagram.com/hudson_access/" target="_blank">Instagram</a>
+            </p>
+            <p class="t4 ws"> 
+                Email: hudsonaccessproject@gmail.com
+            </p>
+            <!-- <p class="t4 ws">
                 The website you are using is a beta version. It was created by a small team at the Pratt Spatial Analysis and 
                 Visualization Initiative over the last 1.5 years as part of a River Access Grant awarded by the New York State 
                 Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program was a collaborator on this effort 
@@ -33,10 +52,10 @@
                 see here.  We will integrate new data into the site periodically throughout the summer. Please follow us on 
                 Instagram or twitter to find out when updates occur. And send us an email if you want to learn more or access 
                 the dataset as a resource for research about public access.  
-            </p>
+            </p> -->
         <!-- </div> -->
     </CollapsibleSection>
-    <CollapsibleSection isVisible={false} headerText={'Contact Us'} >
+    <!-- <CollapsibleSection isVisible={false} headerText={'Contact Us'} >
         <p class="t4 ws"> 
             <a href="https://twitter.com/hudson_access/" target="_blank">Twitter</a>
         </p>
@@ -44,9 +63,9 @@
             <a href="https://www.instagram.com/hudson_access/" target="_blank">Instagram</a>
         </p>
         <p class="t4 ws"> 
-            Email: Hudsonaccessproject@gmail.com
+            Email: hudsonaccessproject@gmail.com
         </p>
-    </CollapsibleSection>
+    </CollapsibleSection> -->
     <CollapsibleSection isVisible={false} headerText={'Thank you'} >
         <p class="t4 ws">Supported by HEP, HRF and public access working group (PAWG)
         </p>

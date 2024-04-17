@@ -5,16 +5,16 @@
 </script>
 <!-- map legend div with title and several rows with a styled circle or suqare and a label -->
 <div class="legend">
-    <h3 class="legend-title">Boat Launches and Swimming Beaches Near Pollution Sources</h3>
+    <h3 class="legend-title">Boat Launches and Swimming Beaches</h3>
     <div class="legend-row sub">
         <div class="legend-symbol">
-            <div class="legend-circle" style="background-color: #707070;"></div>
+            <div class="legend-small-circle" style="background-color: #000000;"></div>
         </div>
         <div class="legend-label header">Human powered boat launches or swim beach</div>
     </div>
     <div class="legend-row">
         <div class="legend-symbol">
-            <div class="legend-circle" style="background-color: #FFAA22;"></div>
+            <div class="legend-small-circle" style="background-color: #FFAA22;"></div>
         </div>
         <div class="legend-label">within half mile of an outfall</div>
     </div>
@@ -48,7 +48,7 @@
     </div>
     <div class="legend-row">
         <div class="legend-symbol">
-            <div class="legend-small-circle" style="background-color: transparent; border: 1px solid #FFAA22;"></div>
+            <div class="legend-small-circle" style="background-color: transparent; border: 1.5px solid #FFAA22;"></div>
         </div>
         <div class="legend-label">within half mile of a boat launch or swimming beach</div>
     </div>
@@ -70,7 +70,7 @@
         </div>
         <div class="legend-label">within half mile of swimming beaches</div>
     </div> -->
-    <div class="legend-collapsible">
+    <!-- <div class="legend-collapsible">
         <h3>
             <button aria-expanded={expanded} on:click={() => expanded = !expanded} class="button-container">
                 <span class="learn-text header {expanded ? 'expanded' : ''}" >Learn more</span>
@@ -93,7 +93,7 @@
                 and sediments. In separate sewer areas, this pollution is carried by stormwater and discharged directly into local waterways.  
             </p>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <style>

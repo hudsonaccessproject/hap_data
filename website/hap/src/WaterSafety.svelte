@@ -4,16 +4,16 @@
 
 <!-- <div> -->
     <CollapsibleSection isVisible={true} headerText={'Introduction'} >
-        <p class="t4 ws"><strong>The Hudson Access Project</strong> was created to help you discover and explore the local waterways. 
-            Get to know them, and  learn how to do so safely. 
+        <p class="t4 ws"><strong>The Hudson Access Project</strong> was created to help you discover and explore the local waterways. Get to 
+            know them, and learn how to do so safely.
         </p>
         <p class="t4 ws">
-            Understand that air and water temperature can vary widely and cold water temperatures on a hot spring day can 
-            surprise novice boaters at minimum, and pose mortal danger to those who fall in at worst. Also learn about 
-            the power of the wind; consult tide and current tables and navigation charts; learn the rules of the water-ways 
-            and learn which fish species need protection by consulting fishing regulations before you head out. Dress 
-            appropriately and bring plenty of food, water, and sun protection. Don’t forget a life vest or other 
-            personal floatation devices; and when boating, travel with experienced boaters, and travel in groups.  
+            Understand that air and water temperature can vary widely and cold water temperatures on a hot spring day can surprise novice 
+            boaters at minimum, and pose mortal danger to those who fall in at worst. Also learn about the power of the wind; consult tide 
+            and current tables and navigation charts; learn the rules of the water-ways and learn which fish species need protection by 
+            consulting fishing regulations before you head out. Dress appropriately and bring plenty of food, water, and sun protection. 
+            Don’t forget a life vest or other personal floatation devices; and when boating, travel with experienced boaters, and travel 
+            in groups. 
         </p>
     </CollapsibleSection>
     <CollapsibleSection isVisible={false} headerText={'Water vs. Air Temperature'} >
@@ -26,11 +26,18 @@
             and wear a PFD regardless of your swimming abilities when water temperatures are low and boating.
         </p>
     </CollapsibleSection>
-    <CollapsibleSection isVisible={false} headerText={'Resources'} >
+    <CollapsibleSection isVisible={false} headerText={'Boating safety and regulations'} >
+        <p class="t4 ws">See the resources below for locally produced safety guides for human powered boating in the Hudson estuary region. 
+        </p>
         <p class="t4 ws"> <a href="https://www.graemebirchall.com/kayakers-guide" target="_blank">Kayaking guide: </a>This comprehensive resource covers 
             everything from commercial boat traffic, tidal information to boat wrecks in the area. Graeme Birchall of the Downtown Boathouse updates this annually. 
         </p>
-        <p class="t2 ws oj">Tides + currents, weather, water + air temperatures and more: </p>
+        <p class="t4 ws"><a href="https://www.thesafeharbor.us/" target="_blank">Float plans and safety regulation</a>
+        </p>
+        <p class="t4 ws"><a href="https://hudsonrivergreenwaywatertrail.org/info-safety" target="_blank">Hudson River Greenway Watertrail Safety Guide </a>
+        </p>
+    </CollapsibleSection>
+    <CollapsibleSection isVisible={false} headerText={'Tides, currents, and weather'} >
         <p class="t4 ws"> <a href="https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1407" target="_blank">National Oceanic and Atmospheric Administration (NOAA) </a>
             tide and weather gauges in your location for site-specific tide and current charts, and <a href="https://tidesandcurrents.noaa.gov/map/index.html" target="_blank">map</a>.
         </p>
@@ -40,24 +47,25 @@
         <p class="t4 ws"> 
             <a href="www.thesafeharbor.us/chapters.html" target="_blank">Tips for boating safely</a>  on busy waterways.
         </p>
-        <p class="t4 ws"> 
+    </CollapsibleSection>
+    <CollapsibleSection isVisible={false} headerText={'Fishing Regulations and advisories'} >
+        <!-- <p class="t4 ws"> 
             <a href="https://www.riverkeeper.org/water-quality/citizen-data/" target="_blank">Riverkeeper: Citizen Water Quality Monitoring Data</a>
         </p>
         <p class="t4 ws"> 
             <a href="https://www.nyc.gov/site/dep/water/waterbody-advisories.page" target="_blank">Waterbody Advisory Page</a>
-        </p>
-        <p class="t4 ws"> 
+        </p> -->
+        <!-- <p class="t4 ws"> 
             <a href="https://hudsonrivergreenwaywatertrail.org/info-safety" target="_blank">Hudson River Greenway</a>
         </p>
         <p class="t4 ws"> 
             <a href="https://www.njcleanwaterways.com/public-notification" target="_blank">New Jersey CSO notification system information </a>and 
             <a href="https://njcso.hdrgateway.com" target="_blank"> map</a>
-        </p>
-        <p class="t4 ws"> 
+        </p> -->
+        <!-- <p class="t4 ws"> 
             <a href="https://www.nhudsonsa.com/waterbody-advisor-system" target="_blank">North Hudson Sewerage Authority information </a>and 
             <a href="https://www.nhudsonsa.com/waterbody-advisor-system" target="_blank"> map</a>
-        </p>
-        <p class="t2 ws oj">Fishing Regulations and advisories:  </p>
+        </p> -->
         <p class="t4 ws"> 
             <a href="https://www.dec.ny.gov/outdoor/7894.html" target="_blank">NY State fishing regulations</a>
         </p>
@@ -78,23 +86,10 @@
 
 <style>
 
-    /* .inner-title {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    } */
     .safety-img {
 		position: relative;
 		width: 95%;
 		padding-left: 2.5%;	
         padding-bottom: 10px;
 	}
-
-    .ws {
-        padding: 0 2.5%;
-    }
-
-    .oj {
-        color: var(--orange2);
-        line-height: 1.25;
-    }
 </style>

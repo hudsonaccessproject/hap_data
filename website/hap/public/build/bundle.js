@@ -25875,21 +25875,21 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(span0, "class", "close svelte-vysjh0");
+    			attr_dev(span0, "class", "close svelte-18g8hv9");
     			add_location(span0, file$6, 105, 8, 5263);
-    			attr_dev(p, "class", "park-name svelte-vysjh0");
+    			attr_dev(p, "class", "park-name svelte-18g8hv9");
     			add_location(p, file$6, 106, 8, 5358);
-    			attr_dev(div0, "class", "act-container svelte-vysjh0");
+    			attr_dev(div0, "class", "act-container svelte-18g8hv9");
     			add_location(div0, file$6, 110, 8, 5538);
-    			attr_dev(div1, "class", "park-header svelte-vysjh0");
+    			attr_dev(div1, "class", "park-header svelte-18g8hv9");
     			add_location(div1, file$6, 104, 4, 5229);
-    			attr_dev(span1, "class", "d svelte-vysjh0");
+    			attr_dev(span1, "class", "d svelte-18g8hv9");
     			add_location(span1, file$6, 187, 12, 8871);
-    			attr_dev(div2, "class", "amenity-icons svelte-vysjh0");
+    			attr_dev(div2, "class", "amenity-icons svelte-18g8hv9");
     			add_location(div2, file$6, 188, 12, 8922);
-    			attr_dev(div3, "class", "amenities-container svelte-vysjh0");
+    			attr_dev(div3, "class", "amenities-container svelte-18g8hv9");
     			add_location(div3, file$6, 186, 8, 8825);
-    			attr_dev(div4, "class", "park-details svelte-vysjh0");
+    			attr_dev(div4, "class", "park-details svelte-18g8hv9");
     			add_location(div4, file$6, 116, 4, 5746);
     		},
     		m: function mount(target, anchor) {
@@ -26242,7 +26242,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "park-subname svelte-vysjh0");
+    			attr_dev(p, "class", "park-subname svelte-18g8hv9");
     			add_location(p, file$6, 108, 12, 5460);
     		},
     		m: function mount(target, anchor) {
@@ -26276,7 +26276,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", "act-icon svelte-vysjh0");
+    			attr_dev(img, "class", "act-icon svelte-18g8hv9");
     			attr_dev(img, "alt", /*site_act*/ ctx[18].value);
     			if (!src_url_equal(img.src, img_src_value = /*site_act*/ ctx[18].source)) attr_dev(img, "src", img_src_value);
     			add_location(img, file$6, 112, 20, 5628);
@@ -26316,9 +26316,9 @@ var app = (function () {
     			span.textContent = "Address:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 118, 15, 5823);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 118, 12, 5820);
     		},
     		m: function mount(target, anchor) {
@@ -26361,9 +26361,9 @@ var app = (function () {
     			span.textContent = "Site description:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 121, 11, 5941);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 121, 8, 5938);
     		},
     		m: function mount(target, anchor) {
@@ -26415,7 +26415,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(carousel_1.$$.fragment);
-    			attr_dev(div, "class", "carousel-container svelte-vysjh0");
+    			attr_dev(div, "class", "carousel-container svelte-18g8hv9");
     			add_location(div, file$6, 124, 12, 6080);
     		},
     		m: function mount(target, anchor) {
@@ -26469,7 +26469,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = /*src*/ ctx[15].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*src*/ ctx[15].description);
-    			attr_dev(img, "class", "site_photo svelte-vysjh0");
+    			attr_dev(img, "class", "site_photo svelte-18g8hv9");
     			add_location(img, file$6, 132, 24, 6419);
     		},
     		m: function mount(target, anchor) {
@@ -26625,9 +26625,9 @@ var app = (function () {
     			span.textContent = "Hours:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 140, 15, 6681);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 140, 12, 6678);
     		},
     		m: function mount(target, anchor) {
@@ -26670,9 +26670,9 @@ var app = (function () {
     			span.textContent = "Accessibility description:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 143, 15, 6813);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 143, 12, 6810);
     		},
     		m: function mount(target, anchor) {
@@ -26715,9 +26715,9 @@ var app = (function () {
     			span.textContent = "Public transit options:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 146, 15, 6981);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 146, 12, 6978);
     		},
     		m: function mount(target, anchor) {
@@ -26760,9 +26760,9 @@ var app = (function () {
     			span.textContent = "Parking description:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 149, 15, 7140);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 149, 12, 7137);
     		},
     		m: function mount(target, anchor) {
@@ -26814,9 +26814,9 @@ var app = (function () {
     			span.textContent = "Website:";
     			t1 = space();
     			if_block.c();
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 153, 12, 7289);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 152, 8, 7273);
     		},
     		m: function mount(target, anchor) {
@@ -26948,9 +26948,9 @@ var app = (function () {
     			span.textContent = "Safety considerations:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 162, 11, 7697);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 162, 8, 7694);
     		},
     		m: function mount(target, anchor) {
@@ -26993,9 +26993,9 @@ var app = (function () {
     			span.textContent = "Program name:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 165, 11, 7824);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 165, 8, 7821);
     		},
     		m: function mount(target, anchor) {
@@ -27038,9 +27038,9 @@ var app = (function () {
     			span.textContent = "Program description:";
     			t1 = space();
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 168, 11, 7955);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 168, 8, 7952);
     		},
     		m: function mount(target, anchor) {
@@ -27092,9 +27092,9 @@ var app = (function () {
     			span.textContent = "Programming website:";
     			t1 = space();
     			if_block.c();
-    			attr_dev(span, "class", "svelte-vysjh0");
+    			attr_dev(span, "class", "svelte-18g8hv9");
     			add_location(span, file$6, 172, 16, 8113);
-    			attr_dev(p, "class", "svelte-vysjh0");
+    			attr_dev(p, "class", "svelte-18g8hv9");
     			add_location(p, file$6, 171, 12, 8093);
     		},
     		m: function mount(target, anchor) {
@@ -27219,7 +27219,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", "amenity-icon svelte-vysjh0");
+    			attr_dev(img, "class", "amenity-icon svelte-18g8hv9");
     			attr_dev(img, "alt", /*site_feature*/ ctx[11].value);
     			if (!src_url_equal(img.src, img_src_value = /*site_feature*/ ctx[11].source)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "title", /*site_feature*/ ctx[11].desc);
@@ -27587,7 +27587,7 @@ var app = (function () {
     const file$5 = "src/WaterSafety.svelte";
 
     // (6:4) <CollapsibleSection isVisible={true} headerText={'Introduction'} >
-    function create_default_slot_2$1(ctx) {
+    function create_default_slot_4(ctx) {
     	let p0;
     	let strong;
     	let t1;
@@ -27599,15 +27599,15 @@ var app = (function () {
     			p0 = element("p");
     			strong = element("strong");
     			strong.textContent = "The Hudson Access Project";
-    			t1 = text(" was created to help you discover and explore the local waterways. \n            Get to know them, and  learn how to do so safely.");
+    			t1 = text(" was created to help you discover and explore the local waterways. Get to \n            know them, and learn how to do so safely.");
     			t2 = space();
     			p1 = element("p");
-    			p1.textContent = "Understand that air and water temperature can vary widely and cold water temperatures on a hot spring day can \n            surprise novice boaters at minimum, and pose mortal danger to those who fall in at worst. Also learn about \n            the power of the wind; consult tide and current tables and navigation charts; learn the rules of the water-ways \n            and learn which fish species need protection by consulting fishing regulations before you head out. Dress \n            appropriately and bring plenty of food, water, and sun protection. Don’t forget a life vest or other \n            personal floatation devices; and when boating, travel with experienced boaters, and travel in groups.";
+    			p1.textContent = "Understand that air and water temperature can vary widely and cold water temperatures on a hot spring day can surprise novice \n            boaters at minimum, and pose mortal danger to those who fall in at worst. Also learn about the power of the wind; consult tide \n            and current tables and navigation charts; learn the rules of the water-ways and learn which fish species need protection by \n            consulting fishing regulations before you head out. Dress appropriately and bring plenty of food, water, and sun protection. \n            Don’t forget a life vest or other personal floatation devices; and when boating, travel with experienced boaters, and travel \n            in groups.";
     			add_location(strong, file$5, 6, 25, 196);
-    			attr_dev(p0, "class", "t4 ws svelte-10sruuz");
+    			attr_dev(p0, "class", "t4 ws");
     			add_location(p0, file$5, 6, 8, 179);
-    			attr_dev(p1, "class", "t4 ws svelte-10sruuz");
-    			add_location(p1, file$5, 9, 8, 390);
+    			attr_dev(p1, "class", "t4 ws");
+    			add_location(p1, file$5, 9, 8, 388);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -27626,7 +27626,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$1.name,
+    		id: create_default_slot_4.name,
     		type: "slot",
     		source: "(6:4) <CollapsibleSection isVisible={true} headerText={'Introduction'} >",
     		ctx
@@ -27636,7 +27636,7 @@ var app = (function () {
     }
 
     // (19:4) <CollapsibleSection isVisible={false} headerText={'Water vs. Air Temperature'} >
-    function create_default_slot_1$3(ctx) {
+    function create_default_slot_3(ctx) {
     	let div;
     	let p0;
     	let t1;
@@ -27656,15 +27656,15 @@ var app = (function () {
     			p1 = element("p");
     			p1.textContent = "Water temperatures below 60° can be dangerous to those who fall in or are submerged for any \n            amount of time, especially for those without personal floatation devices. Pay attention to water temperatures \n            and wear a PFD regardless of your swimming abilities when water temperatures are low and boating.";
     			attr_dev(p0, "class", "t3");
-    			add_location(p0, file$5, 20, 12, 1290);
+    			add_location(p0, file$5, 20, 12, 1287);
     			if (!src_url_equal(img.src, img_src_value = "https://raw.githubusercontent.com/skhaji/test_data/main/water_safety/AIRvsTemp_website.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			attr_dev(img, "class", "safety-img svelte-10sruuz");
-    			add_location(img, file$5, 21, 12, 1393);
-    			attr_dev(div, "class", "t4 ws svelte-10sruuz");
-    			add_location(div, file$5, 19, 8, 1257);
-    			attr_dev(p1, "class", "t4 ws svelte-10sruuz");
-    			add_location(p1, file$5, 23, 8, 1545);
+    			attr_dev(img, "class", "safety-img svelte-143ahky");
+    			add_location(img, file$5, 21, 12, 1390);
+    			attr_dev(div, "class", "t4 ws");
+    			add_location(div, file$5, 19, 8, 1254);
+    			attr_dev(p1, "class", "t4 ws");
+    			add_location(p1, file$5, 23, 8, 1542);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -27684,7 +27684,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$3.name,
+    		id: create_default_slot_3.name,
     		type: "slot",
     		source: "(19:4) <CollapsibleSection isVisible={false} headerText={'Water vs. Air Temperature'} >",
     		ctx
@@ -27693,311 +27693,269 @@ var app = (function () {
     	return block;
     }
 
-    // (29:4) <CollapsibleSection isVisible={false} headerText={'Resources'} >
-    function create_default_slot$3(ctx) {
+    // (29:4) <CollapsibleSection isVisible={false} headerText={'Boating safety and regulations'} >
+    function create_default_slot_2$1(ctx) {
     	let p0;
-    	let a0;
     	let t1;
-    	let t2;
     	let p1;
+    	let a0;
+    	let t3;
     	let t4;
     	let p2;
     	let a1;
     	let t6;
-    	let a2;
-    	let t8;
-    	let t9;
     	let p3;
+    	let a2;
+
+    	const block = {
+    		c: function create() {
+    			p0 = element("p");
+    			p0.textContent = "See the resources below for locally produced safety guides for human powered boating in the Hudson estuary region.";
+    			t1 = space();
+    			p1 = element("p");
+    			a0 = element("a");
+    			a0.textContent = "Kayaking guide: ";
+    			t3 = text("This comprehensive resource covers \n            everything from commercial boat traffic, tidal information to boat wrecks in the area. Graeme Birchall of the Downtown Boathouse updates this annually.");
+    			t4 = space();
+    			p2 = element("p");
+    			a1 = element("a");
+    			a1.textContent = "Float plans and safety regulation";
+    			t6 = space();
+    			p3 = element("p");
+    			a2 = element("a");
+    			a2.textContent = "Hudson River Greenway Watertrail Safety Guide";
+    			attr_dev(p0, "class", "t4 ws");
+    			add_location(p0, file$5, 29, 8, 2022);
+    			attr_dev(a0, "href", "https://www.graemebirchall.com/kayakers-guide");
+    			attr_dev(a0, "target", "_blank");
+    			add_location(a0, file$5, 31, 26, 2194);
+    			attr_dev(p1, "class", "t4 ws");
+    			add_location(p1, file$5, 31, 8, 2176);
+    			attr_dev(a1, "href", "https://www.thesafeharbor.us/");
+    			attr_dev(a1, "target", "_blank");
+    			add_location(a1, file$5, 34, 25, 2525);
+    			attr_dev(p2, "class", "t4 ws");
+    			add_location(p2, file$5, 34, 8, 2508);
+    			attr_dev(a2, "href", "https://hudsonrivergreenwaywatertrail.org/info-safety");
+    			attr_dev(a2, "target", "_blank");
+    			add_location(a2, file$5, 36, 25, 2657);
+    			attr_dev(p3, "class", "t4 ws");
+    			add_location(p3, file$5, 36, 8, 2640);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, p1, anchor);
+    			append_dev(p1, a0);
+    			append_dev(p1, t3);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, p2, anchor);
+    			append_dev(p2, a1);
+    			insert_dev(target, t6, anchor);
+    			insert_dev(target, p3, anchor);
+    			append_dev(p3, a2);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(p1);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(p3);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_2$1.name,
+    		type: "slot",
+    		source: "(29:4) <CollapsibleSection isVisible={false} headerText={'Boating safety and regulations'} >",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (40:4) <CollapsibleSection isVisible={false} headerText={'Tides, currents, and weather'} >
+    function create_default_slot_1$3(ctx) {
+    	let p0;
+    	let a0;
+    	let t1;
+    	let a1;
+    	let t3;
+    	let t4;
+    	let p1;
+    	let a2;
+    	let t6;
+    	let p2;
     	let a3;
-    	let t11;
-    	let p4;
-    	let a4;
-    	let t13;
-    	let t14;
-    	let p5;
-    	let a5;
-    	let t16;
-    	let p6;
-    	let a6;
-    	let t18;
-    	let p7;
-    	let a7;
-    	let t20;
-    	let p8;
-    	let a8;
-    	let t22;
-    	let a9;
-    	let t24;
-    	let p9;
-    	let a10;
-    	let t26;
-    	let a11;
-    	let t28;
-    	let p10;
-    	let t30;
-    	let p11;
-    	let a12;
-    	let t32;
-    	let p12;
-    	let a13;
-    	let t34;
-    	let p13;
-    	let a14;
-    	let t36;
-    	let p14;
-    	let a15;
-    	let t38;
-    	let p15;
-    	let a16;
+    	let t8;
 
     	const block = {
     		c: function create() {
     			p0 = element("p");
     			a0 = element("a");
-    			a0.textContent = "Kayaking guide: ";
-    			t1 = text("This comprehensive resource covers \n            everything from commercial boat traffic, tidal information to boat wrecks in the area. Graeme Birchall of the Downtown Boathouse updates this annually.");
-    			t2 = space();
-    			p1 = element("p");
-    			p1.textContent = "Tides + currents, weather, water + air temperatures and more:";
-    			t4 = space();
-    			p2 = element("p");
+    			a0.textContent = "National Oceanic and Atmospheric Administration (NOAA)";
+    			t1 = text("\n            tide and weather gauges in your location for site-specific tide and current charts, and ");
     			a1 = element("a");
-    			a1.textContent = "National Oceanic and Atmospheric Administration (NOAA)";
-    			t6 = text("\n            tide and weather gauges in your location for site-specific tide and current charts, and ");
+    			a1.textContent = "map";
+    			t3 = text(".");
+    			t4 = space();
+    			p1 = element("p");
     			a2 = element("a");
-    			a2.textContent = "map";
-    			t8 = text(".");
-    			t9 = space();
-    			p3 = element("p");
+    			a2.textContent = "Stevens Institute, Tides and Currents";
+    			t6 = space();
+    			p2 = element("p");
     			a3 = element("a");
-    			a3.textContent = "Stevens Institute, Tides and Currents";
-    			t11 = space();
-    			p4 = element("p");
-    			a4 = element("a");
-    			a4.textContent = "Tips for boating safely";
-    			t13 = text("  on busy waterways.");
-    			t14 = space();
-    			p5 = element("p");
-    			a5 = element("a");
-    			a5.textContent = "Riverkeeper: Citizen Water Quality Monitoring Data";
-    			t16 = space();
-    			p6 = element("p");
-    			a6 = element("a");
-    			a6.textContent = "Waterbody Advisory Page";
-    			t18 = space();
-    			p7 = element("p");
-    			a7 = element("a");
-    			a7.textContent = "Hudson River Greenway";
-    			t20 = space();
-    			p8 = element("p");
-    			a8 = element("a");
-    			a8.textContent = "New Jersey CSO notification system information ";
-    			t22 = text("and \n            ");
-    			a9 = element("a");
-    			a9.textContent = "map";
-    			t24 = space();
-    			p9 = element("p");
-    			a10 = element("a");
-    			a10.textContent = "North Hudson Sewerage Authority information ";
-    			t26 = text("and \n            ");
-    			a11 = element("a");
-    			a11.textContent = "map";
-    			t28 = space();
-    			p10 = element("p");
-    			p10.textContent = "Fishing Regulations and advisories:";
-    			t30 = space();
-    			p11 = element("p");
-    			a12 = element("a");
-    			a12.textContent = "NY State fishing regulations";
-    			t32 = space();
-    			p12 = element("p");
-    			a13 = element("a");
-    			a13.textContent = "NY Recreational Marine Fishing Registry";
-    			t34 = space();
-    			p13 = element("p");
-    			a14 = element("a");
-    			a14.textContent = "NJ Recreational Marine Fishing Registry";
-    			t36 = space();
-    			p14 = element("p");
-    			a15 = element("a");
-    			a15.textContent = "NY fish consumption advisories: Upper Bay, Rivers, and Kills";
-    			t38 = space();
-    			p15 = element("p");
-    			a16 = element("a");
-    			a16.textContent = "NJ fish consumption advisories";
-    			attr_dev(a0, "href", "https://www.graemebirchall.com/kayakers-guide");
+    			a3.textContent = "Tips for boating safely";
+    			t8 = text("  on busy waterways.");
+    			attr_dev(a0, "href", "https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1407");
     			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$5, 29, 26, 2022);
-    			attr_dev(p0, "class", "t4 ws svelte-10sruuz");
-    			add_location(p0, file$5, 29, 8, 2004);
-    			attr_dev(p1, "class", "t2 ws oj svelte-10sruuz");
-    			add_location(p1, file$5, 32, 8, 2336);
-    			attr_dev(a1, "href", "https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1407");
+    			add_location(a0, file$5, 40, 26, 2941);
+    			attr_dev(a1, "href", "https://tidesandcurrents.noaa.gov/map/index.html");
     			attr_dev(a1, "target", "_blank");
-    			add_location(a1, file$5, 33, 26, 2449);
-    			attr_dev(a2, "href", "https://tidesandcurrents.noaa.gov/map/index.html");
+    			add_location(a1, file$5, 41, 100, 3192);
+    			attr_dev(p0, "class", "t4 ws");
+    			add_location(p0, file$5, 40, 8, 2923);
+    			attr_dev(a2, "href", "https://hudson.dl.stevens-tech.edu/maritimeforecast/maincontrol.shtml");
     			attr_dev(a2, "target", "_blank");
-    			add_location(a2, file$5, 34, 100, 2700);
-    			attr_dev(p2, "class", "t4 ws svelte-10sruuz");
-    			add_location(p2, file$5, 33, 8, 2431);
-    			attr_dev(a3, "href", "https://hudson.dl.stevens-tech.edu/maritimeforecast/maincontrol.shtml");
+    			add_location(a2, file$5, 44, 12, 3328);
+    			attr_dev(p1, "class", "t4 ws");
+    			add_location(p1, file$5, 43, 8, 3297);
+    			attr_dev(a3, "href", "www.thesafeharbor.us/chapters.html");
     			attr_dev(a3, "target", "_blank");
-    			add_location(a3, file$5, 37, 12, 2836);
-    			attr_dev(p3, "class", "t4 ws svelte-10sruuz");
-    			add_location(p3, file$5, 36, 8, 2805);
-    			attr_dev(a4, "href", "www.thesafeharbor.us/chapters.html");
-    			attr_dev(a4, "target", "_blank");
-    			add_location(a4, file$5, 40, 12, 3026);
-    			attr_dev(p4, "class", "t4 ws svelte-10sruuz");
-    			add_location(p4, file$5, 39, 8, 2995);
-    			attr_dev(a5, "href", "https://www.riverkeeper.org/water-quality/citizen-data/");
-    			attr_dev(a5, "target", "_blank");
-    			add_location(a5, file$5, 43, 12, 3187);
-    			attr_dev(p5, "class", "t4 ws svelte-10sruuz");
-    			add_location(p5, file$5, 42, 8, 3156);
-    			attr_dev(a6, "href", "https://www.nyc.gov/site/dep/water/waterbody-advisories.page");
-    			attr_dev(a6, "target", "_blank");
-    			add_location(a6, file$5, 46, 12, 3376);
-    			attr_dev(p6, "class", "t4 ws svelte-10sruuz");
-    			add_location(p6, file$5, 45, 8, 3345);
-    			attr_dev(a7, "href", "https://hudsonrivergreenwaywatertrail.org/info-safety");
-    			attr_dev(a7, "target", "_blank");
-    			add_location(a7, file$5, 49, 12, 3543);
-    			attr_dev(p7, "class", "t4 ws svelte-10sruuz");
-    			add_location(p7, file$5, 48, 8, 3512);
-    			attr_dev(a8, "href", "https://www.njcleanwaterways.com/public-notification");
-    			attr_dev(a8, "target", "_blank");
-    			add_location(a8, file$5, 52, 12, 3701);
-    			attr_dev(a9, "href", "https://njcso.hdrgateway.com");
-    			attr_dev(a9, "target", "_blank");
-    			add_location(a9, file$5, 53, 12, 3848);
-    			attr_dev(p8, "class", "t4 ws svelte-10sruuz");
-    			add_location(p8, file$5, 51, 8, 3670);
-    			attr_dev(a10, "href", "https://www.nhudsonsa.com/waterbody-advisor-system");
-    			attr_dev(a10, "target", "_blank");
-    			add_location(a10, file$5, 56, 12, 3964);
-    			attr_dev(a11, "href", "https://www.nhudsonsa.com/waterbody-advisor-system");
-    			attr_dev(a11, "target", "_blank");
-    			add_location(a11, file$5, 57, 12, 4106);
-    			attr_dev(p9, "class", "t4 ws svelte-10sruuz");
-    			add_location(p9, file$5, 55, 8, 3933);
-    			attr_dev(p10, "class", "t2 ws oj svelte-10sruuz");
-    			add_location(p10, file$5, 59, 8, 4213);
-    			attr_dev(a12, "href", "https://www.dec.ny.gov/outdoor/7894.html");
-    			attr_dev(a12, "target", "_blank");
-    			add_location(a12, file$5, 61, 12, 4314);
-    			attr_dev(p11, "class", "t4 ws svelte-10sruuz");
-    			add_location(p11, file$5, 60, 8, 4283);
-    			attr_dev(a13, "href", "https://www.dec.ny.gov/permits/54950.html");
-    			attr_dev(a13, "target", "_blank");
-    			add_location(a13, file$5, 64, 12, 4466);
-    			attr_dev(p12, "class", "t4 ws svelte-10sruuz");
-    			add_location(p12, file$5, 63, 8, 4435);
-    			attr_dev(a14, "href", "https://dep.nj.gov/saltwaterregistry/");
-    			attr_dev(a14, "target", "_blank");
-    			add_location(a14, file$5, 67, 12, 4630);
-    			attr_dev(p13, "class", "t4 ws svelte-10sruuz");
-    			add_location(p13, file$5, 66, 8, 4599);
-    			attr_dev(a15, "href", "https://www.health.ny.gov/environmental/outdoors/fish/health_advisories/regional/new_york_city.htm#Upper");
-    			attr_dev(a15, "target", "_blank");
-    			add_location(a15, file$5, 70, 12, 4790);
-    			attr_dev(p14, "class", "t4 ws svelte-10sruuz");
-    			add_location(p14, file$5, 69, 8, 4759);
-    			attr_dev(a16, "href", "https://dep.nj.gov/dsr/fish-advisories-studies/");
-    			attr_dev(a16, "target", "_blank");
-    			add_location(a16, file$5, 73, 12, 5038);
-    			attr_dev(p15, "class", "t4 ws svelte-10sruuz");
-    			add_location(p15, file$5, 72, 8, 5007);
+    			add_location(a3, file$5, 47, 12, 3518);
+    			attr_dev(p2, "class", "t4 ws");
+    			add_location(p2, file$5, 46, 8, 3487);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
     			append_dev(p0, a0);
     			append_dev(p0, t1);
-    			insert_dev(target, t2, anchor);
-    			insert_dev(target, p1, anchor);
+    			append_dev(p0, a1);
+    			append_dev(p0, t3);
     			insert_dev(target, t4, anchor);
+    			insert_dev(target, p1, anchor);
+    			append_dev(p1, a2);
+    			insert_dev(target, t6, anchor);
     			insert_dev(target, p2, anchor);
-    			append_dev(p2, a1);
-    			append_dev(p2, t6);
-    			append_dev(p2, a2);
+    			append_dev(p2, a3);
     			append_dev(p2, t8);
-    			insert_dev(target, t9, anchor);
-    			insert_dev(target, p3, anchor);
-    			append_dev(p3, a3);
-    			insert_dev(target, t11, anchor);
-    			insert_dev(target, p4, anchor);
-    			append_dev(p4, a4);
-    			append_dev(p4, t13);
-    			insert_dev(target, t14, anchor);
-    			insert_dev(target, p5, anchor);
-    			append_dev(p5, a5);
-    			insert_dev(target, t16, anchor);
-    			insert_dev(target, p6, anchor);
-    			append_dev(p6, a6);
-    			insert_dev(target, t18, anchor);
-    			insert_dev(target, p7, anchor);
-    			append_dev(p7, a7);
-    			insert_dev(target, t20, anchor);
-    			insert_dev(target, p8, anchor);
-    			append_dev(p8, a8);
-    			append_dev(p8, t22);
-    			append_dev(p8, a9);
-    			insert_dev(target, t24, anchor);
-    			insert_dev(target, p9, anchor);
-    			append_dev(p9, a10);
-    			append_dev(p9, t26);
-    			append_dev(p9, a11);
-    			insert_dev(target, t28, anchor);
-    			insert_dev(target, p10, anchor);
-    			insert_dev(target, t30, anchor);
-    			insert_dev(target, p11, anchor);
-    			append_dev(p11, a12);
-    			insert_dev(target, t32, anchor);
-    			insert_dev(target, p12, anchor);
-    			append_dev(p12, a13);
-    			insert_dev(target, t34, anchor);
-    			insert_dev(target, p13, anchor);
-    			append_dev(p13, a14);
-    			insert_dev(target, t36, anchor);
-    			insert_dev(target, p14, anchor);
-    			append_dev(p14, a15);
-    			insert_dev(target, t38, anchor);
-    			insert_dev(target, p15, anchor);
-    			append_dev(p15, a16);
     		},
     		p: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
-    			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(p1);
     			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(p1);
+    			if (detaching) detach_dev(t6);
     			if (detaching) detach_dev(p2);
-    			if (detaching) detach_dev(t9);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$3.name,
+    		type: "slot",
+    		source: "(40:4) <CollapsibleSection isVisible={false} headerText={'Tides, currents, and weather'} >",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (51:4) <CollapsibleSection isVisible={false} headerText={'Fishing Regulations and advisories'} >
+    function create_default_slot$3(ctx) {
+    	let p0;
+    	let a0;
+    	let t1;
+    	let p1;
+    	let a1;
+    	let t3;
+    	let p2;
+    	let a2;
+    	let t5;
+    	let p3;
+    	let a3;
+    	let t7;
+    	let p4;
+    	let a4;
+
+    	const block = {
+    		c: function create() {
+    			p0 = element("p");
+    			a0 = element("a");
+    			a0.textContent = "NY State fishing regulations";
+    			t1 = space();
+    			p1 = element("p");
+    			a1 = element("a");
+    			a1.textContent = "NY Recreational Marine Fishing Registry";
+    			t3 = space();
+    			p2 = element("p");
+    			a2 = element("a");
+    			a2.textContent = "NJ Recreational Marine Fishing Registry";
+    			t5 = space();
+    			p3 = element("p");
+    			a3 = element("a");
+    			a3.textContent = "NY fish consumption advisories: Upper Bay, Rivers, and Kills";
+    			t7 = space();
+    			p4 = element("p");
+    			a4 = element("a");
+    			a4.textContent = "NJ fish consumption advisories";
+    			attr_dev(a0, "href", "https://www.dec.ny.gov/outdoor/7894.html");
+    			attr_dev(a0, "target", "_blank");
+    			add_location(a0, file$5, 69, 12, 4883);
+    			attr_dev(p0, "class", "t4 ws");
+    			add_location(p0, file$5, 68, 8, 4852);
+    			attr_dev(a1, "href", "https://www.dec.ny.gov/permits/54950.html");
+    			attr_dev(a1, "target", "_blank");
+    			add_location(a1, file$5, 72, 12, 5035);
+    			attr_dev(p1, "class", "t4 ws");
+    			add_location(p1, file$5, 71, 8, 5004);
+    			attr_dev(a2, "href", "https://dep.nj.gov/saltwaterregistry/");
+    			attr_dev(a2, "target", "_blank");
+    			add_location(a2, file$5, 75, 12, 5199);
+    			attr_dev(p2, "class", "t4 ws");
+    			add_location(p2, file$5, 74, 8, 5168);
+    			attr_dev(a3, "href", "https://www.health.ny.gov/environmental/outdoors/fish/health_advisories/regional/new_york_city.htm#Upper");
+    			attr_dev(a3, "target", "_blank");
+    			add_location(a3, file$5, 78, 12, 5359);
+    			attr_dev(p3, "class", "t4 ws");
+    			add_location(p3, file$5, 77, 8, 5328);
+    			attr_dev(a4, "href", "https://dep.nj.gov/dsr/fish-advisories-studies/");
+    			attr_dev(a4, "target", "_blank");
+    			add_location(a4, file$5, 81, 12, 5607);
+    			attr_dev(p4, "class", "t4 ws");
+    			add_location(p4, file$5, 80, 8, 5576);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p0, anchor);
+    			append_dev(p0, a0);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, p1, anchor);
+    			append_dev(p1, a1);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, p2, anchor);
+    			append_dev(p2, a2);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, p3, anchor);
+    			append_dev(p3, a3);
+    			insert_dev(target, t7, anchor);
+    			insert_dev(target, p4, anchor);
+    			append_dev(p4, a4);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(p1);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(t5);
     			if (detaching) detach_dev(p3);
-    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(t7);
     			if (detaching) detach_dev(p4);
-    			if (detaching) detach_dev(t14);
-    			if (detaching) detach_dev(p5);
-    			if (detaching) detach_dev(t16);
-    			if (detaching) detach_dev(p6);
-    			if (detaching) detach_dev(t18);
-    			if (detaching) detach_dev(p7);
-    			if (detaching) detach_dev(t20);
-    			if (detaching) detach_dev(p8);
-    			if (detaching) detach_dev(t24);
-    			if (detaching) detach_dev(p9);
-    			if (detaching) detach_dev(t28);
-    			if (detaching) detach_dev(p10);
-    			if (detaching) detach_dev(t30);
-    			if (detaching) detach_dev(p11);
-    			if (detaching) detach_dev(t32);
-    			if (detaching) detach_dev(p12);
-    			if (detaching) detach_dev(t34);
-    			if (detaching) detach_dev(p13);
-    			if (detaching) detach_dev(t36);
-    			if (detaching) detach_dev(p14);
-    			if (detaching) detach_dev(t38);
-    			if (detaching) detach_dev(p15);
     		}
     	};
 
@@ -28005,7 +27963,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(29:4) <CollapsibleSection isVisible={false} headerText={'Resources'} >",
+    		source: "(51:4) <CollapsibleSection isVisible={false} headerText={'Fishing Regulations and advisories'} >",
     		ctx
     	});
 
@@ -28018,13 +27976,17 @@ var app = (function () {
     	let collapsiblesection1;
     	let t1;
     	let collapsiblesection2;
+    	let t2;
+    	let collapsiblesection3;
+    	let t3;
+    	let collapsiblesection4;
     	let current;
 
     	collapsiblesection0 = new CollapsibleSection({
     			props: {
     				isVisible: true,
     				headerText: 'Introduction',
-    				$$slots: { default: [create_default_slot_2$1] },
+    				$$slots: { default: [create_default_slot_4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -28034,7 +27996,7 @@ var app = (function () {
     			props: {
     				isVisible: false,
     				headerText: 'Water vs. Air Temperature',
-    				$$slots: { default: [create_default_slot_1$3] },
+    				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -28043,7 +28005,27 @@ var app = (function () {
     	collapsiblesection2 = new CollapsibleSection({
     			props: {
     				isVisible: false,
-    				headerText: 'Resources',
+    				headerText: 'Boating safety and regulations',
+    				$$slots: { default: [create_default_slot_2$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	collapsiblesection3 = new CollapsibleSection({
+    			props: {
+    				isVisible: false,
+    				headerText: 'Tides, currents, and weather',
+    				$$slots: { default: [create_default_slot_1$3] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	collapsiblesection4 = new CollapsibleSection({
+    			props: {
+    				isVisible: false,
+    				headerText: 'Fishing Regulations and advisories',
     				$$slots: { default: [create_default_slot$3] },
     				$$scope: { ctx }
     			},
@@ -28057,6 +28039,10 @@ var app = (function () {
     			create_component(collapsiblesection1.$$.fragment);
     			t1 = space();
     			create_component(collapsiblesection2.$$.fragment);
+    			t2 = space();
+    			create_component(collapsiblesection3.$$.fragment);
+    			t3 = space();
+    			create_component(collapsiblesection4.$$.fragment);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -28067,6 +28053,10 @@ var app = (function () {
     			mount_component(collapsiblesection1, target, anchor);
     			insert_dev(target, t1, anchor);
     			mount_component(collapsiblesection2, target, anchor);
+    			insert_dev(target, t2, anchor);
+    			mount_component(collapsiblesection3, target, anchor);
+    			insert_dev(target, t3, anchor);
+    			mount_component(collapsiblesection4, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -28091,18 +28081,36 @@ var app = (function () {
     			}
 
     			collapsiblesection2.$set(collapsiblesection2_changes);
+    			const collapsiblesection3_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				collapsiblesection3_changes.$$scope = { dirty, ctx };
+    			}
+
+    			collapsiblesection3.$set(collapsiblesection3_changes);
+    			const collapsiblesection4_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				collapsiblesection4_changes.$$scope = { dirty, ctx };
+    			}
+
+    			collapsiblesection4.$set(collapsiblesection4_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(collapsiblesection0.$$.fragment, local);
     			transition_in(collapsiblesection1.$$.fragment, local);
     			transition_in(collapsiblesection2.$$.fragment, local);
+    			transition_in(collapsiblesection3.$$.fragment, local);
+    			transition_in(collapsiblesection4.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(collapsiblesection0.$$.fragment, local);
     			transition_out(collapsiblesection1.$$.fragment, local);
     			transition_out(collapsiblesection2.$$.fragment, local);
+    			transition_out(collapsiblesection3.$$.fragment, local);
+    			transition_out(collapsiblesection4.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -28111,6 +28119,10 @@ var app = (function () {
     			destroy_component(collapsiblesection1, detaching);
     			if (detaching) detach_dev(t1);
     			destroy_component(collapsiblesection2, detaching);
+    			if (detaching) detach_dev(t2);
+    			destroy_component(collapsiblesection3, detaching);
+    			if (detaching) detach_dev(t3);
+    			destroy_component(collapsiblesection4, detaching);
     		}
     	};
 
@@ -28180,17 +28192,17 @@ var app = (function () {
     			p2.textContent = "Presence of Pathogenic Bacteria after Rainfall";
     			t5 = space();
     			img = element("img");
-    			attr_dev(p0, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p0, "class", "t4 ws");
     			add_location(p0, file$4, 5, 4, 174);
-    			attr_dev(p1, "class", "t2 inner-title svelte-1ef52t9");
+    			attr_dev(p1, "class", "t2 inner-title svelte-1i8hucc");
     			add_location(p1, file$4, 9, 8, 579);
     			attr_dev(p2, "class", "t3");
     			add_location(p2, file$4, 10, 8, 655);
     			if (!src_url_equal(img.src, img_src_value = "https://raw.githubusercontent.com/skhaji/test_data/main/water_safety/WaterPollution_after_rain_website.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			attr_dev(img, "class", "safety-img svelte-1ef52t9");
+    			attr_dev(img, "class", "safety-img svelte-1i8hucc");
     			add_location(img, file$4, 11, 8, 728);
-    			attr_dev(div, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(div, "class", "t4 ws");
     			add_location(div, file$4, 8, 4, 550);
     		},
     		m: function mount(target, anchor) {
@@ -28255,6 +28267,12 @@ var app = (function () {
     	let t21;
     	let p9;
     	let a7;
+    	let t23;
+    	let p10;
+    	let a8;
+    	let t25;
+    	let p11;
+    	let a9;
 
     	const block = {
     		c: function create() {
@@ -28300,51 +28318,69 @@ var app = (function () {
     			p9 = element("p");
     			a7 = element("a");
     			a7.textContent = "Hudson River National Estuarine Research Reserve";
-    			attr_dev(p0, "class", "t4 ws qual svelte-1ef52t9");
+    			t23 = space();
+    			p10 = element("p");
+    			a8 = element("a");
+    			a8.textContent = "Waterbody Advisory Page";
+    			t25 = space();
+    			p11 = element("p");
+    			a9 = element("a");
+    			a9.textContent = "Hudson River Greenway";
+    			attr_dev(p0, "class", "t4 ws qual svelte-1i8hucc");
     			add_location(p0, file$4, 15, 4, 990);
-    			attr_dev(p1, "class", "t2 inner-title indent svelte-1ef52t9");
+    			attr_dev(p1, "class", "t2 inner-title indent svelte-1i8hucc");
     			add_location(p1, file$4, 17, 4, 1133);
     			attr_dev(a0, "href", "https://www.hudsonriver.org/article/harborwidewq");
     			attr_dev(a0, "target", "_blank");
     			add_location(a0, file$4, 19, 8, 1234);
-    			attr_dev(p2, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p2, "class", "t4 ws");
     			add_location(p2, file$4, 18, 4, 1207);
     			attr_dev(a1, "href", "http://www.hudson-river.org/harborwidewqreport-2021");
     			attr_dev(a1, "target", "_blank");
     			add_location(a1, file$4, 21, 22, 1376);
-    			attr_dev(p3, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p3, "class", "t4 ws");
     			add_location(p3, file$4, 21, 4, 1358);
     			attr_dev(a2, "href", "https://www.hudsonriver.org/state-of-the-estuary#report");
     			attr_dev(a2, "target", "_blank");
     			add_location(a2, file$4, 22, 22, 1505);
-    			attr_dev(p4, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p4, "class", "t4 ws");
     			add_location(p4, file$4, 22, 4, 1487);
     			attr_dev(a3, "href", "https://www.hudsonriver.org/article/charts-and-graphs");
     			attr_dev(a3, "target", "_blank");
     			add_location(a3, file$4, 23, 23, 1645);
-    			attr_dev(p5, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p5, "class", "t4 ws");
     			add_location(p5, file$4, 23, 5, 1627);
     			attr_dev(a4, "href", "www.nycwatertrail.org/water_quality.html");
     			attr_dev(a4, "target", "_blank");
     			add_location(a4, file$4, 24, 23, 1800);
-    			attr_dev(p6, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p6, "class", "t4 ws");
     			add_location(p6, file$4, 24, 5, 1782);
     			attr_dev(a5, "href", " https://www.riverkeeper.org/water-quality/testing/");
     			attr_dev(a5, "target", "_blank");
     			add_location(a5, file$4, 25, 23, 2001);
     			add_location(i, file$4, 26, 66, 2223);
-    			attr_dev(p7, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p7, "class", "t4 ws");
     			add_location(p7, file$4, 25, 5, 1983);
     			attr_dev(a6, "href", "https://ny.water.usgs.gov/maps/hrecos/");
     			attr_dev(a6, "target", "_blank");
     			add_location(a6, file$4, 29, 22, 2485);
-    			attr_dev(p8, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p8, "class", "t4 ws");
     			add_location(p8, file$4, 29, 4, 2467);
     			attr_dev(a7, "href", "https://hrnerr.org/");
     			attr_dev(a7, "target", "_blank");
     			add_location(a7, file$4, 33, 22, 2928);
-    			attr_dev(p9, "class", "t4 ws svelte-1ef52t9");
+    			attr_dev(p9, "class", "t4 ws");
     			add_location(p9, file$4, 33, 4, 2910);
+    			attr_dev(a8, "href", "https://www.nyc.gov/site/dep/water/waterbody-advisories.page");
+    			attr_dev(a8, "target", "_blank");
+    			add_location(a8, file$4, 35, 8, 3062);
+    			attr_dev(p10, "class", "t4 ws");
+    			add_location(p10, file$4, 34, 4, 3035);
+    			attr_dev(a9, "href", "https://hudsonrivergreenwaywatertrail.org/info-safety");
+    			attr_dev(a9, "target", "_blank");
+    			add_location(a9, file$4, 38, 8, 3217);
+    			attr_dev(p11, "class", "t4 ws");
+    			add_location(p11, file$4, 37, 4, 3190);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -28378,6 +28414,12 @@ var app = (function () {
     			insert_dev(target, t21, anchor);
     			insert_dev(target, p9, anchor);
     			append_dev(p9, a7);
+    			insert_dev(target, t23, anchor);
+    			insert_dev(target, p10, anchor);
+    			append_dev(p10, a8);
+    			insert_dev(target, t25, anchor);
+    			insert_dev(target, p11, anchor);
+    			append_dev(p11, a9);
     		},
     		p: noop,
     		d: function destroy(detaching) {
@@ -28400,6 +28442,10 @@ var app = (function () {
     			if (detaching) detach_dev(p8);
     			if (detaching) detach_dev(t21);
     			if (detaching) detach_dev(p9);
+    			if (detaching) detach_dev(t23);
+    			if (detaching) detach_dev(p10);
+    			if (detaching) detach_dev(t25);
+    			if (detaching) detach_dev(p11);
     		}
     	};
 
@@ -28530,45 +28576,35 @@ var app = (function () {
     /* src/About.svelte generated by Svelte v3.59.2 */
     const file$3 = "src/About.svelte";
 
-    // (17:4) <CollapsibleSection isVisible={true} headerText={'Share Information!'} >
+    // (7:8) <CollapsibleSection isVisible={true} headerText={'Submit photos and information! '} >
     function create_default_slot_2(ctx) {
-    	let p0;
-    	let t1;
-    	let p1;
-    	let t3;
-    	let p2;
+    	let p;
+    	let t0;
+    	let a;
+    	let t2;
 
     	const block = {
     		c: function create() {
-    			p0 = element("p");
-    			p0.textContent = "The Hudson Access Project has specific priorities in data collection: we want to make it easier for \n                people in areas with fewer resources, and communities with fewer blue spaces, to find their way onto the water \n                more easily. We also want to make it easier for people with mobility or other concerns to understand how \n                accessible each site listed is. Please share information supporting these goals if you have it.";
-    			t1 = space();
-    			p1 = element("p");
-    			p1.textContent = "The website you are using is a beta version. It was created by a small team at the Pratt Spatial Analysis and \n                Visualization Initiative over the last 1.5 years as part of a River Access Grant awarded by the New York State \n                Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program was a collaborator on this effort \n                and facilitated the important support and advisory role that  their Public Access Working Group was able to provide.";
-    			t3 = space();
-    			p2 = element("p");
-    			p2.textContent = "Data collection and field research will be conducted for 10 weeks this summer to improve the information you \n                see here.  We will integrate new data into the site periodically throughout the summer. Please follow us on \n                Instagram or twitter to find out when updates occur. And send us an email if you want to learn more or access \n                the dataset as a resource for research about public access.";
-    			attr_dev(p0, "class", "t4 ws");
-    			add_location(p0, file$3, 18, 12, 1414);
-    			attr_dev(p1, "class", "t4 ws");
-    			add_location(p1, file$3, 24, 12, 1925);
-    			attr_dev(p2, "class", "t4 ws");
-    			add_location(p2, file$3, 30, 12, 2490);
+    			p = element("p");
+    			t0 = text("Share information about public access sites: The Hudson Access Project was created to make \n            it easier for everyone — especially people in areas with fewer resources and communities with fewer blue \n            spaces — to find their way onto the water. We also want to make it easier for people with mobility or \n            other concerns to understand how accessible each site is. We welcome your input! Please send us your \n            photographs, corrections, feedback and new information, especially details that support our goals to \n            increase accessibility for everyone. Photos and information can be submitted \n            through ");
+    			a = element("a");
+    			a.textContent = "this survey";
+    			t2 = text(".");
+    			attr_dev(a, "href", "https://forms.gle/7mz519nRxRUUMstX9");
+    			attr_dev(a, "target", "_blank");
+    			add_location(a, file$3, 13, 20, 951);
+    			attr_dev(p, "class", "t4 ws qual");
+    			add_location(p, file$3, 7, 8, 266);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p0, anchor);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, p1, anchor);
-    			insert_dev(target, t3, anchor);
-    			insert_dev(target, p2, anchor);
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, a);
+    			append_dev(p, t2);
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p0);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(p1);
-    			if (detaching) detach_dev(t3);
-    			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(p);
     		}
     	};
 
@@ -28576,56 +28612,65 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(17:4) <CollapsibleSection isVisible={true} headerText={'Share Information!'} >",
+    		source: "(7:8) <CollapsibleSection isVisible={true} headerText={'Submit photos and information! '} >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:4) <CollapsibleSection isVisible={false} headerText={'Contact Us'} >
+    // (21:4) <CollapsibleSection isVisible={true} headerText={'About the map'} >
     function create_default_slot_1$1(ctx) {
     	let p0;
-    	let a0;
     	let t1;
     	let p1;
-    	let a1;
+    	let a0;
     	let t3;
     	let p2;
+    	let a1;
+    	let t5;
+    	let p3;
 
     	const block = {
     		c: function create() {
     			p0 = element("p");
-    			a0 = element("a");
-    			a0.textContent = "Twitter";
+    			p0.textContent = "The website you are using was created by a small team at Pratt Institute with collaborative \n                support from the NY-NJ Harbor & Estuary Program.  The project is funded by a River Access Grant awarded \n                by the New York State Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program has \n                facilitated a relationship with the Public Access Working Group which has provided valuable insight into \n                issues around public access, water safety and data. Additional funding was awarded to the project in 2023 \n                by the Pratt Center Taconic Fellowship.";
     			t1 = space();
     			p1 = element("p");
-    			a1 = element("a");
-    			a1.textContent = "Instagram";
+    			a0 = element("a");
+    			a0.textContent = "Twitter";
     			t3 = space();
     			p2 = element("p");
-    			p2.textContent = "Email: Hudsonaccessproject@gmail.com";
+    			a1 = element("a");
+    			a1.textContent = "Instagram";
+    			t5 = space();
+    			p3 = element("p");
+    			p3.textContent = "Email: hudsonaccessproject@gmail.com";
+    			attr_dev(p0, "class", "t4 ws");
+    			add_location(p0, file$3, 27, 12, 2302);
     			attr_dev(a0, "href", "https://twitter.com/hudson_access/");
     			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$3, 40, 12, 3140);
-    			attr_dev(p0, "class", "t4 ws");
-    			add_location(p0, file$3, 39, 8, 3109);
+    			add_location(a0, file$3, 35, 16, 3019);
+    			attr_dev(p1, "class", "t4 ws");
+    			add_location(p1, file$3, 34, 12, 2984);
     			attr_dev(a1, "href", "https://www.instagram.com/hudson_access/");
     			attr_dev(a1, "target", "_blank");
-    			add_location(a1, file$3, 43, 12, 3265);
-    			attr_dev(p1, "class", "t4 ws");
-    			add_location(p1, file$3, 42, 8, 3234);
+    			add_location(a1, file$3, 38, 16, 3156);
     			attr_dev(p2, "class", "t4 ws");
-    			add_location(p2, file$3, 45, 8, 3367);
+    			add_location(p2, file$3, 37, 12, 3121);
+    			attr_dev(p3, "class", "t4 ws");
+    			add_location(p3, file$3, 40, 12, 3266);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
-    			append_dev(p0, a0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, p1, anchor);
-    			append_dev(p1, a1);
+    			append_dev(p1, a0);
     			insert_dev(target, t3, anchor);
     			insert_dev(target, p2, anchor);
+    			append_dev(p2, a1);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, p3, anchor);
     		},
     		p: noop,
     		d: function destroy(detaching) {
@@ -28634,6 +28679,8 @@ var app = (function () {
     			if (detaching) detach_dev(p1);
     			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(p3);
     		}
     	};
 
@@ -28641,14 +28688,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(39:4) <CollapsibleSection isVisible={false} headerText={'Contact Us'} >",
+    		source: "(21:4) <CollapsibleSection isVisible={true} headerText={'About the map'} >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:4) <CollapsibleSection isVisible={false} headerText={'Thank you'} >
+    // (69:4) <CollapsibleSection isVisible={false} headerText={'Thank you'} >
     function create_default_slot$1(ctx) {
     	let p0;
     	let t1;
@@ -28699,35 +28746,35 @@ var app = (function () {
     			p1 = element("p");
     			p1.textContent = "The Hudson Access Project was created by Sara Eichner, Sara Hodges and Pratt Institute graduate assistant, Alyssa Bement. \n            We can all be reached at: hudsonaccessproject@gmail.com";
     			attr_dev(p0, "class", "t4 ws");
-    			add_location(p0, file$3, 50, 8, 3551);
+    			add_location(p0, file$3, 69, 8, 5011);
     			attr_dev(a0, "href", "https://www.scenichudson.org/");
     			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$3, 53, 30, 3685);
+    			add_location(a0, file$3, 72, 30, 5145);
     			attr_dev(li0, "class", "t4 ws");
-    			add_location(li0, file$3, 53, 12, 3667);
+    			add_location(li0, file$3, 72, 12, 5127);
     			attr_dev(a1, "href", "https://waterfrontaccess.planning.nyc.gov/about#10/40.7097/-73.9653");
     			attr_dev(a1, "target", "_blank");
-    			add_location(a1, file$3, 54, 30, 3794);
+    			add_location(a1, file$3, 73, 30, 5254);
     			attr_dev(li1, "class", "t4 ws");
-    			add_location(li1, file$3, 54, 12, 3776);
+    			add_location(li1, file$3, 73, 12, 5236);
     			attr_dev(a2, "href", "https://www.nycwatertrail.org/map.html");
     			attr_dev(a2, "target", "_blank");
-    			add_location(a2, file$3, 55, 30, 3935);
+    			add_location(a2, file$3, 74, 30, 5395);
     			attr_dev(li2, "class", "t4 ws");
-    			add_location(li2, file$3, 55, 12, 3917);
+    			add_location(li2, file$3, 74, 12, 5377);
     			attr_dev(a3, "href", "https://www.traillink.com/trail-maps/hudson-river-greenway/");
     			attr_dev(a3, "target", "_blank");
-    			add_location(a3, file$3, 56, 30, 4055);
+    			add_location(a3, file$3, 75, 30, 5515);
     			attr_dev(li3, "class", "t4 ws");
-    			add_location(li3, file$3, 56, 12, 4037);
+    			add_location(li3, file$3, 75, 12, 5497);
     			attr_dev(a4, "href", "https://bronxriver.org/wp-content/uploads/2021/05/Get-Moving-on-the-Bronx-River-2016-Activity-Guide1.pdf\n                ");
     			attr_dev(a4, "target", "_blank");
-    			add_location(a4, file$3, 57, 30, 4202);
+    			add_location(a4, file$3, 76, 30, 5662);
     			attr_dev(li4, "class", "t4 ws");
-    			add_location(li4, file$3, 57, 12, 4184);
-    			add_location(ul, file$3, 52, 8, 3650);
+    			add_location(li4, file$3, 76, 12, 5644);
+    			add_location(ul, file$3, 71, 8, 5110);
     			attr_dev(p1, "class", "t4 ws");
-    			add_location(p1, file$3, 60, 8, 4417);
+    			add_location(p1, file$3, 79, 8, 5877);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -28764,7 +28811,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(50:4) <CollapsibleSection isVisible={false} headerText={'Thank you'} >",
+    		source: "(69:4) <CollapsibleSection isVisible={false} headerText={'Thank you'} >",
     		ctx
     	});
 
@@ -28772,27 +28819,17 @@ var app = (function () {
     }
 
     function create_fragment$4(ctx) {
-    	let p0;
-    	let t0;
-    	let span;
-    	let t2;
-    	let t3;
-    	let p1;
-    	let t4;
-    	let a;
-    	let t6;
-    	let t7;
     	let collapsiblesection0;
-    	let t8;
+    	let t0;
     	let collapsiblesection1;
-    	let t9;
+    	let t1;
     	let collapsiblesection2;
     	let current;
 
     	collapsiblesection0 = new CollapsibleSection({
     			props: {
     				isVisible: true,
-    				headerText: 'Share Information!',
+    				headerText: 'Submit photos and information! ',
     				$$slots: { default: [create_default_slot_2] },
     				$$scope: { ctx }
     			},
@@ -28801,8 +28838,8 @@ var app = (function () {
 
     	collapsiblesection1 = new CollapsibleSection({
     			props: {
-    				isVisible: false,
-    				headerText: 'Contact Us',
+    				isVisible: true,
+    				headerText: 'About the map',
     				$$slots: { default: [create_default_slot_1$1] },
     				$$scope: { ctx }
     			},
@@ -28821,52 +28858,20 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			p0 = element("p");
-    			t0 = text("The Hudson Access Project is collecting information about all the places where the public \n            can get into and onto the water in the Hudson & Harbor ");
-    			span = element("span");
-    			span.textContent = "Estuary";
-    			t2 = text(" and its tributaries for swimming, boating, \n            and fishing; with a focus on activities that bring people into direct contact with the water. The project \n            is ongoing and we welcome information and feedback. Please put the tool to use so you can test it and \n            help us improve it.");
-    			t3 = space();
-    			p1 = element("p");
-    			t4 = text("If you have any comments, or photos of a site that we can use on the Hudson Access Project website, please fill out ");
-    			a = element("a");
-    			a.textContent = "this form";
-    			t6 = text(".");
-    			t7 = space();
     			create_component(collapsiblesection0.$$.fragment);
-    			t8 = space();
+    			t0 = space();
     			create_component(collapsiblesection1.$$.fragment);
-    			t9 = space();
+    			t1 = space();
     			create_component(collapsiblesection2.$$.fragment);
-    			attr_dev(span, "class", "estuary");
-    			attr_dev(span, "title", "An estuary is any body of water where tidal ocean waters mix with fresh water from rivers and streams. The impact of tides and saltwater reaches all the way to Troy, NY and this map covers all the area of the estuary from the NY-NJ Harbor estuary to the northern reach of the Hudson at Troy. ");
-    			add_location(span, file$3, 7, 67, 352);
-    			attr_dev(p0, "class", "t4 ws qual");
-    			add_location(p0, file$3, 6, 8, 172);
-    			attr_dev(a, "href", "https://forms.gle/7mz519nRxRUUMstX9");
-    			attr_dev(a, "target", "_blank");
-    			add_location(a, file$3, 13, 128, 1168);
-    			attr_dev(p1, "class", "t4 ws");
-    			add_location(p1, file$3, 12, 8, 1021);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p0, anchor);
-    			append_dev(p0, t0);
-    			append_dev(p0, span);
-    			append_dev(p0, t2);
-    			insert_dev(target, t3, anchor);
-    			insert_dev(target, p1, anchor);
-    			append_dev(p1, t4);
-    			append_dev(p1, a);
-    			append_dev(p1, t6);
-    			insert_dev(target, t7, anchor);
     			mount_component(collapsiblesection0, target, anchor);
-    			insert_dev(target, t8, anchor);
+    			insert_dev(target, t0, anchor);
     			mount_component(collapsiblesection1, target, anchor);
-    			insert_dev(target, t9, anchor);
+    			insert_dev(target, t1, anchor);
     			mount_component(collapsiblesection2, target, anchor);
     			current = true;
     		},
@@ -28907,14 +28912,10 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p0);
-    			if (detaching) detach_dev(t3);
-    			if (detaching) detach_dev(p1);
-    			if (detaching) detach_dev(t7);
     			destroy_component(collapsiblesection0, detaching);
-    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(t0);
     			destroy_component(collapsiblesection1, detaching);
-    			if (detaching) detach_dev(t9);
+    			if (detaching) detach_dev(t1);
     			destroy_component(collapsiblesection2, detaching);
     		}
     	};
@@ -29063,7 +29064,7 @@ var app = (function () {
     const file$2 = "src/WaterQualityLegend.svelte";
 
     function create_fragment$2(ctx) {
-    	let div18;
+    	let div16;
     	let h30;
     	let t1;
     	let div3;
@@ -29091,38 +29092,12 @@ var app = (function () {
     	let div12;
     	let t13;
     	let div14;
-    	let t15;
-    	let div17;
-    	let h32;
-    	let button;
-    	let span0;
-    	let t16;
-    	let span0_class_value;
-    	let t17;
-    	let span1;
-    	let t18_value = (/*expanded*/ ctx[0] ? 'x' : '+') + "";
-    	let t18;
-    	let span1_class_value;
-    	let t19;
-    	let div16;
-    	let p0;
-    	let span2;
-    	let t21;
-    	let t22;
-    	let p1;
-    	let span3;
-    	let t24;
-    	let a;
-    	let t26;
-    	let div16_hidden_value;
-    	let mounted;
-    	let dispose;
 
     	const block = {
     		c: function create() {
-    			div18 = element("div");
+    			div16 = element("div");
     			h30 = element("h3");
-    			h30.textContent = "Boat Launches and Swimming Beaches Near Pollution Sources";
+    			h30.textContent = "Boat Launches and Swimming Beaches";
     			t1 = space();
     			div3 = element("div");
     			div1 = element("div");
@@ -29154,179 +29129,89 @@ var app = (function () {
     			t13 = space();
     			div14 = element("div");
     			div14.textContent = "within half mile of a boat launch or swimming beach";
-    			t15 = space();
-    			div17 = element("div");
-    			h32 = element("h3");
-    			button = element("button");
-    			span0 = element("span");
-    			t16 = text("Learn more");
-    			t17 = space();
-    			span1 = element("span");
-    			t18 = text(t18_value);
-    			t19 = space();
-    			div16 = element("div");
-    			p0 = element("p");
-    			span2 = element("span");
-    			span2.textContent = "CSOs, MS4s and storm related pollution:";
-    			t21 = text(" \n                Combined Sewer Overflows serve about 60% of New York City. Under dry weather conditions CSOs convey sewage to \n                treatment plants but with as little one twentieth of an inch of rain, CSOs can be overwhelmed and stormwater and \n                sewage are diverted to overflow outflows and discharged into area waterbodies. According to Riverkeeper, more \n                than 27 billion gallons of raw sewage and polluted stormwater runoff from CSOs enter the waters of the Harbor \n                and Estuary every year.");
-    			t22 = space();
-    			p1 = element("p");
-    			span3 = element("span");
-    			span3.textContent = "MS4s:";
-    			t24 = text(" Municipal Separate Storm Sewer Systems carry stormwater runoff directly to local waterbodies \n                and serve approximately 30–40% of New York \n                City. (");
-    			a = element("a");
-    			a.textContent = "NYC DEP";
-    			t26 = text(") As \n                stormwater flows over streets and other impervious surfaces, it sweeps up pollutants such as oils, chemicals, pathogens, \n                and sediments. In separate sewer areas, this pollution is carried by stormwater and discharged directly into local waterways.");
     			attr_dev(h30, "class", "legend-title svelte-st0f1q");
     			add_location(h30, file$2, 7, 4, 192);
-    			attr_dev(div0, "class", "legend-circle svelte-st0f1q");
-    			set_style(div0, "background-color", "#707070");
-    			add_location(div0, file$2, 10, 12, 361);
+    			attr_dev(div0, "class", "legend-small-circle svelte-st0f1q");
+    			set_style(div0, "background-color", "#000000");
+    			add_location(div0, file$2, 10, 12, 338);
     			attr_dev(div1, "class", "legend-symbol svelte-st0f1q");
-    			add_location(div1, file$2, 9, 8, 321);
+    			add_location(div1, file$2, 9, 8, 298);
     			attr_dev(div2, "class", "legend-label header svelte-st0f1q");
-    			add_location(div2, file$2, 12, 8, 453);
+    			add_location(div2, file$2, 12, 8, 436);
     			attr_dev(div3, "class", "legend-row sub svelte-st0f1q");
-    			add_location(div3, file$2, 8, 4, 284);
-    			attr_dev(div4, "class", "legend-circle svelte-st0f1q");
+    			add_location(div3, file$2, 8, 4, 261);
+    			attr_dev(div4, "class", "legend-small-circle svelte-st0f1q");
     			set_style(div4, "background-color", "#FFAA22");
-    			add_location(div4, file$2, 16, 12, 622);
+    			add_location(div4, file$2, 16, 12, 605);
     			attr_dev(div5, "class", "legend-symbol svelte-st0f1q");
-    			add_location(div5, file$2, 15, 8, 582);
+    			add_location(div5, file$2, 15, 8, 565);
     			attr_dev(div6, "class", "legend-label svelte-st0f1q");
-    			add_location(div6, file$2, 18, 8, 714);
+    			add_location(div6, file$2, 18, 8, 703);
     			attr_dev(div7, "class", "legend-row svelte-st0f1q");
-    			add_location(div7, file$2, 14, 4, 549);
+    			add_location(div7, file$2, 14, 4, 532);
     			attr_dev(h31, "class", "legend-subtitle svelte-st0f1q");
-    			add_location(h31, file$2, 38, 4, 1513);
+    			add_location(h31, file$2, 38, 4, 1502);
     			attr_dev(div8, "class", "legend-small-circle svelte-st0f1q");
     			set_style(div8, "background-color", "#C4C3C3");
     			set_style(div8, "border", "1px solid #C4C3C3");
-    			add_location(div8, file$2, 44, 12, 1783);
+    			add_location(div8, file$2, 44, 12, 1772);
     			attr_dev(div9, "class", "legend-symbol svelte-st0f1q");
-    			add_location(div9, file$2, 43, 8, 1743);
+    			add_location(div9, file$2, 43, 8, 1732);
     			attr_dev(div10, "class", "legend-label header svelte-st0f1q");
-    			add_location(div10, file$2, 46, 8, 1908);
+    			add_location(div10, file$2, 46, 8, 1897);
     			attr_dev(div11, "class", "legend-row sub svelte-st0f1q");
-    			add_location(div11, file$2, 42, 4, 1706);
+    			add_location(div11, file$2, 42, 4, 1695);
     			attr_dev(div12, "class", "legend-small-circle svelte-st0f1q");
     			set_style(div12, "background-color", "transparent");
-    			set_style(div12, "border", "1px solid #FFAA22");
-    			add_location(div12, file$2, 50, 12, 2066);
+    			set_style(div12, "border", "1.5px solid #FFAA22");
+    			add_location(div12, file$2, 50, 12, 2055);
     			attr_dev(div13, "class", "legend-symbol svelte-st0f1q");
-    			add_location(div13, file$2, 49, 8, 2026);
+    			add_location(div13, file$2, 49, 8, 2015);
     			attr_dev(div14, "class", "legend-label svelte-st0f1q");
-    			add_location(div14, file$2, 52, 8, 2195);
+    			add_location(div14, file$2, 52, 8, 2186);
     			attr_dev(div15, "class", "legend-row svelte-st0f1q");
-    			add_location(div15, file$2, 48, 4, 1993);
-    			attr_dev(span0, "class", span0_class_value = "learn-text header " + (/*expanded*/ ctx[0] ? 'expanded' : '') + " svelte-st0f1q");
-    			add_location(span0, file$2, 75, 16, 3367);
-    			attr_dev(span1, "class", span1_class_value = "expand-icon " + (/*expanded*/ ctx[0] ? 'expanded' : '') + " svelte-st0f1q");
-    			add_location(span1, file$2, 76, 16, 3463);
-    			attr_dev(button, "aria-expanded", /*expanded*/ ctx[0]);
-    			attr_dev(button, "class", "button-container svelte-st0f1q");
-    			add_location(button, file$2, 74, 12, 3254);
-    			add_location(h32, file$2, 73, 8, 3237);
-    			attr_dev(span2, "class", "header svelte-st0f1q");
-    			add_location(span2, file$2, 81, 15, 3658);
-    			add_location(p0, file$2, 81, 12, 3655);
-    			attr_dev(span3, "class", "header svelte-st0f1q");
-    			add_location(span3, file$2, 88, 15, 4312);
-    			attr_dev(a, "href", "https://www.nyc.gov/site/dep/water/municipal-separate-storm-sewer-system.page#:~:text=A%20municipal%20separate%20storm%20sewer,surface%20waters%20of%20the%20State.");
-    			attr_dev(a, "target", "_blank");
-    			add_location(a, file$2, 90, 23, 4523);
-    			add_location(p1, file$2, 88, 12, 4309);
-    			attr_dev(div16, "class", "contents");
-    			div16.hidden = div16_hidden_value = !/*expanded*/ ctx[0];
-    			add_location(div16, file$2, 80, 8, 3601);
-    			attr_dev(div17, "class", "legend-collapsible");
-    			add_location(div17, file$2, 72, 4, 3196);
-    			attr_dev(div18, "class", "legend svelte-st0f1q");
-    			add_location(div18, file$2, 6, 0, 167);
+    			add_location(div15, file$2, 48, 4, 1982);
+    			attr_dev(div16, "class", "legend svelte-st0f1q");
+    			add_location(div16, file$2, 6, 0, 167);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div18, anchor);
-    			append_dev(div18, h30);
-    			append_dev(div18, t1);
-    			append_dev(div18, div3);
+    			insert_dev(target, div16, anchor);
+    			append_dev(div16, h30);
+    			append_dev(div16, t1);
+    			append_dev(div16, div3);
     			append_dev(div3, div1);
     			append_dev(div1, div0);
     			append_dev(div3, t2);
     			append_dev(div3, div2);
-    			append_dev(div18, t4);
-    			append_dev(div18, div7);
+    			append_dev(div16, t4);
+    			append_dev(div16, div7);
     			append_dev(div7, div5);
     			append_dev(div5, div4);
     			append_dev(div7, t5);
     			append_dev(div7, div6);
-    			append_dev(div18, t7);
-    			append_dev(div18, h31);
-    			append_dev(div18, t9);
-    			append_dev(div18, div11);
+    			append_dev(div16, t7);
+    			append_dev(div16, h31);
+    			append_dev(div16, t9);
+    			append_dev(div16, div11);
     			append_dev(div11, div9);
     			append_dev(div9, div8);
     			append_dev(div11, t10);
     			append_dev(div11, div10);
-    			append_dev(div18, t12);
-    			append_dev(div18, div15);
+    			append_dev(div16, t12);
+    			append_dev(div16, div15);
     			append_dev(div15, div13);
     			append_dev(div13, div12);
     			append_dev(div15, t13);
     			append_dev(div15, div14);
-    			append_dev(div18, t15);
-    			append_dev(div18, div17);
-    			append_dev(div17, h32);
-    			append_dev(h32, button);
-    			append_dev(button, span0);
-    			append_dev(span0, t16);
-    			append_dev(button, t17);
-    			append_dev(button, span1);
-    			append_dev(span1, t18);
-    			append_dev(div17, t19);
-    			append_dev(div17, div16);
-    			append_dev(div16, p0);
-    			append_dev(p0, span2);
-    			append_dev(p0, t21);
-    			append_dev(div16, t22);
-    			append_dev(div16, p1);
-    			append_dev(p1, span3);
-    			append_dev(p1, t24);
-    			append_dev(p1, a);
-    			append_dev(p1, t26);
-
-    			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[1], false, false, false, false);
-    				mounted = true;
-    			}
     		},
-    		p: function update(ctx, [dirty]) {
-    			if (dirty & /*expanded*/ 1 && span0_class_value !== (span0_class_value = "learn-text header " + (/*expanded*/ ctx[0] ? 'expanded' : '') + " svelte-st0f1q")) {
-    				attr_dev(span0, "class", span0_class_value);
-    			}
-
-    			if (dirty & /*expanded*/ 1 && t18_value !== (t18_value = (/*expanded*/ ctx[0] ? 'x' : '+') + "")) set_data_dev(t18, t18_value);
-
-    			if (dirty & /*expanded*/ 1 && span1_class_value !== (span1_class_value = "expand-icon " + (/*expanded*/ ctx[0] ? 'expanded' : '') + " svelte-st0f1q")) {
-    				attr_dev(span1, "class", span1_class_value);
-    			}
-
-    			if (dirty & /*expanded*/ 1) {
-    				attr_dev(button, "aria-expanded", /*expanded*/ ctx[0]);
-    			}
-
-    			if (dirty & /*expanded*/ 1 && div16_hidden_value !== (div16_hidden_value = !/*expanded*/ ctx[0])) {
-    				prop_dev(div16, "hidden", div16_hidden_value);
-    			}
-    		},
+    		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div18);
-    			mounted = false;
-    			dispose();
+    			if (detaching) detach_dev(div16);
     		}
     	};
 
@@ -29352,19 +29237,18 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<WaterQualityLegend> was created with unknown prop '${key}'`);
     	});
 
-    	const click_handler = () => $$invalidate(0, expanded = !expanded);
     	$$self.$capture_state = () => ({ isVisible, expanded });
 
     	$$self.$inject_state = $$props => {
     		if ('isVisible' in $$props) isVisible = $$props.isVisible;
-    		if ('expanded' in $$props) $$invalidate(0, expanded = $$props.expanded);
+    		if ('expanded' in $$props) expanded = $$props.expanded;
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [expanded, click_handler];
+    	return [];
     }
 
     class WaterQualityLegend extends SvelteComponentDev {
@@ -29572,7 +29456,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Loading...";
-    			add_location(div, file, 494, 1, 16411);
+    			add_location(div, file, 494, 1, 16405);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -29662,11 +29546,11 @@ var app = (function () {
     			t7 = space();
     			create_component(title_1.$$.fragment);
     			attr_dev(div0, "class", "left-panel panel svelte-swzx3f");
-    			add_location(div0, file, 357, 2, 11203);
+    			add_location(div0, file, 357, 2, 11197);
     			attr_dev(div1, "class", "map-only-pane svelte-swzx3f");
-    			add_location(div1, file, 446, 2, 14759);
+    			add_location(div1, file, 446, 2, 14753);
     			attr_dev(div2, "class", "map-pane svelte-swzx3f");
-    			add_location(div2, file, 356, 1, 11178);
+    			add_location(div2, file, 356, 1, 11172);
     		},
     		m: function mount(target, anchor) {
     			mount_component(header, target, anchor);
@@ -29923,19 +29807,19 @@ var app = (function () {
     			div4 = element("div");
     			create_component(collapsiblesection.$$.fragment);
     			attr_dev(span0, "class", "t2 act-filter-header");
-    			add_location(span0, file, 362, 7, 11365);
-    			add_location(br, file, 362, 65, 11423);
+    			add_location(span0, file, 362, 7, 11359);
+    			add_location(br, file, 362, 65, 11417);
     			attr_dev(span1, "class", "t3 icon-instructions svelte-swzx3f");
-    			add_location(span1, file, 363, 7, 11435);
+    			add_location(span1, file, 363, 7, 11429);
     			attr_dev(div0, "class", "act-filters-label svelte-swzx3f");
-    			add_location(div0, file, 361, 6, 11326);
+    			add_location(div0, file, 361, 6, 11320);
     			attr_dev(div1, "class", "act-filters svelte-swzx3f");
-    			add_location(div1, file, 366, 6, 11559);
+    			add_location(div1, file, 366, 6, 11553);
     			attr_dev(div2, "class", "activity-filter svelte-swzx3f");
-    			add_location(div2, file, 360, 5, 11290);
-    			add_location(div3, file, 359, 4, 11279);
+    			add_location(div2, file, 360, 5, 11284);
+    			add_location(div3, file, 359, 4, 11273);
     			attr_dev(div4, "id", "amenity");
-    			add_location(div4, file, 388, 4, 12015);
+    			add_location(div4, file, 388, 4, 12009);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -30044,15 +29928,15 @@ var app = (function () {
     			t1 = space();
     			attr_dev(img, "alt", img_alt_value = /*act*/ ctx[44].value);
     			if (!src_url_equal(img.src, img_src_value = modifyIconSource(/*act*/ ctx[44]))) attr_dev(img, "src", img_src_value);
-    			add_location(img, file, 372, 8, 11709);
+    			add_location(img, file, 372, 8, 11703);
     			attr_dev(input, "class", "act-input");
     			attr_dev(input, "type", "checkbox");
     			input.value = input_value_value = /*act*/ ctx[44].value;
     			attr_dev(input, "id", input_id_value = /*act*/ ctx[44].value);
-    			add_location(input, file, 376, 8, 11793);
+    			add_location(input, file, 376, 8, 11787);
     			attr_dev(label, "class", "act-buttons");
     			toggle_class(label, "active", /*act*/ ctx[44].isActive);
-    			add_location(label, file, 368, 7, 11619);
+    			add_location(label, file, 368, 7, 11613);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -30224,77 +30108,77 @@ var app = (function () {
     			br9 = element("br");
     			attr_dev(input0, "type", "checkbox");
     			input0.value = "boat_launch_YN";
-    			add_location(input0, file, 391, 7, 12162);
+    			add_location(input0, file, 391, 7, 12156);
     			attr_dev(label0, "class", "t3");
     			attr_dev(label0, "for", "boat_launch_YN");
-    			add_location(label0, file, 392, 7, 12262);
-    			add_location(br0, file, 392, 66, 12321);
+    			add_location(label0, file, 392, 7, 12256);
+    			add_location(br0, file, 392, 66, 12315);
     			attr_dev(input1, "type", "checkbox");
     			input1.value = "restrooms";
-    			add_location(input1, file, 393, 7, 12333);
+    			add_location(input1, file, 393, 7, 12327);
     			attr_dev(label1, "class", "t3");
     			attr_dev(label1, "for", "restrooms");
-    			add_location(label1, file, 394, 7, 12427);
-    			add_location(br1, file, 394, 59, 12479);
+    			add_location(label1, file, 394, 7, 12421);
+    			add_location(br1, file, 394, 59, 12473);
     			attr_dev(input2, "type", "checkbox");
     			input2.value = "public_transit";
-    			add_location(input2, file, 395, 7, 12491);
+    			add_location(input2, file, 395, 7, 12485);
     			attr_dev(label2, "class", "t3");
     			attr_dev(label2, "for", "public_transit");
-    			add_location(label2, file, 396, 7, 12591);
-    			add_location(br2, file, 396, 83, 12667);
+    			add_location(label2, file, 396, 7, 12585);
+    			add_location(br2, file, 396, 83, 12661);
     			attr_dev(input3, "type", "checkbox");
     			input3.value = "parking";
-    			add_location(input3, file, 397, 7, 12679);
+    			add_location(input3, file, 397, 7, 12673);
     			attr_dev(label3, "class", "t3");
     			attr_dev(label3, "for", "parking");
-    			add_location(label3, file, 398, 7, 12771);
-    			add_location(br3, file, 398, 55, 12819);
+    			add_location(label3, file, 398, 7, 12765);
+    			add_location(br3, file, 398, 55, 12813);
     			attr_dev(input4, "type", "checkbox");
     			input4.value = "food";
-    			add_location(input4, file, 399, 7, 12831);
+    			add_location(input4, file, 399, 7, 12825);
     			attr_dev(label4, "class", "t3");
     			attr_dev(label4, "for", "food");
-    			add_location(label4, file, 400, 7, 12921);
-    			add_location(br4, file, 400, 57, 12971);
+    			add_location(label4, file, 400, 7, 12915);
+    			add_location(br4, file, 400, 57, 12965);
     			attr_dev(input5, "type", "checkbox");
     			input5.value = "drinking_water";
-    			add_location(input5, file, 401, 7, 12983);
+    			add_location(input5, file, 401, 7, 12977);
     			attr_dev(label5, "class", "t3");
     			attr_dev(label5, "for", "drinking_water");
-    			add_location(label5, file, 402, 7, 13082);
-    			add_location(br5, file, 402, 80, 13155);
+    			add_location(label5, file, 402, 7, 13076);
+    			add_location(br5, file, 402, 80, 13149);
     			attr_dev(input6, "type", "checkbox");
     			input6.value = "picnic_area";
-    			add_location(input6, file, 403, 7, 13167);
+    			add_location(input6, file, 403, 7, 13161);
     			attr_dev(label6, "class", "t3");
     			attr_dev(label6, "for", "picnic_area");
-    			add_location(label6, file, 404, 7, 13264);
-    			add_location(br6, file, 404, 63, 13320);
+    			add_location(label6, file, 404, 7, 13258);
+    			add_location(br6, file, 404, 63, 13314);
     			attr_dev(input7, "type", "checkbox");
     			input7.value = "hiking";
-    			add_location(input7, file, 405, 7, 13332);
+    			add_location(input7, file, 405, 7, 13326);
     			attr_dev(label7, "class", "t3");
     			attr_dev(label7, "for", "hiking");
-    			add_location(label7, file, 406, 7, 13423);
-    			add_location(br7, file, 406, 70, 13486);
+    			add_location(label7, file, 406, 7, 13417);
+    			add_location(br7, file, 406, 70, 13480);
     			attr_dev(input8, "type", "checkbox");
     			input8.value = "pets_allowed";
-    			add_location(input8, file, 407, 7, 13498);
+    			add_location(input8, file, 407, 7, 13492);
     			attr_dev(label8, "class", "t3");
     			attr_dev(label8, "for", "pets_allowed");
-    			add_location(label8, file, 408, 7, 13596);
-    			add_location(br8, file, 408, 72, 13661);
+    			add_location(label8, file, 408, 7, 13590);
+    			add_location(br8, file, 408, 72, 13655);
     			attr_dev(input9, "type", "checkbox");
     			attr_dev(input9, "class", "last svelte-swzx3f");
     			input9.value = "program";
-    			add_location(input9, file, 409, 7, 13673);
+    			add_location(input9, file, 409, 7, 13667);
     			attr_dev(label9, "class", "t3");
     			attr_dev(label9, "for", "program");
-    			add_location(label9, file, 410, 7, 13779);
-    			add_location(br9, file, 410, 59, 13831);
+    			add_location(label9, file, 410, 7, 13773);
+    			add_location(br9, file, 410, 59, 13825);
     			attr_dev(div, "class", "feature-filters r");
-    			add_location(div, file, 390, 6, 12123);
+    			add_location(div, file, 390, 6, 12117);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -30413,13 +30297,13 @@ var app = (function () {
     			attr_dev(input, "id", "searcher");
     			attr_dev(input, "placeholder", "Search for a site by name");
     			attr_dev(input, "type", "text");
-    			add_location(input, file, 417, 5, 13971);
+    			add_location(input, file, 417, 5, 13965);
     			attr_dev(div0, "class", "searcher r");
-    			add_location(div0, file, 416, 4, 13941);
+    			add_location(div0, file, 416, 4, 13935);
     			attr_dev(div1, "class", "info-panel panel svelte-swzx3f");
-    			add_location(div1, file, 425, 5, 14253);
+    			add_location(div1, file, 425, 5, 14247);
     			attr_dev(div2, "class", "places-list svelte-swzx3f");
-    			add_location(div2, file, 424, 4, 14222);
+    			add_location(div2, file, 424, 4, 14216);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -30749,11 +30633,11 @@ var app = (function () {
     			span1 = element("span");
     			t4 = text("Next High Tide: ");
     			t5 = text(t5_value);
-    			add_location(span0, file, 452, 6, 15118);
-    			add_location(br, file, 452, 51, 15163);
-    			add_location(span1, file, 453, 6, 15174);
+    			add_location(span0, file, 452, 6, 15112);
+    			add_location(br, file, 452, 51, 15157);
+    			add_location(span1, file, 453, 6, 15168);
     			attr_dev(div, "class", "water-temp svelte-swzx3f");
-    			add_location(div, file, 450, 5, 14888);
+    			add_location(div, file, 450, 5, 14882);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31395,9 +31279,9 @@ var app = (function () {
     			if_block_anchor = empty();
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css");
-    			add_location(link, file, 339, 1, 10691);
+    			add_location(link, file, 339, 1, 10685);
     			if (!src_url_equal(script.src, script_src_value = "https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 340, 1, 10793);
+    			add_location(script, file, 340, 1, 10787);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -31914,8 +31798,8 @@ var app = (function () {
     						changeBasemap(safetyTileURL);
     						break;
     					case 'quality':
-    						// removePoints();
-    						// removePolygons();
+    						removePoints();
+    						removePolygons();
     						filterPollution();
     						changeBasemap(qualityTileURL);
     						break;

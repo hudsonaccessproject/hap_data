@@ -1,13 +1,13 @@
 :root {
     --hh: 65px;
     --orange: #f4a261;
-    --orange2: #f77b00;
+    --orange2: #ff8900;
     --orange3: #ffaa22;
     --blue: #3884CB;
     --green: #79BB43;
 }
 
-.modal {
+/* .modal {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -27,7 +27,7 @@
 
 .modal-hide {
     visibility: hidden;
-}
+} */
 
 p {
     margin: 5px;
@@ -36,7 +36,6 @@ p {
 
 a {
     color: var(--blue);
-    /* color: #000; */
     text-decoration: none;
     font-weight: 700;
 }
@@ -189,6 +188,12 @@ img {
 #logo {
     margin: unset;
     margin-left: auto;
+}
+
+/* text for sidebar */
+.ws {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 @media screen and (max-width: 768px) {

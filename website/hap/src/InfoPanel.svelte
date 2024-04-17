@@ -212,7 +212,7 @@
 }
 
 .park-details p {
-    padding-top: 15px;
+    padding-top: 10px;
     margin: 0px;
 }
 

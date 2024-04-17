@@ -94,8 +94,8 @@
 			changeBasemap(safetyTileURL);
 			break;
 		case 'quality':
-			// removePoints();
-			// removePolygons();
+			removePoints();
+			removePolygons();
 			filterPollution();
 			changeBasemap(qualityTileURL);
 			break;

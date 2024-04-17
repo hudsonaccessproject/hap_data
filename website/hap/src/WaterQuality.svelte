@@ -32,6 +32,12 @@
         with most stations operating year-round.
     </p>
     <p class="t4 ws"> <a href="https://hrnerr.org/" target="_blank">Hudson River National Estuarine Research Reserve</a></p>
+    <p class="t4 ws"> 
+        <a href="https://www.nyc.gov/site/dep/water/waterbody-advisories.page" target="_blank">Waterbody Advisory Page</a>
+    </p>
+    <p class="t4 ws"> 
+        <a href="https://hudsonrivergreenwaywatertrail.org/info-safety" target="_blank">Hudson River Greenway</a>
+    </p>
     <!-- <ul>
         <li class="t4 ws"><a href="http://www.hudson-river.org/harborwidewqreport-2021" target="_blank">Water Quality Report</a></li>
         <li class="t4 ws"><a href="https://www.hudsonriver.org/state-of-the-estuary#report" target="_blank">State of the Hudson Report</a></li>
@@ -65,10 +71,6 @@
         padding-left: 10px;
     }
 
-    .ws {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
     .safety-img {
 		position: relative;
 		width: 95%;
