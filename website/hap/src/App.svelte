@@ -22,6 +22,7 @@
 
 	let title = "The Hudson Access Project is collecting information about all the places where the public can get into and onto the water in the Hudson & Harbor Estuary and its tributaries for swimming, boating, and fishing; with a focus on activities that bring people into direct contact with the water."
 
+	// let showTooltip = false;
 	let point_data;
 	let act_data;
 	let poly_data;
@@ -99,9 +100,9 @@
 			changeBasemap(qualityTileURL);
 			break;
 		case 'about':
-			removePoints();
-			removePolygons();
-			changeBasemap(regTileURL);
+			// removePoints();
+			// removePolygons();
+			// changeBasemap(regTileURL);
 			break;
 		default:
 			// console.log("default");
@@ -240,7 +241,7 @@
 	function filterPollution() {
 		filters.act_filters = ['SWIM', 'HPBL'];
 		// I am using the existing featre filters and treating the cso and ms4 columns as features.  If the site va
-		filters.feature_filters = ['nr_ms4_cso'];
+		filters.feature_filters = ['cso'];
 	}
 
 	// Handle Site Feature Filters
@@ -348,9 +349,9 @@
 	<!-- <Header  {activePage} {changePage}/> -->
 	<Header />
 
-	{#if $activePageTracker === 'about'}
+	<!-- {#if $activePageTracker === 'about'}
 		<About />
-	{/if}
+	{/if} -->
 
 	<!-- Initiate Map Here-->
 	<div class="map-pane">
@@ -438,16 +439,26 @@
 			{/if}
 			{#if $activePageTracker === 'quality'}
 				<WaterQuality />
-			{/if}		
+			{/if}	
+			{#if $activePageTracker === 'about'}
+				<About />
+			{/if}	
 		</div>
 		<div class="map-only-pane">
 			<LeafletMap >
 				<HomeButton on:homebutton={handleExtent}/>
 				{#if waterTemp!==undefined}
 					<div class="water-temp">
+					<!-- <div class="water-temp" on:mouseover="{() => showTooltip = true}" on:focus="{() => showTooltip = true}" on:mouseout="{() => showTooltip = false}" on:blur="{() => showTooltip = false}"> -->
 						<span>Water Temperature: {waterTemp}°F</span><br>
 						<span>Next High Tide: { nextHighTide ? nextHighTide : 'is tomorrow'}</span>
-						<!-- <span>Next High Tide: { nextHighTide ? nextHighTide.t.substr(11, 5) : 'is tomorrow'}</span> -->
+						<!-- {#if showTooltip} -->
+							<!-- <div class="tooltip">
+								<span class="caution">CAUTION!</span><br>
+								<span>The water can be much colder than the air!</span><br><br>
+								<span>Temperature and Tide information are updated continuously and are from the Battery in lower Manhattan.</span>
+							</div> -->
+						<!-- {/if} -->
 					</div>
 				{/if}
 				<!-- data on the map -->
@@ -519,7 +530,27 @@
 		background-color: var(--orange3);
 		padding: 3px 5px;
 		border-radius: 5px;
+		cursor: pointer;
 	}
+
+	/* .tooltip {
+		position: absolute;
+		bottom: 95%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #fff;
+		padding: 5px;
+		border-radius: 3px;
+		font-size: 0.8em;
+		display: none;
+		width: 260px;
+		border:1px solid #000;
+	}
+
+	/* .caution {
+		color: var(--orange3);
+	}	 */ 
+
 
 	.left-panel {
 		width: 30vw;
@@ -531,7 +562,7 @@
 		/* overflow: scroll; */
 		z-index: 10001;
 		order: 2;
-		overflow: hidden;
+		/* overflow: hidden; */
 	} 
 
 	.activity-filter {
@@ -576,6 +607,7 @@
 			max-height: 60%;
 			flex-grow: 1;
 			padding-bottom: 10px;
+			overflow: hidden;
 		}
 
 		.icon-instructions {

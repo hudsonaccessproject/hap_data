@@ -2,8 +2,8 @@
     import CollapsibleSection from './CollapsibleSection.svelte'
 </script>
 
-<div class="about-wide">
-    <div class="about-content-top">
+<!-- <div class="about-wide"> -->
+    <!-- <div class="about-content-top"> -->
         <p class="t4 ws qual">The Hudson Access Project is collecting information about all the places where the public 
             can get into and onto the water in the Hudson & Harbor <span class="estuary" title="An estuary is any body of water where tidal ocean waters mix with fresh water from rivers and streams. The impact of tides and saltwater reaches all the way to Troy, NY and this map covers all the area of the estuary from the NY-NJ Harbor estuary to the northern reach of the Hudson at Troy. ">Estuary</span> and its tributaries for swimming, boating, 
             and fishing; with a focus on activities that bring people into direct contact with the water. The project 
@@ -13,9 +13,9 @@
         <p class="t4 ws"> 
             If you have any comments, or photos of a site that we can use on the Hudson Access Project website, please fill out <a href="https://forms.gle/7mz519nRxRUUMstX9" target="_blank">this form</a>.
         </p>
-    </div>  
+    <!-- </div>   -->
     <CollapsibleSection isVisible={true} headerText={'Share Information!'} >
-        <div class="about-content">
+        <!-- <div class="about-content"> -->
             <p class="t4 ws">The Hudson Access Project has specific priorities in data collection: we want to make it easier for 
                 people in areas with fewer resources, and communities with fewer blue spaces, to find their way onto the water 
                 more easily. We also want to make it easier for people with mobility or other concerns to understand how 
@@ -34,7 +34,7 @@
                 Instagram or twitter to find out when updates occur. And send us an email if you want to learn more or access 
                 the dataset as a resource for research about public access.  
             </p>
-        </div>
+        <!-- </div> -->
     </CollapsibleSection>
     <CollapsibleSection isVisible={false} headerText={'Contact Us'} >
         <p class="t4 ws"> 
@@ -62,30 +62,30 @@
             We can all be reached at: hudsonaccessproject@gmail.com
         </p>
     </CollapsibleSection>
-</div>
+<!-- </div> -->
 
 <style>
 
-    .about-wide {
-        position: absolute;
-        top: 66px;
-        z-index: 10001;
-        background-color: #fff;
-        height: calc(100% - 65px);
-    }
+    /* .about-wide { */
+        /* position: absolute; */
+        /* top: 66px; */
+        /* z-index: 10001;
+        background-color: #fff; */
+        /* height: calc(100% - 65px); */
+    /* } */
 
-    .about-content {
+    /* .about-content {
         padding-top: 20px;
         padding-bottom: 20px;
     }
     .about-content-top {
         padding-top: 20px !important;
-    }
-    @media (max-width: 767px) {
+    } */
+    /* @media (max-width: 767px) {
         .about-wide {
             top: 75px;
             height: calc(100% - 75px);
         }
-    }
+    } */
 
 </style>

@@ -2,7 +2,7 @@
     import CollapsibleSection from './CollapsibleSection.svelte'
 </script>
 
-<div>
+<!-- <div> -->
     <CollapsibleSection isVisible={true} headerText={'Introduction'} >
         <p class="t4 ws"><strong>The Hudson Access Project</strong> was created to help you discover and explore the local waterways. 
             Get to know them, and  learn how to do so safely. 
@@ -74,7 +74,7 @@
             <a href="https://dep.nj.gov/dsr/fish-advisories-studies/" target="_blank">NJ fish consumption advisories</a>
         </p>
     </CollapsibleSection>
-</div>
+<!-- </div> -->
 
 <style>
 

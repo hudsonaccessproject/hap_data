@@ -62,20 +62,33 @@
 <style>
   .collapsible {
     border-bottom: 1.5px solid var(--gray-light, #e1e1e1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
   }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+	.contents::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.contents {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
 	
 	h3 {
 		margin: 0;
 	}
 
-/* Styles for non-expanded state */
-  /* .collapsible h3 .header-text {
-    color: black;
-  } */
-
 .collapsible h3 .header-text.expanded {
   /* Styles for expanded state */
   color: #3884CB;
+}
+
+.contents {
+   overflow-y: scroll;
 }
 	
   button {

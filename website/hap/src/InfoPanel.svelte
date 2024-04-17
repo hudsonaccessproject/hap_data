@@ -108,9 +108,11 @@
         {#if active_point.program_name}
             <p class="park-subname">{active_point.program_name}</p>
         {/if}
-        {#each site_acts as site_act}
-                <img class="act-icon" alt={site_act.value} src= {site_act.source}/>
-        {/each}
+        <div class="act-container">
+            {#each site_acts as site_act}
+                    <img class="act-icon" alt={site_act.value} src= {site_act.source}/>
+            {/each}
+        </div>
     </div>
     <div class="park-details">
         {#if active_point.address}
@@ -176,10 +178,20 @@
                 {/if}
             </p>
         {/if}
-        <p><span>Site amenities:</span> <br>
-        {#each site_features as site_feature}
-                <img class="act-icon" alt={site_feature.value} src= {site_feature.source}  title={site_feature.desc}/>
-        {/each}
+        <!-- <p><span>Site amenities:</span></p>
+        <div class="amenity-icons">
+            {#each site_features as site_feature}
+                    <img class="amenity-icon" alt={site_feature.value} src= {site_feature.source}  title={site_feature.desc}/>
+            {/each}
+        </div> -->
+        <div class="amenities-container">
+            <span class="d">Site amenities:</span>
+            <div class="amenity-icons">
+              {#each site_features as site_feature}
+                <img class="amenity-icon" alt={site_feature.value} src={site_feature.source} title={site_feature.desc}/>
+              {/each}
+            </div>
+          </div>
 
     </div>
 {:else}
@@ -208,7 +220,7 @@
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 0px;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 
 .park-subname {
@@ -222,9 +234,33 @@ p span {
     font-weight: 600;
 }
 
+.d {
+    font-weight: 600;
+}
+
+.act-container {
+    padding-top: 5px;
+}
+
 .act-icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+.amenities-container {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+  }
+
+.amenity-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.amenity-icon {
+    width: 20px;
+    height: 20px;
     margin-left: 5px;
 }
 

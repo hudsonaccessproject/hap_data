@@ -48,11 +48,11 @@
     </div>
     <div class="legend-row">
         <div class="legend-symbol">
-            <div class="legend-small-circle" style="background-color: #FC0000; border: 1px solid #FC0000;"></div>
+            <div class="legend-small-circle" style="background-color: transparent; border: 1px solid #FFAA22;"></div>
         </div>
         <div class="legend-label">within half mile of a boat launch or swimming beach</div>
     </div>
-    <div class="legend-row sub">
+    <!-- <div class="legend-row sub">
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: #C4C3C3; border: 1px solid #C4C3C3;"></div>
         </div>
@@ -63,7 +63,7 @@
             <div class="legend-small-circle" style="background-color: transparent; border: 1px solid #FFAA22;"></div>
         </div>
         <div class="legend-label">within half mile of a boat launch or swimming beach</div>
-    </div>
+    </div> -->
     <!-- <div class="legend-row">
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: #FFAA22; border: 1px solid #FFAA22;"></div>
@@ -175,10 +175,10 @@
         margin-left: 3px;
     }
 
-    .legend-square {
+    /* .legend-square {
         width: 100%;
         height: 100%;
-    }
+    } */
 
     .legend-label {
         margin: 0;
