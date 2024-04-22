@@ -28,6 +28,11 @@
           <span class="hamburger-line"></span>
         </label> -->
         <div class="hamburger-menu">
+          <div class="col {$activePageTracker === 'access' ? 'active' : ''}">
+            <div class="column-content other-pages" on:click={() => setPage('access')} on:keydown={() => setPage('access')}>
+              Water Access
+            </div>
+          </div>
           <div class="col {$activePageTracker === 'safety' ? 'active' : ''}">
             <div class="column-content other-pages" on:click={() => setPage('safety')} on:keydown={() => setPage('safety')}>
               Water Safety

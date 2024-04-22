@@ -36,6 +36,17 @@
 	let temp_point_data;
 	let active_data;
 	let active_point;
+	let stage;
+
+	const emptyFilters = {
+		act_filters: [],
+		feature_filters: [],
+		prog_filters: [],
+		text_filter: "",
+		pollution_filters: [],
+		active: [],
+		previous: []
+	};
 
 	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
 	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
@@ -73,8 +84,6 @@
 	}
 
 	function removePolygons() {
-		// console.log(active_point);
-		console.log("test");
 		map.eachLayer(layer => {
 			if (layer instanceof L.Layer && layer.feature && layer.feature.geometry && (layer.feature.geometry.type === 'MultiPolygon' || layer.feature.geometry.type === 'Polygon')) {
 			map.removeLayer(layer);
@@ -84,29 +93,37 @@
 
 	$: {
 		switch($activePageTracker) {
-		case 'access':
-			// changeBasemap($activeTileURL);
-			// console.log("access case");
-			break;
-		case 'safety':
-			removePoints();
-			removePolygons();
-			changeBasemap(safetyTileURL);
-			break;
-		case 'quality':
-			removePoints();
-			removePolygons();
-			filterPollution();
-			changeBasemap(qualityTileURL);
-			break;
-		case 'about':
-			// removePoints();
-			// removePolygons();
-			// changeBasemap(regTileURL);
-			break;
-		default:
-			// console.log("default");
-			//changeBasemap(regTileURL);
+			// using stage to identify when the map is not in its initial state.  otherwise, the access 
+			// case messes up the initial loading of the map
+			case 'access':
+				if (stage == 'updated') {
+					removePoints();
+					removePolygons();
+					filters = { ...emptyFilters };
+					changeBasemap(regTileURL);
+				}
+				break;
+			case 'safety':
+				stage = 'updated';
+				removePoints();
+				removePolygons();
+				changeBasemap(safetyTileURL);
+				break;
+			case 'quality':
+				stage = 'updated';
+				removePoints();
+				removePolygons();
+				filterPollution();
+				changeBasemap(qualityTileURL);
+				break;
+			case 'about':
+				stage = 'updated';
+				removePoints();
+				removePolygons();
+				filters = { ...emptyFilters };
+				changeBasemap(regTileURL);
+				break;
+			default:
 		}
 	}
 
@@ -148,15 +165,16 @@
 
 	//Filter Function. Filter goes to GeoJSON.svelte
 	//Declare Empty filter. All Filters are together
-	let filters = {
-		act_filters:[],
-		feature_filters:[],
-		prog_filters:[],
-		text_filter:"",
-		pollution_filters:[],
-		active:[],
-		previous:[]
-	};
+	let filters = emptyFilters
+	// let filters = {
+	// 	act_filters:[],
+	// 	feature_filters:[],
+	// 	prog_filters:[],
+	// 	text_filter:"",
+	// 	pollution_filters:[],
+	// 	active:[],
+	// 	previous:[]
+	// };
 
 	//Use these for creating buttons and hover pop up
 	let acts = [
@@ -308,7 +326,6 @@
 		// Otherwise, add it to filters.act_filters.
 		filters.act_filters = [...filters.act_filters, value];
 		}
-		console.log(value);
 
 		// Toggle the isActive property of each act object based on the click
 		acts = acts.map(act => {
@@ -462,7 +479,7 @@
 					</div>
 				{/if}
 				<!-- data on the map -->
-				{#if $activePageTracker === 'access' || $activePageTracker === 'quality'}
+				{#if $activePageTracker === 'access' || $activePageTracker === 'quality' || $activePageTracker === 'about'}
 					{#key active_data}
 					<Polygon active_data={active_data}/>
 					{/key}
