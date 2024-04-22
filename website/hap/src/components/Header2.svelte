@@ -19,6 +19,9 @@
           <span title="This is a work in progress. Please help make this website as useful as it can be: send any corrections or site information to hudsonaccessproject@gmail.com." class="beta">beta</span>
         </div>
       </div>
+      
+        <i class="fas fa-info-circle mobile-about-button" on:click={() => setPage('about')} on:keydown={() => setPage('about')}></i>
+      
       <div class="other-pages">
       <!-- <div class="hamburger-selector"> -->
         <!-- <input type="checkbox" id="hamburger-checkbox">
@@ -43,7 +46,7 @@
               Water Quality
             </div>
           </div>
-          <div class="col {$activePageTracker === 'about' ? 'active' : ''}" >
+          <div class="col about {$activePageTracker === 'about' ? 'active' : ''}" >
             <div class="column-content other-pages" on:click={() => setPage('about')} on:keydown={() => setPage('about')}>
               About
             </div>
@@ -157,6 +160,10 @@
     flex-basis: 60%;
   }
 
+  .mobile-about-button {
+    display: none;
+  }
+
   /* .hamburger-selector {
     flex-basis: 60%;
   }
@@ -250,6 +257,27 @@
     .large-col {
       flex-basis: 100%;
     }
+
+    .mobile-about-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--orange3);
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 8px; 
+    right: 8px;  
+    z-index: 100; /* Ensure it's on top of other elements */
+  }
+
+  .col.about {
+    /* Hide the desktop content on mobile */
+    display: none;
+  }
 
     /* .hamburger-selector {
       flex-basis: 10%;
