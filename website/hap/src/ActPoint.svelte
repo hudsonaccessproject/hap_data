@@ -10,67 +10,67 @@
     });
     let d = 0;
 
-    let acts = [
-		{
-		value: "FISH",
-		name: "Fishing",
-		source: "/assets/icons/activities/fishing.svg",
-		activesource: "/assets/icons/activities/fishing_F77B00.svg",
-		desc: "You can fish here."
-		},
-		{
-		value: "SWIM",
-		name: "Swimming",
-		source: "/assets/icons/activities/swimming.svg",
-		activesource: "/assets/icons/activities/swimming_F77B00.svg",
-		desc: "You can swim here."
-		},
-		{
-		value: "HPBL",
-		name: "Human-powered boating",
-		source: "/assets/icons/activities/hp_boating.svg",
-		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-		desc: "You can kayak here."
-		},
-		{
-		value: "MPBL",
-		name: "Motor boating",
-		source: "/assets/icons/activities/mp_boating.svg",
-		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-		desc: "You can motor boat here."
-		}
-	];
-
     // let acts = [
 	// 	{
 	// 	value: "FISH",
 	// 	name: "Fishing",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	source: "/assets/icons/activities/fishing.svg",
+	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
 	// 	desc: "You can fish here."
 	// 	},
 	// 	{
 	// 	value: "SWIM",
 	// 	name: "Swimming",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	source: "/assets/icons/activities/swimming.svg",
+	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
 	// 	desc: "You can swim here."
 	// 	},
 	// 	{
 	// 	value: "HPBL",
 	// 	name: "Human-powered boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/hp_boating.svg",
+	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 	// 	desc: "You can kayak here."
 	// 	},
 	// 	{
 	// 	value: "MPBL",
 	// 	name: "Motor boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/mp_boating.svg",
+	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 	// 	desc: "You can motor boat here."
 	// 	}
 	// ];
+
+    let acts = [
+		{
+		value: "FISH",
+		name: "Fishing",
+		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		desc: "You can fish here."
+		},
+		{
+		value: "SWIM",
+		name: "Swimming",
+		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		desc: "You can swim here."
+		},
+		{
+		value: "HPBL",
+		name: "Human-powered boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		desc: "You can kayak here."
+		},
+		{
+		value: "MPBL",
+		name: "Motor boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		desc: "You can motor boat here."
+		}
+	];
 
     export let act_geojson;
     // export let activePage;
@@ -92,7 +92,7 @@
 
     // Define the setLayerVisibility function
     function setLayerVisibility(zoom) {
-        if (zoom >= 14 && zoom <= 18 && ($activePageTracker === 'access' || $activePageTracker === 'quality')) {
+        if (zoom >= 14 && zoom <= 18 && ($activePageTracker === 'access' || $activePageTracker === 'quality' || $activePageTracker === 'about')) {
         // if (zoom >= 13 && zoom <= 18 && activePage === 'access') {
             map.addLayer(layer);
         } else {

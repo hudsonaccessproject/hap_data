@@ -37,6 +37,7 @@
 	let active_data;
 	let active_point;
 	let stage;
+	let showTooltip = false;
 
 	const emptyFilters = {
 		act_filters: [],
@@ -48,12 +49,12 @@
 		previous: []
 	};
 
-	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
-	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
-	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
-	const point_url = "/assets/hap_site_points_20240422.geojson"; 
-	const act_point_url = "/assets/hap_act_points_20240320.geojson";
-	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
+	const point_url = "/hudsonaccessproject/assets/hap_site_points_20240422.geojson";
+	const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
+	const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
+	// const point_url = "/assets/hap_site_points_20240422.geojson"; 
+	// const act_point_url = "/assets/hap_act_points_20240320.geojson";
+	// const polygon_url = "/assets/hap_site_polys_20240201.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
@@ -177,67 +178,67 @@
 	// };
 
 	//Use these for creating buttons and hover pop up
-	let acts = [
-		{
-		value: "FISH",
-		name: "Fishing",
-		source: "/assets/icons/activities/fishing.svg",
-		activesource: "/assets/icons/activities/fishing_F77B00.svg",
-		desc: "You can fish here."
-		},
-		{
-		value: "SWIM",
-		name: "Swimming",
-		source: "/assets/icons/activities/swimming.svg",
-		activesource: "/assets/icons/activities/swimming_F77B00.svg",
-		desc: "You can swim here."
-		},
-		{
-		value: "HPBL",
-		name: "Human-powered boating",
-		source: "/assets/icons/activities/hp_boating.svg",
-		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-		desc: "You can kayak here."
-		},
-		{
-		value: "MPBL",
-		name: "Motor boating",
-		source: "/assets/icons/activities/mp_boating.svg",
-		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-		desc: "You can motor boat here."
-		}
-	];
-
-    // let acts = [
+	// let acts = [
 	// 	{
 	// 	value: "FISH",
 	// 	name: "Fishing",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	source: "/assets/icons/activities/fishing.svg",
+	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
 	// 	desc: "You can fish here."
 	// 	},
 	// 	{
 	// 	value: "SWIM",
 	// 	name: "Swimming",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	source: "/assets/icons/activities/swimming.svg",
+	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
 	// 	desc: "You can swim here."
 	// 	},
 	// 	{
 	// 	value: "HPBL",
 	// 	name: "Human-powered boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/hp_boating.svg",
+	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 	// 	desc: "You can kayak here."
 	// 	},
 	// 	{
 	// 	value: "MPBL",
 	// 	name: "Motor boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/mp_boating.svg",
+	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 	// 	desc: "You can motor boat here."
 	// 	}
 	// ];
+
+    let acts = [
+		{
+		value: "FISH",
+		name: "Fishing",
+		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		desc: "You can fish here."
+		},
+		{
+		value: "SWIM",
+		name: "Swimming",
+		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		desc: "You can swim here."
+		},
+		{
+		value: "HPBL",
+		name: "Human-powered boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		desc: "You can kayak here."
+		},
+		{
+		value: "MPBL",
+		name: "Motor boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		desc: "You can motor boat here."
+		}
+	];
 
 	function getNextHighTide(tides) {
 		const currentTime = new Date();
@@ -465,17 +466,28 @@
 			<LeafletMap >
 				<HomeButton on:homebutton={handleExtent}/>
 				{#if waterTemp!==undefined}
-					<div class="water-temp">
-					<!-- <div class="water-temp" on:mouseover="{() => showTooltip = true}" on:focus="{() => showTooltip = true}" on:mouseout="{() => showTooltip = false}" on:blur="{() => showTooltip = false}"> -->
+				{#if showTooltip}
+					<div class="tooltip">
+						<span class="caution">CAUTION!</span><br>
+						<span class="bold">The water can be much colder than the air!<br>Unexpected immersion in cold water can be dangerous. Be careful in spring and early summer; always wear a flotation 
+							device when boating and check temperatures before swimming.
+						</span><br><br>
+						<span>Temperature and Tide information  are updated continuously from <a href="https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1407#listing" target="_blank">NOAA water monitoring station</a> in 
+							lower Manhattan at the Battery. Learn more and access stations in other 
+							locations on the Water Safety page. </span>
+					</div> 
+				{/if}
+					<!-- <div class="water-temp"> -->
+					<div class="water-temp" on:mouseover="{() => showTooltip = true}" on:focus="{() => showTooltip = true}" on:mouseout="{() => showTooltip = false}" on:blur="{() => showTooltip = false}" on:focus="{() => showTooltip = true}">
 						<span>Water Temperature: {waterTemp}°F</span><br>
 						<span>Next High Tide: { nextHighTide ? nextHighTide : 'is tomorrow'}</span>
-						<!-- {#if showTooltip} -->
-							<!-- <div class="tooltip">
+						<!-- {#if showTooltip}
+							<div class="tooltip">
 								<span class="caution">CAUTION!</span><br>
 								<span>The water can be much colder than the air!</span><br><br>
 								<span>Temperature and Tide information are updated continuously and are from the Battery in lower Manhattan.</span>
-							</div> -->
-						<!-- {/if} -->
+							</div> 
+						{/if} -->
 					</div>
 				{/if}
 				<!-- data on the map -->
@@ -550,23 +562,26 @@
 		cursor: pointer;
 	}
 
-	/* .tooltip {
+	.map-only-pane .tooltip {
 		position: absolute;
-		bottom: 95%;
-		left: 50%;
-		transform: translateX(-50%);
+		bottom: 100px;
+		right: 11px;
+		/* transform: translateX(-50%); */
 		background-color: #fff;
 		padding: 5px;
-		border-radius: 3px;
-		font-size: 0.8em;
-		display: none;
-		width: 260px;
+		border-radius: 5px;
+		/* font-size: 0.8em; */
+		/* display: none; */
+		width: 320px;
 		border:1px solid #000;
+		z-index: 10005;
 	}
 
-	/* .caution {
-		color: var(--orange3);
-	}	 */ 
+	.caution {
+		color: var(--orange2);
+		font-size: 1.2em;
+		font-weight: 700;
+	}
 
 
 	.left-panel {

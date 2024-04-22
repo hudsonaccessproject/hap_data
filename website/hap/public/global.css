@@ -29,6 +29,10 @@
     visibility: hidden;
 } */
 
+.bold {
+    font-weight: 700;
+}
+
 p {
     margin: 5px;
     line-height: 1.5;
