@@ -18,7 +18,7 @@
         </p> -->
     </CollapsibleSection>
     <!-- </div>   -->
-    <CollapsibleSection isVisible={true} headerText={'About the map'} >
+    <CollapsibleSection isVisible={false} headerText={'About the map'} >
         <!-- <div class="about-content"> -->
             <!-- The Hudson Access Project is collecting information about all the places where the public 
             can get into and onto the water in the Hudson & Harbor <span class="estuary" title="An estuary is any body of water where tidal ocean waters mix with fresh water from rivers and streams. The impact of tides and saltwater reaches all the way to Troy, NY and this map covers all the area of the estuary from the NY-NJ Harbor estuary to the northern reach of the Hudson at Troy. ">Estuary</span> and its tributaries for swimming, boating, 

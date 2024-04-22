@@ -40,7 +40,7 @@
 	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240320.geojson";
 	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
 	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
-	const point_url = "/assets/hap_site_points_20240320.geojson"; 
+	const point_url = "/assets/hap_site_points_20240422.geojson"; 
 	const act_point_url = "/assets/hap_act_points_20240320.geojson";
 	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
@@ -241,7 +241,7 @@
 	function filterPollution() {
 		filters.act_filters = ['SWIM', 'HPBL'];
 		// I am using the existing featre filters and treating the cso and ms4 columns as features.  If the site va
-		filters.feature_filters = ['cso'];
+		filters.feature_filters = ['near_cso'];
 	}
 
 	// Handle Site Feature Filters
@@ -596,7 +596,7 @@
 
 		.map-only-pane .water-temp {
 			bottom: 41px;
-			font-size: 16px;
+			font-size: 14px;
 		}
 
 		.left-panel {

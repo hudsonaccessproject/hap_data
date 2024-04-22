@@ -123,7 +123,7 @@
   }
 
   .side-title {
-		color: var(--orange3);
+		color: var(--orange2);
 		font-size: 22px;
 		font-weight: 700;
     padding-left: 15px;
@@ -144,7 +144,7 @@
 
   .beta {
     font-size: 1em;
-    color: #FFAA22;
+    color: var(--orange2);
     font-style: italic;
   }
 
@@ -197,7 +197,7 @@
 
   @media (max-width: 900px) {
     .column-content {
-      font-size: 15px;
+      font-size: 16px;
     }
 
     .title{

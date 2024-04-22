@@ -15526,10 +15526,12 @@ var app = (function () {
     function style$1(feature) {
     	return {
     		fillColor: getColorByFilter(feature.properties.remain),
-    		color: getColorByFilter(feature.properties.remain),
+    		// color:getColorByFilter(feature.properties.remain),
+    		color: 'transparent',
+    		// color: 'red',
     		opacity: 1,
     		radius: 3,
-    		weight: 0,
+    		weight: 2,
     		fillOpacity: 1
     	};
     }
@@ -15569,6 +15571,11 @@ var app = (function () {
     	});
 
     	function onEachFeature(feature, layer) {
+    		// Custom HTML for clickable area
+    		// const customHtml = `
+    		// <div class="custom-marker" style="width: 50px; height: 50px; cursor: pointer;">
+    		//     <span class="marker-content">${feature.properties.site_name}</span>
+    		// </div>`;
     		var popupContent = `
         <span class="Retired-popup-text">
             ${feature.properties.site_name}
@@ -15577,6 +15584,7 @@ var app = (function () {
     		layer.bindPopup(popupContent);
 
     		layer.on({
+    			// html: customHtml,
     			click: activePoint,
     			mouseover: e => {
     				layer.openPopup();
@@ -16402,7 +16410,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = "Find a place to access the water";
-    			attr_dev(span, "class", "t1 side-title svelte-e3bafe");
+    			attr_dev(span, "class", "t1 side-title svelte-1q62zml");
     			add_location(span, file$g, 51, 6, 2102);
     		},
     		m: function mount(target, anchor) {
@@ -16432,7 +16440,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = "How to stay safe on the water";
-    			attr_dev(span, "class", "t1 side-title svelte-e3bafe");
+    			attr_dev(span, "class", "t1 side-title svelte-1q62zml");
     			add_location(span, file$g, 54, 6, 2232);
     		},
     		m: function mount(target, anchor) {
@@ -16462,7 +16470,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = "Learn about water quality";
-    			attr_dev(span, "class", "t1 side-title svelte-e3bafe");
+    			attr_dev(span, "class", "t1 side-title svelte-1q62zml");
     			add_location(span, file$g, 57, 6, 2360);
     		},
     		m: function mount(target, anchor) {
@@ -16492,7 +16500,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = "About the Hudson Access Project";
-    			attr_dev(span, "class", "t1 side-title svelte-e3bafe");
+    			attr_dev(span, "class", "t1 side-title svelte-1q62zml");
     			add_location(span, file$g, 60, 6, 2482);
     		},
     		m: function mount(target, anchor) {
@@ -16585,45 +16593,45 @@ var app = (function () {
     			attr_dev(span0, "title", "Covering sites where you can access the Hudson River Estuary South of the Mario Cuomo Bridge, Hudson tributaries, and the waters of the NY-NJ Harbor area.");
     			add_location(span0, file$g, 17, 10, 360);
     			attr_dev(span1, "title", "This is a work in progress. Please help make this website as useful as it can be: send any corrections or site information to hudsonaccessproject@gmail.com.");
-    			attr_dev(span1, "class", "beta svelte-e3bafe");
+    			attr_dev(span1, "class", "beta svelte-1q62zml");
     			add_location(span1, file$g, 18, 10, 569);
-    			attr_dev(div0, "class", "title svelte-e3bafe");
+    			attr_dev(div0, "class", "title svelte-1q62zml");
     			add_location(div0, file$g, 16, 8, 282);
-    			attr_dev(div1, "class", "col large-col svelte-e3bafe");
+    			attr_dev(div1, "class", "col large-col svelte-1q62zml");
     			add_location(div1, file$g, 15, 6, 246);
-    			attr_dev(div2, "class", "column-content other-pages svelte-e3bafe");
+    			attr_dev(div2, "class", "column-content other-pages svelte-1q62zml");
     			add_location(div2, file$g, 31, 12, 1264);
 
     			attr_dev(div3, "class", div3_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'safety'
     			? 'active'
-    			: '') + " svelte-e3bafe");
+    			: '') + " svelte-1q62zml");
 
     			add_location(div3, file$g, 30, 10, 1184);
-    			attr_dev(div4, "class", "column-content other-pages svelte-e3bafe");
+    			attr_dev(div4, "class", "column-content other-pages svelte-1q62zml");
     			add_location(div4, file$g, 36, 12, 1532);
 
     			attr_dev(div5, "class", div5_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'quality'
     			? 'active'
-    			: '') + " svelte-e3bafe");
+    			: '') + " svelte-1q62zml");
 
     			add_location(div5, file$g, 35, 10, 1450);
-    			attr_dev(div6, "class", "column-content other-pages svelte-e3bafe");
+    			attr_dev(div6, "class", "column-content other-pages svelte-1q62zml");
     			add_location(div6, file$g, 41, 12, 1801);
 
     			attr_dev(div7, "class", div7_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'about'
     			? 'active'
-    			: '') + " svelte-e3bafe");
+    			: '') + " svelte-1q62zml");
 
     			add_location(div7, file$g, 40, 10, 1721);
-    			attr_dev(div8, "class", "hamburger-menu svelte-e3bafe");
+    			attr_dev(div8, "class", "hamburger-menu svelte-1q62zml");
     			add_location(div8, file$g, 29, 8, 1145);
-    			attr_dev(div9, "class", "other-pages svelte-e3bafe");
+    			attr_dev(div9, "class", "other-pages svelte-1q62zml");
     			add_location(div9, file$g, 21, 6, 799);
-    			attr_dev(div10, "class", "header-content svelte-e3bafe");
+    			attr_dev(div10, "class", "header-content svelte-1q62zml");
     			add_location(div10, file$g, 14, 4, 211);
-    			attr_dev(div11, "class", "find svelte-e3bafe");
+    			attr_dev(div11, "class", "find svelte-1q62zml");
     			add_location(div11, file$g, 49, 4, 2033);
-    			attr_dev(header, "class", "svelte-e3bafe");
+    			attr_dev(header, "class", "svelte-1q62zml");
     			add_location(header, file$g, 13, 2, 198);
     		},
     		l: function claim(nodes) {
@@ -16676,19 +16684,19 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*$activePageTracker*/ 1 && div3_class_value !== (div3_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'safety'
     			? 'active'
-    			: '') + " svelte-e3bafe")) {
+    			: '') + " svelte-1q62zml")) {
     				attr_dev(div3, "class", div3_class_value);
     			}
 
     			if (dirty & /*$activePageTracker*/ 1 && div5_class_value !== (div5_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'quality'
     			? 'active'
-    			: '') + " svelte-e3bafe")) {
+    			: '') + " svelte-1q62zml")) {
     				attr_dev(div5, "class", div5_class_value);
     			}
 
     			if (dirty & /*$activePageTracker*/ 1 && div7_class_value !== (div7_class_value = "col " + (/*$activePageTracker*/ ctx[0] === 'about'
     			? 'active'
-    			: '') + " svelte-e3bafe")) {
+    			: '') + " svelte-1q62zml")) {
     				attr_dev(div7, "class", div7_class_value);
     			}
 
@@ -28619,7 +28627,7 @@ var app = (function () {
     	return block;
     }
 
-    // (21:4) <CollapsibleSection isVisible={true} headerText={'About the map'} >
+    // (21:4) <CollapsibleSection isVisible={false} headerText={'About the map'} >
     function create_default_slot_1$1(ctx) {
     	let p0;
     	let t1;
@@ -28647,19 +28655,19 @@ var app = (function () {
     			p3 = element("p");
     			p3.textContent = "Email: hudsonaccessproject@gmail.com";
     			attr_dev(p0, "class", "t4 ws");
-    			add_location(p0, file$3, 27, 12, 2302);
+    			add_location(p0, file$3, 27, 12, 2303);
     			attr_dev(a0, "href", "https://twitter.com/hudson_access/");
     			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$3, 35, 16, 3019);
+    			add_location(a0, file$3, 35, 16, 3020);
     			attr_dev(p1, "class", "t4 ws");
-    			add_location(p1, file$3, 34, 12, 2984);
+    			add_location(p1, file$3, 34, 12, 2985);
     			attr_dev(a1, "href", "https://www.instagram.com/hudson_access/");
     			attr_dev(a1, "target", "_blank");
-    			add_location(a1, file$3, 38, 16, 3156);
+    			add_location(a1, file$3, 38, 16, 3157);
     			attr_dev(p2, "class", "t4 ws");
-    			add_location(p2, file$3, 37, 12, 3121);
+    			add_location(p2, file$3, 37, 12, 3122);
     			attr_dev(p3, "class", "t4 ws");
-    			add_location(p3, file$3, 40, 12, 3266);
+    			add_location(p3, file$3, 40, 12, 3267);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -28688,7 +28696,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(21:4) <CollapsibleSection isVisible={true} headerText={'About the map'} >",
+    		source: "(21:4) <CollapsibleSection isVisible={false} headerText={'About the map'} >",
     		ctx
     	});
 
@@ -28746,35 +28754,35 @@ var app = (function () {
     			p1 = element("p");
     			p1.textContent = "The Hudson Access Project was created by Sara Eichner, Sara Hodges and Pratt Institute graduate assistant, Alyssa Bement. \n            We can all be reached at: hudsonaccessproject@gmail.com";
     			attr_dev(p0, "class", "t4 ws");
-    			add_location(p0, file$3, 69, 8, 5011);
+    			add_location(p0, file$3, 69, 8, 5012);
     			attr_dev(a0, "href", "https://www.scenichudson.org/");
     			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$3, 72, 30, 5145);
+    			add_location(a0, file$3, 72, 30, 5146);
     			attr_dev(li0, "class", "t4 ws");
-    			add_location(li0, file$3, 72, 12, 5127);
+    			add_location(li0, file$3, 72, 12, 5128);
     			attr_dev(a1, "href", "https://waterfrontaccess.planning.nyc.gov/about#10/40.7097/-73.9653");
     			attr_dev(a1, "target", "_blank");
-    			add_location(a1, file$3, 73, 30, 5254);
+    			add_location(a1, file$3, 73, 30, 5255);
     			attr_dev(li1, "class", "t4 ws");
-    			add_location(li1, file$3, 73, 12, 5236);
+    			add_location(li1, file$3, 73, 12, 5237);
     			attr_dev(a2, "href", "https://www.nycwatertrail.org/map.html");
     			attr_dev(a2, "target", "_blank");
-    			add_location(a2, file$3, 74, 30, 5395);
+    			add_location(a2, file$3, 74, 30, 5396);
     			attr_dev(li2, "class", "t4 ws");
-    			add_location(li2, file$3, 74, 12, 5377);
+    			add_location(li2, file$3, 74, 12, 5378);
     			attr_dev(a3, "href", "https://www.traillink.com/trail-maps/hudson-river-greenway/");
     			attr_dev(a3, "target", "_blank");
-    			add_location(a3, file$3, 75, 30, 5515);
+    			add_location(a3, file$3, 75, 30, 5516);
     			attr_dev(li3, "class", "t4 ws");
-    			add_location(li3, file$3, 75, 12, 5497);
+    			add_location(li3, file$3, 75, 12, 5498);
     			attr_dev(a4, "href", "https://bronxriver.org/wp-content/uploads/2021/05/Get-Moving-on-the-Bronx-River-2016-Activity-Guide1.pdf\n                ");
     			attr_dev(a4, "target", "_blank");
-    			add_location(a4, file$3, 76, 30, 5662);
+    			add_location(a4, file$3, 76, 30, 5663);
     			attr_dev(li4, "class", "t4 ws");
-    			add_location(li4, file$3, 76, 12, 5644);
-    			add_location(ul, file$3, 71, 8, 5110);
+    			add_location(li4, file$3, 76, 12, 5645);
+    			add_location(ul, file$3, 71, 8, 5111);
     			attr_dev(p1, "class", "t4 ws");
-    			add_location(p1, file$3, 79, 8, 5877);
+    			add_location(p1, file$3, 79, 8, 5878);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -28838,7 +28846,7 @@ var app = (function () {
 
     	collapsiblesection1 = new CollapsibleSection({
     			props: {
-    				isVisible: true,
+    				isVisible: false,
     				headerText: 'About the map',
     				$$slots: { default: [create_default_slot_1$1] },
     				$$scope: { ctx }
@@ -29064,7 +29072,7 @@ var app = (function () {
     const file$2 = "src/WaterQualityLegend.svelte";
 
     function create_fragment$2(ctx) {
-    	let div16;
+    	let div18;
     	let h30;
     	let t1;
     	let div3;
@@ -29092,10 +29100,30 @@ var app = (function () {
     	let div12;
     	let t13;
     	let div14;
+    	let t15;
+    	let div17;
+    	let h32;
+    	let button;
+    	let span0;
+    	let t16;
+    	let span0_class_value;
+    	let t17;
+    	let span1;
+    	let t18_value = (/*expanded*/ ctx[0] ? 'x' : '+') + "";
+    	let t18;
+    	let span1_class_value;
+    	let t19;
+    	let div16;
+    	let p;
+    	let span2;
+    	let t21;
+    	let div16_hidden_value;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
-    			div16 = element("div");
+    			div18 = element("div");
     			h30 = element("h3");
     			h30.textContent = "Boat Launches and Swimming Beaches";
     			t1 = space();
@@ -29129,6 +29157,21 @@ var app = (function () {
     			t13 = space();
     			div14 = element("div");
     			div14.textContent = "within half mile of a boat launch or swimming beach";
+    			t15 = space();
+    			div17 = element("div");
+    			h32 = element("h3");
+    			button = element("button");
+    			span0 = element("span");
+    			t16 = text("Learn more");
+    			t17 = space();
+    			span1 = element("span");
+    			t18 = text(t18_value);
+    			t19 = space();
+    			div16 = element("div");
+    			p = element("p");
+    			span2 = element("span");
+    			span2.textContent = "CSOs and storm related pollution:";
+    			t21 = text(" \n                Combined Sewer Overflows serve about 60% of New York City. Under dry weather conditions CSOs convey sewage to \n                treatment plants but with as little one twentieth of an inch of rain, CSOs can be overwhelmed and stormwater and \n                sewage are diverted to overflow outflows and discharged into area waterbodies. According to Riverkeeper, more \n                than 27 billion gallons of raw sewage and polluted stormwater runoff from CSOs enter the waters of the Harbor \n                and Estuary every year.");
     			attr_dev(h30, "class", "legend-title svelte-st0f1q");
     			add_location(h30, file$2, 7, 4, 192);
     			attr_dev(div0, "class", "legend-small-circle svelte-st0f1q");
@@ -29171,47 +29214,102 @@ var app = (function () {
     			add_location(div14, file$2, 52, 8, 2186);
     			attr_dev(div15, "class", "legend-row svelte-st0f1q");
     			add_location(div15, file$2, 48, 4, 1982);
-    			attr_dev(div16, "class", "legend svelte-st0f1q");
-    			add_location(div16, file$2, 6, 0, 167);
+    			attr_dev(span0, "class", span0_class_value = "learn-text header " + (/*expanded*/ ctx[0] ? 'expanded' : '') + " svelte-st0f1q");
+    			add_location(span0, file$2, 75, 16, 3358);
+    			attr_dev(span1, "class", span1_class_value = "expand-icon " + (/*expanded*/ ctx[0] ? 'expanded' : '') + " svelte-st0f1q");
+    			add_location(span1, file$2, 76, 16, 3454);
+    			attr_dev(button, "aria-expanded", /*expanded*/ ctx[0]);
+    			attr_dev(button, "class", "button-container svelte-st0f1q");
+    			add_location(button, file$2, 74, 12, 3245);
+    			add_location(h32, file$2, 73, 8, 3228);
+    			attr_dev(span2, "class", "header svelte-st0f1q");
+    			add_location(span2, file$2, 81, 15, 3649);
+    			add_location(p, file$2, 81, 12, 3646);
+    			attr_dev(div16, "class", "contents");
+    			div16.hidden = div16_hidden_value = !/*expanded*/ ctx[0];
+    			add_location(div16, file$2, 80, 8, 3592);
+    			attr_dev(div17, "class", "legend-collapsible");
+    			add_location(div17, file$2, 72, 4, 3187);
+    			attr_dev(div18, "class", "legend svelte-st0f1q");
+    			add_location(div18, file$2, 6, 0, 167);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div16, anchor);
-    			append_dev(div16, h30);
-    			append_dev(div16, t1);
-    			append_dev(div16, div3);
+    			insert_dev(target, div18, anchor);
+    			append_dev(div18, h30);
+    			append_dev(div18, t1);
+    			append_dev(div18, div3);
     			append_dev(div3, div1);
     			append_dev(div1, div0);
     			append_dev(div3, t2);
     			append_dev(div3, div2);
-    			append_dev(div16, t4);
-    			append_dev(div16, div7);
+    			append_dev(div18, t4);
+    			append_dev(div18, div7);
     			append_dev(div7, div5);
     			append_dev(div5, div4);
     			append_dev(div7, t5);
     			append_dev(div7, div6);
-    			append_dev(div16, t7);
-    			append_dev(div16, h31);
-    			append_dev(div16, t9);
-    			append_dev(div16, div11);
+    			append_dev(div18, t7);
+    			append_dev(div18, h31);
+    			append_dev(div18, t9);
+    			append_dev(div18, div11);
     			append_dev(div11, div9);
     			append_dev(div9, div8);
     			append_dev(div11, t10);
     			append_dev(div11, div10);
-    			append_dev(div16, t12);
-    			append_dev(div16, div15);
+    			append_dev(div18, t12);
+    			append_dev(div18, div15);
     			append_dev(div15, div13);
     			append_dev(div13, div12);
     			append_dev(div15, t13);
     			append_dev(div15, div14);
+    			append_dev(div18, t15);
+    			append_dev(div18, div17);
+    			append_dev(div17, h32);
+    			append_dev(h32, button);
+    			append_dev(button, span0);
+    			append_dev(span0, t16);
+    			append_dev(button, t17);
+    			append_dev(button, span1);
+    			append_dev(span1, t18);
+    			append_dev(div17, t19);
+    			append_dev(div17, div16);
+    			append_dev(div16, p);
+    			append_dev(p, span2);
+    			append_dev(p, t21);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[1], false, false, false, false);
+    				mounted = true;
+    			}
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*expanded*/ 1 && span0_class_value !== (span0_class_value = "learn-text header " + (/*expanded*/ ctx[0] ? 'expanded' : '') + " svelte-st0f1q")) {
+    				attr_dev(span0, "class", span0_class_value);
+    			}
+
+    			if (dirty & /*expanded*/ 1 && t18_value !== (t18_value = (/*expanded*/ ctx[0] ? 'x' : '+') + "")) set_data_dev(t18, t18_value);
+
+    			if (dirty & /*expanded*/ 1 && span1_class_value !== (span1_class_value = "expand-icon " + (/*expanded*/ ctx[0] ? 'expanded' : '') + " svelte-st0f1q")) {
+    				attr_dev(span1, "class", span1_class_value);
+    			}
+
+    			if (dirty & /*expanded*/ 1) {
+    				attr_dev(button, "aria-expanded", /*expanded*/ ctx[0]);
+    			}
+
+    			if (dirty & /*expanded*/ 1 && div16_hidden_value !== (div16_hidden_value = !/*expanded*/ ctx[0])) {
+    				prop_dev(div16, "hidden", div16_hidden_value);
+    			}
+    		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div16);
+    			if (detaching) detach_dev(div18);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -29237,18 +29335,19 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<WaterQualityLegend> was created with unknown prop '${key}'`);
     	});
 
+    	const click_handler = () => $$invalidate(0, expanded = !expanded);
     	$$self.$capture_state = () => ({ isVisible, expanded });
 
     	$$self.$inject_state = $$props => {
     		if ('isVisible' in $$props) isVisible = $$props.isVisible;
-    		if ('expanded' in $$props) expanded = $$props.expanded;
+    		if ('expanded' in $$props) $$invalidate(0, expanded = $$props.expanded);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [];
+    	return [expanded, click_handler];
     }
 
     class WaterQualityLegend extends SvelteComponentDev {
@@ -29456,7 +29555,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Loading...";
-    			add_location(div, file, 494, 1, 16405);
+    			add_location(div, file, 494, 1, 16410);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -29545,12 +29644,12 @@ var app = (function () {
     			create_component(hoverup.$$.fragment);
     			t7 = space();
     			create_component(title_1.$$.fragment);
-    			attr_dev(div0, "class", "left-panel panel svelte-swzx3f");
-    			add_location(div0, file, 357, 2, 11197);
-    			attr_dev(div1, "class", "map-only-pane svelte-swzx3f");
-    			add_location(div1, file, 446, 2, 14753);
-    			attr_dev(div2, "class", "map-pane svelte-swzx3f");
-    			add_location(div2, file, 356, 1, 11172);
+    			attr_dev(div0, "class", "left-panel panel svelte-2pkpt9");
+    			add_location(div0, file, 357, 2, 11202);
+    			attr_dev(div1, "class", "map-only-pane svelte-2pkpt9");
+    			add_location(div1, file, 446, 2, 14758);
+    			attr_dev(div2, "class", "map-pane svelte-2pkpt9");
+    			add_location(div2, file, 356, 1, 11177);
     		},
     		m: function mount(target, anchor) {
     			mount_component(header, target, anchor);
@@ -29807,19 +29906,19 @@ var app = (function () {
     			div4 = element("div");
     			create_component(collapsiblesection.$$.fragment);
     			attr_dev(span0, "class", "t2 act-filter-header");
-    			add_location(span0, file, 362, 7, 11359);
-    			add_location(br, file, 362, 65, 11417);
-    			attr_dev(span1, "class", "t3 icon-instructions svelte-swzx3f");
-    			add_location(span1, file, 363, 7, 11429);
-    			attr_dev(div0, "class", "act-filters-label svelte-swzx3f");
-    			add_location(div0, file, 361, 6, 11320);
-    			attr_dev(div1, "class", "act-filters svelte-swzx3f");
-    			add_location(div1, file, 366, 6, 11553);
-    			attr_dev(div2, "class", "activity-filter svelte-swzx3f");
-    			add_location(div2, file, 360, 5, 11284);
-    			add_location(div3, file, 359, 4, 11273);
+    			add_location(span0, file, 362, 7, 11364);
+    			add_location(br, file, 362, 65, 11422);
+    			attr_dev(span1, "class", "t3 icon-instructions svelte-2pkpt9");
+    			add_location(span1, file, 363, 7, 11434);
+    			attr_dev(div0, "class", "act-filters-label svelte-2pkpt9");
+    			add_location(div0, file, 361, 6, 11325);
+    			attr_dev(div1, "class", "act-filters svelte-2pkpt9");
+    			add_location(div1, file, 366, 6, 11558);
+    			attr_dev(div2, "class", "activity-filter svelte-2pkpt9");
+    			add_location(div2, file, 360, 5, 11289);
+    			add_location(div3, file, 359, 4, 11278);
     			attr_dev(div4, "id", "amenity");
-    			add_location(div4, file, 388, 4, 12009);
+    			add_location(div4, file, 388, 4, 12014);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -29928,15 +30027,15 @@ var app = (function () {
     			t1 = space();
     			attr_dev(img, "alt", img_alt_value = /*act*/ ctx[44].value);
     			if (!src_url_equal(img.src, img_src_value = modifyIconSource(/*act*/ ctx[44]))) attr_dev(img, "src", img_src_value);
-    			add_location(img, file, 372, 8, 11703);
+    			add_location(img, file, 372, 8, 11708);
     			attr_dev(input, "class", "act-input");
     			attr_dev(input, "type", "checkbox");
     			input.value = input_value_value = /*act*/ ctx[44].value;
     			attr_dev(input, "id", input_id_value = /*act*/ ctx[44].value);
-    			add_location(input, file, 376, 8, 11787);
+    			add_location(input, file, 376, 8, 11792);
     			attr_dev(label, "class", "act-buttons");
     			toggle_class(label, "active", /*act*/ ctx[44].isActive);
-    			add_location(label, file, 368, 7, 11613);
+    			add_location(label, file, 368, 7, 11618);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -30108,77 +30207,77 @@ var app = (function () {
     			br9 = element("br");
     			attr_dev(input0, "type", "checkbox");
     			input0.value = "boat_launch_YN";
-    			add_location(input0, file, 391, 7, 12156);
+    			add_location(input0, file, 391, 7, 12161);
     			attr_dev(label0, "class", "t3");
     			attr_dev(label0, "for", "boat_launch_YN");
-    			add_location(label0, file, 392, 7, 12256);
-    			add_location(br0, file, 392, 66, 12315);
+    			add_location(label0, file, 392, 7, 12261);
+    			add_location(br0, file, 392, 66, 12320);
     			attr_dev(input1, "type", "checkbox");
     			input1.value = "restrooms";
-    			add_location(input1, file, 393, 7, 12327);
+    			add_location(input1, file, 393, 7, 12332);
     			attr_dev(label1, "class", "t3");
     			attr_dev(label1, "for", "restrooms");
-    			add_location(label1, file, 394, 7, 12421);
-    			add_location(br1, file, 394, 59, 12473);
+    			add_location(label1, file, 394, 7, 12426);
+    			add_location(br1, file, 394, 59, 12478);
     			attr_dev(input2, "type", "checkbox");
     			input2.value = "public_transit";
-    			add_location(input2, file, 395, 7, 12485);
+    			add_location(input2, file, 395, 7, 12490);
     			attr_dev(label2, "class", "t3");
     			attr_dev(label2, "for", "public_transit");
-    			add_location(label2, file, 396, 7, 12585);
-    			add_location(br2, file, 396, 83, 12661);
+    			add_location(label2, file, 396, 7, 12590);
+    			add_location(br2, file, 396, 83, 12666);
     			attr_dev(input3, "type", "checkbox");
     			input3.value = "parking";
-    			add_location(input3, file, 397, 7, 12673);
+    			add_location(input3, file, 397, 7, 12678);
     			attr_dev(label3, "class", "t3");
     			attr_dev(label3, "for", "parking");
-    			add_location(label3, file, 398, 7, 12765);
-    			add_location(br3, file, 398, 55, 12813);
+    			add_location(label3, file, 398, 7, 12770);
+    			add_location(br3, file, 398, 55, 12818);
     			attr_dev(input4, "type", "checkbox");
     			input4.value = "food";
-    			add_location(input4, file, 399, 7, 12825);
+    			add_location(input4, file, 399, 7, 12830);
     			attr_dev(label4, "class", "t3");
     			attr_dev(label4, "for", "food");
-    			add_location(label4, file, 400, 7, 12915);
-    			add_location(br4, file, 400, 57, 12965);
+    			add_location(label4, file, 400, 7, 12920);
+    			add_location(br4, file, 400, 57, 12970);
     			attr_dev(input5, "type", "checkbox");
     			input5.value = "drinking_water";
-    			add_location(input5, file, 401, 7, 12977);
+    			add_location(input5, file, 401, 7, 12982);
     			attr_dev(label5, "class", "t3");
     			attr_dev(label5, "for", "drinking_water");
-    			add_location(label5, file, 402, 7, 13076);
-    			add_location(br5, file, 402, 80, 13149);
+    			add_location(label5, file, 402, 7, 13081);
+    			add_location(br5, file, 402, 80, 13154);
     			attr_dev(input6, "type", "checkbox");
     			input6.value = "picnic_area";
-    			add_location(input6, file, 403, 7, 13161);
+    			add_location(input6, file, 403, 7, 13166);
     			attr_dev(label6, "class", "t3");
     			attr_dev(label6, "for", "picnic_area");
-    			add_location(label6, file, 404, 7, 13258);
-    			add_location(br6, file, 404, 63, 13314);
+    			add_location(label6, file, 404, 7, 13263);
+    			add_location(br6, file, 404, 63, 13319);
     			attr_dev(input7, "type", "checkbox");
     			input7.value = "hiking";
-    			add_location(input7, file, 405, 7, 13326);
+    			add_location(input7, file, 405, 7, 13331);
     			attr_dev(label7, "class", "t3");
     			attr_dev(label7, "for", "hiking");
-    			add_location(label7, file, 406, 7, 13417);
-    			add_location(br7, file, 406, 70, 13480);
+    			add_location(label7, file, 406, 7, 13422);
+    			add_location(br7, file, 406, 70, 13485);
     			attr_dev(input8, "type", "checkbox");
     			input8.value = "pets_allowed";
-    			add_location(input8, file, 407, 7, 13492);
+    			add_location(input8, file, 407, 7, 13497);
     			attr_dev(label8, "class", "t3");
     			attr_dev(label8, "for", "pets_allowed");
-    			add_location(label8, file, 408, 7, 13590);
-    			add_location(br8, file, 408, 72, 13655);
+    			add_location(label8, file, 408, 7, 13595);
+    			add_location(br8, file, 408, 72, 13660);
     			attr_dev(input9, "type", "checkbox");
-    			attr_dev(input9, "class", "last svelte-swzx3f");
+    			attr_dev(input9, "class", "last svelte-2pkpt9");
     			input9.value = "program";
-    			add_location(input9, file, 409, 7, 13667);
+    			add_location(input9, file, 409, 7, 13672);
     			attr_dev(label9, "class", "t3");
     			attr_dev(label9, "for", "program");
-    			add_location(label9, file, 410, 7, 13773);
-    			add_location(br9, file, 410, 59, 13825);
+    			add_location(label9, file, 410, 7, 13778);
+    			add_location(br9, file, 410, 59, 13830);
     			attr_dev(div, "class", "feature-filters r");
-    			add_location(div, file, 390, 6, 12117);
+    			add_location(div, file, 390, 6, 12122);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -30297,13 +30396,13 @@ var app = (function () {
     			attr_dev(input, "id", "searcher");
     			attr_dev(input, "placeholder", "Search for a site by name");
     			attr_dev(input, "type", "text");
-    			add_location(input, file, 417, 5, 13965);
+    			add_location(input, file, 417, 5, 13970);
     			attr_dev(div0, "class", "searcher r");
-    			add_location(div0, file, 416, 4, 13935);
-    			attr_dev(div1, "class", "info-panel panel svelte-swzx3f");
-    			add_location(div1, file, 425, 5, 14247);
-    			attr_dev(div2, "class", "places-list svelte-swzx3f");
-    			add_location(div2, file, 424, 4, 14216);
+    			add_location(div0, file, 416, 4, 13940);
+    			attr_dev(div1, "class", "info-panel panel svelte-2pkpt9");
+    			add_location(div1, file, 425, 5, 14252);
+    			attr_dev(div2, "class", "places-list svelte-2pkpt9");
+    			add_location(div2, file, 424, 4, 14221);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -30633,11 +30732,11 @@ var app = (function () {
     			span1 = element("span");
     			t4 = text("Next High Tide: ");
     			t5 = text(t5_value);
-    			add_location(span0, file, 452, 6, 15112);
-    			add_location(br, file, 452, 51, 15157);
-    			add_location(span1, file, 453, 6, 15168);
-    			attr_dev(div, "class", "water-temp svelte-swzx3f");
-    			add_location(div, file, 450, 5, 14882);
+    			add_location(span0, file, 452, 6, 15117);
+    			add_location(br, file, 452, 51, 15162);
+    			add_location(span1, file, 453, 6, 15173);
+    			attr_dev(div, "class", "water-temp svelte-2pkpt9");
+    			add_location(div, file, 450, 5, 14887);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31279,9 +31378,9 @@ var app = (function () {
     			if_block_anchor = empty();
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css");
-    			add_location(link, file, 339, 1, 10685);
+    			add_location(link, file, 339, 1, 10690);
     			if (!src_url_equal(script.src, script_src_value = "https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 340, 1, 10787);
+    			add_location(script, file, 340, 1, 10792);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -31354,7 +31453,7 @@ var app = (function () {
     	return block;
     }
 
-    const point_url = "/assets/hap_site_points_20240320.geojson";
+    const point_url = "/assets/hap_site_points_20240422.geojson";
     const act_point_url = "/assets/hap_act_points_20240320.geojson";
     const polygon_url = "/assets/hap_site_polys_20240201.geojson";
     const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
@@ -31555,7 +31654,7 @@ var app = (function () {
     		$$invalidate(9, filters.act_filters = ['SWIM', 'HPBL'], filters);
 
     		// I am using the existing featre filters and treating the cso and ms4 columns as features.  If the site va
-    		$$invalidate(9, filters.feature_filters = ['cso'], filters);
+    		$$invalidate(9, filters.feature_filters = ['near_cso'], filters);
     	}
 
     	// Handle Site Feature Filters

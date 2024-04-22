@@ -42,12 +42,19 @@
 
     function onEachFeature(feature, layer) {
 
+        // Custom HTML for clickable area
+        // const customHtml = `
+        // <div class="custom-marker" style="width: 50px; height: 50px; cursor: pointer;">
+        //     <span class="marker-content">${feature.properties.site_name}</span>
+        // </div>`;
+        
         var popupContent = `
         <span class="Retired-popup-text">
             ${feature.properties.site_name}
         </span>`;
         layer.bindPopup(popupContent);
         layer.on({
+            // html: customHtml,
             click:activePoint,
             mouseover: e => {layer.openPopup()},
             mouseout: e => {layer.closePopup()}
@@ -186,10 +193,12 @@
     function style(feature) {
         return {
         fillColor: getColorByFilter(feature.properties.remain),
-        color:getColorByFilter(feature.properties.remain),
+        // color:getColorByFilter(feature.properties.remain),
+        color: 'transparent',
+        // color: 'red',
         opacity: 1,
         radius: 3,
-        weight: 0,
+        weight: 2,
         fillOpacity: 1
         }
     }

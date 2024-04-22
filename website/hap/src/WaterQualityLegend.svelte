@@ -70,7 +70,7 @@
         </div>
         <div class="legend-label">within half mile of swimming beaches</div>
     </div> -->
-    <!-- <div class="legend-collapsible">
+    <div class="legend-collapsible">
         <h3>
             <button aria-expanded={expanded} on:click={() => expanded = !expanded} class="button-container">
                 <span class="learn-text header {expanded ? 'expanded' : ''}" >Learn more</span>
@@ -79,21 +79,21 @@
         </h3>
         
         <div class='contents' hidden={!expanded}>
-            <p><span class="header">CSOs, MS4s and storm related pollution:</span> 
+            <p><span class="header">CSOs and storm related pollution:</span> 
                 Combined Sewer Overflows serve about 60% of New York City. Under dry weather conditions CSOs convey sewage to 
                 treatment plants but with as little one twentieth of an inch of rain, CSOs can be overwhelmed and stormwater and 
                 sewage are diverted to overflow outflows and discharged into area waterbodies. According to Riverkeeper, more 
                 than 27 billion gallons of raw sewage and polluted stormwater runoff from CSOs enter the waters of the Harbor 
                 and Estuary every year.  
             </p>
-            <p><span class="header">MS4s:</span> Municipal Separate Storm Sewer Systems carry stormwater runoff directly to local waterbodies 
+            <!-- <p><span class="header">MS4s:</span> Municipal Separate Storm Sewer Systems carry stormwater runoff directly to local waterbodies 
                 and serve approximately 30–40% of New York 
                 City. (<a href="https://www.nyc.gov/site/dep/water/municipal-separate-storm-sewer-system.page#:~:text=A%20municipal%20separate%20storm%20sewer,surface%20waters%20of%20the%20State." target="_blank">NYC DEP</a>) As 
                 stormwater flows over streets and other impervious surfaces, it sweeps up pollutants such as oils, chemicals, pathogens, 
                 and sediments. In separate sewer areas, this pollution is carried by stormwater and discharged directly into local waterways.  
-            </p>
+            </p> -->
         </div>
-    </div> -->
+    </div>
 </div>
 
 <style>
