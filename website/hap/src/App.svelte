@@ -282,7 +282,6 @@
 		active_point = all_point_data.filter( function(f){
 			return String(f.properties.site_id) === active_id;
 		 })
-		 console.log(active_point);
 	}
 
 	function handleMessage(e){
@@ -367,15 +366,19 @@
 	<!-- <Header  {activePage} {changePage}/> -->
 	<Header />
 
-	<!-- {#if $activePageTracker === 'about'}
-		<About />
-	{/if} -->
-
 	<!-- Initiate Map Here-->
 	<div class="map-pane">
 		<div class="left-panel panel">
+			<!-- make this update -->
+			{#if $activePageTracker === 'access' && active_point != null}
+				<div class = "info-panel">
+					{#key active_point}
+						<InfoPanel {active_point} />
+					{/key}
+				</div>
+			{/if}
 			{#if $activePageTracker === 'access'}
-				<div>
+				<!-- <div> -->
 					<div class="activity-filter">
 						<div class="act-filters-label">
 							<span class="t2 act-filter-header">Activity Filters</span><br>
@@ -403,7 +406,7 @@
 							{/each}
 						</div>
 					</div>
-				</div>
+				<!-- </div> -->
 				<div id="amenity">
 					<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
 						<div class="feature-filters r">
@@ -432,21 +435,15 @@
 				</div>
 			{/if}
 			{#if $activePageTracker === 'access'}
-				<div class="searcher r">
+				<div class="searcher">
 					<input id="searcher" placeholder="Search for a site by name" type="text" bind:value={filters.text_filter}>
 				</div>
-				<!-- <div class = "info-panel panel">
-					{#key active_point}
-						<InfoPanel {active_point} />
-					{/key}
-				</div> -->
 				<div class="places-list">
-					<div class = "info-panel panel">
+					<!-- <div class = "info-panel panel">
 						{#key active_point}
 							<InfoPanel {active_point} />
 						{/key}
-					</div>
-					<!-- Accordion List -->
+					</div> -->
 					{#key filters}
 						<PlaceList on:message={handlePlaceMessage} geojson={all_point_data} {filters}/>
 					{/key}
@@ -608,6 +605,11 @@
 		padding-top: 10px;
 	}
 
+	/* #amenity {
+		display: block;
+		overflow: unset;
+	} */
+
 
 	/* Media query for mobile devices */
 	@media (max-width: 767px) {
@@ -623,7 +625,7 @@
 			height: -webkit-fill-available;
 			order: 2;
 			border-top: solid 2px rgb(225, 225, 225);
-			margin-top: 10px;
+			/* margin-top: 10px; */
 		}
 
 		.map-only-pane .water-temp {
@@ -636,7 +638,7 @@
 			height: auto;
 			order: 1;
 			border: none;
-			max-height: 60%;
+			max-height: 50%;
 			flex-grow: 1;
 			padding-bottom: 10px;
 			overflow: hidden;
@@ -668,6 +670,14 @@
 			padding-top: 6px;
 			margin-bottom: 3px;
 		}
+
+		#amenity {
+			min-height: 35px;
+			display: flex;
+			flex-direction: column;
+			overflow-y: scroll;
+			flex-grow: 1.5;
+		} 
 
 	}
 
@@ -702,7 +712,10 @@
 	}
 
 	.places-list {
+		display: flex;
+		flex-direction: column;
 		overflow-y: scroll;
+		flex-grow: 1;
 	} 
 
 	/* Hide scrollbar for Chrome, Safari and Opera */

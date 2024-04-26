@@ -92,6 +92,7 @@
 
     function closeDiv() {
         active_point = null; // this is a hack to remove previous polygon
+        console.log(active_point);
         map.eachLayer(layer => {
             if (layer instanceof L.Layer && layer.feature && layer.feature.geometry && layer.feature.geometry.type === 'MultiPolygon') {
                 map.removeLayer(layer);

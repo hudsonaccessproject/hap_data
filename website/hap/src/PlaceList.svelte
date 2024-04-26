@@ -271,6 +271,7 @@
 
     .search {
         margin-left: 9px;
+        color: var(--blue);
     }
 
 </style>
