@@ -17291,7 +17291,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (231:0) {#if map_data.length > 0}
+    // (232:0) {#if map_data.length > 0}
     function create_if_block$4(ctx) {
     	let button;
     	let div0;
@@ -17318,11 +17318,11 @@ var app = (function () {
     			div1 = element("div");
     			if_block1.c();
     			attr_dev(div0, "class", "site-button svelte-1s88ose");
-    			add_location(div0, file$d, 232, 4, 8371);
-    			add_location(button, file$d, 231, 0, 8337);
+    			add_location(div0, file$d, 233, 4, 8430);
+    			add_location(button, file$d, 232, 0, 8396);
     			attr_dev(div1, "id", "holder");
     			attr_dev(div1, "class", "" + (null_to_empty(/*holderClass*/ ctx[2]) + " svelte-1s88ose"));
-    			add_location(div1, file$d, 240, 0, 8617);
+    			add_location(div1, file$d, 241, 0, 8676);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -17378,14 +17378,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(231:0) {#if map_data.length > 0}",
+    		source: "(232:0) {#if map_data.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (234:8) {#if map_data.length > 0}
+    // (235:8) {#if map_data.length > 0}
     function create_if_block_2$3(ctx) {
     	let span0;
     	let t1;
@@ -17398,10 +17398,10 @@ var app = (function () {
     			t1 = space();
     			span1 = element("span");
     			attr_dev(span0, "class", "t2 search svelte-1s88ose");
-    			add_location(span0, file$d, 234, 12, 8463);
+    			add_location(span0, file$d, 235, 12, 8522);
     			attr_dev(span1, "id", "collapse-nav-button");
     			attr_dev(span1, "class", "svelte-1s88ose");
-    			add_location(span1, file$d, 235, 12, 8521);
+    			add_location(span1, file$d, 236, 12, 8580);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span0, anchor);
@@ -17422,14 +17422,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$3.name,
     		type: "if",
-    		source: "(234:8) {#if map_data.length > 0}",
+    		source: "(235:8) {#if map_data.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (250:4) {:else}
+    // (251:4) {:else}
     function create_else_block$3(ctx) {
     	const block = { c: noop, m: noop, p: noop, d: noop };
 
@@ -17437,14 +17437,14 @@ var app = (function () {
     		block,
     		id: create_else_block$3.name,
     		type: "else",
-    		source: "(250:4) {:else}",
+    		source: "(251:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (243:4) {#if map_data.length > 0}
+    // (244:4) {#if map_data.length > 0}
     function create_if_block_1$4(ctx) {
     	let each_1_anchor;
     	let each_value = /*map_data*/ ctx[1];
@@ -17507,14 +17507,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$4.name,
     		type: "if",
-    		source: "(243:4) {#if map_data.length > 0}",
+    		source: "(244:4) {#if map_data.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (245:8) {#each map_data as d }
+    // (246:8) {#each map_data as d }
     function create_each_block$3(ctx) {
     	let div;
     	let t0_value = /*d*/ ctx[16].properties.site_name + "";
@@ -17532,7 +17532,7 @@ var app = (function () {
     			t1 = space();
     			attr_dev(div, "class", div_class_value = "place-list t3 " + /*d*/ ctx[16].properties.site_id + " svelte-1s88ose");
     			attr_dev(div, "id", div_id_value = /*d*/ ctx[16].properties.site_id);
-    			add_location(div, file$d, 245, 12, 8822);
+    			add_location(div, file$d, 246, 12, 8881);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -17570,7 +17570,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(245:8) {#each map_data as d }",
+    		source: "(246:8) {#each map_data as d }",
     		ctx
     	});
 
@@ -17776,6 +17776,7 @@ var app = (function () {
     	//1. Set view, 2. update and dispatch clicked polygon
     	function clickHandle(e) {
     		let clicked_list = geojson.filter(function (d) {
+    			arePanelsVisible.set(false);
     			return d.properties.site_id == e.target.id;
     		});
 
@@ -17859,6 +17860,7 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		L: leafletSrc,
     		count,
+    		arePanelsVisible,
     		afterUpdate,
     		createEventDispatcher,
     		onMount,

@@ -1,7 +1,7 @@
 <script lang="typescript" >
 
     import L from "leaflet";
-    import { count } from "./store.js";
+    import { count, arePanelsVisible } from "./store.js";
     import { afterUpdate } from 'svelte';
     import { createEventDispatcher } from 'svelte';
     import { onMount } from "svelte";
@@ -166,6 +166,7 @@
     //1. Set view, 2. update and dispatch clicked polygon
     function clickHandle(e){
         let clicked_list = geojson.filter( function(d){
+            arePanelsVisible.set(false);
             return d.properties.site_id == e.target.id
         }) 
         dispatch('message', {
