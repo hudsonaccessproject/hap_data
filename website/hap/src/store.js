@@ -6,3 +6,4 @@ export const active = writable("");
 export const mapDataSiteIds = writable([]);
 export const activePageTracker = writable('access');
 export const activeTileURL = writable('https://api.mapbox.com/styles/v1/prattsavi/cli2a1j4w04qg01qn1cfaaqta/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw');
+export const arePanelsVisible = writable(true);

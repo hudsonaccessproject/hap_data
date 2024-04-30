@@ -18,7 +18,8 @@
 	import HomeButton from './Home.svelte'
 	import WaterQualityLegend from './WaterQualityLegend.svelte';
 	import WaterSafetyLegend from './WaterSafetyLegend.svelte';
-	import { count, activePageTracker} from "./store.js";
+	// import { count, activePageTracker} from "./store.js";
+	import { count, activePageTracker, arePanelsVisible } from "./store.js";
 
 	let title = "The Hudson Access Project is collecting information about all the places where the public can get into and onto the water in the Hudson & Harbor Estuary and its tributaries for swimming, boating, and fishing; with a focus on activities that bring people into direct contact with the water."
 
@@ -38,6 +39,12 @@
 	let active_point;
 	let stage;
 	let showTooltip = false;
+	// defines whether the infopanel is visible or not
+	// let arePanelsVisible = true;
+
+	arePanelsVisible.subscribe((value) => {
+		console.log(value);
+	});
 
 	const emptyFilters = {
 		act_filters: [],
@@ -369,15 +376,12 @@
 	<!-- Initiate Map Here-->
 	<div class="map-pane">
 		<div class="left-panel panel">
-			<!-- make this update -->
-			{#if $activePageTracker === 'access' && active_point != null}
-				<div class = "info-panel">
+			{#if $activePageTracker === 'access'}
 					{#key active_point}
 						<InfoPanel {active_point} />
 					{/key}
-				</div>
 			{/if}
-			{#if $activePageTracker === 'access'}
+			{#if $activePageTracker === 'access' && $arePanelsVisible}
 				<!-- <div> -->
 					<div class="activity-filter">
 						<div class="act-filters-label">
@@ -434,7 +438,7 @@
 					</CollapsibleSection>
 				</div>
 			{/if}
-			{#if $activePageTracker === 'access'}
+			{#if $activePageTracker === 'access' && $arePanelsVisible}
 				<div class="searcher">
 					<input id="searcher" placeholder="Search for a site by name" type="text" bind:value={filters.text_filter}>
 				</div>
@@ -588,10 +592,8 @@
 		border-left: solid 2px rgb(225, 225, 225);
 		box-sizing: border-box;
 		height:calc(100vh - 62px);
-		/* overflow: scroll; */
 		z-index: 10001;
 		order: 2;
-		/* overflow: hidden; */
 	} 
 
 	.activity-filter {
@@ -677,6 +679,7 @@
 			flex-direction: column;
 			overflow-y: scroll;
 			flex-grow: 1.5;
+			border-bottom: 1.5px solid var(--gray-light, #e1e1e1);;
 		} 
 
 	}

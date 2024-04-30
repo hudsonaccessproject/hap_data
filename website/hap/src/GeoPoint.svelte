@@ -1,6 +1,6 @@
 <script>
     import * as L from 'leaflet';
-    import { count, mapDataSiteIds, activePageTracker } from "./store.js";
+    import { count, mapDataSiteIds, activePageTracker, arePanelsVisible } from "./store.js";
 
     import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
@@ -167,6 +167,7 @@
     //Zoom to active point and write id to store.
     function activePoint(e){
         map.flyTo(e.latlng, 15)
+        arePanelsVisible.set(false);
         // e.target.setStyle({ fillColor: '#FDAA23', radius: 7,  weight: 3});  
         let clicked_point = geojson.filter( function(d){
             return d.properties.site_id == e.target.feature.properties.site_id

@@ -1,6 +1,6 @@
 <script>
     import * as L from 'leaflet';
-    import { count, mapDataSiteIds, activePageTracker } from './store.js';
+    import { count, mapDataSiteIds, activePageTracker, arePanelsVisible } from './store.js';
     import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
@@ -196,7 +196,7 @@
 
         // Get the site ID of the clicked point
         var clickedSiteId = e.target.feature.properties.site_id;
-        console.log(clickedSiteId);
+        arePanelsVisible.set(false);
 
         // Iterate over each layer and update the style if it is in the clciked site
         // layer.eachLayer(function (layer) {
