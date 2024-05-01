@@ -33,7 +33,7 @@
 		desc:"You can motor boat here."}
 	]
 
-     // let acts = [
+    //  let acts = [
 	// 	{
 	// 	value: "FISH",
 	// 	name: "Fishing",

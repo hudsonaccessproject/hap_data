@@ -149,6 +149,7 @@ h1 {
     color: #333; */
        /* max-width: 375px; */
     overflow-y: scroll;
+    min-height: 300px;
     /* display: flex;
     flex-direction: column;
     height:calc(100vh - 62px);

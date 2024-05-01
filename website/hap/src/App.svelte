@@ -59,6 +59,7 @@
 	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240422.geojson";
 	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
 	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
+	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
 	const point_url = "/assets/hap_site_points_20240422.geojson"; 
 	const act_point_url = "/assets/hap_act_points_20240320.geojson";
 	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
@@ -642,8 +643,8 @@
 			border: none;
 			max-height: 50%;
 			flex-grow: 1;
-			padding-bottom: 10px;
-			overflow: hidden;
+			/* padding-bottom: 10px;
+			overflow: hidden; */
 		}
 
 		.icon-instructions {

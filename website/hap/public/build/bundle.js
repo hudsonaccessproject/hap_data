@@ -17953,7 +17953,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			t = text(/*headerText*/ ctx[0]);
-    			attr_dev(span, "class", span_class_value = "header-text " + (/*expanded*/ ctx[1] ? 'expanded' : '') + " svelte-1tc0dfs");
+    			attr_dev(span, "class", span_class_value = "header-text " + (/*expanded*/ ctx[1] ? 'expanded' : '') + " svelte-1li7w8v");
     			add_location(span, file$c, 28, 12, 991);
     		},
     		m: function mount(target, anchor) {
@@ -17963,7 +17963,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (dirty & /*headerText*/ 1) set_data_dev(t, /*headerText*/ ctx[0]);
 
-    			if (dirty & /*expanded*/ 2 && span_class_value !== (span_class_value = "header-text " + (/*expanded*/ ctx[1] ? 'expanded' : '') + " svelte-1tc0dfs")) {
+    			if (dirty & /*expanded*/ 2 && span_class_value !== (span_class_value = "header-text " + (/*expanded*/ ctx[1] ? 'expanded' : '') + " svelte-1li7w8v")) {
     				attr_dev(span, "class", span_class_value);
     			}
     		},
@@ -18124,14 +18124,14 @@ var app = (function () {
     			div0 = element("div");
     			if (default_slot) default_slot.c();
     			attr_dev(button, "aria-expanded", /*expanded*/ ctx[1]);
-    			attr_dev(button, "class", "svelte-1tc0dfs");
+    			attr_dev(button, "class", "svelte-1li7w8v");
     			add_location(button, file$c, 25, 6, 848);
-    			attr_dev(h3, "class", "svelte-1tc0dfs");
+    			attr_dev(h3, "class", "svelte-1li7w8v");
     			add_location(h3, file$c, 24, 4, 837);
-    			attr_dev(div0, "class", "contents svelte-1tc0dfs");
+    			attr_dev(div0, "class", "contents svelte-1li7w8v");
     			div0.hidden = div0_hidden_value = !/*expanded*/ ctx[1];
     			add_location(div0, file$c, 56, 4, 2377);
-    			attr_dev(div1, "class", "collapsible svelte-1tc0dfs");
+    			attr_dev(div1, "class", "collapsible svelte-1li7w8v");
     			add_location(div1, file$c, 23, 0, 807);
     		},
     		l: function claim(nodes) {
@@ -27435,7 +27435,7 @@ var app = (function () {
     		}
     	];
 
-    	// let acts = [
+    	//  let acts = [
     	// 	{
     	// 	value: "FISH",
     	// 	name: "Fishing",
@@ -29626,7 +29626,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (524:1) {:else}
+    // (525:1) {:else}
     function create_else_block(ctx) {
     	let div;
 
@@ -29634,7 +29634,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Loading...";
-    			add_location(div, file, 524, 1, 17828);
+    			add_location(div, file, 525, 1, 17906);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -29651,14 +29651,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(524:1) {:else}",
+    		source: "(525:1) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (371:0) {#if all_point_data && all_poly_data}
+    // (372:0) {#if all_point_data && all_poly_data}
     function create_if_block(ctx) {
     	let header;
     	let t0;
@@ -29727,12 +29727,12 @@ var app = (function () {
     			create_component(hoverup.$$.fragment);
     			t8 = space();
     			create_component(title_1.$$.fragment);
-    			attr_dev(div0, "class", "left-panel panel svelte-1ixme6j");
-    			add_location(div0, file, 377, 2, 11793);
-    			attr_dev(div1, "class", "map-only-pane svelte-1ixme6j");
-    			add_location(div1, file, 465, 2, 15380);
-    			attr_dev(div2, "class", "map-pane svelte-1ixme6j");
-    			add_location(div2, file, 376, 1, 11768);
+    			attr_dev(div0, "class", "left-panel panel svelte-145mtkb");
+    			add_location(div0, file, 378, 2, 11871);
+    			attr_dev(div1, "class", "map-only-pane svelte-145mtkb");
+    			add_location(div1, file, 466, 2, 15458);
+    			attr_dev(div2, "class", "map-pane svelte-145mtkb");
+    			add_location(div2, file, 377, 1, 11846);
     		},
     		m: function mount(target, anchor) {
     			mount_component(header, target, anchor);
@@ -29955,14 +29955,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(371:0) {#if all_point_data && all_poly_data}",
+    		source: "(372:0) {#if all_point_data && all_poly_data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (379:3) {#if $activePageTracker === 'access'}
+    // (380:3) {#if $activePageTracker === 'access'}
     function create_if_block_12(ctx) {
     	let previous_key = /*active_point*/ ctx[8];
     	let key_block_anchor;
@@ -30011,14 +30011,14 @@ var app = (function () {
     		block,
     		id: create_if_block_12.name,
     		type: "if",
-    		source: "(379:3) {#if $activePageTracker === 'access'}",
+    		source: "(380:3) {#if $activePageTracker === 'access'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (380:5) {#key active_point}
+    // (381:5) {#key active_point}
     function create_key_block_4(ctx) {
     	let infopanel;
     	let current;
@@ -30059,14 +30059,14 @@ var app = (function () {
     		block,
     		id: create_key_block_4.name,
     		type: "key",
-    		source: "(380:5) {#key active_point}",
+    		source: "(381:5) {#key active_point}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (384:3) {#if $activePageTracker === 'access' && $arePanelsVisible}
+    // (385:3) {#if $activePageTracker === 'access' && $arePanelsVisible}
     function create_if_block_11(ctx) {
     	let div2;
     	let div0;
@@ -30119,19 +30119,19 @@ var app = (function () {
     			div3 = element("div");
     			create_component(collapsiblesection.$$.fragment);
     			attr_dev(span0, "class", "t2 act-filter-header");
-    			add_location(span0, file, 387, 7, 12107);
-    			add_location(br, file, 387, 65, 12165);
-    			attr_dev(span1, "class", "t3 icon-instructions svelte-1ixme6j");
-    			add_location(span1, file, 388, 7, 12177);
-    			attr_dev(div0, "class", "act-filters-label svelte-1ixme6j");
-    			add_location(div0, file, 386, 6, 12068);
-    			attr_dev(div1, "class", "act-filters svelte-1ixme6j");
-    			add_location(div1, file, 391, 6, 12301);
-    			attr_dev(div2, "class", "activity-filter svelte-1ixme6j");
-    			add_location(div2, file, 385, 5, 12032);
+    			add_location(span0, file, 388, 7, 12185);
+    			add_location(br, file, 388, 65, 12243);
+    			attr_dev(span1, "class", "t3 icon-instructions svelte-145mtkb");
+    			add_location(span1, file, 389, 7, 12255);
+    			attr_dev(div0, "class", "act-filters-label svelte-145mtkb");
+    			add_location(div0, file, 387, 6, 12146);
+    			attr_dev(div1, "class", "act-filters svelte-145mtkb");
+    			add_location(div1, file, 392, 6, 12379);
+    			attr_dev(div2, "class", "activity-filter svelte-145mtkb");
+    			add_location(div2, file, 386, 5, 12110);
     			attr_dev(div3, "id", "amenity");
-    			attr_dev(div3, "class", "svelte-1ixme6j");
-    			add_location(div3, file, 413, 4, 12766);
+    			attr_dev(div3, "class", "svelte-145mtkb");
+    			add_location(div3, file, 414, 4, 12844);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -30209,14 +30209,14 @@ var app = (function () {
     		block,
     		id: create_if_block_11.name,
     		type: "if",
-    		source: "(384:3) {#if $activePageTracker === 'access' && $arePanelsVisible}",
+    		source: "(385:3) {#if $activePageTracker === 'access' && $arePanelsVisible}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (393:7) {#each acts as act}
+    // (394:7) {#each acts as act}
     function create_each_block(ctx) {
     	let label;
     	let img;
@@ -30239,15 +30239,15 @@ var app = (function () {
     			t1 = space();
     			attr_dev(img, "alt", img_alt_value = /*act*/ ctx[53].value);
     			if (!src_url_equal(img.src, img_src_value = modifyIconSource(/*act*/ ctx[53]))) attr_dev(img, "src", img_src_value);
-    			add_location(img, file, 397, 8, 12451);
-    			attr_dev(input, "class", "act-input svelte-1ixme6j");
+    			add_location(img, file, 398, 8, 12529);
+    			attr_dev(input, "class", "act-input svelte-145mtkb");
     			attr_dev(input, "type", "checkbox");
     			input.value = input_value_value = /*act*/ ctx[53].value;
     			attr_dev(input, "id", input_id_value = /*act*/ ctx[53].value);
-    			add_location(input, file, 401, 8, 12535);
+    			add_location(input, file, 402, 8, 12613);
     			attr_dev(label, "class", "act-buttons");
     			toggle_class(label, "active", /*act*/ ctx[53].isActive);
-    			add_location(label, file, 393, 7, 12361);
+    			add_location(label, file, 394, 7, 12439);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -30293,14 +30293,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(393:7) {#each acts as act}",
+    		source: "(394:7) {#each acts as act}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (415:5) <CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
+    // (416:5) <CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
     function create_default_slot_1(ctx) {
     	let div;
     	let input0;
@@ -30419,77 +30419,77 @@ var app = (function () {
     			br9 = element("br");
     			attr_dev(input0, "type", "checkbox");
     			input0.value = "boat_launch_YN";
-    			add_location(input0, file, 416, 7, 12913);
+    			add_location(input0, file, 417, 7, 12991);
     			attr_dev(label0, "class", "t3");
     			attr_dev(label0, "for", "boat_launch_YN");
-    			add_location(label0, file, 417, 7, 13013);
-    			add_location(br0, file, 417, 66, 13072);
+    			add_location(label0, file, 418, 7, 13091);
+    			add_location(br0, file, 418, 66, 13150);
     			attr_dev(input1, "type", "checkbox");
     			input1.value = "restrooms";
-    			add_location(input1, file, 418, 7, 13084);
+    			add_location(input1, file, 419, 7, 13162);
     			attr_dev(label1, "class", "t3");
     			attr_dev(label1, "for", "restrooms");
-    			add_location(label1, file, 419, 7, 13178);
-    			add_location(br1, file, 419, 59, 13230);
+    			add_location(label1, file, 420, 7, 13256);
+    			add_location(br1, file, 420, 59, 13308);
     			attr_dev(input2, "type", "checkbox");
     			input2.value = "public_transit";
-    			add_location(input2, file, 420, 7, 13242);
+    			add_location(input2, file, 421, 7, 13320);
     			attr_dev(label2, "class", "t3");
     			attr_dev(label2, "for", "public_transit");
-    			add_location(label2, file, 421, 7, 13342);
-    			add_location(br2, file, 421, 83, 13418);
+    			add_location(label2, file, 422, 7, 13420);
+    			add_location(br2, file, 422, 83, 13496);
     			attr_dev(input3, "type", "checkbox");
     			input3.value = "parking";
-    			add_location(input3, file, 422, 7, 13430);
+    			add_location(input3, file, 423, 7, 13508);
     			attr_dev(label3, "class", "t3");
     			attr_dev(label3, "for", "parking");
-    			add_location(label3, file, 423, 7, 13522);
-    			add_location(br3, file, 423, 55, 13570);
+    			add_location(label3, file, 424, 7, 13600);
+    			add_location(br3, file, 424, 55, 13648);
     			attr_dev(input4, "type", "checkbox");
     			input4.value = "food";
-    			add_location(input4, file, 424, 7, 13582);
+    			add_location(input4, file, 425, 7, 13660);
     			attr_dev(label4, "class", "t3");
     			attr_dev(label4, "for", "food");
-    			add_location(label4, file, 425, 7, 13672);
-    			add_location(br4, file, 425, 57, 13722);
+    			add_location(label4, file, 426, 7, 13750);
+    			add_location(br4, file, 426, 57, 13800);
     			attr_dev(input5, "type", "checkbox");
     			input5.value = "drinking_water";
-    			add_location(input5, file, 426, 7, 13734);
+    			add_location(input5, file, 427, 7, 13812);
     			attr_dev(label5, "class", "t3");
     			attr_dev(label5, "for", "drinking_water");
-    			add_location(label5, file, 427, 7, 13833);
-    			add_location(br5, file, 427, 80, 13906);
+    			add_location(label5, file, 428, 7, 13911);
+    			add_location(br5, file, 428, 80, 13984);
     			attr_dev(input6, "type", "checkbox");
     			input6.value = "picnic_area";
-    			add_location(input6, file, 428, 7, 13918);
+    			add_location(input6, file, 429, 7, 13996);
     			attr_dev(label6, "class", "t3");
     			attr_dev(label6, "for", "picnic_area");
-    			add_location(label6, file, 429, 7, 14015);
-    			add_location(br6, file, 429, 63, 14071);
+    			add_location(label6, file, 430, 7, 14093);
+    			add_location(br6, file, 430, 63, 14149);
     			attr_dev(input7, "type", "checkbox");
     			input7.value = "hiking";
-    			add_location(input7, file, 430, 7, 14083);
+    			add_location(input7, file, 431, 7, 14161);
     			attr_dev(label7, "class", "t3");
     			attr_dev(label7, "for", "hiking");
-    			add_location(label7, file, 431, 7, 14174);
-    			add_location(br7, file, 431, 70, 14237);
+    			add_location(label7, file, 432, 7, 14252);
+    			add_location(br7, file, 432, 70, 14315);
     			attr_dev(input8, "type", "checkbox");
     			input8.value = "pets_allowed";
-    			add_location(input8, file, 432, 7, 14249);
+    			add_location(input8, file, 433, 7, 14327);
     			attr_dev(label8, "class", "t3");
     			attr_dev(label8, "for", "pets_allowed");
-    			add_location(label8, file, 433, 7, 14347);
-    			add_location(br8, file, 433, 72, 14412);
+    			add_location(label8, file, 434, 7, 14425);
+    			add_location(br8, file, 434, 72, 14490);
     			attr_dev(input9, "type", "checkbox");
-    			attr_dev(input9, "class", "last svelte-1ixme6j");
+    			attr_dev(input9, "class", "last svelte-145mtkb");
     			input9.value = "program";
-    			add_location(input9, file, 434, 7, 14424);
+    			add_location(input9, file, 435, 7, 14502);
     			attr_dev(label9, "class", "t3");
     			attr_dev(label9, "for", "program");
-    			add_location(label9, file, 435, 7, 14530);
-    			add_location(br9, file, 435, 59, 14582);
+    			add_location(label9, file, 436, 7, 14608);
+    			add_location(br9, file, 436, 59, 14660);
     			attr_dev(div, "class", "feature-filters r");
-    			add_location(div, file, 415, 6, 12874);
+    			add_location(div, file, 416, 6, 12952);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -30572,14 +30572,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(415:5) <CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >",
+    		source: "(416:5) <CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (441:3) {#if $activePageTracker === 'access' && $arePanelsVisible}
+    // (442:3) {#if $activePageTracker === 'access' && $arePanelsVisible}
     function create_if_block_10(ctx) {
     	let div0;
     	let input;
@@ -30601,11 +30601,11 @@ var app = (function () {
     			attr_dev(input, "id", "searcher");
     			attr_dev(input, "placeholder", "Search for a site by name");
     			attr_dev(input, "type", "text");
-    			add_location(input, file, 442, 5, 14741);
+    			add_location(input, file, 443, 5, 14819);
     			attr_dev(div0, "class", "searcher");
-    			add_location(div0, file, 441, 4, 14713);
-    			attr_dev(div1, "class", "places-list svelte-1ixme6j");
-    			add_location(div1, file, 444, 4, 14863);
+    			add_location(div0, file, 442, 4, 14791);
+    			attr_dev(div1, "class", "places-list svelte-145mtkb");
+    			add_location(div1, file, 445, 4, 14941);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -30661,14 +30661,14 @@ var app = (function () {
     		block,
     		id: create_if_block_10.name,
     		type: "if",
-    		source: "(441:3) {#if $activePageTracker === 'access' && $arePanelsVisible}",
+    		source: "(442:3) {#if $activePageTracker === 'access' && $arePanelsVisible}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (451:5) {#key filters}
+    // (452:5) {#key filters}
     function create_key_block_3(ctx) {
     	let placelist;
     	let current;
@@ -30715,14 +30715,14 @@ var app = (function () {
     		block,
     		id: create_key_block_3.name,
     		type: "key",
-    		source: "(451:5) {#key filters}",
+    		source: "(452:5) {#key filters}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (456:3) {#if $activePageTracker === 'safety'}
+    // (457:3) {#if $activePageTracker === 'safety'}
     function create_if_block_9(ctx) {
     	let watersafety;
     	let current;
@@ -30754,14 +30754,14 @@ var app = (function () {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(456:3) {#if $activePageTracker === 'safety'}",
+    		source: "(457:3) {#if $activePageTracker === 'safety'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (459:3) {#if $activePageTracker === 'quality'}
+    // (460:3) {#if $activePageTracker === 'quality'}
     function create_if_block_8(ctx) {
     	let waterquality;
     	let current;
@@ -30793,14 +30793,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(459:3) {#if $activePageTracker === 'quality'}",
+    		source: "(460:3) {#if $activePageTracker === 'quality'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (462:3) {#if $activePageTracker === 'about'}
+    // (463:3) {#if $activePageTracker === 'about'}
     function create_if_block_7(ctx) {
     	let about;
     	let current;
@@ -30832,14 +30832,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(462:3) {#if $activePageTracker === 'about'}",
+    		source: "(463:3) {#if $activePageTracker === 'about'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (469:4) {#if waterTemp!==undefined}
+    // (470:4) {#if waterTemp!==undefined}
     function create_if_block_5(ctx) {
     	let t0;
     	let div;
@@ -30875,11 +30875,11 @@ var app = (function () {
     			span1 = element("span");
     			t5 = text("Next High Tide: ");
     			t6 = text(t6_value);
-    			add_location(span0, file, 482, 6, 16518);
-    			add_location(br, file, 482, 51, 16563);
-    			add_location(span1, file, 483, 6, 16574);
-    			attr_dev(div, "class", "water-temp svelte-1ixme6j");
-    			add_location(div, file, 481, 5, 16289);
+    			add_location(span0, file, 483, 6, 16596);
+    			add_location(br, file, 483, 51, 16641);
+    			add_location(span1, file, 484, 6, 16652);
+    			attr_dev(div, "class", "water-temp svelte-145mtkb");
+    			add_location(div, file, 482, 5, 16367);
     		},
     		m: function mount(target, anchor) {
     			if (if_block) if_block.m(target, anchor);
@@ -30938,14 +30938,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(469:4) {#if waterTemp!==undefined}",
+    		source: "(470:4) {#if waterTemp!==undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (470:4) {#if showTooltip}
+    // (471:4) {#if showTooltip}
     function create_if_block_6(ctx) {
     	let div;
     	let span0;
@@ -30982,20 +30982,20 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "NOAA water monitoring station";
     			t7 = text(" in \n\t\t\t\t\t\t\tlower Manhattan at the Battery. Learn more and access stations in other \n\t\t\t\t\t\t\tlocations on the Water Safety page.");
-    			attr_dev(span0, "class", "caution svelte-1ixme6j");
-    			add_location(span0, file, 471, 6, 15559);
-    			add_location(br0, file, 471, 43, 15596);
-    			add_location(br1, file, 472, 67, 15668);
+    			attr_dev(span0, "class", "caution svelte-145mtkb");
+    			add_location(span0, file, 472, 6, 15637);
+    			add_location(br0, file, 472, 43, 15674);
+    			add_location(br1, file, 473, 67, 15746);
     			attr_dev(span1, "class", "bold");
-    			add_location(span1, file, 472, 6, 15607);
-    			add_location(br2, file, 474, 13, 15869);
-    			add_location(br3, file, 474, 17, 15873);
+    			add_location(span1, file, 473, 6, 15685);
+    			add_location(br2, file, 475, 13, 15947);
+    			add_location(br3, file, 475, 17, 15951);
     			attr_dev(a, "href", "https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1407#listing");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file, 475, 76, 15954);
-    			add_location(span2, file, 475, 6, 15884);
-    			attr_dev(div, "class", "tooltip svelte-1ixme6j");
-    			add_location(div, file, 470, 5, 15531);
+    			add_location(a, file, 476, 76, 16032);
+    			add_location(span2, file, 476, 6, 15962);
+    			attr_dev(div, "class", "tooltip svelte-145mtkb");
+    			add_location(div, file, 471, 5, 15609);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31023,14 +31023,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(470:4) {#if showTooltip}",
+    		source: "(471:4) {#if showTooltip}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (495:4) {#if $activePageTracker === 'access' || $activePageTracker === 'quality' || $activePageTracker === 'about'}
+    // (496:4) {#if $activePageTracker === 'access' || $activePageTracker === 'quality' || $activePageTracker === 'about'}
     function create_if_block_4(ctx) {
     	let previous_key = /*active_data*/ ctx[7];
     	let t0;
@@ -31125,14 +31125,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(495:4) {#if $activePageTracker === 'access' || $activePageTracker === 'quality' || $activePageTracker === 'about'}",
+    		source: "(496:4) {#if $activePageTracker === 'access' || $activePageTracker === 'quality' || $activePageTracker === 'about'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (496:5) {#key active_data}
+    // (497:5) {#key active_data}
     function create_key_block_2(ctx) {
     	let polygon;
     	let current;
@@ -31173,14 +31173,14 @@ var app = (function () {
     		block,
     		id: create_key_block_2.name,
     		type: "key",
-    		source: "(496:5) {#key active_data}",
+    		source: "(497:5) {#key active_data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (499:5) {#key filters}
+    // (500:5) {#key filters}
     function create_key_block_1(ctx) {
     	let geopoint;
     	let current;
@@ -31227,14 +31227,14 @@ var app = (function () {
     		block,
     		id: create_key_block_1.name,
     		type: "key",
-    		source: "(499:5) {#key filters}",
+    		source: "(500:5) {#key filters}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (502:5) {#key filters}
+    // (503:5) {#key filters}
     function create_key_block(ctx) {
     	let actpoint;
     	let current;
@@ -31277,14 +31277,14 @@ var app = (function () {
     		block,
     		id: create_key_block.name,
     		type: "key",
-    		source: "(502:5) {#key filters}",
+    		source: "(503:5) {#key filters}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (506:4) {#if $activePageTracker === 'safety'}
+    // (507:4) {#if $activePageTracker === 'safety'}
     function create_if_block_3(ctx) {
     	let safetypoint;
     	let current;
@@ -31325,14 +31325,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(506:4) {#if $activePageTracker === 'safety'}",
+    		source: "(507:4) {#if $activePageTracker === 'safety'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (510:4) {#if $activePageTracker === 'quality'}
+    // (511:4) {#if $activePageTracker === 'quality'}
     function create_if_block_2(ctx) {
     	let waterqualitylegend;
     	let current;
@@ -31364,14 +31364,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(510:4) {#if $activePageTracker === 'quality'}",
+    		source: "(511:4) {#if $activePageTracker === 'quality'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (513:4) {#if $activePageTracker === 'safety'}
+    // (514:4) {#if $activePageTracker === 'safety'}
     function create_if_block_1(ctx) {
     	let watersafetylegend;
     	let current;
@@ -31403,14 +31403,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(513:4) {#if $activePageTracker === 'safety'}",
+    		source: "(514:4) {#if $activePageTracker === 'safety'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (467:3) <LeafletMap >
+    // (468:3) <LeafletMap >
     function create_default_slot(ctx) {
     	let homebutton;
     	let t0;
@@ -31597,7 +31597,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(467:3) <LeafletMap >",
+    		source: "(468:3) <LeafletMap >",
     		ctx
     	});
 
@@ -31635,9 +31635,9 @@ var app = (function () {
     			if_block_anchor = empty();
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css");
-    			add_location(link, file, 363, 1, 11348);
+    			add_location(link, file, 364, 1, 11426);
     			if (!src_url_equal(script.src, script_src_value = "https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 364, 1, 11450);
+    			add_location(script, file, 365, 1, 11528);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
