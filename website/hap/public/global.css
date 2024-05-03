@@ -140,19 +140,23 @@ h1 {
 }
 
 .info-panel {
-    padding-top: 0px;
-    position: relative;
+    /* padding-top: 0px;
+    position: absolute;
+    background-color: #fff;
     top: 0px !important;
     font-weight: 400;
     font-size: 14px;
-    color: #333;
-    /* max-width: 375px; */
+    color: #333; */
+       /* max-width: 375px; */
     overflow-y: scroll;
-    display: flex;
+    min-height: 300px;
+    /* display: flex;
     flex-direction: column;
-    /* max-height: calc(100% - var(--hh)); */
-    border-bottom: solid 2px rgb(225, 225, 225);
+    height:calc(100vh - 62px);
+    width: 30vw;
+    border-bottom: solid 2px rgb(225, 225, 225); */
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .info-panel::-webkit-scrollbar {
     display: none;
@@ -201,13 +205,29 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-    .info-panel {
-        /* height: 293px;
-        width: calc(100% - 330px); */
-        overflow-y: hidden;
+    /* .info-panel { */
+        /* overflow-y: hidden;
+        max-width: unset; */
+        /* display: none;
+    } */
+    /* .info-panel {
+        position: absolute;
+        display: block;
+        overflow-y: scroll;
         max-width: unset;
-    }
+        height: 50%;
+        width: 100vw;
+    } */
 }
+
+/* .info-panel {
+    display: none;
+}
+
+.info-panel.tester2 {
+    display: block;
+    flex:1;
+} */
 
 #holder {
     position: relative;
@@ -354,24 +374,31 @@ input[type=text]:focus {
     padding-left: 0px;
 }
 
+.searcher {
+    padding: 15px;
+    border-bottom: 1.5px solid rgba(225, 225, 225);
+}
+
 #searcher {
     color: var(--blue);
     font-size: 22px;
     height: 30px;
-    padding-bottom: 0px;
-    /* padding-right: 5px; */
+    /* padding: 15px; */
+    margin-top: 2px;
 }
 
 @media (max-width: 767px) {
     .searcher {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
+        /* padding-top: 0px !important;
+        padding-bottom: 0px !important; */
+        min-height: 40px;
+        padding: 0px 11px 0px 11px;
     }
 
-    #searcher {
-        /* padding-bottom: 10px; */
-        height: 40px;
-    }
+    /* #searcher { */
+        /* height: 40px; */
+        /* padding: 0px 11px 0px 11px; */
+    /* } */
 
 }
 

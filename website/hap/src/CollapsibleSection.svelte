@@ -68,12 +68,14 @@
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
-	.contents::-webkit-scrollbar {
+	.collapsible::-webkit-scrollbar,
+  .contents::-webkit-scrollbar {
 		display: none;
 	}
 
 	/* Hide scrollbar for IE, Edge and Firefox */
-	.contents {
+	.collapsible::-webkit-scrollbar,
+  .contents {
 		-ms-overflow-style: none;  /* IE and Edge */
 		scrollbar-width: none;  /* Firefox */
 	}
@@ -89,6 +91,7 @@
 
 .contents {
    overflow-y: scroll;
+   flex-grow: 1;
 }
 	
   button {

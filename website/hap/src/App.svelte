@@ -18,7 +18,8 @@
 	import HomeButton from './Home.svelte'
 	import WaterQualityLegend from './WaterQualityLegend.svelte';
 	import WaterSafetyLegend from './WaterSafetyLegend.svelte';
-	import { count, activePageTracker} from "./store.js";
+	// import { count, activePageTracker} from "./store.js";
+	import { count, activePageTracker, arePanelsVisible } from "./store.js";
 
 	let title = "The Hudson Access Project is collecting information about all the places where the public can get into and onto the water in the Hudson & Harbor Estuary and its tributaries for swimming, boating, and fishing; with a focus on activities that bring people into direct contact with the water."
 
@@ -38,6 +39,12 @@
 	let active_point;
 	let stage;
 	let showTooltip = false;
+	// defines whether the infopanel is visible or not
+	// let arePanelsVisible = true;
+
+	arePanelsVisible.subscribe((value) => {
+		console.log(value);
+	});
 
 	const emptyFilters = {
 		act_filters: [],
@@ -52,6 +59,7 @@
 	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240422.geojson";
 	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
 	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
+	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
 	const point_url = "/assets/hap_site_points_20240422.geojson"; 
 	const act_point_url = "/assets/hap_act_points_20240320.geojson";
 	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
@@ -282,7 +290,6 @@
 		active_point = all_point_data.filter( function(f){
 			return String(f.properties.site_id) === active_id;
 		 })
-		 console.log(active_point);
 	}
 
 	function handleMessage(e){
@@ -367,15 +374,16 @@
 	<!-- <Header  {activePage} {changePage}/> -->
 	<Header />
 
-	<!-- {#if $activePageTracker === 'about'}
-		<About />
-	{/if} -->
-
 	<!-- Initiate Map Here-->
 	<div class="map-pane">
 		<div class="left-panel panel">
 			{#if $activePageTracker === 'access'}
-				<div>
+					{#key active_point}
+						<InfoPanel {active_point} />
+					{/key}
+			{/if}
+			{#if $activePageTracker === 'access' && $arePanelsVisible}
+				<!-- <div> -->
 					<div class="activity-filter">
 						<div class="act-filters-label">
 							<span class="t2 act-filter-header">Activity Filters</span><br>
@@ -403,7 +411,7 @@
 							{/each}
 						</div>
 					</div>
-				</div>
+				<!-- </div> -->
 				<div id="amenity">
 					<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
 						<div class="feature-filters r">
@@ -431,22 +439,16 @@
 					</CollapsibleSection>
 				</div>
 			{/if}
-			{#if $activePageTracker === 'access'}
-				<div class="searcher r">
+			{#if $activePageTracker === 'access' && $arePanelsVisible}
+				<div class="searcher">
 					<input id="searcher" placeholder="Search for a site by name" type="text" bind:value={filters.text_filter}>
 				</div>
-				<!-- <div class = "info-panel panel">
-					{#key active_point}
-						<InfoPanel {active_point} />
-					{/key}
-				</div> -->
 				<div class="places-list">
-					<div class = "info-panel panel">
+					<!-- <div class = "info-panel panel">
 						{#key active_point}
 							<InfoPanel {active_point} />
 						{/key}
-					</div>
-					<!-- Accordion List -->
+					</div> -->
 					{#key filters}
 						<PlaceList on:message={handlePlaceMessage} geojson={all_point_data} {filters}/>
 					{/key}
@@ -591,10 +593,8 @@
 		border-left: solid 2px rgb(225, 225, 225);
 		box-sizing: border-box;
 		height:calc(100vh - 62px);
-		/* overflow: scroll; */
 		z-index: 10001;
 		order: 2;
-		/* overflow: hidden; */
 	} 
 
 	.activity-filter {
@@ -607,6 +607,11 @@
 	.act-filters {
 		padding-top: 10px;
 	}
+
+	/* #amenity {
+		display: block;
+		overflow: unset;
+	} */
 
 
 	/* Media query for mobile devices */
@@ -623,7 +628,7 @@
 			height: -webkit-fill-available;
 			order: 2;
 			border-top: solid 2px rgb(225, 225, 225);
-			margin-top: 10px;
+			/* margin-top: 10px; */
 		}
 
 		.map-only-pane .water-temp {
@@ -636,10 +641,10 @@
 			height: auto;
 			order: 1;
 			border: none;
-			max-height: 60%;
+			max-height: 50%;
 			flex-grow: 1;
-			padding-bottom: 10px;
-			overflow: hidden;
+			/* padding-bottom: 10px;
+			overflow: hidden; */
 		}
 
 		.icon-instructions {
@@ -668,6 +673,15 @@
 			padding-top: 6px;
 			margin-bottom: 3px;
 		}
+
+		#amenity {
+			min-height: 35px;
+			display: flex;
+			flex-direction: column;
+			overflow-y: scroll;
+			flex-grow: 1.5;
+			border-bottom: 1.5px solid var(--gray-light, #e1e1e1);;
+		} 
 
 	}
 
@@ -702,7 +716,10 @@
 	}
 
 	.places-list {
+		display: flex;
+		flex-direction: column;
 		overflow-y: scroll;
+		flex-grow: 1;
 	} 
 
 	/* Hide scrollbar for Chrome, Safari and Opera */
