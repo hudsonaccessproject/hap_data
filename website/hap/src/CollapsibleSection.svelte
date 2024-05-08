@@ -125,6 +125,10 @@
       padding-bottom: 0.3em;
       padding: 3px 11px 3px 11px; /* this adjusts the padding arond site amenity*/
     }
+
+    .contents {
+      max-height: 80px;
+    }
   }
 
 
