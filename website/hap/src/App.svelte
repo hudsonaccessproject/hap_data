@@ -6,8 +6,8 @@
 	import ActPoint from './ActPoint.svelte';
 	import SafetyPoint from './SafetyPoint.svelte';
 	import {onMount, afterUpdate} from 'svelte'
-	import Header from './components/Header2.svelte';	
-	import Hoverup from './Hoverup.svelte';
+	import Header from './components/Header.svelte';	
+	// import Hoverup from './Hoverup.svelte';
 	import Title from './Title.svelte';
 	import PlaceList from './PlaceList.svelte';
 	import CollapsibleSection from './CollapsibleSection.svelte'
@@ -354,10 +354,10 @@
 
 
 	//Hide Hover at Start-Up
-	afterUpdate( () => {
-		let eco = [...document.getElementsByClassName('hoverup')][0];
-		if( eco ) eco.hidden = true;
-	})
+	// afterUpdate( () => {
+	// 	let eco = [...document.getElementsByClassName('hoverup')][0];
+	// 	if( eco ) eco.hidden = true;
+	// })
 	
 </script>
 
@@ -371,7 +371,6 @@
 <!-- Render the page -- header, map and the sidebar -->
 {#if all_point_data && all_poly_data} 
 
-	<!-- <Header  {activePage} {changePage}/> -->
 	<Header />
 
 	<!-- Initiate Map Here-->
@@ -518,7 +517,7 @@
 		</div>
 	</div>
 
-	<Hoverup {acts} />
+	<!-- <Hoverup {acts} /> -->
 
 	<Title {title_hover}/>
 
@@ -533,10 +532,10 @@
 		left: 0px;
 		z-index: 0;
 		width: 100vw;
-		height: calc(100% - 75px);
+		height: calc(100vh - 65px);
 		padding: 0px;
 		display: flex;
-  		flex-direction: row;
+  		/* flex-direction: row; */
 	}
 
 	.map-only-pane {
@@ -642,7 +641,9 @@
 			order: 1;
 			border: none;
 			max-height: 50%;
+			/* min-height: 110px; */
 			flex-grow: 1;
+			/* overflow: hidden; */
 			/* padding-bottom: 10px;
 			overflow: hidden; */
 		}
@@ -682,6 +683,10 @@
 			flex-grow: 1.5;
 			border-bottom: 1.5px solid var(--gray-light, #e1e1e1);;
 		} 
+
+		.places-list {
+			max-height: 200px;
+		}
 
 	}
 
