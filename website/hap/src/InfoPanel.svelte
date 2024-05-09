@@ -22,43 +22,43 @@
     `;
 
     //Use these for activitiy feature ucons
-	// let acts = [
-	// 	{value:"FISH", name:"Fishing", source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/fishing.svg" ,
-	// 	desc:"You can fish here."},
-	// 	{value:"SWIM",name:"Swimming" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/swimming.svg" ,
-	// 	desc:"You can swim here."},
-	// 	{value:"HPBL",name:"Human-powered boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/hp_boating.svg" ,
-	// 	desc:"You can kayak here."},
-	// 	{value:"MPBL",name:"Motor boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/mp_boating.svg" ,
-	// 	desc:"You can motor boat here."}
-	// ]
+	let acts = [
+		{value:"FISH", name:"Fishing", source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/fishing.svg" ,
+		desc:"You can fish here."},
+		{value:"SWIM",name:"Swimming" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/swimming.svg" ,
+		desc:"You can swim here."},
+		{value:"HPBL",name:"Human-powered boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/hp_boating.svg" ,
+		desc:"You can kayak here."},
+		{value:"MPBL",name:"Motor boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/mp_boating.svg" ,
+		desc:"You can motor boat here."}
+	]
 
-     let acts = [
-		{
-		value: "FISH",
-		name: "Fishing",
-		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-		desc: "You can fish here."
-		},
-		{
-		value: "SWIM",
-		name: "Swimming",
-		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-		desc: "You can swim here."
-		},
-		{
-		value: "HPBL",
-		name: "Human-powered boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-		desc: "You can kayak here."
-		},
-		{
-		value: "MPBL",
-		name: "Motor boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-		desc: "You can motor boat here."
-		}
-	];
+    //  let acts = [
+	// 	{
+	// 	value: "FISH",
+	// 	name: "Fishing",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+	// 	desc: "You can fish here."
+	// 	},
+	// 	{
+	// 	value: "SWIM",
+	// 	name: "Swimming",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+	// 	desc: "You can swim here."
+	// 	},
+	// 	{
+	// 	value: "HPBL",
+	// 	name: "Human-powered boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+	// 	desc: "You can kayak here."
+	// 	},
+	// 	{
+	// 	value: "MPBL",
+	// 	name: "Motor boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+	// 	desc: "You can motor boat here."
+	// 	}
+	// ];
 
     //Use these for creating site feature buttons and info panel icons
 	let site_feature_icons = [
