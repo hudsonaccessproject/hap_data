@@ -127,7 +127,8 @@
     }
 
     .contents {
-      max-height: 80px;
+      /* max-height: 80px; */
+      max-height: 150px
     }
   }
 

@@ -16,20 +16,19 @@
       <div class="col large-col">
         <div class="title" on:click={refreshPage} on:keydown={refreshPage}>
           <span title="Covering sites where you can access the Hudson River Estuary South of the Mario Cuomo Bridge, Hudson tributaries, and the waters of the NY-NJ Harbor area.">Hudson Access Project</span> 
-          <span title="This is a work in progress. Please help make this website as useful as it can be: send any corrections or site information to hudsonaccessproject@gmail.com." class="beta">beta</span>
+          <span class="beta">beta</span>
         </div>
       </div>
-      <div class="hamburger-selector">
-        <input type="checkbox" id="hamburger-checkbox">
-        <!-- <label for="hamburger-checkbox">
-          <span class="hamburger"></span>
-        </label> -->
-        <label for="hamburger-checkbox">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </label>
+      
+      <i class="fas fa-info-circle mobile-about-button" on:click={() => setPage('about')} on:keydown={() => setPage('about')}></i>
+      
+      <div class="other-pages">
         <div class="hamburger-menu">
+          <div class="col {$activePageTracker === 'access' ? 'active' : ''}">
+            <div class="column-content other-pages" on:click={() => setPage('access')} on:keydown={() => setPage('access')}>
+              Water Access
+            </div>
+          </div>
           <div class="col {$activePageTracker === 'safety' ? 'active' : ''}">
             <div class="column-content other-pages" on:click={() => setPage('safety')} on:keydown={() => setPage('safety')}>
               Water Safety
@@ -40,13 +39,14 @@
               Water Quality
             </div>
           </div>
-          <div class="col {$activePageTracker === 'about' ? 'active' : ''}" >
+          <div class="col about {$activePageTracker === 'about' ? 'active' : ''}" >
             <div class="column-content other-pages" on:click={() => setPage('about')} on:keydown={() => setPage('about')}>
               About
             </div>
           </div>
         </div>
       </div>
+
     </div>
     <div class="find">
       {#if $activePageTracker === 'access'}
@@ -67,7 +67,7 @@
 <style>
 
   header {
-    height: 65px !important;
+    height: 65px;
     white-space: nowrap;
     margin: 0px;
     z-index: 3;
@@ -81,7 +81,6 @@
     width: calc(30vw - 2px);
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 
   .header-content {
@@ -125,9 +124,10 @@
   }
 
   .side-title {
-		color: var(--orange3);
+		color: var(--orange2);
 		font-size: 22px;
 		font-weight: 700;
+    padding-left: 15px;
 	}
 
   /* active styles for column-content */
@@ -145,17 +145,18 @@
 
   .beta {
     font-size: 1em;
-    color: #FFAA22;
+    color: var(--orange2);
     font-style: italic;
   }
 
-  .hamburger-selector {
+  .other-pages {
     flex-basis: 60%;
   }
 
-  .hamburger-selector input[type="checkbox"] {
+  .mobile-about-button {
     display: none;
   }
+
   .hamburger-menu {
     display: flex;
     justify-content: space-between;
@@ -194,7 +195,7 @@
 
   @media (max-width: 900px) {
     .column-content {
-      font-size: 15px;
+      font-size: 16px;
     }
 
     .title{
@@ -211,7 +212,7 @@
   @media (max-width: 767px) {
     header {
         width: 100%;
-        height: 45px !important;
+        height: 45px;
 
     }
 
@@ -223,55 +224,54 @@
       display: none;
     }
 
+    .other-pages {
+      flex-basis: 0%;
+    }
+
     .header-content {
       height: 45px;
     }
     
     .large-col {
-      flex-basis: 90%;
+      flex-basis: 100%;
     }
 
-    .hamburger-selector {
-      flex-basis: 10%;
+    .mobile-about-button {
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: center;
-      border: solid 1.5px rgb(225, 225, 225);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: var(--orange3);
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 8px; 
+      right: 8px;  
+      z-index: 100; /* Ensure it's on top of other elements */
     }
 
-    .hamburger-selector input[type="checkbox"] {
-      display: none;
-    }
+  .col.about {
+    /* Hide the desktop content on mobile */
+    display: none;
+  }
 
     .hamburger-menu {
-      display: none;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       background-color: #fff;
-      padding: 10px;
-      box-sizing: border-box;
-      height: auto;
-    }
 
-    .hamburger-selector input[type="checkbox"]:checked ~ .hamburger-menu {
-      display: block;
+      box-sizing: border-box;
+      height: 30px;
+      border-top: solid 1.5px rgb(225, 225, 225);
+      border-bottom: solid 1.5px rgb(225, 225, 225);
     }
 
     .hamburger-menu .col {
       flex-basis: calc(100% / 3);
-      margin-bottom: 10px;
-    }
-
-    .hamburger-line {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background-color: #707070;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-      margin-bottom: 5px;
     }
   }
 
