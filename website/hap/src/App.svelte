@@ -56,14 +56,14 @@
 		previous: []
 	};
 
-	const point_url = "/hudsonaccessproject/assets/hap_site_points_20240422.geojson";
-	const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
-	const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
-	const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
-	// const point_url = "/assets/hap_site_points_20240509.geojson"; 
-	// const act_point_url = "/assets/hap_act_points_20240320.geojson";
-	// const polygon_url = "/assets/hap_site_polys_20240201.geojson";
-	// const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
+	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240422.geojson";
+	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
+	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
+	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
+	const point_url = "/assets/hap_site_points_20240509.geojson"; 
+	const act_point_url = "/assets/hap_act_points_20240320.geojson";
+	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
+	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
 
@@ -186,67 +186,67 @@
 	// };
 
 	//Use these for creating buttons and hover pop up
-	// let acts = [
-	// 	{
-	// 	value: "FISH",
-	// 	name: "Fishing",
-	// 	source: "/assets/icons/activities/fishing.svg",
-	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
-	// 	desc: "You can fish here."
-	// 	},
-	// 	{
-	// 	value: "SWIM",
-	// 	name: "Swimming",
-	// 	source: "/assets/icons/activities/swimming.svg",
-	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
-	// 	desc: "You can swim here."
-	// 	},
-	// 	{
-	// 	value: "HPBL",
-	// 	name: "Human-powered boating",
-	// 	source: "/assets/icons/activities/hp_boating.svg",
-	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-	// 	desc: "You can kayak here."
-	// 	},
-	// 	{
-	// 	value: "MPBL",
-	// 	name: "Motor boating",
-	// 	source: "/assets/icons/activities/mp_boating.svg",
-	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-	// 	desc: "You can motor boat here."
-	// 	}
-	// ];
-
-    let acts = [
+	let acts = [
 		{
 		value: "FISH",
 		name: "Fishing",
-		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		source: "/assets/icons/activities/fishing.svg",
+		activesource: "/assets/icons/activities/fishing_F77B00.svg",
 		desc: "You can fish here."
 		},
 		{
 		value: "SWIM",
 		name: "Swimming",
-		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		source: "/assets/icons/activities/swimming.svg",
+		activesource: "/assets/icons/activities/swimming_F77B00.svg",
 		desc: "You can swim here."
 		},
 		{
 		value: "HPBL",
 		name: "Human-powered boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		source: "/assets/icons/activities/hp_boating.svg",
+		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 		desc: "You can kayak here."
 		},
 		{
 		value: "MPBL",
 		name: "Motor boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		source: "/assets/icons/activities/mp_boating.svg",
+		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 		desc: "You can motor boat here."
 		}
 	];
+
+    // let acts = [
+	// 	{
+	// 	value: "FISH",
+	// 	name: "Fishing",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	desc: "You can fish here."
+	// 	},
+	// 	{
+	// 	value: "SWIM",
+	// 	name: "Swimming",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	desc: "You can swim here."
+	// 	},
+	// 	{
+	// 	value: "HPBL",
+	// 	name: "Human-powered boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	desc: "You can kayak here."
+	// 	},
+	// 	{
+	// 	value: "MPBL",
+	// 	name: "Motor boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	desc: "You can motor boat here."
+	// 	}
+	// ];
 
 	function getNextHighTide(tides) {
 		const currentTime = new Date();
@@ -382,13 +382,11 @@
 					{/key}
 			{/if}
 			{#if $activePageTracker === 'access' && $arePanelsVisible}
-				<!-- <div> -->
 					<div class="activity-filter">
 						<div class="act-filters-label">
 							<span class="t2 act-filter-header">Activity Filters</span><br>
 							<span class="t3 icon-instructions">Select an icon to search by activity</span>
 						</div>
-						<!-- ACT BUTTONS-->
 						<div class="act-filters">
 							{#each acts as act}
 							<label
@@ -410,7 +408,6 @@
 							{/each}
 						</div>
 					</div>
-				<!-- </div> -->
 				<div id="amenity">
 					<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
 						<div class="feature-filters r">
@@ -443,11 +440,6 @@
 					<input id="searcher" placeholder="Search for a site by name" type="text" bind:value={filters.text_filter}>
 				</div>
 				<div class="places-list">
-					<!-- <div class = "info-panel panel">
-						{#key active_point}
-							<InfoPanel {active_point} />
-						{/key}
-					</div> -->
 					{#key filters}
 						<PlaceList on:message={handlePlaceMessage} geojson={all_point_data} {filters}/>
 					{/key}
@@ -478,20 +470,11 @@
 							locations on the Water Safety page. </span>
 					</div> 
 				{/if}
-					<!-- <div class="water-temp"> -->
 					<div class="water-temp" on:mouseover="{() => showTooltip = true}" on:focus="{() => showTooltip = true}" on:mouseout="{() => showTooltip = false}" on:blur="{() => showTooltip = false}" on:focus="{() => showTooltip = true}">
 						<span>Water Temperature: {waterTemp}°F</span><br>
 						<span>Next High Tide: { nextHighTide ? nextHighTide : 'is tomorrow'}</span>
-						<!-- {#if showTooltip}
-							<div class="tooltip">
-								<span class="caution">CAUTION!</span><br>
-								<span>The water can be much colder than the air!</span><br><br>
-								<span>Temperature and Tide information are updated continuously and are from the Battery in lower Manhattan.</span>
-							</div> 
-						{/if} -->
 					</div>
 				{/if}
-				<!-- data on the map -->
 				{#if $activePageTracker === 'access' || $activePageTracker === 'quality' || $activePageTracker === 'about'}
 					{#key active_data}
 					<Polygon active_data={active_data}/>
@@ -506,7 +489,6 @@
 				{#if $activePageTracker === 'safety'}
 					<SafetyPoint geojson={temp_point_data} />
 				{/if}
-				<!-- Legends -->
 				{#if $activePageTracker === 'quality'}
 					<WaterQualityLegend />
 				{/if}
@@ -620,6 +602,9 @@
 			flex-direction: column;
 			width: 100vw;
 			top: 75px;
+			height: calc(100vh - 75px);
+			/* top: 0px;
+			height: 100vh; */
 			order: unset; 
 		}
 		.map-only-pane {
@@ -640,7 +625,8 @@
 			height: auto;
 			order: 1;
 			border: none;
-			max-height: 50%;
+			max-height: 50vh;
+			/* max-height: calc(50vh - 75px); */
 			/* min-height: 110px; */
 			flex-grow: 1;
 			/* overflow: hidden; */
@@ -656,9 +642,10 @@
 		.activity-filter {
 			display: flex;
 			border-bottom: 1.5px solid rgb(225, 225, 225);
+			/* padding-left: 11px; */
 			padding: 0px 11px 0px 11px;
 			justify-content: space-between; /* Align children at ends */
-    		width: 100%; /* Ensure full width */
+    		/* width: 100%; */
 		}
 
 		.act-filters-label {
