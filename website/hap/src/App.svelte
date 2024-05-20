@@ -392,6 +392,7 @@
 							<label
 								class="act-buttons"
 								class:active="{act.isActive}"
+								title="{act.desc}"  
 							>
 								<img
 								alt={act.value}
@@ -642,10 +643,9 @@
 		.activity-filter {
 			display: flex;
 			border-bottom: 1.5px solid rgb(225, 225, 225);
-			/* padding-left: 11px; */
 			padding: 0px 11px 0px 11px;
 			justify-content: space-between; /* Align children at ends */
-    		/* width: 100%; */
+
 		}
 
 		.act-filters-label {
