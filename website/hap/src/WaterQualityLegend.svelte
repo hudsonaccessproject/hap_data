@@ -161,11 +161,11 @@
         margin-right: 5px;
     }
 
-    .legend-circle {
+    /* .legend-circle {
         width: 90%;
         height: 90%;
         border-radius: 50%;
-    }
+    } */
 
     .legend-small-circle {
         width: 50%;

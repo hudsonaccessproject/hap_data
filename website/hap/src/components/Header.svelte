@@ -179,7 +179,7 @@
 		}
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     .column-content {
       font-size: 18px;
     }
@@ -193,7 +193,7 @@
 		}
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     .column-content {
       font-size: 16px;
     }
