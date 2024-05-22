@@ -118,9 +118,16 @@
     }
   }
 
+  @media (max-width: 900px) {
+    button {
+      font-size: 16px;
+    }
+  }
+
   /* Media query for mobile devices */
 	@media (max-width: 767px) {
     button {
+      font-size: 18px;
       padding-top: 0.3em;
       padding-bottom: 0.3em;
       padding: 3px 11px 3px 11px; /* this adjusts the padding arond site amenity*/

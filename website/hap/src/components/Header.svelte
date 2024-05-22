@@ -16,7 +16,7 @@
       <div class="col large-col">
         <div class="title" on:click={refreshPage} on:keydown={refreshPage}>
           <span title="Covering sites where you can access the Hudson River Estuary South of the Mario Cuomo Bridge, Hudson tributaries, and the waters of the NY-NJ Harbor area.">Hudson Access Project</span> 
-          <span class="beta">beta</span>
+          <!-- <span class="beta">beta</span> -->
         </div>
       </div>
       
@@ -207,6 +207,12 @@
 		}
   }
 
+  @media (max-width: 820px) {
+    .title{
+      font-size: 18px;
+    }
+  }
+
 
   /* Media query for mobile devices */
   @media (max-width: 767px) {
@@ -214,6 +220,10 @@
         width: 100%;
         height: 45px;
 
+    }
+
+    .title{
+      font-size: 20px;
     }
 
     .header-content {
