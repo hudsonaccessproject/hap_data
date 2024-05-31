@@ -74,14 +74,14 @@
 		desc:"There is food here."},
 		{value:"drinking_water",name:"Drinking water" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/drinking_water_circle.svg" ,
 		desc:"There is drinking water here."},
-		{value:"picnic_area",name:"Picnic area" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/food_circle.svg" ,
-		desc:"You can picnic here."},
-		{value:"hiking",name:"Hiking" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/hiking_walking.svg" ,
-		desc:"You can hike here."},
+		{value:"wheelchair_access_restrooms",name:"Wheelchair accessible restrooms" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/wheelchair_accessibility_circle.svg" ,
+		desc:"The restrooms are wheelchair accessible here."},
+		// {value:"walking_trails",name:"Walking trails" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/walking_trails.svg" ,
+		// desc:"There are walking trails here."},
 		// {value:"pets_allowed",name:"Pets allowed" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/pets_allowed.svg" ,
 		// desc:"Pets are allowed here."},
-		{value:"program",name:"Programming" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/guided_tour_circle.svg" ,
-		desc:"There is programming here."},
+		// {value:"program",name:"Programming" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/guided_tour_circle.svg" ,
+		// desc:"There is programming here."},
 	]
 
     // create array to hold site activiteis for the site
@@ -170,6 +170,9 @@
             {#if active_point.hours_info}
                 <p><span>Hours:</span> {active_point.hours_info}</p>
             {/if}
+            {#if active_point.open_close_date}
+                <p><span>Seasonal closures:</span> {active_point.open_close_date}</p>
+            {/if}
             {#if active_point.accessibility_description}
                 <p><span>Accessibility description:</span> {active_point.accessibility_description}</p>
             {/if}
@@ -191,6 +194,9 @@
             {/if}
             {#if active_point.safety}
             <p><span>Safety considerations:</span> {active_point.safety}</p>
+            {/if}
+            {#if active_point.use_limits}
+                <p><span>Use limits:</span> {active_point.use_limits}</p>
             {/if}
             {#if active_point.program_name}
             <p><span>Program name:</span> {active_point.program_name}</p>
@@ -222,6 +228,9 @@
                 {/each}
                 </div>
             </div>
+            {#if active_point.amenities_description}
+            <p><span>Amenities description:</span> {active_point.amenities_description}</p>
+            {/if}
         </div>    
     </div>
 {:else}

@@ -418,26 +418,28 @@
 				<div id="amenity">
 					<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
 						<div class="feature-filters r">
-							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch_yn"> 
-							<label class="t3" for="boat_launch_YN"> Boat launch</label><br>
-							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
-							<label class="t3" for="restrooms"> Restrooms</label><br>
 							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "public_transit"> 
 							<label class="t3" for="public_transit"> Accessible by public transit</label><br>
-							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "parking">
-							<label class="t3" for="parking"> Parking</label><br>
-							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "food"> 
-							<label class="t3" for="food"> Food on site</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "bike_path_accessible">
+							<label class="t3" for="bike_path_accessible"> Bike path accessible</label><br>
+							<input type="checkbox" class="last" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_cleaning_requirements"> 
+							<label class="t3" for="boat_cleaning_requirements"> Boat cleaning requirements</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch_yn"> 
+							<label class="t3" for="boat_launch_yn"> Boat launch</label><br>
 							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "drinking_water">
 							<label class="t3" for="drinking_water"> Drinkable / running water</label><br>
-							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "picnic_area"> 
-							<label class="t3" for="picnic_area"> Picnic Area</label><br>
-							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "hiking">
-							<label class="t3" for="hiking"> Walking / hiking trails</label><br>
-							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "pets_allowed"> 
-							<label class="t3" for="pets_allowed"> Dogs / pets allowed</label><br>
-							<input type="checkbox" class="last" on:click={e=>{clickHandleSiteFeatures(e)}} value = "program"> 
-							<label class="t3" for="program"> Programming</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "equipment_rental"> 
+							<label class="t3" for="equipment_rental"> Equipment rental</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "food"> 
+							<label class="t3" for="food"> Food on site</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "parking">
+							<label class="t3" for="parking"> Parking</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
+							<label class="t3" for="restrooms"> Restrooms</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "walking_trails"> 
+							<label class="t3" for="walking_trails"> Walking trails</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "wheelchair_access_restrooms"> 
+							<label class="t3" for="wheelchair_access_restrooms"> Wheelchair accessible restrooms</label><br>
 						</div>
 					</CollapsibleSection>
 				</div>
