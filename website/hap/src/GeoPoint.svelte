@@ -86,7 +86,8 @@
         }else{
             // Only show the feature if the feature's activity code is included in one
             // of the existing activity filters
-            let actCodes = feature.properties.act_codes.split(',').map(code => code.trim());
+            console.log(feature.properties.activity_codes);
+            let actCodes = feature.properties.activity_codes.split(',').map(code => code.trim());
 
             const isActive = filters.act_filters.some(el => actCodes.includes(el));
 
@@ -149,7 +150,7 @@
             }
         }
         /// for the water quality page, we want to hide the SWIM and HPBL sites that are near ms4 or cso
-        let actCodes = feature.properties.act_codes.split(',').map(code => code.trim());
+        let actCodes = feature.properties.activity_codes.split(',').map(code => code.trim());
         const noSwimHPBL = !filters.act_filters.some(el => actCodes.includes(el));
         if ($activePageTracker === 'quality' && noSwimHPBL) {
             feature.properties.remain = "hidden";

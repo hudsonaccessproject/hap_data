@@ -509,15 +509,6 @@ label {
 	font-weight: bold;
 }
 
-
-/* Media query for mid-size */
-
-@media (max-width: 1200px) {
-    .column-content {
-        font-size: 20px;
-    }
-}
-
 /* Media query to make icoms fit on one line */
 @media (max-width: 900px) {
     label.act-buttons img {

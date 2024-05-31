@@ -22,47 +22,47 @@
     `;
 
     //Use these for activitiy feature ucons
-	// let acts = [
-	// 	{value:"FISH", name:"Fishing", source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/fishing.svg" ,
-	// 	desc:"You can fish here."},
-	// 	{value:"SWIM",name:"Swimming" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/swimming.svg" ,
-	// 	desc:"You can swim here."},
-	// 	{value:"HPBL",name:"Human-powered boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/hp_boating.svg" ,
-	// 	desc:"You can kayak here."},
-	// 	{value:"MPBL",name:"Motor boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/mp_boating.svg" ,
-	// 	desc:"You can motor boat here."}
-	// ]
+	let acts = [
+		{value:"FISH", name:"Fishing", source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/fishing.svg" ,
+		desc:"You can fish here."},
+		{value:"SWIM",name:"Swimming" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/swimming.svg" ,
+		desc:"You can swim here."},
+		{value:"HPBL",name:"Human-powered boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/hp_boating.svg" ,
+		desc:"You can kayak here."},
+		{value:"MPBL",name:"Motor boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/mp_boating.svg" ,
+		desc:"You can motor boat here."}
+	]
 
-     let acts = [
-		{
-		value: "FISH",
-		name: "Fishing",
-		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-		desc: "You can fish here."
-		},
-		{
-		value: "SWIM",
-		name: "Swimming",
-		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-		desc: "You can swim here."
-		},
-		{
-		value: "HPBL",
-		name: "Human-powered boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-		desc: "You can kayak here."
-		},
-		{
-		value: "MPBL",
-		name: "Motor boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-		desc: "You can motor boat here."
-		}
-	];
+    //  let acts = [
+	// 	{
+	// 	value: "FISH",
+	// 	name: "Fishing",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+	// 	desc: "You can fish here."
+	// 	},
+	// 	{
+	// 	value: "SWIM",
+	// 	name: "Swimming",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+	// 	desc: "You can swim here."
+	// 	},
+	// 	{
+	// 	value: "HPBL",
+	// 	name: "Human-powered boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+	// 	desc: "You can kayak here."
+	// 	},
+	// 	{
+	// 	value: "MPBL",
+	// 	name: "Motor boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+	// 	desc: "You can motor boat here."
+	// 	}
+	// ];
 
     //Use these for creating site feature buttons and info panel icons
 	let site_feature_icons = [
-		{value:"boat_launch_YN", name:"Boat launch", source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/boat_launch_cricle.svg" ,
+		{value:"boat_launch_yn", name:"Boat launch", source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/boat_launch_cricle.svg" ,
 		desc:"There is a boat launch"},
 		{value:"restrooms",name:"Restrooms" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/restrooms_circle.svg" ,
 		desc:"There are restrooms."},
@@ -91,7 +91,7 @@
 
     if (active_point) {
         active_point = active_point[0].properties;
-        let actCodes = active_point.act_codes.split(',').map(code => code.trim());
+        let actCodes = active_point.activity_codes.split(',').map(code => code.trim());
 
         if (active_point.site_name_photo_01) {
             images.push({url: `https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/photos/${active_point.site_name_photo_01}`, description: 'image1'});
@@ -145,8 +145,8 @@
             </div>
         </div>
         <div class="park-details">
-            {#if active_point.address}
-                <p><span>Address:</span> {active_point.address}</p>
+            {#if active_point.site_address}
+                <p><span>Address:</span> {active_point.site_address}</p>
             {/if}
             {#if active_point.site_description}
             <p><span>Site description:</span> {active_point.site_description}</p>

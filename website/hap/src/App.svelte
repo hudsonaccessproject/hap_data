@@ -60,9 +60,15 @@
 	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240320.geojson";
 	// const polygon_url = "/hudsonaccessproject/assets/hap_site_polys_20240201.geojson";
 	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
-	const point_url = "/assets/hap_site_points_20240509.geojson"; 
-	const act_point_url = "/assets/hap_act_points_20240320.geojson";
-	const polygon_url = "/assets/hap_site_polys_20240201.geojson";
+
+	const point_url = "/assets/hap_site_points_20240531.geojson"; 
+	const act_point_url = "/assets/hap_act_points_20240531.geojson";
+	const polygon_url = "/assets/hap_site_poly_20240531.geojson";
+
+	// const point_url = "/assets/hap_site_points_20240509.geojson"; 
+	// const act_point_url = "/assets/hap_act_points_20240320.geojson";
+	// const polygon_url = "/assets/hap_site_polys_20240201.geojson";
+
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
@@ -412,7 +418,7 @@
 				<div id="amenity">
 					<CollapsibleSection isVisible={false} headerText={'Search by site amenity'} >
 						<div class="feature-filters r">
-							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch_YN"> 
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "boat_launch_yn"> 
 							<label class="t3" for="boat_launch_YN"> Boat launch</label><br>
 							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
 							<label class="t3" for="restrooms"> Restrooms</label><br>

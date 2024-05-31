@@ -68,7 +68,7 @@
         }else{
             // Only show the feature if the feature's activity code is included in one
             // of the existing activity filters
-            let actCodes = feature.properties.act_codes.split(',').map(code => code.trim());
+            let actCodes = feature.properties.activity_codes.split(',').map(code => code.trim());
             // console.log(actCodes);
             const isActive = filters.act_filters.some(el => actCodes.includes(el));
 
