@@ -5,29 +5,8 @@
     --orange3: #ffaa22;
     --blue: #3884CB;
     --green: #79BB43;
+    --doc-height: 100%;
 }
-
-/* .modal {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    z-index: 10000000;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-view {
-    visibility: visible;
-}
-
-.modal-hide {
-    visibility: hidden;
-} */
 
 .bold {
     font-weight: 700;
@@ -101,15 +80,13 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     font-family: "ff-tisa-sans-web-pro", sans-serif;
-    width: 100vw;
-    height: 100vh;
-    /* max-height: 100vh !important;
-    min-height: 100vh !important; */
+    /* min-height: -webkit-fill-available; */
+    width: 100%;
+    height: 100vh; /* old browsers */
+    height: 100dvh; /* new browsers */
     margin: 0;
     padding: 0;
-    /* display: flex;
-    flex-direction: row; */
-    /* background-color: red; */
+    position: fixed;
 }
 
 /* body {
@@ -207,31 +184,6 @@ img {
     padding-right: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    /* .info-panel { */
-        /* overflow-y: hidden;
-        max-width: unset; */
-        /* display: none;
-    } */
-    /* .info-panel {
-        position: absolute;
-        display: block;
-        overflow-y: scroll;
-        max-width: unset;
-        height: 50%;
-        width: 100vw;
-    } */
-}
-
-/* .info-panel {
-    display: none;
-}
-
-.info-panel.tester2 {
-    display: block;
-    flex:1;
-} */
-
 #holder {
     position: relative;
     padding: 0px 5px 5px 15px;
@@ -266,14 +218,6 @@ img {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
     padding-top: 0px;
-}
-
-.act-filters {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
-    /* padding-bottom: 15px;
-    padding-top: 0px; */
 }
 
 .act-logos {
@@ -392,16 +336,9 @@ input[type=text]:focus {
 
 @media (max-width: 767px) {
     .searcher {
-        /* padding-top: 0px !important;
-        padding-bottom: 0px !important; */
         min-height: 40px;
         padding: 0px 11px 0px 11px;
     }
-
-    /* #searcher { */
-        /* height: 40px; */
-        /* padding: 0px 11px 0px 11px; */
-    /* } */
 
 }
 
@@ -445,7 +382,7 @@ label.act-buttons img {
     opacity: 1;
 }
 
-.pressed#Working {
+/* .pressed#Working {
     background: #62A4D620;
 }
 
@@ -455,7 +392,7 @@ label.act-buttons img {
 
 .pressed#Completed {
     background: #93C15C20;
-}
+} */
 
 .act-buttons:hover {
     opacity: 1;
@@ -520,21 +457,6 @@ label {
 
 /* Media query for mobile devices */
 @media (max-width: 767px) {
-    
-    /* .act-filters {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        border-bottom: 1.5px solid rgba(225, 225, 225);
-    } */
-
-    /* .site-filters {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        border-bottom: 1.5px solid rgba(225, 225, 225);
-        padding-bottom: 10px;
-        padding-top: 0px;
-    } */
 
     .r {
         /* padding: 10px; */
@@ -545,14 +467,6 @@ label {
         width: 25px;
     }
 }
-
-/* Media query for mobile devices */
-/* @media (min-width: 1500px) {
-    .act-filters {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-} */
 
 
 h1 {
@@ -598,20 +512,6 @@ h1 {
     text-align: left;
 }
 
-/* input[type=text] {
-    width: 100%;
-    height: 30px;
-    border: none;
-    color: #333;
-    font-size: 14px;
-    font-weight: 700;
-    background-color: white;
-    /* background-image: url("https://raw.githubusercontent.com/PrattSAVI/RAM/main/img/icons/searchicon.png"); */
-    /* background-position: 257px 5px;
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-} */ 
-
 input[type=text]:focus {
     background-color: #e7e7e7;
     outline-width: 0;
@@ -646,10 +546,6 @@ input[type=text]:focus {
 }
 
 @media (max-width: 767px) {
-    /* .about-wide p {
-        padding-left: 15px;
-        padding-right: 15px;
-    }  */
 
     .about-wide .header-text {
         padding-left: 5px;

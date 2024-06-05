@@ -1,5 +1,5 @@
 <script>
-    import { count } from "./store.js";
+    import { count, arePanelsVisible } from "./store.js";
     import L from "leaflet";
 
     import { createEventDispatcher } from 'svelte';
@@ -22,6 +22,7 @@
             }
         });
         map.flyTo([40.73, -74.05], 10);
+        arePanelsVisible.set(true);
     },'Reset map');
     
     home.button.onclick = function(){

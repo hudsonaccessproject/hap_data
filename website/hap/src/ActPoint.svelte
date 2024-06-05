@@ -10,67 +10,67 @@
     });
     let d = 0;
 
-    let acts = [
-		{
-		value: "FISH",
-		name: "Fishing",
-		source: "/assets/icons/activities/fishing.svg",
-		activesource: "/assets/icons/activities/fishing_F77B00.svg",
-		desc: "You can fish here."
-		},
-		{
-		value: "SWIM",
-		name: "Swimming",
-		source: "/assets/icons/activities/swimming.svg",
-		activesource: "/assets/icons/activities/swimming_F77B00.svg",
-		desc: "You can swim here."
-		},
-		{
-		value: "HPBL",
-		name: "Human-powered boating",
-		source: "/assets/icons/activities/hp_boating.svg",
-		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-		desc: "You can kayak here."
-		},
-		{
-		value: "MPBL",
-		name: "Motor boating",
-		source: "/assets/icons/activities/mp_boating.svg",
-		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-		desc: "You can motor boat here."
-		}
-	];
-
     // let acts = [
 	// 	{
 	// 	value: "FISH",
 	// 	name: "Fishing",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	source: "/assets/icons/activities/fishing.svg",
+	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
 	// 	desc: "You can fish here."
 	// 	},
 	// 	{
 	// 	value: "SWIM",
 	// 	name: "Swimming",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	source: "/assets/icons/activities/swimming.svg",
+	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
 	// 	desc: "You can swim here."
 	// 	},
 	// 	{
 	// 	value: "HPBL",
 	// 	name: "Human-powered boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/hp_boating.svg",
+	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 	// 	desc: "You can kayak here."
 	// 	},
 	// 	{
 	// 	value: "MPBL",
 	// 	name: "Motor boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/mp_boating.svg",
+	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 	// 	desc: "You can motor boat here."
 	// 	}
 	// ];
+
+    let acts = [
+		{
+		value: "FISH",
+		name: "Fishing",
+		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		desc: "You can fish here."
+		},
+		{
+		value: "SWIM",
+		name: "Swimming",
+		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		desc: "You can swim here."
+		},
+		{
+		value: "HPBL",
+		name: "Human-powered boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		desc: "You can kayak here."
+		},
+		{
+		value: "MPBL",
+		name: "Motor boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		desc: "You can motor boat here."
+		}
+	];
 
     export let act_geojson;
     // export let activePage;
@@ -165,7 +165,7 @@
         if (matchingAct) {
             var popupContent = `
                 <span class="Retired-popup-text">
-                    ${feature.properties.site_name}
+                    ${feature.properties.activity_site_name}
                 </span>`;
             layer.bindPopup(popupContent);
             layer.on({
@@ -196,6 +196,7 @@
 
         // Get the site ID of the clicked point
         var clickedSiteId = e.target.feature.properties.site_id;
+        console.log(clickedSiteId);
         arePanelsVisible.set(false);
 
         // Iterate over each layer and update the style if it is in the clciked site
@@ -211,6 +212,8 @@
         var clickedPoint = act_geojson.filter(function (d) {
             return d.properties.site_id == clickedSiteId;
         });
+
+        console.log(clickedPoint);
 
         dispatch('message', {
             active: clickedPoint
