@@ -34,7 +34,6 @@
     function expander() {
         let holder = document.getElementById('holder');
         holder.classList.toggle('hidden');
-        //plusInnerHTML = holder.classList.contains('hidden') ? "+" : "x";
         plusInnerHTML = holder.classList.contains('hidden') ? openSVG : closeSVG;
     }
 
@@ -45,10 +44,6 @@
     onMount(() => {
         checkScreenWidth();
     	window.addEventListener("resize", checkScreenWidth);
-
-        // use this to hide the list on mobile
-        // holderClass = isMobile ? "hidden" : "";
-        // plusInnerHTML = holderClass === "hidden" ? "+" : "x";
         plusInnerHTML = holderClass === "hidden" ? openSVG : closeSVG;
     });
 
@@ -175,21 +170,8 @@
         map.flyTo( L.geoJson(clicked_list).getBounds().getCenter() , 15, {
             animate: true,
             duration: 1
-        }); // Zoom to point
+        }); 
     }
-
-
-    // function expander(){
-    //     let holder = document.getElementById('holder');
-    //     holder.hidden = !holder.hidden;
-
-    //     let plus = document.getElementById('collapse-nav-button');
-    //     if (plus.innerHTML == "+"){
-    //         plus.innerHTML = "&#8722;"
-    //     }else{
-    //         plus.innerHTML = "+"
-    //     }       
-    // }
 
     // scroll to after loading.
     afterUpdate(() => {

@@ -56,15 +56,15 @@
 		previous: []
 	};
 
-	const point_url = "/hudsonaccessproject/assets/hap_site_points_20240531.geojson";
-	const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240605.geojson";
-	const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240605.geojson";
-	const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
+	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240531.geojson";
+	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240605.geojson";
+	// const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240605.geojson";
+	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
 
-	// const point_url = "/assets/hap_site_points_20240531.geojson"; 
-	// const act_point_url = "/assets/hap_act_points_20240605.geojson";
-	// const polygon_url = "/assets/hap_site_poly_20240605.geojson";
-	// const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
+	const point_url = "/assets/hap_site_points_20240531.geojson"; 
+	const act_point_url = "/assets/hap_act_points_20240605.geojson";
+	const polygon_url = "/assets/hap_site_poly_20240605.geojson";
+	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
 
@@ -186,68 +186,82 @@
 	// 	previous:[]
 	// };
 
-	//Use these for creating buttons and hover pop up
-	// let acts = [
-	// 	{
-	// 	value: "FISH",
-	// 	name: "Fishing",
-	// 	source: "/assets/icons/activities/fishing.svg",
-	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
-	// 	desc: "You can fish here."
-	// 	},
-	// 	{
-	// 	value: "SWIM",
-	// 	name: "Swimming",
-	// 	source: "/assets/icons/activities/swimming.svg",
-	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
-	// 	desc: "You can swim here."
-	// 	},
-	// 	{
-	// 	value: "HPBL",
-	// 	name: "Human-powered boating",
-	// 	source: "/assets/icons/activities/hp_boating.svg",
-	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-	// 	desc: "You can kayak here."
-	// 	},
-	// 	{
-	// 	value: "MPBL",
-	// 	name: "Motor boating",
-	// 	source: "/assets/icons/activities/mp_boating.svg",
-	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-	// 	desc: "You can motor boat here."
-	// 	}
-	// ];
-
-    let acts = [
+	// Use these for creating buttons and hover pop up
+	let acts = [
 		{
 		value: "FISH",
 		name: "Fishing",
-		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		source: "/assets/icons/activities/fishing.svg",
+		activesource: "/assets/icons/activities/fishing_F77B00.svg",
 		desc: "You can fish here."
 		},
 		{
 		value: "SWIM",
 		name: "Swimming",
-		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		source: "/assets/icons/activities/swimming.svg",
+		activesource: "/assets/icons/activities/swimming_F77B00.svg",
 		desc: "You can swim here."
 		},
 		{
 		value: "HPBL",
 		name: "Human-powered boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		source: "/assets/icons/activities/hp_boating.svg",
+		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 		desc: "You can kayak here."
 		},
 		{
 		value: "MPBL",
 		name: "Motor boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		source: "/assets/icons/activities/mp_boating.svg",
+		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 		desc: "You can motor boat here."
+		},
+		{
+		value: "CSEE",
+		name: "Community engagement",
+		source: "/assets/icons/activities/csee.svg",
+		activesource: "/assets/icons/activities/csee.svg",
+		desc: "Sites with community engagement and community science opportunities."
 		}
 	];
+
+    // let acts = [
+	// 	{
+	// 	value: "FISH",
+	// 	name: "Fishing",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	desc: "You can fish here."
+	// 	},
+	// 	{
+	// 	value: "SWIM",
+	// 	name: "Swimming",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	desc: "You can swim here."
+	// 	},
+	// 	{
+	// 	value: "HPBL",
+	// 	name: "Human-powered boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	desc: "You can kayak here."
+	// 	},
+	// 	{
+	// 	value: "MPBL",
+	// 	name: "Motor boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	desc: "You can motor boat here."
+	// 	},
+		// {
+		// value: "CSEE",
+		// name: "Community engagement",
+		// source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
+		// activesource: "/hudsonaccessproject/assets/icons/activities/csee.svg",
+		// desc: "Sites with community engagement and community science opportunities."
+		// }
+	// ];
 
 	function getNextHighTide(tides) {
 		const currentTime = new Date();
@@ -429,6 +443,8 @@
 							<label class="t3" for="food"> Food on site</label><br>
 							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "parking">
 							<label class="t3" for="parking"> Parking</label><br>
+							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "program_yn">
+							<label class="t3" for="program_yn"> Programming</label><br>
 							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "restrooms">
 							<label class="t3" for="restrooms"> Restrooms</label><br>
 							<input type="checkbox" on:click={e=>{clickHandleSiteFeatures(e)}} value = "walking_trails"> 
@@ -484,7 +500,7 @@
 					<Polygon active_data={active_data}/>
 					{/key}
 					{#key filters}
-					<GeoPoint geojson={all_point_data}  {filters} on:message={handleMessage} />
+					<GeoPoint geojson={all_point_data}  {filters} on:message={handlePlaceMessage} />
 					{/key}
 					{#key filters}
 					<ActPoint act_geojson={act_point_data}  on:message={handleMessage}  />

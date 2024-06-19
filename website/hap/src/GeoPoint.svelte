@@ -169,7 +169,6 @@
     function activePoint(e){
         map.flyTo(e.latlng, 15)
         arePanelsVisible.set(false);
-        // e.target.setStyle({ fillColor: '#FDAA23', radius: 7,  weight: 3});  
         let clicked_point = geojson.filter( function(d){
             return d.properties.site_id == e.target.feature.properties.site_id
         }) 
