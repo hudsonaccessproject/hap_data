@@ -281,7 +281,7 @@
 
 	// write a function to toggle the isActive property of the act object with value = 'FISH'
 	function filterPollution() {
-		filters.act_filters = ['SWIM', 'HPBL'];
+		filters.act_filters = ['SWIM', 'HPBL', 'MPBL', 'CSEE', 'FISH'];
 		// I am using the existing featre filters and treating the cso and ms4 columns as features.  If the site va
 		filters.feature_filters = ['near_cso'];
 	}
