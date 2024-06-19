@@ -39,12 +39,7 @@
 	let active_point;
 	let stage;
 	let showTooltip = false;
-	// defines whether the infopanel is visible or not
-	// let arePanelsVisible = true;
-
-	// arePanelsVisible.subscribe((value) => {
-	// 	console.log(active_point);
-	// });
+	let safeAreaBottom; // defines whether there is a address bar at the bottom
 
 	const emptyFilters = {
 		act_filters: [],
@@ -139,6 +134,10 @@
 
 	
 	onMount(async () => {
+
+		const body = document.body;
+		safeAreaBottom = window.innerHeight - document.documentElement.clientHeight;
+		body.style.paddingBottom = safeAreaBottom + 'px';
 
 		const res = await fetch( point_url );
 		point_data = await res.json();
@@ -484,8 +483,8 @@
 						<span class="caution">CAUTION!</span><br>
 						<span class="bold">The water can be much colder than the air!<br>Unexpected immersion in cold water can be dangerous. Be careful in spring and early summer; always wear a flotation 
 							device when boating and check temperatures before swimming.
-						</span><br><br>
-						<span>Temperature and Tide information  are updated continuously from <a href="https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1407#listing" target="_blank">NOAA water monitoring station</a> in 
+						</span><br>
+						<span>Temperature and Tide information  are updated continuously from a <a href="https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1407#listing" target="_blank">NOAA water monitoring station</a> in 
 							lower Manhattan at the Battery. Learn more and access stations in other 
 							locations on the Water Safety page. </span>
 					</div> 
@@ -571,7 +570,8 @@
 		right: 11px;
 		/* transform: translateX(-50%); */
 		background-color: #fff;
-		padding: 5px;
+		padding: 10px;
+		line-height: 1.4em;
 		border-radius: 5px;
 		/* font-size: 0.8em; */
 		/* display: none; */
@@ -584,6 +584,7 @@
 		color: var(--orange2);
 		font-size: 1.2em;
 		font-weight: 700;
+		/* line-height: 1.4em; */
 	}
 
 
@@ -636,7 +637,7 @@
 		}
 
 		.map-only-pane .water-temp {
-			bottom: 61px;
+			bottom: 41px;
 			font-size: 14px;
 		}
 

@@ -49,7 +49,7 @@
         // </div>`;
         
         var popupContent = `
-        <span class="Retired-popup-text">
+        <span class="popup-content">
             ${feature.properties.site_name}
         </span>`;
         layer.bindPopup(popupContent);

@@ -178,7 +178,7 @@
 
         if (matchingAct) {
             var popupContent = `
-                <span class="Retired-popup-text">
+                <span class="popup-content">
                     ${feature.properties.activity_site_name}
                 </span>`;
             layer.bindPopup(popupContent);
@@ -188,18 +188,6 @@
                 mouseout: e => { layer.closePopup() }
             });
         }
-
-        // var popupContent = `
-        //     <span class="Retired-popup-text">
-        //         ${feature.properties.site_name}
-        //     </span>`;
-        //     layer.bindPopup(popupContent);
-        //     layer.on({
-        //         click:activePoint,
-        //         mouseover: e => {layer.openPopup()},
-        //         mouseout: e => {layer.closePopup()}
-
-        // })
     };
 
     

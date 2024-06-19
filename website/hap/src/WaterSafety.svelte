@@ -27,12 +27,20 @@
         </p>
     </CollapsibleSection>
     <CollapsibleSection isVisible={false} headerText={'Boating safety and regulations'} >
-        <p class="t4 ws">See the resources below for locally produced safety guides for human powered boating in the Hudson estuary region. 
+        <p class="t4 ws">Permits are required for kayaks and Canoes in New York City Parks: Find forms and boat safety regulation information at <a href="https://www.nycgovparks.org/pagefiles/127/Kayak-Canoe-Boat-Launch-Permit__5ade12c252c6c.pdf" target="_blank">this link</a>. Submitted by mail or in person.
+        </p>
+        <p class="t4 ws"><a href="https://parks.ny.gov/boating/registrations.aspx" target="_blank">Register a motor boat in NY</a>.
+        </p>
+        <p class="t4 ws"><a href="https://www.takemefishing.org/new-jersey/boating/boat-registration/" target="_blank">Register a motor boat in NJ</a>.
+        </p>
+        <p class="t4 ws">See the resources below for local safety guides for human powered boating. 
         </p>
         <p class="t4 ws"> <a href="https://www.graemebirchall.com/kayakers-guide" target="_blank">Kayaking guide: </a>This comprehensive resource covers 
             everything from commercial boat traffic, tidal information to boat wrecks in the area. Graeme Birchall of the Downtown Boathouse updates this annually. 
         </p>
         <p class="t4 ws"><a href="https://www.thesafeharbor.us/" target="_blank">Float plans and safety regulation</a>
+        </p>
+        <p class="t4 ws"><a href="https://nycwatertrail.org/harbor-safety-trip-planning/" target="_blank">Harbor Safety & Trip Planning, NYC Water Trail</a>
         </p>
         <p class="t4 ws"><a href="https://hudsonrivergreenwaywatertrail.org/info-safety" target="_blank">Hudson River Greenway Watertrail Safety Guide </a>
         </p>
@@ -49,23 +57,13 @@
         </p>
     </CollapsibleSection>
     <CollapsibleSection isVisible={false} headerText={'Fishing Regulations and advisories'} >
-        <!-- <p class="t4 ws"> 
-            <a href="https://www.riverkeeper.org/water-quality/citizen-data/" target="_blank">Riverkeeper: Citizen Water Quality Monitoring Data</a>
+        <p class="t4 ws">Fishing permits and parking passes are required for some Gateway National Recreation Areas: </p>
+        <p class="t4 ws2"> 
+            <a href="https://www.nps.gov/gate/2024-permits.htm" target="_blank">National Park Service</a>
         </p>
-        <p class="t4 ws"> 
-            <a href="https://www.nyc.gov/site/dep/water/waterbody-advisories.page" target="_blank">Waterbody Advisory Page</a>
-        </p> -->
-        <!-- <p class="t4 ws"> 
-            <a href="https://hudsonrivergreenwaywatertrail.org/info-safety" target="_blank">Hudson River Greenway</a>
+        <p class="t4 ws2"> 
+            <a href="https://nycwatertrail.org/harbor-safety-trip-planning/" target="_blank">NYC Water Trail</a>
         </p>
-        <p class="t4 ws"> 
-            <a href="https://www.njcleanwaterways.com/public-notification" target="_blank">New Jersey CSO notification system information </a>and 
-            <a href="https://njcso.hdrgateway.com" target="_blank"> map</a>
-        </p> -->
-        <!-- <p class="t4 ws"> 
-            <a href="https://www.nhudsonsa.com/waterbody-advisor-system" target="_blank">North Hudson Sewerage Authority information </a>and 
-            <a href="https://www.nhudsonsa.com/waterbody-advisor-system" target="_blank"> map</a>
-        </p> -->
         <p class="t4 ws"> 
             <a href="https://www.dec.ny.gov/outdoor/7894.html" target="_blank">NY State fishing regulations</a>
         </p>
