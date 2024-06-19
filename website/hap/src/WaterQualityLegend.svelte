@@ -5,71 +5,33 @@
 </script>
 <!-- map legend div with title and several rows with a styled circle or suqare and a label -->
 <div class="legend">
-    <h3 class="legend-title">Boat Launches and Swimming Beaches</h3>
-    <div class="legend-row sub">
-        <div class="legend-symbol">
-            <div class="legend-small-circle" style="background-color: #000000;"></div>
-        </div>
-        <div class="legend-label header">Human powered boat launches or swim beach</div>
-    </div>
-    <div class="legend-row">
-        <div class="legend-symbol">
-            <div class="legend-small-circle" style="background-color: #FFAA22;"></div>
-        </div>
-        <div class="legend-label">within half mile of an outfall</div>
-    </div>
-    <!-- <div class="legend-row">
-        <div class="legend-symbol">
-            <div class="legend-circle" style="background-color: #FFD474;"></div>
-        </div>
-        <div class="legend-label">within half mile of MS4</div>
-    </div>
-    <div class="legend-row sub">
-        <div class="legend-symbol">
-            <div class="legend-square" style="background-color: #91D57D;"></div>
-        </div>
-        <div class="legend-label header">Swimming Beaches</div>
-    </div>
-    <div class="legend-row">
-        <div class="legend-symbol">
-            <div class="legend-square" style="background-color: #FFD474;"></div>
-        </div>
-        <div class="legend-label">within half mile of MS4</div>
-    </div> -->
-    <h3 class="legend-subtitle">Pollution Sources: Outfalls</h3>
-    <!-- <div class="legend-row sub">
-        <div class="legend-label header">Pollution Sources: Outfalls</div>
-    </div> -->
-    <div class="legend-row sub">
-        <div class="legend-symbol">
-            <div class="legend-small-circle" style="background-color: #C4C3C3; border: 1px solid #C4C3C3;"></div>
-        </div>
-        <div class="legend-label header">Combined Sewer Outflows (CSOs)</div>
-    </div>
+    <h3 class="legend-title">Pollution Sources Near Water Recreation Sites</h3>
+    <div class="legend-label">Combined Sewer Outflows (CSOs)</div>
     <div class="legend-row">
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: transparent; border: 1.5px solid #FFAA22;"></div>
         </div>
-        <div class="legend-label">within half mile of a boat launch or swimming beach</div>
-    </div>
-    <!-- <div class="legend-row sub">
-        <div class="legend-symbol">
-            <div class="legend-small-circle" style="background-color: #C4C3C3; border: 1px solid #C4C3C3;"></div>
-        </div>
-        <div class="legend-label header">Municipal Separate Storm Sewer Systems (MS4)</div>
+        <div class="legend-label">CSO within half mile of a site</div>
     </div>
     <div class="legend-row">
         <div class="legend-symbol">
-            <div class="legend-small-circle" style="background-color: transparent; border: 1px solid #FFAA22;"></div>
+            <div class="legend-small-circle" style="background-color: #C4C3C3; border: 1px solid #C4C3C3;"></div>
         </div>
-        <div class="legend-label">within half mile of a boat launch or swimming beach</div>
-    </div> -->
-    <!-- <div class="legend-row">
+        <div class="legend-label">CSO</div>
+    </div>
+    <div class="legend-title">Water Access Site</div>
+    <div class="legend-row">
         <div class="legend-symbol">
-            <div class="legend-small-circle" style="background-color: #FFAA22; border: 1px solid #FFAA22;"></div>
+            <div class="legend-small-circle" style="background-color: #FFAA22;"></div>
         </div>
-        <div class="legend-label">within half mile of swimming beaches</div>
-    </div> -->
+        <div class="legend-label">Within 1/2 mile of a CSO</div>
+    </div>
+    <div class="legend-row">
+        <div class="legend-symbol">
+            <div class="legend-small-circle" style="background-color: #000000;"></div>
+        </div>
+        <div class="legend-label">Outside 1/2 mile range of CSO</div>
+    </div>
     <div class="legend-collapsible">
         <h3>
             <button aria-expanded={expanded} on:click={() => expanded = !expanded} class="button-container">
@@ -144,8 +106,8 @@
     .legend-subtitle {
         color: #707070;
         margin: 5px 0 5px 0;
-        font-size: 16px;
-        font-weight: 700;
+        font-size: 14px;
+        font-weight: 400;
         line-height: 1.25;
     }
 
