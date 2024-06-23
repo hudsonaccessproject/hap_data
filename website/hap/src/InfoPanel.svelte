@@ -204,6 +204,9 @@
             {#if active_point.safety}
             <p><span>Safety considerations:</span> {active_point.safety}</p>
             {/if}
+            {#if active_point.station_name}
+            <p><span>Closest tide gauge:</span> <a href="{active_point.tide_url}" target="_blank">{active_point.station_name}</a></p>
+            {/if}
             {#if active_point.use_limits}
                 <p><span>Use limits:</span> {active_point.use_limits}</p>
             {/if}
