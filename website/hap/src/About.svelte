@@ -25,47 +25,45 @@
             and fishing; with a focus on activities that bring people into direct contact with the water. The project 
             is ongoing and we welcome information and feedback. Please put the tool to use so you can test it and 
             help us improve it. -->
-            <p class="t4 ws">The website you are using was created by a small team at Pratt Institute with collaborative 
-                support from the NY-NJ Harbor & Estuary Program.  The project is funded by a River Access Grant awarded 
-                by the New York State Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program has 
-                facilitated a relationship with the Public Access Working Group which has provided valuable insight into 
-                issues around public access, water safety and data. Additional funding was awarded to the project in 2023 
-                by the Pratt Center Taconic Fellowship. 
+            <p class="t4 ws">The Hudson Access Project was created by a small team at Pratt Institute led by Sara Eichner and Sara Hodges with collaborative support from the NY-NJ Harbor & Estuary Program. 
+                It is hosted at Pratt Institute’s Recover Adapt Mitigate Plan (RAMP) program in the Graduate Center for Planning and the Environment and funded by a River Access Grant awarded by the New York State Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program has facilitated a relationship with the Public Access Working Group which has provided valuable insight into issues around public access, water safety and data. Additional funding was awarded to the project in 2023 by the Pratt Center Taconic Fellowship.
             </p>
-            <p class="t4 ws"> 
-                <a href="https://twitter.com/hudson_access/" target="_blank">Twitter</a>
+            <p class="t4 ws top"> 
+                Current Graduate Assistants:
             </p>
-            <p class="t4 ws"> 
-                <a href="https://www.instagram.com/hudson_access/" target="_blank">Instagram</a>
+            <p class="t4 ws2"> 
+                Nicholas Conklin
             </p>
-            <p class="t4 ws"> 
+            <p class="t4 ws2">
+                Shahadat Hossain
+            </p>
+            <p class="t4 ws top"> 
+               Former Team and Collaborators:
+            </p>
+            <p class="t4 ws2"> 
+                Pratt Institute’s Spatial Analysis and Visualization Initiative
+            </p>
+            <p class="t4 ws2">
+                Can Sucuoglu
+            </p>
+            <p class="t4 ws2">
+                Alyssa Bement
+            </p>
+            <p class="t4 ws top"> 
+                Follow us:
+             </p>
+            <p class="t4 ws2">
+                <a href="https://www.instagram.com/hudson_access/" target="_blank">
+                    <img src="hudsonaccessproject/assets/icons/social/instagram.svg" alt="Instagram" class="insta"/>
+                </a>
+                <a href="https://twitter.com/hudson_access/" target="_blank">
+                    <img src="hudsonaccessproject/assets/icons/social/x-logo-black.png" alt="X" class="twit"/>
+                </a>
+            </p>
+            <p class="t4 ws2"> 
                 Email: hudsonaccessproject@gmail.com
             </p>
-            <!-- <p class="t4 ws">
-                The website you are using is a beta version. It was created by a small team at the Pratt Spatial Analysis and 
-                Visualization Initiative over the last 1.5 years as part of a River Access Grant awarded by the New York State 
-                Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program was a collaborator on this effort 
-                and facilitated the important support and advisory role that  their Public Access Working Group was able to provide.  
-            </p>
-            <p class="t4 ws">
-                Data collection and field research will be conducted for 10 weeks this summer to improve the information you 
-                see here.  We will integrate new data into the site periodically throughout the summer. Please follow us on 
-                Instagram or twitter to find out when updates occur. And send us an email if you want to learn more or access 
-                the dataset as a resource for research about public access.  
-            </p> -->
-        <!-- </div> -->
     </CollapsibleSection>
-    <!-- <CollapsibleSection isVisible={false} headerText={'Contact Us'} >
-        <p class="t4 ws"> 
-            <a href="https://twitter.com/hudson_access/" target="_blank">Twitter</a>
-        </p>
-        <p class="t4 ws"> 
-            <a href="https://www.instagram.com/hudson_access/" target="_blank">Instagram</a>
-        </p>
-        <p class="t4 ws"> 
-            Email: hudsonaccessproject@gmail.com
-        </p>
-    </CollapsibleSection> -->
     <CollapsibleSection isVisible={false} headerText={'Thank you'} >
         <p class="t4 ws">Supported by HEP, HRF and public access working group (PAWG)
         </p>
@@ -77,9 +75,9 @@
             <li class="t4 ws"><a href="https://bronxriver.org/wp-content/uploads/2021/05/Get-Moving-on-the-Bronx-River-2016-Activity-Guide1.pdf
                 " target="_blank">Bronx River Alliance Greenway Guide</a></li>
         </ul>
-        <p class="t4 ws">The Hudson Access Project was created by Sara Eichner, Sara Hodges and Pratt Institute graduate assistant, Alyssa Bement. 
+        <!-- <p class="t4 ws">The Hudson Access Project was created by Sara Eichner, Sara Hodges and Pratt Institute graduate assistant, Alyssa Bement. 
             We can all be reached at: hudsonaccessproject@gmail.com
-        </p>
+        </p> -->
     </CollapsibleSection>
 <!-- </div> -->
 

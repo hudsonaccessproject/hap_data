@@ -590,3 +590,17 @@ div.leaflet-popup-content {
         font-size: 14px;
     }
 }
+
+.insta {
+    width: 24px;
+}
+
+.twit {
+    padding-left: 5px;
+    margin-bottom: 1px;
+    width: 20px;
+}
+
+.top {
+    margin-top: 10px;
+}
