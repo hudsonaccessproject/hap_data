@@ -31,7 +31,7 @@
 		desc:"You can kayak here."},
 		{value:"MPBL",name:"Motor boating" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/mp_boating.svg" ,
 		desc:"You can motor boat here."},
-		{value: "CSEE", name: "Community engagement", source: "/assets/icons/activities/csee.svg", activesource: "/assets/icons/activities/csee.svg",
+		{value: "CSEE", name: "Community engagement", source: "/assets/icons/activities/csee.svg",
 		desc: "Sites with community engagement and community science opportunities."}
 	]
 
@@ -64,7 +64,6 @@
 	// 	value: "CSEE",
 	// 	name: "Community engagement",
 	// 	source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
-	// 	activesource: "/hudsonaccessproject/assets/icons/activities/csee.svg",
 	// 	desc: "Sites with community engagement and community science opportunities."
 	// 	}
 	// ];

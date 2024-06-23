@@ -39,7 +39,8 @@
 	let active_point;
 	let stage;
 	let showTooltip = false;
-	let safeAreaBottom; // defines whether there is a address bar at the bottom
+	// defines whether there is a address bar at the bottom
+	// let safeAreaBottom; 
 
 	const emptyFilters = {
 		act_filters: [],
@@ -51,12 +52,12 @@
 		previous: []
 	};
 
-	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240531.geojson";
-	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240605.geojson";
-	// const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240605.geojson";
+	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240619.geojson";
+	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240619.geojson";
+	// const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240619.geojson";
 	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
 
-	const point_url = "/assets/hap_site_points_20240619.geojson"; 
+	const point_url = "/assets/hap_site_points_20240623.geojson"; 
 	const act_point_url = "/assets/hap_act_points_20240619.geojson";
 	const polygon_url = "/assets/hap_site_poly_20240619.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
@@ -135,9 +136,9 @@
 	
 	onMount(async () => {
 
-		const body = document.body;
-		safeAreaBottom = window.innerHeight - document.documentElement.clientHeight;
-		body.style.paddingBottom = safeAreaBottom + 'px';
+		// const body = document.body;
+		// safeAreaBottom = window.innerHeight - document.documentElement.clientHeight;
+		// body.style.paddingBottom = safeAreaBottom + 'px';
 
 		const res = await fetch( point_url );
 		point_data = await res.json();
@@ -219,7 +220,7 @@
 		value: "CSEE",
 		name: "Community engagement",
 		source: "/assets/icons/activities/csee.svg",
-		activesource: "/assets/icons/activities/csee.svg",
+		activesource: "/assets/icons/activities/csee_F77B00.svg",
 		desc: "Sites with community engagement and community science opportunities."
 		}
 	];
@@ -253,13 +254,13 @@
 	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
 	// 	desc: "You can motor boat here."
 	// 	},
-		// {
-		// value: "CSEE",
-		// name: "Community engagement",
-		// source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
-		// activesource: "/hudsonaccessproject/assets/icons/activities/csee.svg",
-		// desc: "Sites with community engagement and community science opportunities."
-		// }
+	// 	{
+	// 	value: "CSEE",
+	// 	name: "Community engagement",
+	// 	source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
+	// 	activesource: "/hudsonaccessproject/assets/icons/activities/csee_F77B00.svg",
+	// 	desc: "Sites with community engagement and community science opportunities."
+	// 	}
 	// ];
 
 	function getNextHighTide(tides) {
@@ -533,7 +534,7 @@
 		left: 0px;
 		z-index: 0;
 		width: 100vw;
-		height: calc(100vh - 65px);
+		height: calc(100dvh - 65px);
 		padding: 0px;
 		display: flex;
   		/* flex-direction: row; */
@@ -594,7 +595,7 @@
 		flex-direction: column;
 		border-left: solid 2px rgb(225, 225, 225);
 		box-sizing: border-box;
-		height:calc(100vh - 62px);
+		height:calc(100dvh - 62px);
 		z-index: 10001;
 		order: 2;
 	} 
@@ -623,7 +624,7 @@
 			flex-direction: column;
 			width: 100vw;
 			top: 75px;
-			height: calc(100vh - 75px);
+			height: calc(100dvh - 75px);
 			/* top: 0px;
 			height: 100vh; */
 			order: unset; 
@@ -646,7 +647,7 @@
 			height: auto;
 			order: 1;
 			border: none;
-			max-height: 50vh;
+			max-height: 50dvh;
 			/* max-height: calc(50vh - 75px); */
 			/* min-height: 110px; */
 			flex-grow: 1;

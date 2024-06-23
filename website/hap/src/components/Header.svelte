@@ -13,7 +13,7 @@
     
   <header>
     <div class="header-content">
-      <div class="col large-col">
+      <div class="large-col">
         <div class="title" on:click={refreshPage} on:keydown={refreshPage}>
           <span title="Covering sites where you can access the Hudson River Estuary South of the Mario Cuomo Bridge, Hudson tributaries, and the waters of the NY-NJ Harbor area.">Hudson Access Project</span> 
           <!-- <span class="beta">beta</span> -->
@@ -101,6 +101,11 @@
 
   .large-col {
     flex-basis: 40%;
+    justify-content: left;
+    border-right: solid 2px rgb(225, 225, 225);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
   }
 
   .title {
@@ -143,11 +148,11 @@
     font-weight: 600;
   }
 
-  .beta {
+  /* .beta {
     font-size: 1em;
     color: var(--orange2);
     font-style: italic;
-  }
+  } */
 
   .other-pages {
     flex-basis: 60%;
@@ -165,7 +170,7 @@
     z-index: 100002;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1400px) {
     .column-content {
       font-size: 20px;
       padding-left: 1px;
@@ -229,7 +234,7 @@
     }
 
     .title, .column-content{
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .header-content {
@@ -250,6 +255,10 @@
     
     .large-col {
       flex-basis: 100%;
+      justify-content: center;
+      border-right: solid 2px rgb(225, 225, 225);
+      display: flex;
+      align-items: center;
     }
 
     .mobile-about-button {

@@ -29,7 +29,7 @@
 </div>
 
 <style>
-    .legend {
+    /* .legend {
         position: absolute;
         top: 10px;
         left: 55px;
@@ -38,20 +38,18 @@
         padding: 10px;
         border-radius: 5px;
         border: solid 2px rgb(204, 204, 204);
-        /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.65); */
         font-size: 12px;
         line-height: 18px;
         max-width: 310px;
         max-height: calc(100vh - 115px);
         overflow-y: scroll;
         color: #707070;
-    }
-    /* Media query for mobile devices */   
+    } */
     @media (max-width: 767px) {
-        .legend {
+        /* .legend {
             top: auto;
             margin-top: 10px;
-        }
+        } */
 
         .header {
             display: none;

@@ -43,7 +43,7 @@
 		value: "CSEE",
 		name: "Community engagement",
 		source: "/assets/icons/activities/csee.svg",
-		activesource: "/assets/icons/activities/csee.svg",
+		activesource: "/assets/icons/activities/csee_F77B00.svg",
 		desc: "Sites with community engagement and community science opportunities."
 		}
 	];
@@ -81,7 +81,7 @@
 	// 	value: "CSEE",
 	// 	name: "Community engagement",
 	// 	source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
-	// 	activesource: "/hudsonaccessproject/assets/icons/activities/csee.svg",
+	// 	activesource: "/hudsonaccessproject/assets/icons/activities/csee_F77B00.svg",
 	// 	desc: "Sites with community engagement and community science opportunities."
 	// 	}
 	// ];
@@ -160,15 +160,6 @@
                 }),
             };
         }
-        // return {
-        // fillColor: "#ffaa22",
-        // color: "ffaa22",
-        // opacity: 0,
-        // radius: 12,
-        // // radius: getRadiusByFilter(feature.properties.remain),
-        // weight: 2,
-        // fillOpacity: 0
-        // }
     }
 
     function onEachFeature(feature, layer) {
@@ -201,14 +192,6 @@
         console.log(clickedSiteId);
         arePanelsVisible.set(false);
 
-        // Iterate over each layer and update the style if it is in the clciked site
-        // layer.eachLayer(function (layer) {
-        //     if (layer.feature.properties.site_id === clickedSiteId) {
-        //     layer.setStyle({ fillOpacity: 0.7 }); // Change the opacity for matching points
-        //     } else {
-        //     layer.setStyle({ fillOpacity: 0 }); // Change the opacity for non-matching points
-        //     }
-        // });
 
         // Filter the active point based on site ID
         var clickedPoint = act_geojson.filter(function (d) {
@@ -221,15 +204,6 @@
             active: clickedPoint
         });
     }
-
-
-    // const layer = L.geoJSON(act_geojson,{
-    //     pointToLayer: createCircles,
-    //     onEachFeature: onEachFeature,
-    //     style:style,
-    //     minZoom: 13,
-    //     maxZoom: 18
-    // }).addTo(map);
 
 
 </script>

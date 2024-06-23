@@ -11,15 +11,15 @@
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: transparent; border: 1.5px solid #FFAA22;"></div>
         </div>
-        <div class="legend-label">CSO within half mile of a site</div>
+        <div class="legend-label">Within 1/2 mile of a site</div>
     </div>
     <div class="legend-row">
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: #C4C3C3; border: 1px solid #C4C3C3;"></div>
         </div>
-        <div class="legend-label">CSO</div>
+        <div class="legend-label">Outside 1/2 mile range of a site</div>
     </div>
-    <div class="legend-title">Water Access Site</div>
+    <div class="legend-label">Water Access Site</div>
     <div class="legend-row">
         <div class="legend-symbol">
             <div class="legend-small-circle" style="background-color: #FFAA22;"></div>
@@ -59,7 +59,7 @@
 </div>
 
 <style>
-    .legend {
+    /* .legend {
         position: absolute;
         top: 10px;
         left: 55px;
@@ -68,20 +68,22 @@
         padding: 10px;
         border-radius: 5px;
         border: solid 2px rgb(204, 204, 204);
-        /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.65); */
         font-size: 12px;
         line-height: 18px;
         max-width: 310px;
         max-height: calc(100vh - 115px);
         overflow-y: scroll;
         color: #707070;
-    }
-    /* Media query for mobile devices */
+    } */
+
     @media (max-width: 767px) {
-        .legend {
+        .legend-collapsible {
+            display: none;
+        }
+        /* .legend {
             top: auto;
             margin-top: 5px;
-        }
+        } */
     }
 
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -103,13 +105,13 @@
         line-height: 1.25;
     }
 
-    .legend-subtitle {
+    /* .legend-subtitle {
         color: #707070;
         margin: 5px 0 5px 0;
         font-size: 14px;
         font-weight: 400;
         line-height: 1.25;
-    }
+    } */
 
     .legend-row {
         display: flex;
@@ -148,10 +150,6 @@
 
     .header {
         font-weight: 700;
-    }
-
-    .sub {
-        margin-top: 6px;
     }
 
     .button-container {
