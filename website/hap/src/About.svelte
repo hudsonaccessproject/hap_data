@@ -13,12 +13,12 @@
             facilities, regulations, and more.  
         </p>
         <p class="t4 ws">Want to find sites with fishing, running water and bathrooms?</p>
-        <ul>
+        <ul class="t4">
             <li>Click on the FISH icon in the activity filter (it will turn orange when selected)</li>
             <li>Click "Search by amenity" to expand the list and select "Restroom" and "Drinkable / running water" in the amenity filter</li>
         </ul>
         <p class="t4 ws">Want to find sites with programming to try out kayaking?  </p>
-        <ul>
+        <ul class="t4">
             <li>Click on the “Human-Powered Boating” icon in the activity filter and </li>
             <li>Click “Search by amenity” to expand the list and select “Programming” in the amenity filter </li>
         </ul>
@@ -64,10 +64,10 @@
              </p>
             <p class="t4 ws2">
                 <a href="https://www.instagram.com/hudson_access/" target="_blank">
-                    <img src="hudsonaccessproject/assets/icons/social/instagram.svg" alt="Instagram" class="insta"/>
+                    <img src="/hudsonaccessproject/assets/icons/social/instagram.svg" alt="Instagram" class="insta"/>
                 </a>
                 <a href="https://twitter.com/hudson_access/" target="_blank">
-                    <img src="hudsonaccessproject/assets/icons/social/x-logo-black.png" alt="X" class="twit"/>
+                    <img src="/hudsonaccessproject/assets/icons/social/x-logo-black.png" alt="X" class="twit"/>
                 </a>
             </p>
             <p class="t4 ws2"> 

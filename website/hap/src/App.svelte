@@ -20,6 +20,7 @@
 	import WaterSafetyLegend from './WaterSafetyLegend.svelte';
 	// import { count, activePageTracker} from "./store.js";
 	import { count, activePageTracker, arePanelsVisible } from "./store.js";
+    import { empty } from 'svelte/internal';
 
 	let title = "The Hudson Access Project is collecting information about all the places where the public can get into and onto the water in the Hudson & Harbor Estuary and its tributaries for swimming, boating, and fishing; with a focus on activities that bring people into direct contact with the water."
 
@@ -52,15 +53,15 @@
 		previous: []
 	};
 
-	const point_url = "/hudsonaccessproject/assets/hap_site_points_20240623.geojson";
-	const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240619.geojson";
-	const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240619.geojson";
-	const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
+	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240623.geojson";
+	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240619.geojson";
+	// const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240619.geojson";
+	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
 
-	// const point_url = "/assets/hap_site_points_20240623.geojson"; 
-	// const act_point_url = "/assets/hap_act_points_20240619.geojson";
-	// const polygon_url = "/assets/hap_site_poly_20240619.geojson";
-	// const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
+	const point_url = "/assets/hap_site_points_20240623.geojson"; 
+	const act_point_url = "/assets/hap_act_points_20240619.geojson";
+	const polygon_url = "/assets/hap_site_poly_20240619.geojson";
+	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
 
@@ -97,16 +98,44 @@
 		});
 	}
 
+	function resetFilters() {
+		filters = {
+			act_filters: [],
+			feature_filters: [],
+			prog_filters: [],
+			text_filter: "",
+			pollution_filters: [],
+			active: [],
+			previous: []
+		};
+
+		//loop through acts and make .isActive false for each one
+		acts = acts.map(act => {
+			return { ...act, isActive: false };
+		});
+
+		// uncheck all the checkboxes in feature filters
+		const checkboxes = document.querySelectorAll('.feature-filters input[type="checkbox"]');
+		checkboxes.forEach(checkbox => {
+			checkbox.checked = false;
+		});
+
+		/// in the input #searcher, reset text to blank so that the search bar is empty
+		const searcherInput = document.getElementById('searcher');
+		if (searcherInput) {
+			searcherInput.value = '';
+		}
+	}
+
 	$: {
 		switch($activePageTracker) {
 			// using stage to identify when the map is not in its initial state.  otherwise, the access 
 			// case messes up the initial loading of the map
 			case 'access':
-				console.log(stage);
 				if (stage == 'updated') {
 					removePoints();
 					removePolygons();
-					filters = { ...emptyFilters };
+					resetFilters();
 					changeBasemap(regTileURL);
 				}
 				break;
@@ -127,7 +156,7 @@
 				stage = 'updated';
 				removePoints();
 				removePolygons();
-				filters = { ...emptyFilters };
+				resetFilters();
 				changeBasemap(regTileURL);
 				break;
 			default:
@@ -179,81 +208,81 @@
 	let filters = emptyFilters;
 
 	// Use these for creating buttons and hover pop up
-	// let acts = [
-	// 	{
-	// 	value: "FISH",
-	// 	name: "Fishing",
-	// 	source: "/assets/icons/activities/fishing.svg",
-	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
-	// 	desc: "You can fish here."
-	// 	},
-	// 	{
-	// 	value: "SWIM",
-	// 	name: "Swimming",
-	// 	source: "/assets/icons/activities/swimming.svg",
-	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
-	// 	desc: "You can swim here."
-	// 	},
-	// 	{
-	// 	value: "HPBL",
-	// 	name: "Human-powered boating",
-	// 	source: "/assets/icons/activities/hp_boating.svg",
-	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-	// 	desc: "You can kayak here."
-	// 	},
-	// 	{
-	// 	value: "MPBL",
-	// 	name: "Motor boating",
-	// 	source: "/assets/icons/activities/mp_boating.svg",
-	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-	// 	desc: "You can motor boat here."
-	// 	},
-	// 	{
-	// 	value: "CSEE",
-	// 	name: "Community engagement",
-	// 	source: "/assets/icons/activities/csee.svg",
-	// 	activesource: "/assets/icons/activities/csee_F77B00.svg",
-	// 	desc: "Sites with community engagement and community science opportunities."
-	// 	}
-	// ];
-
-    let acts = [
+	let acts = [
 		{
 		value: "FISH",
 		name: "Fishing",
-		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		source: "/assets/icons/activities/fishing.svg",
+		activesource: "/assets/icons/activities/fishing_F77B00.svg",
 		desc: "You can fish here."
 		},
 		{
 		value: "SWIM",
 		name: "Swimming",
-		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		source: "/assets/icons/activities/swimming.svg",
+		activesource: "/assets/icons/activities/swimming_F77B00.svg",
 		desc: "You can swim here."
 		},
 		{
 		value: "HPBL",
 		name: "Human-powered boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		source: "/assets/icons/activities/hp_boating.svg",
+		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 		desc: "You can kayak here."
 		},
 		{
 		value: "MPBL",
 		name: "Motor boating",
-		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		source: "/assets/icons/activities/mp_boating.svg",
+		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 		desc: "You can motor boat here."
 		},
 		{
 		value: "CSEE",
 		name: "Community engagement",
-		source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
-		activesource: "/hudsonaccessproject/assets/icons/activities/csee_F77B00.svg",
+		source: "/assets/icons/activities/csee.svg",
+		activesource: "/assets/icons/activities/csee_F77B00.svg",
 		desc: "Sites with community engagement and community science opportunities."
 		}
 	];
+
+    // let acts = [
+	// 	{
+	// 	value: "FISH",
+	// 	name: "Fishing",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	desc: "You can fish here."
+	// 	},
+	// 	{
+	// 	value: "SWIM",
+	// 	name: "Swimming",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	desc: "You can swim here."
+	// 	},
+	// 	{
+	// 	value: "HPBL",
+	// 	name: "Human-powered boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	desc: "You can kayak here."
+	// 	},
+	// 	{
+	// 	value: "MPBL",
+	// 	name: "Motor boating",
+	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	desc: "You can motor boat here."
+	// 	},
+	// 	{
+	// 	value: "CSEE",
+	// 	name: "Community engagement",
+	// 	source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
+	// 	activesource: "/hudsonaccessproject/assets/icons/activities/csee_F77B00.svg",
+	// 	desc: "Sites with community engagement and community science opportunities."
+	// 	}
+	// ];
 
 	function getNextHighTide(tides) {
 		const currentTime = new Date();
