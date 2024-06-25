@@ -10,81 +10,81 @@
     });
     let d = 0;
 
-    let acts = [
-		{
-		value: "FISH",
-		name: "Fishing",
-		source: "/assets/icons/activities/fishing.svg",
-		activesource: "/assets/icons/activities/fishing_F77B00.svg",
-		desc: "You can fish here."
-		},
-		{
-		value: "SWIM",
-		name: "Swimming",
-		source: "/assets/icons/activities/swimming.svg",
-		activesource: "/assets/icons/activities/swimming_F77B00.svg",
-		desc: "You can swim here."
-		},
-		{
-		value: "HPBL",
-		name: "Human-powered boating",
-		source: "/assets/icons/activities/hp_boating.svg",
-		activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
-		desc: "You can kayak here."
-		},
-		{
-		value: "MPBL",
-		name: "Motor boating",
-		source: "/assets/icons/activities/mp_boating.svg",
-		activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
-		desc: "You can motor boat here."
-		},
-		{
-		value: "CSEE",
-		name: "Community engagement",
-		source: "/assets/icons/activities/csee.svg",
-		activesource: "/assets/icons/activities/csee_F77B00.svg",
-		desc: "Sites with community engagement and community science opportunities."
-		}
-	];
-
     // let acts = [
 	// 	{
 	// 	value: "FISH",
 	// 	name: "Fishing",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+	// 	source: "/assets/icons/activities/fishing.svg",
+	// 	activesource: "/assets/icons/activities/fishing_F77B00.svg",
 	// 	desc: "You can fish here."
 	// 	},
 	// 	{
 	// 	value: "SWIM",
 	// 	name: "Swimming",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+	// 	source: "/assets/icons/activities/swimming.svg",
+	// 	activesource: "/assets/icons/activities/swimming_F77B00.svg",
 	// 	desc: "You can swim here."
 	// 	},
 	// 	{
 	// 	value: "HPBL",
 	// 	name: "Human-powered boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/hp_boating.svg",
+	// 	activesource: "/assets/icons/activities/hp_boating_F77B00.svg",
 	// 	desc: "You can kayak here."
 	// 	},
 	// 	{
 	// 	value: "MPBL",
 	// 	name: "Motor boating",
-	// 	  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
-	// 	  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+	// 	source: "/assets/icons/activities/mp_boating.svg",
+	// 	activesource: "/assets/icons/activities/mp_boating_F77B00.svg",
 	// 	desc: "You can motor boat here."
 	// 	},
 	// 	{
 	// 	value: "CSEE",
 	// 	name: "Community engagement",
-	// 	source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
-	// 	activesource: "/hudsonaccessproject/assets/icons/activities/csee_F77B00.svg",
+	// 	source: "/assets/icons/activities/csee.svg",
+	// 	activesource: "/assets/icons/activities/csee_F77B00.svg",
 	// 	desc: "Sites with community engagement and community science opportunities."
 	// 	}
 	// ];
+
+    let acts = [
+		{
+		value: "FISH",
+		name: "Fishing",
+		  source: "/hudsonaccessproject/assets/icons/activities/fishing.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/fishing_F77B00.svg",
+		desc: "You can fish here."
+		},
+		{
+		value: "SWIM",
+		name: "Swimming",
+		  source: "/hudsonaccessproject/assets/icons/activities/swimming.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/swimming_F77B00.svg",
+		desc: "You can swim here."
+		},
+		{
+		value: "HPBL",
+		name: "Human-powered boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/hp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/hp_boating_F77B00.svg",
+		desc: "You can kayak here."
+		},
+		{
+		value: "MPBL",
+		name: "Motor boating",
+		  source: "/hudsonaccessproject/assets/icons/activities/mp_boating.svg",
+		  activesource: "/hudsonaccessproject/assets/icons/activities/mp_boating_F77B00.svg",
+		desc: "You can motor boat here."
+		},
+		{
+		value: "CSEE",
+		name: "Community engagement",
+		source: "/hudsonaccessproject/assets/icons/activities/csee.svg",
+		activesource: "/hudsonaccessproject/assets/icons/activities/csee_F77B00.svg",
+		desc: "Sites with community engagement and community science opportunities."
+		}
+	];
 
     export let act_geojson;
     // export let activePage;

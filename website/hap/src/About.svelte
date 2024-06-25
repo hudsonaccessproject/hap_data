@@ -3,8 +3,28 @@
 </script>
 
 <!-- <div class="about-wide"> -->
-    <!-- <div class="about-content-top"> -->
-        <CollapsibleSection isVisible={true} headerText={'Submit photos and information! '} >
+    <CollapsibleSection isVisible={true} headerText={'Instructions'} >
+        <p class="t4 ws qual">
+            Use the Hudson Access Project to find locations where you can get into and onto the Hudson River and harbor estuary.  
+            The site includes fishing, swimming, human-powered boating, motor-powered boating, and community science / educational 
+            opportunities.  Click on the activity and amenity filters to highlight sites that offer those amenities or activities – each 
+            site that meets your criteria will turn orange in the map and a list of sites will be shown underneath the filters. You can 
+            click on any site in the map or in the list to zoom-in to the location and view information about accessibility, amenities, 
+            facilities, regulations, and more.  
+        </p>
+        <p class="t4 ws">Want to find sites with fishing, running water and bathrooms?</p>
+        <ul>
+            <li>Click on the FISH icon in the activity filter (it will turn orange when selected)</li>
+            <li>Click "Search by amenity" to expand the list and select "Restroom" and "Drinkable / running water" in the amenity filter</li>
+        </ul>
+        <p class="t4 ws">Want to find sites with programming to try out kayaking?  </p>
+        <ul>
+            <li>Click on the “Human-Powered Boating” icon in the activity filter and </li>
+            <li>Click “Search by amenity” to expand the list and select “Programming” in the amenity filter </li>
+        </ul>
+        <p class="t4 ws">You can search for a particular location by typing the name in “Search by site name”.</p>
+    </CollapsibleSection>
+    <CollapsibleSection isVisible={false} headerText={'Submit photos and information! '} >
         <p class="t4 ws qual">Share information about public access sites: The Hudson Access Project was created to make 
             it easier for everyone — especially people in areas with fewer resources and communities with fewer blue 
             spaces — to find their way onto the water. We also want to make it easier for people with mobility or 
@@ -13,18 +33,8 @@
             increase accessibility for everyone. Photos and information can be submitted 
             through <a href="https://forms.gle/7mz519nRxRUUMstX9" target="_blank">this survey</a>. 
         </p>
-        <!-- <p class="t4 ws"> 
-            If you have any comments, or photos of a site that we can use on the Hudson Access Project website, please fill out <a href="https://forms.gle/7mz519nRxRUUMstX9" target="_blank">this form</a>.
-        </p> -->
     </CollapsibleSection>
-    <!-- </div>   -->
     <CollapsibleSection isVisible={false} headerText={'About the map'} >
-        <!-- <div class="about-content"> -->
-            <!-- The Hudson Access Project is collecting information about all the places where the public 
-            can get into and onto the water in the Hudson & Harbor <span class="estuary" title="An estuary is any body of water where tidal ocean waters mix with fresh water from rivers and streams. The impact of tides and saltwater reaches all the way to Troy, NY and this map covers all the area of the estuary from the NY-NJ Harbor estuary to the northern reach of the Hudson at Troy. ">Estuary</span> and its tributaries for swimming, boating, 
-            and fishing; with a focus on activities that bring people into direct contact with the water. The project 
-            is ongoing and we welcome information and feedback. Please put the tool to use so you can test it and 
-            help us improve it. -->
             <p class="t4 ws">The Hudson Access Project was created by a small team at Pratt Institute led by Sara Eichner and Sara Hodges with collaborative support from the NY-NJ Harbor & Estuary Program. 
                 It is hosted at Pratt Institute’s Recover Adapt Mitigate Plan (RAMP) program in the Graduate Center for Planning and the Environment and funded by a River Access Grant awarded by the New York State Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program has facilitated a relationship with the Public Access Working Group which has provided valuable insight into issues around public access, water safety and data. Additional funding was awarded to the project in 2023 by the Pratt Center Taconic Fellowship.
             </p>
