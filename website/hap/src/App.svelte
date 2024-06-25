@@ -58,9 +58,9 @@
 	// const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240619.geojson";
 	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
 
-	const point_url = "/assets/hap_site_points_20240623.geojson"; 
-	const act_point_url = "/assets/hap_act_points_20240619.geojson";
-	const polygon_url = "/assets/hap_site_poly_20240619.geojson";
+	const point_url = "/assets/hap_site_points_20240625.geojson"; 
+	const act_point_url = "/assets/hap_act_points_20240625.geojson";
+	const polygon_url = "/assets/hap_site_poly_20240625.geojson";
 	const temp_url = "https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/data/hap_noaa_stations.geojson";
 	const water_temp_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=8518750&product=water_temperature&time_zone=lst_ldt&units=english&format=json";
 	const tides_today_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=8518750&product=predictions&datum=MLLW&time_zone=lst_ldt&interval=hilo&units=english&application=DataAPI_Sample&format=json";
