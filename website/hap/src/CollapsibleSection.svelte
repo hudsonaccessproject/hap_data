@@ -41,17 +41,6 @@
             <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
         {/if}
-      <!-- </button>
-        <button aria-expanded={expanded} on:click={() => expanded = !expanded}>
-          {#if headerText} -->
-            <!-- {headerText} -->
-            <!-- <span class="header-text {expanded ? 'expanded' : ''}" >{headerText}</span>
-          {/if}
-          <svg viewBox="0 0 20 20" fill="none" >
-          <path class="vert" d="M10 1V19" stroke="black" stroke-width="2"/>
-          <path d="M1 10L19 10" stroke="black" stroke-width="2"/>
-          </svg>
-        </button> -->
     </h3>
     
     <div class='contents' hidden={!expanded}>
@@ -134,35 +123,13 @@
     }
 
     .contents {
-      /* max-height: 80px; */
       max-height: 150px
     }
   }
 
 
-  button[aria-expanded="true"] {
+  /* button[aria-expanded="true"] {
     border-bottom: 1.5px solid var(--gray-light, #e1e1e1);
-  }
+  } */
 
-    /* button[aria-expanded="true"] .vert {
-        display: none;
-    } */
-
-    /* button:focus svg{
-        outline: 2px solid;
-    } */
-/* 
-    button [aria-expanded="true"] rect {
-        fill: currentColor;
-    } */
-
-    /* svg {
-        height: 0.7em;
-				width: 0.7em;
-    } */
-
-    /* .contents {
-      padding-top: 5px;
-      padding-bottom: 5px;
-    } */
 </style>
