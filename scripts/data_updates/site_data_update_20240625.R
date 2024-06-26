@@ -150,12 +150,12 @@ point_poly_check <- updated_site_points |>
   full_join(poly_check_again, by = "site_id") |> 
   filter(is.na(site_name_poly))
 
-# st_write(updated_site_points, "data/published/data/hap_site_points_20240625.geojson")
-# st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20240625.geojson")
-# st_write(updated_poly, "data/published/data/hap_site_poly_20240625.geojson")
-# st_write(updated_poly, "data/published/website/hap/public/assets/hap_site_poly_20240625.geojson")
-# st_write(updated_act_points, "data/published/data/hap_act_points_20240625.geojson")
-# st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20240625.geojson")
+st_write(updated_site_points, "data/published/data/hap_site_points_20240625.geojson")
+st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20240625.geojson")
+st_write(updated_poly_all, "data/published/data/hap_site_poly_20240625.geojson")
+st_write(updated_poly_all, "data/published/website/hap/public/assets/hap_site_poly_20240625.geojson")
+st_write(updated_act_points, "data/published/data/hap_act_points_20240625.geojson")
+st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20240625.geojson")
   
 
 # st_write(point_poly_check, "data/temp/no_poly.geojson")

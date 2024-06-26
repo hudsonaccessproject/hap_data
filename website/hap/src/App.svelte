@@ -53,9 +53,9 @@
 		previous: []
 	};
 
-	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240623.geojson";
-	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240619.geojson";
-	// const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240619.geojson";
+	// const point_url = "/hudsonaccessproject/assets/hap_site_points_20240625.geojson";
+	// const act_point_url = "/hudsonaccessproject/assets/hap_act_points_20240625.geojson";
+	// const polygon_url = "/hudsonaccessproject/assets/hap_site_poly_20240625.geojson";
 	// const temp_url = "/hudsonaccessproject/assets/hap_noaa_stations.geojson";
 
 	const point_url = "/assets/hap_site_points_20240625.geojson"; 
@@ -480,6 +480,10 @@
 				<div class="searcher">
 					<input id="searcher" placeholder="Search by site name" type="text" bind:value={filters.text_filter}>
 				</div>
+				<!-- display this div if filters is NOT empty -->	
+				{#if filters.act_filters.length > 0 || filters.feature_filters.length > 0 || filters.text_filter.length > 0}
+					<div class="reset" on:click={resetFilters} on:keydown={resetFilters}>Clear Filters</div>
+				{/if}
 				<div class="places-list">
 					{#key filters}
 						<PlaceList on:message={handlePlaceMessage} geojson={all_point_data} {filters}/>
@@ -736,15 +740,6 @@
 		scrollbar-width: none;  /* Firefox */
 	}
 
-	/* .find {
-		min-height: 63px;
-		text-align: center;
-		display: flex;
-		padding-left: 15px;
-    	align-items: center;
-		border-bottom: solid 1.5px rgb(225, 225, 225);
-	} */
-
 	.last {
 		margin-bottom: 10px;
 	}
@@ -776,6 +771,12 @@
 	#amenity {
 		-ms-overflow-style: none;  /* IE and Edge */
 		scrollbar-width: none;  /* Firefox */
+	}
+
+	.reset {
+		padding: 5px 15px 0px 15px;
+		cursor: pointer;
+		color: var(--orange2);
 	}
 
 </style>
