@@ -83,28 +83,55 @@ st_write(point_poly_check, "data/published/data/data_updates/fulcrum/update_2024
 st_write(site_poly_fulcrum, "data/published/data/data_updates/fulcrum/update_20240723/forSaraE_toAddPoly/current_poly.geojson")
 
 ### Now import to finalize and push to website
+updated_site_points_se <- st_read("data/published/data/data_updates/fulcrum/update_20240723/fromSaraE_toCheckAndDeploy/hap_site_points_TEMP_20240723_se.geojson") |> 
+  mutate(site_name_photo_01 = ifelse(site_id == 6, "great_kills_park_01.jpg", site_name_photo_01),
+         site_name_photo_02 = ifelse(site_id == 6, "great_kills_park_02.jpg", site_name_photo_02))
+updated_site_poly_se <- st_read("data/published/data/data_updates/fulcrum/update_20240723/fromSaraE_toCheckAndDeploy/current_poly_updated_se_07242024.geojson")
 
 #### check polygon to make sure they are polys for all points
 
-updated_poly <- site_poly_fulcrum |> 
-  select(-site_name) |> 
-  inner_join(st_drop_geometry(updated_site_points[, c("site_id", "site_name")]), by = "site_id") |> ## change this to left_join to test
+poly_to_check <- updated_site_poly_se |> 
+  # rename(site_name_poly = site_name) |> 
+  select(-site_name) |>
+  inner_join(st_drop_geometry(updated_site_points_se[, c("site_id", "site_name")]), by = "site_id") |> ## change this to left_join to test
   select(site_id, site_name, near_cso, geometry) 
 
-# st_write(updated_site_points, "data/published/data/hap_site_points_20240623.geojson")
-# st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20240623.geojson")
-# st_write(updated_poly, "data/published/data/hap_site_poly_20240619.geojson")
-# st_write(updated_poly, "data/published/website/hap/public/assets/hap_site_poly_20240619.geojson")
-# st_write(updated_act_points, "data/published/data/hap_act_points_20240619.geojson")
-# st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20240619.geojson")
-
-poly_check <- st_drop_geometry(updated_poly) |> 
+poly_check <- st_drop_geometry(poly_to_check) |> 
   rename(site_name_poly = site_name)
   
 
-point_poly_check <- updated_site_points |> 
+point_poly_check <- updated_site_points_se |> 
   select(site_id, site_name) |> 
   full_join(poly_check, by = "site_id") |> 
   filter(is.na(site_name_poly))
+
+
+### remove data points
+remove <- st_drop_geometry(site_points_fulcrum) |> 
+  filter(status == "remove site") |> 
+  select(site_id)
+
+updated_site_points_final <- updated_site_points_se |> 
+  anti_join(remove, by = "site_id")
+
+updated_act_points_final <- updated_act_points |> 
+  anti_join(remove, by = c("activity_site_id" = "site_id"))
+
+website_updated_act_points_final <- website_updated_act_points |> 
+  anti_join(remove, by = "site_id")
+
+updated_site_points_final <- updated_site_points_se |> 
+  anti_join(remove, by = "site_id")
+
+updated_site_poly_final <- updated_site_poly_se |> 
+  anti_join(remove, by = "site_id")
+
+### write out the data 
+st_write(updated_site_points_final, "data/published/data/hap_site_points_20240724.geojson")
+st_write(updated_site_points_final, "data/published/website/hap/public/assets/hap_site_points_20240724.geojson")
+st_write(updated_site_poly_final, "data/published/data/hap_site_poly_20240724.geojson")
+st_write(updated_site_poly_final, "data/published/website/hap/public/assets/hap_site_poly_20240724.geojson")
+st_write(updated_act_points_final, "data/published/data/hap_act_points_20240724.geojson")
+st_write(website_updated_act_points_final, "data/published/website/hap/public/assets/hap_act_points_20240724.geojson")
 
 
