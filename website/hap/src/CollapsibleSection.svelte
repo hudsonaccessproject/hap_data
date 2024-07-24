@@ -101,6 +101,11 @@
     padding: 15px;
   }
 
+  /* Target span element within button */
+  .collapsible h3 button > .header-text {
+    text-align: left;
+  }
+
   @media (max-width: 1000px) {
     button {
       font-size: 18px;

@@ -14,7 +14,7 @@
         </p>
         <p class="t4 ws">Want to find sites with fishing, running water and bathrooms?</p>
         <ul class="t4">
-            <li>Click on the FISH icon in the activity filter (it will turn orange when selected)</li>
+            <li>Click on the "Fish" icon in the activity filter and</li>
             <li>Click "Search by amenity" to expand the list and select "Restroom" and "Drinkable / running water" in the amenity filter</li>
         </ul>
         <p class="t4 ws">Want to find sites with programming to try out kayaking?  </p>
@@ -22,7 +22,19 @@
             <li>Click on the “Human-Powered Boating” icon in the activity filter and </li>
             <li>Click “Search by amenity” to expand the list and select “Programming” in the amenity filter </li>
         </ul>
-        <p class="t4 ws">You can search for a particular location by typing the name in “Search by site name”.</p>
+        <p class="t4 ws">You can also search for a location by typing the name in “Search by site name”.</p>
+        <p class="t4 ws">The Hudson Access Project database is a work in progress. Due to the dynamic nature of public space and land use, the 
+            data is always changing and some data is difficult to find. Please be sure to check with the site you plan to visit and programs 
+            you intend to participate in before heading out. This website provides current links for each site and program where we can find 
+            one. Because information can change or be incomplete, also be sure to refer to any safety guidelines, rules and hazard information 
+            at each recreation site you visit. While we hope you will use the HAP Water Safety and Water Quality tabs as resources, don’t 
+            rely solely on information on this website for safety.
+        </p>
+        <p class="t4 ws">The database was created from multiple sources retrieved from counties, municipalities, non profit organizations, New 
+            Jersey and New York states. The Hudson Access Project  continues to work to validate that data and to fill in the significant gaps 
+            that still exist. We encourage contributions, corrections and photos from the public to help with this ongoing process. Please 
+            submit them <a href="https://forms.gle/7mz519nRxRUUMstX9" target="_blank">here</a>. Thank you!
+        </p>
     </CollapsibleSection>
     <CollapsibleSection isVisible={false} headerText={'Submit photos and information! '} >
         <p class="t4 ws qual">Share information about public access sites: The Hudson Access Project was created to make 
@@ -41,24 +53,18 @@
             <p class="t4 ws top"> 
                 Current Graduate Assistants:
             </p>
-            <p class="t4 ws2"> 
-                Nicholas Conklin
-            </p>
-            <p class="t4 ws2">
-                Shahadat Hossain
-            </p>
+            <ul class="t4">
+                <li>Nicholas Conklin</li>
+                <li>Shahadat Hossain</li>
+            </ul>
             <p class="t4 ws top"> 
                Former Team and Collaborators:
             </p>
-            <p class="t4 ws2"> 
-                Pratt Institute’s Spatial Analysis and Visualization Initiative
-            </p>
-            <p class="t4 ws2">
-                Can Sucuoglu
-            </p>
-            <p class="t4 ws2">
-                Alyssa Bement
-            </p>
+            <ul class="t4">
+                <li>Pratt Institute’s Spatial Analysis and Visualization Initiative</li>
+                <li>Can Sucuoglu</li>
+                <li>Alyssa Bement</li>
+            </ul>
             <p class="t4 ws top"> 
                 Follow us:
              </p>
