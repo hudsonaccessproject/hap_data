@@ -115,3 +115,15 @@ st_write(updated_act_points, "data/published/data/hap_act_points_20240829.geojso
 st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20240829.geojson")
 
 
+
+### importing Sara's corrections
+poly <- st_read("data/published/data/data_updates/fulcrum/update_20240829/fromSaraE/current_poly.geojson")
+raw_polys_to_add <- st_read("data/published/data/data_updates/fulcrum/update_20240829/fromSaraE/newpolys_to_add.shp")
+
+polys_to_add <- raw_polys_to_add |> 
+  rename(site_name_poly = site_name) |> 
+  select(-site_id) |> 
+  st_join(updated_site_points) |> 
+  mutate(near_cso = "") |> 
+  select(site_name, , near_cso, site_id, geometry)
+
