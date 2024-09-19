@@ -50,20 +50,22 @@
             <p class="t4 ws">The Hudson Access Project was created by a small team at Pratt Institute led by Sara Eichner and Sara Hodges with collaborative support from the NY-NJ Harbor & Estuary Program. 
                 It is hosted at Pratt Institute’s Recover Adapt Mitigate Plan (RAMP) program in the Graduate Center for Planning and the Environment and funded by a River Access Grant awarded by the New York State Department of Environmental Conservation. The NY-NJ Harbor & Estuary Program has facilitated a relationship with the Public Access Working Group which has provided valuable insight into issues around public access, water safety and data. Additional funding was awarded to the project in 2023 by the Pratt Center Taconic Fellowship.
             </p>
-            <p class="t4 ws top"> 
+            <!-- <p class="t4 ws top"> 
                 Current Graduate Assistants:
             </p>
             <ul class="t4">
                 <li>Nicholas Conklin</li>
                 <li>Shahadat Hossain</li>
-            </ul>
+            </ul> -->
             <p class="t4 ws top"> 
-               Former Team and Collaborators:
+               Thank you to our former team and collaborators:
             </p>
             <ul class="t4">
                 <li>Pratt Institute’s Spatial Analysis and Visualization Initiative</li>
                 <li>Can Sucuoglu</li>
                 <li>Alyssa Bement</li>
+                <li>Nicholas Conklin</li>
+                <li>Shahadat Hossain</li>
             </ul>
             <p class="t4 ws top"> 
                 Follow us:

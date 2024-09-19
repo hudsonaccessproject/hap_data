@@ -175,6 +175,9 @@
                         {/each}
                     </Carousel>
                 </div>
+                {#if active_point.photo_credits}
+                    <p><span>Photos by:</span> {active_point.photo_credits}</p>
+                {/if}
             {/if}
             {#if active_point.hours_info}
                 <p><span>Hours:</span> {active_point.hours_info}</p>

@@ -575,6 +575,10 @@ div.leaflet-popup-content {
     top: 50%;
 }
 
+.sc-carousel-button{
+    background-color: #ffaa22 !important;
+}
+
 .leaflet-popup-content-wrapper {
     border-radius: 8px !important;
 }

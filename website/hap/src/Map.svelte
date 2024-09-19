@@ -41,9 +41,9 @@
 
   setContext("leafletMapInstance", map);
 
-  let tileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cll2iboa4011k01qgdar6c044/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-
-
+  //let tileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cll2iboa4011k01qgdar6c044/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
+  let tileURL = 'https://api.mapbox.com/styles/v1/hudsonaccess/cm0s2a1w602ip01qv1kwt2nmo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaHVkc29uYWNjZXNzIiwiYSI6ImNsbDJqbnJ5ZjIyYWgzZHBrNTFwNmp5eHgifQ.WmHbnTbEIrqqpzFU0HF9eA'
+  
   L.tileLayer(tileURL, {
     maxZoom: 18,
     minZoom: 8,
