@@ -2,17 +2,51 @@ library(sf)
 library(tidyverse)
 library(cleangeo)
 
-site_points_fulcrum <- st_read("data/published/data/data_updates/fulcrum/update_20240829/hap_site_points_fulcrum_export_9-8-2024.geojson")
+site_points_fulcrum_temp <- st_read("data/published/data/data_updates/fulcrum/update_20241011/hap_site_points_fulcrum_export_10-11-2024.geojson")
 
-act_points_fulcrum <- st_read("data/published/data/data_updates/fulcrum/update_20240829/hap_act_points_fulcrum_export_9-8-2024.geojson")
+act_points_fulcrum <- st_read("data/published/data/data_updates/fulcrum/update_20241011/hap_act_points_fulcrum_export_10-11-2024.geojson")
 # 
-site_poly_fulcrum <- st_read("data/published/website/hap/public/assets/hap_site_poly_20240829.geojson") |> 
+site_poly_fulcrum <- st_read("data/published/website/hap/public/assets/hap_site_poly_20240913.geojson") |> 
   select(site_id, site_name, near_cso, geometry)
-#### this are the polygons that Sara E updated - I didn't use them because there are some weird empty polygons
-poly <- st_read("data/published/data/data_updates/fulcrum/update_20240829/fromSaraE/current_poly.geojson") |>
-  select(site_id, site_name, near_cso, geometry)
-### this was from SAra E and then SAra H edited it in QGIS
-raw_polys_to_add <- st_read("data/published/data/data_updates/fulcrum/update_20240829/fromSaraE/newpolys_to_add.geojson")
+## existing points
+
+current_site_points <- st_read("data/published/website/hap/public/assets/hap_site_points_20240913.geojson")
+
+# join_site_id <- st_drop_geometry(current_site_points) |> 
+#   select(site_id, site_name) |> 
+#   rename(site_id_c = site_id,
+#          site_name_c = site_name) |> 
+#   distinct()
+
+join_site_id <- current_site_points |> 
+  select(site_id, site_name) |> 
+  rename(site_id_c = site_id,
+         site_name_c = site_name) 
+
+### this fixes the problem of assigning a different site id 
+site_points_fulcrum <- site_points_fulcrum_temp |> 
+  st_join(join_site_id) |> 
+  # select(OBJECTID, site_id, site_name, site_id_c, site_name_c) |> 
+  mutate(site_id = ifelse(is.na(site_id), site_id_c, site_id)) |> 
+  select(-site_name_c, -site_id_c)
+
+# site_points_fulcrum_c <- st_drop_geometry(site_points_fulcrum_temp) |> 
+#   left_join(join_site_id, by = "site_name") |> 
+#   select(OBJECTID, site_id, site_name, site_id_c) |> 
+#   filter(is.na(site_id) & !is.na(site_id_c)) |> 
+#   select(OBJECTID, site_id_c)
+# 
+# ### add site id that I had added last time around
+# site_points_fulcrum <- site_points_fulcrum_temp |> 
+#   left_join(site_points_fulcrum_c, by = "OBJECTID") |> 
+#   mutate(site_id = ifelse(is.na(site_id), site_id_c, site_id))
+
+
+# #### this are the polygons that Sara E updated - I didn't use them because there are some weird empty polygons
+# poly <- st_read("data/published/data/data_updates/fulcrum/update_20240829/fromSaraE/current_poly.geojson") |>
+#   select(site_id, site_name, near_cso, geometry)
+# ### this was from SAra E and then SAra H edited it in QGIS
+# raw_polys_to_add <- st_read("data/published/data/data_updates/fulcrum/update_20240829/fromSaraE/newpolys_to_add.geojson")
 
 # polygon_dupes <- st_drop_geometry(poly) |> 
 #   group_by(site_id) |> 
@@ -25,10 +59,10 @@ raw_polys_to_add <- st_read("data/published/data/data_updates/fulcrum/update_202
 #   summarise(count = n(),
 #             dupe_name = toString(site_name))|> 
 #   filter(count > 1)
-
-new_polygon <- poly |> 
-  rbind(raw_polys_to_add) |> 
-  mutate(site_id = ifelse(site_name == "Boyd Park", 598798, site_id))
+# 
+# new_polygon <- poly |> 
+#   rbind(raw_polys_to_add) |> 
+#   mutate(site_id = ifelse(site_name == "Boyd Park", 598798, site_id))
 
 
 # new_polygon <- clgeo_Clean(new_polygon_temp)
@@ -36,7 +70,7 @@ new_polygon <- poly |>
 # ### existing data to compare
 # # act_current <- st_read("data/published/data/hap_act_points_20240201.geojson")
 # poly_current <- st_read("data/published/website/hap/public/assets/hap_site_poly_20240619.geojson")
-point_current <- st_read("data/published/data/hap_site_points_20240829.geojson")
+point_current <- st_read("data/published/data/hap_site_points_20240913.geojson")
 # point_current_website <- st_read("data/published/website/hap/public/assets/hap_site_points_20240625.geojson")
 
 
@@ -44,7 +78,7 @@ point_current <- st_read("data/published/data/hap_site_points_20240829.geojson")
 tide_gauge <- st_read("data/published/data/hap_tide_current_stations.geojson") |> 
   select(station_name, tide_url)
 
-max_site_id <- 4313409
+# max_site_id <- 4314184
 num_na_rows <- site_points_fulcrum |> 
   filter(is.na(site_id)) %>%
   nrow()
@@ -68,7 +102,7 @@ updated_site_points_temp <- site_points_fulcrum |>
   mutate(site_id = ifelse(is.na(site_id), max_site_id + row_number(), site_id)) |> 
   anti_join(remove) |> 
   mutate(site_name_photo_01 = ifelse(site_id == 6, "great_kills_park_01.jpg", site_name_photo_01),
-         site_name_photo_02 = ifelse(site_id == 6, "great_kills_park_02.jpg", site_name_photo_02))
+         site_name_photo_02 = ifelse(site_id == 6, "great_kills_park_02.jpg", site_name_photo_02)) 
 
 updated_act_points <- act_points_fulcrum |> 
   filter(!fulcrum_id == "60c950ba-cb3f-4962-95c4-d8099d283244") |> # remove swimming activity from Parelli Park
@@ -108,11 +142,15 @@ updated_site_points <- updated_site_points_temp |>
   select(-act_codes_new) |> 
   st_join(tide_gauge, join = st_nearest_feature) ### adding the name and url for closest tide gauuge
 
+# dupes <- st_drop_geometry(updated_site_points) |> 
+#   group_by(site_id) |> 
+#   summarise(count = n())
+
 
 ### new poly check 
-# new_poly_check <- new_polygon |> 
-#   rename(site_name_poly = site_name) |> 
-#   st_join(updated_site_points[, c("site_id", "site_name", "geometry")])
+new_poly_check <- site_poly_fulcrum |>
+  rename(site_name_poly = site_name) |>
+  st_join(updated_site_points[, c("site_id", "site_name", "geometry")])
 
 
 
@@ -126,18 +164,26 @@ updated_site_points <- updated_site_points_temp |>
 # 
 # poly_check <- st_drop_geometry(poly_to_check) |> 
 #   rename(site_name_poly = site_name)
+# 
+new_poly_check <- st_drop_geometry(site_poly_fulcrum) |>
+  rename(site_name_poly = site_name)
+# 
+# 
+# #### THESE ARE THE sites with no polygon
+point_poly_check <- updated_site_points |>
+  select(site_id, site_name) |>
+  full_join(new_poly_check, by = "site_id") |>
+  filter(is.na(site_name_poly)) 
 
-new_poly_check <- st_drop_geometry(new_polygon) |> 
-  rename(site_name_poly = site_name) 
+# |> 
+#   select(-site_name_poly, -near_cso) |> 
+#   st_join(site_poly_fulcrum) |> 
+#   select(site_id.x, site_id.y) |> 
+#   rename(site_id = site_id.x,
+#          site_id_poly = site_id.y) |> 
+#   st_drop_geometry() ### now I'll change site_id 
 
-
-#### THESE ARE THE sites with no polygon
-point_poly_check <- updated_site_points |> 
-  select(site_id, site_name) |> 
-  full_join(new_poly_check, by = "site_id") |> 
-  filter(is.na(site_name_poly))
-
-# ### write out data for Sara to check and add polygons
+# ### if there are any missing polygons --- write out data for Sara to check and add polygons
 # st_write(updated_act_points, "data/published/data/data_updates/fulcrum/update_20240829/forSaraE_toAddPoly/hap_act_points_TEMP_20240829.geojson")
 # st_write(updated_site_points, "data/published/data/data_updates/fulcrum/update_20240829/forSaraE_toAddPoly/hap_site_points_TEMP_20240829.geojson")
 # st_write(point_poly_check, "data/published/data/data_updates/fulcrum/update_20240829/forSaraE_toAddPoly/no_poly_20240829_update.geojson")
@@ -145,25 +191,10 @@ point_poly_check <- updated_site_points |>
 
 
 ### write out the data 
-st_write(updated_site_points, "data/published/data/hap_site_points_20240913.geojson")
-st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20240913.geojson")
-st_write(new_polygon, "data/published/data/hap_site_poly_20240913.geojson")
-st_write(new_polygon, "data/published/website/hap/public/assets/hap_site_poly_20240913.geojson")
-st_write(updated_act_points, "data/published/data/hap_act_points_20240913_FULCRUM_FORMATTED.geojson")
-st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20240913.geojson")
+st_write(updated_site_points, "data/published/data/hap_site_points_20241011.geojson")
+st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20241011.geojson")
+# st_write(new_polygon, "data/published/data/hap_site_poly_20241011.geojson")
+# st_write(new_polygon, "data/published/website/hap/public/assets/hap_site_poly_20241011.geojson")
+st_write(updated_act_points, "data/published/data/hap_act_points_20241011_FULCRUM_FORMATTED.geojson")
+st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20241011.geojson")
 
-# ### importing Sara's corrections
-# poly <- st_read("data/published/data/data_updates/fulcrum/update_20240829/fromSaraE/current_poly.geojson")
-# raw_polys_to_add <- st_read("data/published/data/data_updates/fulcrum/update_20240829/fromSaraE/newpolys_to_add.shp")
-# 
-# polys_to_add <- raw_polys_to_add |> 
-#   rename(site_name_poly = site_name) |> 
-#   select(-site_id) |> 
-#   st_join(updated_site_points) |> 
-#   mutate(near_cso = "") |> 
-#   select(site_name, near_cso, site_id, geometry)
-# 
-# dupes <- st_drop_geometry(polys_to_add) |> 
-#   group_by(site_id) |> 
-#   summarise(count = n(),
-#             names = (toString(site_name)))
