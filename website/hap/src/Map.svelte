@@ -41,14 +41,14 @@
 
   setContext("leafletMapInstance", map);
 
-  //let tileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cll2iboa4011k01qgdar6c044/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
-  let tileURL = 'https://api.mapbox.com/styles/v1/hudsonaccess/cm0s2a1w602ip01qv1kwt2nmo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaHVkc29uYWNjZXNzIiwiYSI6ImNsbDJqbnJ5ZjIyYWgzZHBrNTFwNmp5eHgifQ.WmHbnTbEIrqqpzFU0HF9eA'
+  let tileURL = 'https://api.mapbox.com/styles/v1/prattsavi/cll2iboa4011k01qgdar6c044/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicHJhdHRzYXZpIiwiYSI6ImNsOGVzYjZ3djAycGYzdm9vam40MG40cXcifQ.YHBszyZW7pMQShx0GZISbw'
+  //let tileURL = 'https://api.mapbox.com/styles/v1/hudsonaccess/cm0s2a1w602ip01qv1kwt2nmo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaHVkc29uYWNjZXNzIiwiYSI6ImNsbDJqbnJ5ZjIyYWgzZHBrNTFwNmp5eHgifQ.WmHbnTbEIrqqpzFU0HF9eA'
   
   L.tileLayer(tileURL, {
     maxZoom: 18,
     minZoom: 8,
     zoomControl:false,
-    attribution:'Design by <a href="https://www.pratt.edu/research/spatial-analysis-visualization-initiative/">SAVI</a>, Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    attribution:'Data and Design by Eichner & Hodges, Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>',
   }).addTo(map);
 
   onMount(() => {

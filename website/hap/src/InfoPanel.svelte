@@ -70,19 +70,26 @@
 
     //Use these for creating site feature buttons and info panel icons
 	let site_feature_icons = [
-		{value:"boat_launch_yn", name:"Boat launch", source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/boat_launch_cricle.svg" ,
+		// {value:"boat_launch_yn", name:"Boat launch", source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/boat_launch_cricle.svg" ,
+        {value:"boat_launch_yn", name:"Boat launch", source:"/hudsonaccessproject/assets/icons/amenities/boat_launch_cricle.svg" ,
 		desc:"There is a boat launch"},
-		{value:"restrooms",name:"Restrooms" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/restrooms_circle.svg" ,
+		// {value:"restrooms",name:"Restrooms" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/restrooms_circle.svg" ,
+        {value:"restrooms",name:"Restrooms" , source:"/hudsonaccessproject/assets/icons/amenities/restrooms_circle.svg" ,
 		desc:"There are restrooms."},
-		{value:"public_transit",name:"Publi transit" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/transit_circle.svg" ,
+		// {value:"public_transit",name:"Publi transit" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/transit_circle.svg" ,
+        {value:"public_transit",name:"Publi transit" , source:"/hudsonaccessproject/assets/icons/amenities/transit_circle.svg" ,
 		desc:"Site is accessible by public transit"},
-		{value:"parking",name:"Parking" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/parking_circle.svg" ,
+		// {value:"parking",name:"Parking" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/parking_circle.svg" ,
+        {value:"parking",name:"Parking" , source:"/hudsonaccessproject/assets/icons/amenities/parking_circle.svg" ,
 		desc:"There is parking"},
-		{value:"food", name:"Food", source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/food_circle.svg" ,
+		// {value:"food", name:"Food", source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/food_circle.svg" ,
+        {value:"food", name:"Food", source:"/hudsonaccessproject/assets/icons/amenities/food_circle.svg" ,
 		desc:"There is food here."},
-		{value:"drinking_water",name:"Drinking water" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/drinking_water_circle.svg" ,
+		// {value:"drinking_water",name:"Drinking water" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/drinking_water_circle.svg" ,
+        {value:"drinking_water",name:"Drinking water" , source:"/hudsonaccessproject/assets/icons/amenities/drinking_water_circle.svg" ,
 		desc:"There is drinking water here."},
-		{value:"wheelchair_access_restrooms",name:"Wheelchair accessible restrooms" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/wheelchair_accessibility_circle.svg" ,
+		// {value:"wheelchair_access_restrooms",name:"Wheelchair accessible restrooms" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/amenities/wheelchair_accessibility_circle.svg" ,
+        {value:"wheelchair_access_restrooms",name:"Wheelchair accessible restrooms" , source:"/hudsonaccessproject/assets/icons/amenities/wheelchair_accessibility_circle.svg" ,
 		desc:"The restrooms are wheelchair accessible here."},
 		// {value:"walking_trails",name:"Walking trails" , source:"https://raw.githubusercontent.com/skhaji/test_data/main/activities/Activities_in_circles/walking_trails.svg" ,
 		// desc:"There are walking trails here."},
@@ -102,14 +109,23 @@
         active_point = active_point[0].properties;
         let actCodes = active_point.activity_codes.split(',').map(code => code.trim());
 
+        // if (active_point.site_name_photo_01) {
+        //     images.push({url: `https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/photos/${active_point.site_name_photo_01}`, description: 'image1'});
+        // }
+        // if (active_point.site_name_photo_02) {
+        //     images.push({url: `https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/photos/${active_point.site_name_photo_02}`, description: 'image2'});
+        // }
+        // if (active_point.site_name_photo_03) {
+        //     images.push({url: `https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/photos/${active_point.site_name_photo_03}`, description: 'image3'});
+        // }
         if (active_point.site_name_photo_01) {
-            images.push({url: `https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/photos/${active_point.site_name_photo_01}`, description: 'image1'});
+            images.push({url: `/hudsonaccessproject/assets/photos/${active_point.site_name_photo_01}`, description: 'image1'});
         }
         if (active_point.site_name_photo_02) {
-            images.push({url: `https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/photos/${active_point.site_name_photo_02}`, description: 'image2'});
+            images.push({url: `/hudsonaccessproject/assets/photos/${active_point.site_name_photo_02}`, description: 'image2'});
         }
         if (active_point.site_name_photo_03) {
-            images.push({url: `https://raw.githubusercontent.com/hudsonaccessproject/hap_data/main/photos/${active_point.site_name_photo_03}`, description: 'image3'});
+            images.push({url: `/hudsonaccessproject/assets/photos/${active_point.site_name_photo_03}`, description: 'image3'});
         }
 
         acts.forEach(function (act) {

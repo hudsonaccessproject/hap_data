@@ -234,7 +234,7 @@
         <!-- Accessibility: on:keydown is for users that rely on keyboard navigation -->
         {#each map_data as d }
             <div class="place-list t3 {d.properties.site_id}" id={d.properties.site_id} on:click={e=>{clickHandle(e)}} on:keydown={e=>{clickHandle(e)}}>
-                {d.properties.site_name}
+                {d.properties.site_name}{#if d.properties.program_name} / {d.properties.program_name}{/if}
             </div>
         {/each}
     {:else}
