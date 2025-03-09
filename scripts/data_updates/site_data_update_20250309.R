@@ -191,12 +191,12 @@ point_poly_check <- updated_site_points |>
 
 
 ### write out the data 
-st_write(updated_site_points, "data/published/data/hap_site_points_20241011.geojson")
-st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20241011.geojson")
-# st_write(new_polygon, "data/published/data/hap_site_poly_20241011.geojson")
-# st_write(new_polygon, "data/published/website/hap/public/assets/hap_site_poly_20241011.geojson")
-st_write(updated_act_points, "data/published/data/hap_act_points_20241011_FULCRUM_FORMATTED.geojson")
-st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20241011.geojson")
+st_write(updated_site_points, "data/published/data/hap_site_points_20250309.geojson")
+st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20250309.geojson")
+# st_write(new_polygon, "data/published/data/hap_site_poly_20250309.geojson")
+# st_write(new_polygon, "data/published/website/hap/public/assets/hap_site_poly_20250309.geojson")
+st_write(updated_act_points, "data/published/data/hap_act_points_20250309_FULCRUM_FORMATTED.geojson")
+st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20250309.geojson")
 
-
+updated_site_points <- st_read("data/published/data/hap_site_points_20241011.geojson")
 
