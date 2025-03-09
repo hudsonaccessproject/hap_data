@@ -2,15 +2,15 @@ library(sf)
 library(tidyverse)
 library(cleangeo)
 
-site_points_fulcrum_temp <- st_read("data/published/data/data_updates/fulcrum/update_20241011/hap_site_points_fulcrum_export_10-11-2024.geojson")
+site_points_fulcrum_temp <- st_read("data/published/data/data_updates/fulcrum/update_20250309/hap_site_points_fulcrum_export_03092025.geojson")
 
-act_points_fulcrum <- st_read("data/published/data/data_updates/fulcrum/update_20241011/hap_act_points_fulcrum_export_10-11-2024.geojson")
+act_points_fulcrum <- st_read("data/published/data/data_updates/fulcrum/update_20250309/hap_activity_points_fulcrum_export_20250309.geojson")
 # 
 site_poly_fulcrum <- st_read("data/published/website/hap/public/assets/hap_site_poly_20240913.geojson") |> 
   select(site_id, site_name, near_cso, geometry)
 ## existing points
-
-current_site_points <- st_read("data/published/website/hap/public/assets/hap_site_points_20240913.geojson")
+# 
+current_site_points <- st_read("data/published/data/hap_site_points_20241011.geojson")
 
 # join_site_id <- st_drop_geometry(current_site_points) |> 
 #   select(site_id, site_name) |> 
@@ -119,7 +119,13 @@ updated_act_points <- act_points_fulcrum |>
          access_name = trimws(access_name, which = "both"), 
          access_name = ifelse(access_name == activity_site_name, NA, access_name)) |> 
   filter(activity_site_id != 418578) |> 
-  select(activity_site_id, activity_site_name, access_name, activity, geometry) 
+  select(activity_site_id, activity_site_name, access_name, activity, geometry) |> 
+  filter(!(activity_site_id == 900137 & activity == "FISH"))|> 
+  filter(!(activity_site_id == 598277 & activity == "SWIM")) |> 
+  filter(!(activity_site_id == 598641 & activity == "SWIM")) |> 
+  filter(!(activity_site_id == 147 & activity == "SWIM")) |> 
+  filter(!(activity_site_id == 451048 & activity == "SWIM")) |> 
+  filter(!(activity_site_id == 145 & activity == "SWIM"))
 
 # site_id is used in too many places around the website to change the name to activity_site_id, so keep two copies, one with
 # activity_site_id to update Fulcrum and one with site_id for the website
@@ -191,12 +197,20 @@ point_poly_check <- updated_site_points |>
 
 
 ### write out the data 
-st_write(updated_site_points, "data/published/data/hap_site_points_20250309.geojson")
-st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20250309.geojson")
-# st_write(new_polygon, "data/published/data/hap_site_poly_20250309.geojson")
-# st_write(new_polygon, "data/published/website/hap/public/assets/hap_site_poly_20250309.geojson")
-st_write(updated_act_points, "data/published/data/hap_act_points_20250309_FULCRUM_FORMATTED.geojson")
-st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20250309.geojson")
+# st_write(updated_site_points, "data/published/data/hap_site_points_20250309.geojson")
+# st_write(updated_site_points, "data/published/website/hap/public/assets/hap_site_points_20250309.geojson")
+# # st_write(new_polygon, "data/published/data/hap_site_poly_20250309.geojson")
+# # st_write(new_polygon, "data/published/website/hap/public/assets/hap_site_poly_20250309.geojson")
+# st_write(updated_act_points, "data/published/data/hap_act_points_20250309_FULCRUM_FORMATTED.geojson")
+# st_write(website_updated_act_points, "data/published/website/hap/public/assets/hap_act_points_20250309.geojson")
 
 updated_site_points <- st_read("data/published/data/hap_site_points_20241011.geojson")
 
+library(leaflet)
+leaflet() |>
+  addProviderTiles(provider = "CartoDB.Positron") |>
+  addCircleMarkers(data = updated_site_points,
+                   radius = 2,
+                   popup = paste(updated_site_points$site_name, '<br/>',
+                                 updated_site_points$site_id))
+st_crs(updated_site_points)
