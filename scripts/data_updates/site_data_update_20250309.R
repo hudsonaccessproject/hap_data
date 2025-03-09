@@ -144,7 +144,8 @@ updated_site_points <- updated_site_points_temp |>
   select(-fulcrum_id) |> 
   left_join(site_act_codes, by = "site_id") |> 
   mutate(activity_codes = act_codes_new,
-         site_name = str_to_title(site_name)) |> 
+         site_name = str_to_title(site_name),
+         status = ifelse(is.na(status), "not visited", status)) |> 
   select(-act_codes_new) |> 
   st_join(tide_gauge, join = st_nearest_feature) ### adding the name and url for closest tide gauuge
 
